@@ -23,9 +23,36 @@ class FuelTypesController < ApplicationController
   def create
     @fuel_type = FuelType.new(fuel_type_params)
 
+    @fuel_all = FuelType.all
+
+    @count = 0
+    # logger.info "All colours ::: #{@all_colour.inspect}"
+
+    @fuel_typed = (@fuel_type.fuel_type).downcase
+    logger.info "#{@fuel_typed}"
+
+    @fuel_all.each do |fuel|
+
+      @index_type = (fuel.fuel_type).downcase
+
+      if @index_type == @fuel_typed
+
+        @count += 1
+
+      end 
+
+
+      logger.info "#{@index_type} --- car type from loop"
+
+    end 
+
+    logger.info "Count details -- #{ @count}"
+    logger.info "Car transmission details -- #{@fuel_type.inspect}"
+
     respond_to do |format|
-      if @fuel_type.save
-        format.html { redirect_to @fuel_type, notice: "Fuel type was successfully created." }
+      if @count < 1 
+        @fuel_type.save
+        format.html { redirect_to fuel_types_path, notice: "Fuel type was successfully created." }
         format.json { render :show, status: :created, location: @fuel_type }
       else
         format.html { render :new, status: :unprocessable_entity }
