@@ -1,2 +1,0 @@
-class CarSpecification < ApplicationRecord
-end

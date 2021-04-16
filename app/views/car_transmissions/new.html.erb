@@ -3,3 +3,31 @@
 <%= render 'form', car_transmission: @car_transmission %>
 
 <%= link_to 'Back', car_transmissions_path %>
+
+
+<body class="sidebar-dark">
+  	<div class="main-wrapper" style="width:100%;">
+      <div class="page-wrapper" style="width:100%; margin-left:0; padding:0;">
+        	<div class="page-content" style="margin-left:0; padding: 0;">
+				<button type="button" class="btn btn-primary" style="color:white; margin-top: 3%; margin-left: 3%;">
+					<%= link_to 'Back', car_transmissions_path %>
+				</button>
+
+                <h4 style="text-align:center;">Add Car Model</h4>
+
+				<%= render 'form', car_transmission: @car_transmission %>
+
+
+			</div>
+		</div>
+	</diV>
+</body>
+
+
+<style>
+	a {
+		color: white;
+		text-decoration: none;
+		background-color: transparent;
+	}
+</style>
