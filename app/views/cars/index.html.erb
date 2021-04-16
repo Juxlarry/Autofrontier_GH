@@ -1,0 +1,65 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Cars</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Car name</th>
+      <th>Car type</th>
+      <th>Car registration number</th>
+      <th>Car registration first date</th>
+      <th>Car price</th>
+      <th>Fuel type</th>
+      <th>Mileage</th>
+      <th>Colour</th>
+      <th>Body type</th>
+      <th>Description</th>
+      <th>Transmission type</th>
+      <th>Trim details</th>
+      <th>Derivative details</th>
+      <th>Make</th>
+      <th>Model</th>
+      <th>Variant details</th>
+      <th>Seats</th>
+      <th>Doors</th>
+      <th>Status</th>
+      <th>Comments</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @cars.each do |car| %>
+      <tr>
+        <td><%= car.car_name %></td>
+        <td><%= car.car_type_id %></td>
+        <td><%= car.car_registration_number %></td>
+        <td><%= car.car_registration_first_date %></td>
+        <td><%= car.car_price %></td>
+        <td><%= car.fuel_type_id %></td>
+        <td><%= car.mileage %></td>
+        <td><%= car.colour_id %></td>
+        <td><%= car.body_type_id %></td>
+        <td><%= car.description %></td>
+        <td><%= car.transmission_type_id %></td>
+        <td><%= car.trim_details %></td>
+        <td><%= car.derivative_details %></td>
+        <td><%= car.make_id %></td>
+        <td><%= car.model_id %></td>
+        <td><%= car.variant_details %></td>
+        <td><%= car.seats %></td>
+        <td><%= car.doors %></td>
+        <td><%= car.status %></td>
+        <td><%= car.comments %></td>
+        <td><%= link_to 'Show', car %></td>
+        <td><%= link_to 'Edit', edit_car_path(car) %></td>
+        <td><%= link_to 'Destroy', car, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Car', new_car_path %>

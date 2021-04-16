@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @car_transmission.name %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @car_transmission.status %>
+</p>
+
+<p>
+  <strong>Comments:</strong>
+  <%= @car_transmission.comments %>
+</p>
+
+<%= link_to 'Edit', edit_car_transmission_path(@car_transmission) %> |
+<%= link_to 'Back', car_transmissions_path %>

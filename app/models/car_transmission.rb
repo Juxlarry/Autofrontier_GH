@@ -1,0 +1,2 @@
+class CarTransmission < ApplicationRecord
+end

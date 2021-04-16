@@ -1,0 +1,45 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  car_name: MyString
+  car_type_id: 1
+  car_registration_number: MyString
+  car_registration_first_date: 2021-04-16 13:24:39
+  car_price: 1.5
+  fuel_type_id: 1
+  mileage: 1.5
+  colour_id: 1
+  body_type_id: 1
+  description: MyText
+  transmission_type_id: 1
+  trim_details: MyString
+  derivative_details: MyString
+  make_id: 1
+  model_id: 1
+  variant_details: MyString
+  seats: 1
+  doors: 1
+  status: false
+  comments: MyText
+
+two:
+  car_name: MyString
+  car_type_id: 1
+  car_registration_number: MyString
+  car_registration_first_date: 2021-04-16 13:24:39
+  car_price: 1.5
+  fuel_type_id: 1
+  mileage: 1.5
+  colour_id: 1
+  body_type_id: 1
+  description: MyText
+  transmission_type_id: 1
+  trim_details: MyString
+  derivative_details: MyString
+  make_id: 1
+  model_id: 1
+  variant_details: MyString
+  seats: 1
+  doors: 1
+  status: false
+  comments: MyText

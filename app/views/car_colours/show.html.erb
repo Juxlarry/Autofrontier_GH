@@ -1,0 +1,28 @@
+<body class="sidebar-dark">
+  <div class="main-wrapper">
+    <div class="page-wrapper">
+      <div class="page-content">
+
+        <p id="notice"><%= notice %></p>
+
+        <p>
+          <strong>Name:</strong>
+          <%= @car_colour.name %>
+        </p>
+
+        <p>
+          <strong>Status:</strong>
+          <%= @car_colour.status %>
+        </p>
+
+        <p>
+          <strong>Comments:</strong>
+          <%= @car_colour.comments %>
+        </p>
+
+        <%= link_to 'Edit', edit_car_colour_path(@car_colour) %> |
+        <%= link_to 'Back', car_colours_path %>
+      </div>
+    </div>
+  </div> 
+</body>     

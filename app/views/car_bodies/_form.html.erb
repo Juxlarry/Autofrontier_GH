@@ -1,0 +1,28 @@
+<main>
+  <%= simple_form_for(@car_body) do |f| %>
+    <%= f.error_notification %>
+    <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+
+
+    <div class="form-inputs">
+      <div class="form-group">
+        <%= f.input :type_name %>
+      </div>
+      <div class="form-group">
+        <%= f.hidden_field :comments %>
+      </div>
+      <div class="form-group">
+        <%= f.hidden_field :status %>
+      </div>
+    </div>
+
+    <div class="form-actions" style="text-align:center;margin-top: 20px;">
+      <button type="button"  class ="btn btn-success" style="color:white;">
+        <i class="btn-icon-prepend" data-feather="check-square"></i>
+        <%= f.button :submit, "Add Body", style: 'color:white' %>
+      </button>
+    </div>
+  </div>
+  <% end %>
+</main>
+

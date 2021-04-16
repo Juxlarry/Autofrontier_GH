@@ -1,0 +1,32 @@
+
+<%= simple_form_for(@car) do |f| %>
+  <%= f.error_notification %>
+  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+
+  <div class="form-inputs">
+    <%= f.input :car_name %>
+    <%= f.input :car_type_id %>
+    <%= f.input :car_registration_number %>
+    <%= f.input :car_registration_first_date %>
+    <%= f.input :car_price %>
+    <%= f.input :fuel_type_id %>
+    <%= f.input :mileage %>
+    <%= f.input :colour_id %>
+    <%= f.input :body_type_id %>
+    <%= f.input :description %>
+    <%= f.input :transmission_type_id %>
+    <%= f.input :trim_details %>
+    <%= f.input :derivative_details %>
+    <%= f.input :make_id %>
+    <%= f.input :model_id %>
+    <%= f.input :variant_details %>
+    <%= f.input :seats %>
+    <%= f.input :doors %>
+    <%= f.input :status %>
+    <%= f.input :comments %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

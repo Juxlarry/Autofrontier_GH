@@ -1,0 +1,104 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Car name:</strong>
+  <%= @car.car_name %>
+</p>
+
+<p>
+  <strong>Car type:</strong>
+  <%= @car.car_type_id %>
+</p>
+
+<p>
+  <strong>Car registration number:</strong>
+  <%= @car.car_registration_number %>
+</p>
+
+<p>
+  <strong>Car registration first date:</strong>
+  <%= @car.car_registration_first_date %>
+</p>
+
+<p>
+  <strong>Car price:</strong>
+  <%= @car.car_price %>
+</p>
+
+<p>
+  <strong>Fuel type:</strong>
+  <%= @car.fuel_type_id %>
+</p>
+
+<p>
+  <strong>Mileage:</strong>
+  <%= @car.mileage %>
+</p>
+
+<p>
+  <strong>Colour:</strong>
+  <%= @car.colour_id %>
+</p>
+
+<p>
+  <strong>Body type:</strong>
+  <%= @car.body_type_id %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @car.description %>
+</p>
+
+<p>
+  <strong>Transmission type:</strong>
+  <%= @car.transmission_type_id %>
+</p>
+
+<p>
+  <strong>Trim details:</strong>
+  <%= @car.trim_details %>
+</p>
+
+<p>
+  <strong>Derivative details:</strong>
+  <%= @car.derivative_details %>
+</p>
+
+<p>
+  <strong>Make:</strong>
+  <%= @car.make_id %>
+</p>
+
+<p>
+  <strong>Model:</strong>
+  <%= @car.model_id %>
+</p>
+
+<p>
+  <strong>Variant details:</strong>
+  <%= @car.variant_details %>
+</p>
+
+<p>
+  <strong>Seats:</strong>
+  <%= @car.seats %>
+</p>
+
+<p>
+  <strong>Doors:</strong>
+  <%= @car.doors %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @car.status %>
+</p>
+
+<p>
+  <strong>Comments:</strong>
+  <%= @car.comments %>
+</p>
+
+<%= link_to 'Edit', edit_car_path(@car) %> |
+<%= link_to 'Back', cars_path %>

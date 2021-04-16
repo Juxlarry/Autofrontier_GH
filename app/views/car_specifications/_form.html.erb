@@ -1,0 +1,67 @@
+<%= form_with(model: car_specification) do |form| %>
+  <% if car_specification.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(car_specification.errors.count, "error") %> prohibited this car_specification from being saved:</h2>
+
+      <ul>
+        <% car_specification.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :car_id %>
+    <%= form.number_field :car_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :mileage %>
+    <%= form.text_field :mileage %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fuel %>
+    <%= form.number_field :fuel %>
+  </div>
+
+  <div class="field">
+    <%= form.label :seats %>
+    <%= form.number_field :seats %>
+  </div>
+
+  <div class="field">
+    <%= form.label :doors %>
+    <%= form.number_field :doors %>
+  </div>
+
+  <div class="field">
+    <%= form.label :status %>
+    <%= form.check_box :status %>
+  </div>
+
+  <div class="field">
+    <%= form.label :comments %>
+    <%= form.text_area :comments %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_area :description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :gear_type %>
+    <%= form.text_field :gear_type %>
+  </div>
+
+  <div class="field">
+    <%= form.label :body_type %>
+    <%= form.text_field :body_type %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

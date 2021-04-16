@@ -1,0 +1,2 @@
+class CarColour < ApplicationRecord
+end

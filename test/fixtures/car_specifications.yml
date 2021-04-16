@@ -1,0 +1,25 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  car_id: 1
+  mileage: MyString
+  fuel: 1
+  seats: 1
+  doors: 1
+  status: false
+  comments: MyText
+  description: MyText
+  gear_type: MyString
+  body_type: MyString
+
+two:
+  car_id: 1
+  mileage: MyString
+  fuel: 1
+  seats: 1
+  doors: 1
+  status: false
+  comments: MyText
+  description: MyText
+  gear_type: MyString
+  body_type: MyString
