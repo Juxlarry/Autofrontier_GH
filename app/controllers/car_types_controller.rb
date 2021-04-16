@@ -23,9 +23,36 @@ class CarTypesController < ApplicationController
   def create
     @car_type = CarType.new(car_type_params)
 
+    @all_types = CarType.all
+
+    @count = 0
+    # logger.info "All colours ::: #{@all_colour.inspect}"
+
+    @type_typed = (@car_type.name).downcase
+    logger.info "#{@type_typed}"
+
+    @all_types.each do |type|
+
+      @index_type = (type.name).downcase
+
+      if @index_type == @type_typed
+
+        @count += 1
+
+      end 
+
+
+      logger.info "#{@index_type} --- car type from loop"
+
+    end 
+
+    logger.info "Count details -- #{ @count}"
+    logger.info "Car transmission details -- #{@car_type.inspect}"
+
     respond_to do |format|
-      if @car_type.save
-        format.html { redirect_to @car_type, notice: "Car type was successfully created." }
+      if @count < 1
+        @car_type.save
+        format.html { redirect_to car_types_path, notice: "Car type was successfully created." }
         format.json { render :show, status: :created, location: @car_type }
       else
         format.html { render :new, status: :unprocessable_entity }

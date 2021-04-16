@@ -28,12 +28,12 @@ class CarMakesController < ApplicationController
     @count = 0
     # logger.info "All colours ::: #{@all_colour.inspect}"
 
-    @make_typed = @car_make.name
+    @make_typed = (@car_make.name).downcase
     logger.info "#{@make_typed}"
 
     @all_makes.each do |make|
 
-      @index_make = make.name
+      @index_make = (make.name).downcase
 
       if @index_make == @make_typed
 

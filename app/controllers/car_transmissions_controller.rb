@@ -23,9 +23,36 @@ class CarTransmissionsController < ApplicationController
   def create
     @car_transmission = CarTransmission.new(car_transmission_params)
 
+    @all_transmission = CarTransmission.all
+
+    @count = 0
+    # logger.info "All colours ::: #{@all_colour.inspect}"
+
+    @trans_typed = (@car_transmission.name).downcase
+    logger.info "#{@trans_typed}"
+
+    @all_transmission.each do |tran|
+
+      @index_trans = (tran.name).downcase
+
+      if @index_trans == @trans_typed
+
+        @count += 1
+
+      end 
+
+
+      logger.info "#{@index_trans} --- transmission from loop"
+
+    end 
+
+    logger.info "Count details -- #{ @count}"
+    logger.info "Car transmission details -- #{@car_transmission.inspect}"
+
     respond_to do |format|
-      if @car_transmission.save
-        format.html { redirect_to @car_transmission, notice: "Car transmission was successfully created." }
+      if @count < 1 
+        @car_transmission.save
+        format.html { redirect_to car_transmissions_path, notice: "Car transmission was successfully created." }
         format.json { render :show, status: :created, location: @car_transmission }
       else
         format.html { render :new, status: :unprocessable_entity }

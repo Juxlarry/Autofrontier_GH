@@ -1,31 +1,55 @@
-<p id="notice"><%= notice %></p>
-
-<h1>Fuel Types</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Fuel type</th>
-      <th>Status</th>
-      <th>Comments</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @fuel_types.each do |fuel_type| %>
-      <tr>
-        <td><%= fuel_type.fuel_type %></td>
-        <td><%= fuel_type.status %></td>
-        <td><%= fuel_type.comments %></td>
-        <td><%= link_to 'Show', fuel_type %></td>
-        <td><%= link_to 'Edit', edit_fuel_type_path(fuel_type) %></td>
-        <td><%= link_to 'Destroy', fuel_type, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Fuel Type', new_fuel_type_path %>
+<style>
+  .blocktext {
+      margin-left: auto;
+      margin-right: auto;
+  
+      margin: 0;
+    position: relative;
+    left: 50%;
+    margin-right: -50%;
+  }
+</style>
+<main>
+  <section id="main-content">
+    <section class="wrapper">
+      <div class="row">
+        <div class="col-12">
+          <h1 class="blocktext">Fuel Types </h1>
+          <div class="separator mb-5"></div>
+        </div>
+      </div>
+      <div class="row mb-4">
+        <div class="col-12 mb-4">
+          <div class="card">
+            <div class="card-body">
+              <div class="table-responsive bs-example widget-shadow">
+                <table class="table table-bordered">
+                  <thead>
+                    <tr>
+                      <th>Type</th>
+                      <th colspan="3"></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <% @fuel_types.each do |fuel_type| %>
+                    <tr>
+                      <td><%= fuel_type.fuel_type %></td>
+                        <td><span id="badgeSpan" class="badge badge-primary"><%= link_to 'Show', fuel_type, id: "badgeSpan" %></span></td>
+                        <td><span id="badgeSpan" class="badge badge-warning"><%= link_to 'Edit', edit_fuel_type_path(fuel_type) %></span></td>
+                        <td><span id="badgeSpan" class="badge badge-danger"><%= link_to 'Delete', fuel_type, method: :delete, data: { confirm: 'Are you sure?' } %></span></td>
+                      </tr>
+                    <% end %>
+                  </tbody>
+                </table>
+                <br>
+              </div>
+            </div>
+          </div>
+          <div class="blocktext" style="margin-top:5%; color:white">
+            <%= link_to 'New Fuel Type', new_fuel_type_path, class:'btn btn-primary', style:'color:white' %>
+          </div>
+        </div>
+      </div>
+    </section>
+  </section>
+</main>

@@ -1,32 +1,28 @@
-<%= form_with(model: car_type) do |form| %>
-  <% if car_type.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(car_type.errors.count, "error") %> prohibited this car_type from being saved:</h2>
+<main>
+  <%= simple_form_for(@car_type) do |f| %>
+    <%= f.error_notification %>
+    <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 
-      <ul>
-        <% car_type.errors.each do |error| %>
-          <li><%= error.full_message %></li>
-        <% end %>
-      </ul>
+
+    <div class="form-inputs">
+      <div class="form-group">
+        <%= f.input :name, :label => "Type Name", required: true %>
+      </div>
+      <div class="form-group">
+        <%= f.hidden_field :comments %>
+      </div>
+      <div class="form-group">
+        <%= f.hidden_field :status %>
+      </div>
     </div>
+
+    <div class="form-actions" style="text-align:center;margin-top: 20px;">
+      <button type="button"  class ="btn btn-success" style="color:white;">
+        <i class="btn-icon-prepend" data-feather="check-square"></i>
+        <%= f.button :submit, "Add Type", style: 'color:white' %>
+      </button>
+    </div>
+  </div>
   <% end %>
+</main>
 
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
-  </div>
-
-  <div class="field">
-    <%= form.label :status %>
-    <%= form.check_box :status %>
-  </div>
-
-  <div class="field">
-    <%= form.label :comments %>
-    <%= form.text_area :comments %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-<% end %>

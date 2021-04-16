@@ -34,12 +34,12 @@ class CarModelsController < ApplicationController
     @count = 0
     # logger.info "All colours ::: #{@all_colour.inspect}"
 
-    @model_typed = @car_model.name
+    @model_typed = (@car_model.name).downcase
     logger.info "#{@model_typed}"
 
     @all_models.each do |model|
 
-      @index_model = model.name
+      @index_model = (model.name).downcase
 
       if @index_model == @model_typed
 
