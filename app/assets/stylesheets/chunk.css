@@ -910,6 +910,7 @@ a.atds-signpost:hover:not(.atds-signpost--disabled) .atds-signpost__text {
 }
 .atds-header__logo {
   border-radius: 2px;
+  text-decoration: none;
 }
 .atds-notification-count {
   background-color: #e53238;
