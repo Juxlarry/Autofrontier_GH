@@ -7,8 +7,10 @@ environment.plugins.prepend(
       $: 'jquery',
       jQuery: 'jquery',
       jquery: 'jquery',
+      datetimepicker: 'jquery-datetimepicker',
       'window.jQuery': 'jquery',
       Popper: ['popper.js', 'default'],
+      moment: ['moment/moment', 'default']
     })
 )
 

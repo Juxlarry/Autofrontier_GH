@@ -90,6 +90,11 @@
   <%= @car.doors %>
 </p>
 
+
+<% (0...@car.images.count).each do |image|%>
+  <%= image_tag(@car.images[image]) %>
+<% end%>
+
 <p>
   <strong>Status:</strong>
   <%= @car.status %>
