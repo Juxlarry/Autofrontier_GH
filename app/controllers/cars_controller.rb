@@ -3,7 +3,21 @@ class CarsController < ApplicationController
 
   # GET /cars or /cars.json
   def index
-    @cars = Car.all
+    @cars = Car.joins("INNER JOIN car_types ON car_types.id = cars.car_type_id
+      INNER JOIN car_makes ON car_makes.id = cars.make_id
+      INNER JOIN car_models ON car_models.id = cars.model_id
+      INNER JOIN car_bodies ON car_bodies.id = cars.body_type_id
+      INNER JOIN fuel_types ON fuel_types.id = cars.fuel_type_id
+      INNER JOIN car_transmissions ON car_transmissions.id = cars.transmission_type_id
+      INNER JOIN car_colours ON car_colours.id = cars.colour_id").select(
+        "cars.id,car_types.id, car_models.id, car_makes.id, car_colours.id, car_bodies.id, 
+        fuel_types.id, car_transmissions.id, cars.car_name as car_name, cars.car_registration_number as registration_number,
+        cars.car_registration_first_date as registration_date, cars.car_price as car_price, cars.mileage as car_mileage, 
+        cars.trim_details as car_trim, cars.derivative_details as car_derivative, cars.variant_details as car_variant, 
+        cars.seats as car_seats, cars.doors as car_doors, cars.description as car_description, car_makes.name as car_make, 
+        car_models.name as car_model, car_colours.name as car_colour, car_transmissions.name as transmission_type, 
+        car_bodies.type_name as car_body, car_types.name as car_type,fuel_types.fuel_type as car_fuel"
+      )
   end
 
   # GET /cars/1 or /cars/1.json
@@ -25,7 +39,7 @@ class CarsController < ApplicationController
 
     respond_to do |format|
       if @car.save
-        format.html { redirect_to @car, notice: "Car was successfully created." }
+        format.html { redirect_to cars_path, notice: "Car was successfully created." }
         format.json { render :show, status: :created, location: @car }
       else
         format.html { render :new, status: :unprocessable_entity }

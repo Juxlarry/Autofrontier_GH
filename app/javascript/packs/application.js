@@ -7,12 +7,24 @@ import Rails from "@rails/ujs"
 import Turbolinks from "turbolinks"
 import * as ActiveStorage from "@rails/activestorage"
 import "channels"
+import JQuery from 'jquery';
 
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
 
+//= require jquery-3.2.1.slim.min
+//= require popper.min
+//= require bootstrap.min
 
+
+require("jquery")
+require("jquery-datetimepicker")
+// require ("bootstrap-datepicker")
+// require ("bootstrap-datepicker/locales/bootstrap-datepicker.en-GB.js")
+
+// window.jQuery = $;
+// window.$ = $;
 require("bootstrap")
 import "../stylesheets/application";
 document.addEventListener("turbolinks:load", function() {
@@ -21,3 +33,9 @@ document.addEventListener("turbolinks:load", function() {
         $('[data-toggle="popover"]').popover()
     })
 })
+
+
+
+window.jQuery = $;
+window.$ = $;
+

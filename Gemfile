@@ -24,6 +24,10 @@ gem 'jbuilder', '~> 2.7'
 
 gem 'simple_form'
 
+gem 'mini_magick', '~> 4.8'
+
+gem 'bootstrap-datepicker-rails'
+
 
 
 # Use Active Storage variant
