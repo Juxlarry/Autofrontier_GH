@@ -1,0 +1,2 @@
+class CarDocument < ApplicationRecord
+end

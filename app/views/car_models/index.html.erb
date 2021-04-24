@@ -40,7 +40,7 @@
                         <td><%= car_model.model_comments %></td>
                        
                         <td><span id="badgeSpan" class="badge badge-primary"><%= link_to 'Show', car_model, id: "badgeSpan" %></span></td>
-                        <td><span id="badgeSpan" class="badge badge-warning"><%= link_to 'Edit', edit_car_colour_path(car_model) %></span></td>
+                        <td><span id="badgeSpan" class="badge badge-warning"><%= link_to 'Edit', edit_car_model_path(car_model) %></span></td>
                         <td><span id="badgeSpan" class="badge badge-danger"><%= link_to 'Delete', car_model, method: :delete, data: { confirm: 'Are you sure?' } %></span></td>
                       </tr>
                     <% end %>

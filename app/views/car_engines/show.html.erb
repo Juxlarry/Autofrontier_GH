@@ -1,0 +1,28 @@
+<body class="sidebar-dark">
+  <div class="main-wrapper">
+    <div class="page-wrapper">
+      <div class="page-content">
+
+        <p id="notice"><%= notice %></p>
+
+        <p>
+          <strong>Engine type:</strong>
+          <%= @car_engine.engine_type %>
+        </p>
+
+        <p>
+          <strong>Comments:</strong>
+          <%= @car_engine.comments %>
+        </p>
+
+        <p>
+          <strong>Status:</strong>
+          <%= @car_engine.status %>
+        </p>
+
+        <%= link_to 'Edit', edit_car_engine_path(@car_engine) %> |
+        <%= link_to 'Back', car_engines_path %>
+      </div>
+    </div>
+  </div> 
+</body>  

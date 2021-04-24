@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_04_17_003526) do
+ActiveRecord::Schema.define(version: 2021_04_24_081217) do
 
   create_table "active_storage_attachments", charset: "utf8mb4", force: :cascade do |t|
     t.string "name", null: false
@@ -56,6 +56,39 @@ ActiveRecord::Schema.define(version: 2021_04_17_003526) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "car_cylinders", charset: "utf8mb4", force: :cascade do |t|
+    t.integer "cylinder"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.text "comments"
+    t.boolean "status"
+  end
+
+  create_table "car_documents", charset: "utf8mb4", force: :cascade do |t|
+    t.string "doc_type"
+    t.boolean "doc_valid"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.text "comments"
+    t.boolean "status"
+  end
+
+  create_table "car_drives", charset: "utf8mb4", force: :cascade do |t|
+    t.string "drive_type"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.boolean "status"
+    t.text "comments"
+  end
+
+  create_table "car_engines", charset: "utf8mb4", force: :cascade do |t|
+    t.string "engine_type"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.boolean "status"
+    t.text "comments"
+  end
+
   create_table "car_makes", charset: "utf8mb4", force: :cascade do |t|
     t.string "name"
     t.boolean "status"
@@ -71,6 +104,7 @@ ActiveRecord::Schema.define(version: 2021_04_17_003526) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "make_id"
+    t.integer "model_date"
   end
 
   create_table "car_transmissions", charset: "utf8mb4", force: :cascade do |t|
@@ -112,6 +146,16 @@ ActiveRecord::Schema.define(version: 2021_04_17_003526) do
     t.text "comments"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "car_primary_damage"
+    t.string "car_secondary_damage"
+    t.float "estimated_retail_price"
+    t.boolean "car_keys"
+    t.integer "drive_type"
+    t.integer "car_cylinder"
+    t.integer "car_doc_id"
+    t.string "car_highlights"
+    t.integer "car_model_year"
+    t.integer "car_engine_id"
   end
 
   create_table "fuel_types", charset: "utf8mb4", force: :cascade do |t|

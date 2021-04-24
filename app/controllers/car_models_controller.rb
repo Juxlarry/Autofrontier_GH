@@ -6,7 +6,7 @@ class CarModelsController < ApplicationController
     # @car_models = CarModel.all
     @car_models = CarModel.joins("INNER JOIN car_makes ON car_makes.id = car_models.make_id").select(
       'car_makes.id, car_models.id, car_makes.name as make_name, car_makes.status as make_status, 
-      car_makes.comments as makes_comments, car_models.name as car_model_name, 
+      car_makes.comments as makes_comments, car_models.name as car_model_name, car_models.model_date as model_date,
       car_models.make_id as model_make_id, car_models.comments as model_comments, 
       car_models.status as model_status')
 
@@ -71,7 +71,7 @@ class CarModelsController < ApplicationController
   def update
     respond_to do |format|
       if @car_model.update(car_model_params)
-        format.html { redirect_to @car_model, notice: "Car model was successfully updated." }
+        format.html { redirect_to car_models_path, notice: "Car model was successfully updated." }
         format.json { render :show, status: :ok, location: @car_model }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -97,6 +97,6 @@ class CarModelsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def car_model_params
-      params.require(:car_model).permit(:name, :status, :comments, :make_id)
+      params.require(:car_model).permit(:name, :model_date, :status, :comments, :make_id)
     end
 end
