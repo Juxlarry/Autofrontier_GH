@@ -28,6 +28,8 @@ gem 'mini_magick', '~> 4.8'
 
 gem 'bootstrap-datepicker-rails'
 
+gem 'devise'
+
 
 
 # Use Active Storage variant
