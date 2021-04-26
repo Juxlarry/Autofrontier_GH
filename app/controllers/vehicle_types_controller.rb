@@ -28,7 +28,7 @@ class VehicleTypesController < ApplicationController
     @count = 0
     # logger.info "All colours ::: #{@all_colour.inspect}"
 
-    @vehicle_typed = (@car_type.vehicle).downcase
+    @vehicle_typed = (@vehicle_type.vehicle).downcase
     logger.info "#{@vehicle_typed}"
 
     @all_vehicles.each do |type|
@@ -47,12 +47,12 @@ class VehicleTypesController < ApplicationController
     end 
 
     logger.info "Count details -- #{ @count}"
-    logger.info "Car transmission details -- #{@vehicle_type.inspect}"
+    logger.info "vehicle details -- #{@vehicle_type.inspect}"
 
     respond_to do |format|
       if @count < 1
         @vehicle_type.save
-        format.html { redirect_to @vehicle_type, notice: "Vehicle type was successfully created." }
+        format.html { redirect_to vehicle_types_path, notice: "Vehicle type was successfully created." }
         format.json { render :show, status: :created, location: @vehicle_type }
       else
         format.html { render :new, status: :unprocessable_entity }

@@ -5,7 +5,6 @@ Rails.application.routes.draw do
   resources :car_cylinders
   resources :car_engines
   resources :car_documents
-  get 'home/index'
   resources :car_models
   resources :car_makes
   resources :car_transmissions

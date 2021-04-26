@@ -1,31 +1,55 @@
-<p id="notice"><%= notice %></p>
-
-<h1>Vehicle Types</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Vehicle</th>
-      <th>Comments</th>
-      <th>Status</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @vehicle_types.each do |vehicle_type| %>
-      <tr>
-        <td><%= vehicle_type.vehicle %></td>
-        <td><%= vehicle_type.comments %></td>
-        <td><%= vehicle_type.status %></td>
-        <td><%= link_to 'Show', vehicle_type %></td>
-        <td><%= link_to 'Edit', edit_vehicle_type_path(vehicle_type) %></td>
-        <td><%= link_to 'Destroy', vehicle_type, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Vehicle Type', new_vehicle_type_path %>
+<style>
+  .blocktext {
+      margin-left: auto;
+      margin-right: auto;
+  
+      margin: 0;
+    position: relative;
+    left: 50%;
+    margin-right: -50%;
+  }
+</style>
+<main>
+  <section id="main-content">
+    <section class="wrapper">
+      <div class="row">
+        <div class="col-12">
+          <h1 class="blocktext">Vehicle Type </h1>
+          <div class="separator mb-5"></div>
+        </div>
+      </div>
+      <div class="row mb-4">
+        <div class="col-12 mb-4">
+          <div class="card">
+            <div class="card-body">
+              <div class="table-responsive bs-example widget-shadow">
+                <table class="table table-bordered">
+                  <thead>
+                    <tr>
+                      <th>Vehicle</th>
+                      <th colspan="3"></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <% @vehicle_types.each do |vehicle_type| %>
+                      <tr>
+                        <td><%= vehicle_type.vehicle %></td>
+                        <td><span id="badgeSpan" class="badge badge-primary"><%= link_to 'Show', vehicle_type, id: "badgeSpan" %></span></td>
+                        <td><span id="badgeSpan" class="badge badge-warning"><%= link_to 'Edit', edit_vehicle_type_path(vehicle_type) %></span></td>
+                        <td><span id="badgeSpan" class="badge badge-danger"><%= link_to 'Delete', vehicle_type, method: :delete, data: { confirm: 'Are you sure?' } %></span></td>
+                      </tr>
+                    <% end %>
+                  </tbody>
+                </table>
+                <br>
+              </div>
+            </div>
+          </div>
+          <div class="blocktext" style="margin-top:5%; color:white">
+            <%= link_to 'Add Vehicle', new_vehicle_type_path, class:'btn btn-primary', style:'color:white' %>
+          </div>
+        </div>
+      </div>
+    </section>
+  </section>
+</main>
