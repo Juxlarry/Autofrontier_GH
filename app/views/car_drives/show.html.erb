@@ -1,0 +1,28 @@
+<body class="sidebar-dark">
+  <div class="main-wrapper">
+    <div class="page-wrapper">
+      <div class="page-content">
+
+        <p id="notice"><%= notice %></p>
+
+        <p>
+          <strong> Drive type: </strong>
+          <%= @car_drive.drive_type %>
+        </p>
+
+        <p>
+          <strong>Comments:</strong>
+          <%= @car_drive.comments %>
+        </p>
+
+        <p>
+          <strong>Status:</strong>
+          <%= @car_drive.status %>
+        </p>
+
+        <span id="badgeSpan" class="badge badge-warning"><%= link_to 'Edit', edit_car_drife_path(@car_drive) %> </span> | 
+        <span id="badgeSpan" class="badge badge-primary"><%= link_to 'Back', car_drives_path %></span>
+      </div>
+    </div>
+  </div> 
+</body>  

@@ -1,0 +1,28 @@
+<body class="sidebar-dark">
+  <div class="main-wrapper">
+    <div class="page-wrapper">
+      <div class="page-content">
+
+        <p id="notice"><%= notice %></p>
+
+        <p>
+        <strong>Cylinder:</strong>
+        <%= @car_cylinder.cylinder %>
+        </p>
+
+        <p>
+          <strong>Comments:</strong>
+          <%= @car_cylinder.comments %>
+        </p>
+
+        <p>
+          <strong>Status:</strong>
+          <%= @car_cylinder.status %>
+        </p>
+
+        <span id="badgeSpan" class="badge badge-warning"><%= link_to 'Edit', edit_car_cylinder_path(@car_cylinder) %> </span> | 
+        <span id="badgeSpan" class="badge badge-primary"><%= link_to 'Back', car_cylinders_path %></span>
+      </div>
+    </div>
+  </div> 
+</body>  

@@ -16,15 +16,27 @@
         <%= f.input :model_id, collection: CarModel.all, value_method: :id, label_method: :name, required: true %>
       </div>
       <div class="form-group">
+        <%= f.input :car_engine_id, collection: CarEngine.all, value_method: :id, label_method: :engine_type, required: true %>
+      </div>
+      <div class="form-group">
+        <%= f.input :car_model_year, :label => "Year of Car Model",  required: true %>
+      </div>
+      <div class="form-group">
         <%= f.input :car_registration_number, :label => "Car Registration Number" %>
       </div>
       <div class="form-group">
         <%= f.label :car_registration_first_date %>
         <br>
-        <%= f.date_field  :car_registration_first_date, label: "Date of First Registration", as: :string, class: 'form-control datepicker', input_html: { id: "datepicker1", placeholder: 'dd-mm-yy' }  %>
+        <%= f.date_field :car_registration_first_date, label: "Date of First Registration", as: :string, class: 'form-control datepicker', input_html: { id: "datepicker1", placeholder: 'dd-mm-yy' }  %>
+      </div>
+      <div class="form-group">
+        <%= f.input :car_doc_id, collection: CarDocument.all, value_method: :id, label_method: :doc_type, required: true %>
       </div>
       <div class="form-group">
         <%= f.input :car_price, :label => "Car Price in GH", required: true %>
+      </div>
+      <div class="form-group">
+        <%= f.input :estimated_retail_price, :label => "Estimated retail Price" %>
       </div>
       <div class="form-group">
         <%= f.input :car_type_id, collection: CarType.all, value_method: :id, label_method: :name, required: true %>
@@ -37,6 +49,12 @@
       </div>
       <div class="form-group">
         <%= f.input :mileage, :label => "Car mileage", required: true %>
+      </div>
+      <div class="form-group">
+        <%= f.input :car_cylinder, collection: CarCylinder.all, value_method: :id, label_method: :cylinder, required: true %>
+      </div>
+      <div class="form-group">
+        <%= f.input :drive_type, collection: CarDrive.all, value_method: :id, label_method: :drive_type, required: true %>
       </div>
       <div class="form-group">
         <%= f.input :transmission_type_id, collection: CarTransmission.all, value_method: :id, label_method: :name, required: true %>
@@ -59,6 +77,19 @@
       <div class="form-group">
         <%= f.input :doors, :label => "Car Door Number", required: true %>
       </div>
+      <div class="form-group">
+        <%= f.input :car_highlights, :label => "Car Highlight" %>
+      </div>
+      <div class="form-group">
+        <%#= f.input :car_keys, :label => "Car Keys Available", required: true %>
+        <%= f.input :car_keys, :label => "Car Keys Available", as: :select, collection: [['Yes',true], ['No', false]], required: true%>
+      </div>
+      <div class="form-group">
+        <%= f.input :car_primary_damage, :label => "Car Primary Damage" %>
+      </div>
+      <div class="form-group">
+        <%= f.input :car_secondary_damage, :label => "Car Secondary Damage" %>
+      </div>
 
       <div class="form-group">
        <%= f.label :images %>
@@ -69,6 +100,7 @@
       <div class="form-group">
         <%= f.text_area :description, :label => "Car Description", required: true %>
       </div>
+      
       <div class="form-group">
         <%= f.hidden_field :comments %>
       </div>

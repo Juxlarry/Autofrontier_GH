@@ -1,0 +1,2 @@
+class CarCylinder < ApplicationRecord
+end

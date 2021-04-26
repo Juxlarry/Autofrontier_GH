@@ -1,0 +1,2 @@
+class CarDrive < ApplicationRecord
+end

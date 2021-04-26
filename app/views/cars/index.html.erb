@@ -27,11 +27,14 @@
                   <thead>
                     <tr>
                       <th>Car name</th>
-                      <th>Car type</th>
                       <th>Make</th>
                       <th>Model</th>
+                      <th>Car type</th>
+                      <th>Car Highlight</th>
+                      <th>Year of Model</th>
                       <th>Body type</th>
                       <th>Colour</th>
+                      <th>Car Engine</th>
                       <th>Transmission type</th>
                       <th>Fuel type</th>
                       <th>Mileage</th>
@@ -41,22 +44,25 @@
                     </tr>
                   </thead>
                   <tbody>
-                    <% @cars.each do |car| %>
+                    <% @cars.each do |car_show| %>
                       <tr>
-                         <td><%= car.car_name %></td>
-                        <td><%= car.car_type %></td>
-                        <td><%= car.car_make %></td>
-                        <td><%= car.car_model %></td>
-                        <td><%= car.car_body %></td>
-                        <td><%= car.car_colour %></td>
-                        <td><%= car.transmission_type %></td>
-                        <td><%= car.car_fuel %></td>
-                        <td><%= car.car_mileage %></td>
-                        <td><%= car.car_price %></td>
-                        <td><%= car.registration_date %></td>
-                        <td><span id="badgeSpan" class="badge badge-primary"><%= link_to 'Show', car, id: "badgeSpan" %></span></td>
-                        <td><span id="badgeSpan" class="badge badge-warning"><%= link_to 'Edit', edit_car_path(car) %></span></td>
-                        <td><span id="badgeSpan" class="badge badge-danger"><%= link_to 'Delete', car, method: :delete, data: { confirm: 'Are you sure?' } %></span></td>
+                         <td><%= car_show.car_name %></td>
+                        <td><%= car_show.car_make %></td>
+                        <td><%= car_show.car_model %></td>
+                        <td><%= car_show.car_type %></td>
+                        <td><%= car_show.car_highlights %></td>
+                        <td><%= car_show.car_model_year %></td>
+                        <td><%= car_show.car_body %></td>
+                        <td><%= car_show.car_colour %></td>
+                        <td><%= car_show.car_engine %></td>
+                        <td><%= car_show.transmission_type %></td>
+                        <td><%= car_show.car_fuel %></td>
+                        <td><%= car_show.car_mileage %></td>
+                        <td><%= car_show.car_price %></td>
+                        <td><%= car_show.registration_date %></td>
+                        <td><span id="badgeSpan" class="badge badge-primary"><%= link_to 'Show', car_show, id: "badgeSpan" %></span></td>
+                        <td><span id="badgeSpan" class="badge badge-warning"><%= link_to 'Edit', edit_car_path(car_show) %></span></td>
+                        <td><span id="badgeSpan" class="badge badge-danger"><%= link_to 'Delete', car_show, method: :delete, data: { confirm: 'Are you sure?' } %></span></td>
                       </tr>
                     <% end %>
                   </tbody>

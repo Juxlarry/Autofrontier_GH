@@ -1,0 +1,33 @@
+<body class="sidebar-dark">
+  <div class="main-wrapper">
+    <div class="page-wrapper">
+      <div class="page-content">
+
+        <p id="notice"><%= notice %></p>
+
+        <p>
+          <strong>Doc type:</strong>
+          <%= @car_document.doc_type %>
+        </p>
+
+        <p>
+          <strong>Doc valid:</strong>
+          <%= @car_document.doc_valid %>
+        </p>
+
+        <p>
+          <strong>Comments:</strong>
+          <%= @car_document.comments %>
+        </p>
+
+        <p>
+          <strong>Status:</strong>
+          <%= @car_document.status %>
+        </p>
+
+        <%= link_to 'Edit', edit_car_document_path(@car_document) %> |
+        <%= link_to 'Back', car_documents_path %>
+      </div>
+    </div>
+  </div> 
+</body>  
