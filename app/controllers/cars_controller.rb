@@ -17,8 +17,9 @@ class CarsController < ApplicationController
       INNER JOIN car_engines ON car_engines.id = cars.car_engine_id
       INNER JOIN vehicle_types ON vehicle_types.id = cars.vehicle_type_id
       ").select(
-      " cars.id, car_types.id, car_types.name as car_type, car_name, car_price, 
-        mileage as car_mileage, car_model_year, cars.description as car_description, trim_details, 
+      " cars.id, car_types.id as car_type_id, car_types.name as car_type, car_name, car_price, 
+        mileage as car_mileage, car_model_year, cars.description as car_description, car_registration_number,
+        car_registration_first_date, trim_details, 
         variant_details, cars.seats as car_seat, cars.doors as car_door, cars.comments as comment_on_car,
         car_keys, car_primary_damage, car_secondary_damage, estimated_retail_price, car_highlights, 
         fuel_types.fuel_type as car_fuel, car_colours.name as car_colour, car_bodies.type_name as car_body,
@@ -46,6 +47,7 @@ class CarsController < ApplicationController
   # POST /cars or /cars.json
   def create
     @car = Car.new(car_params)
+
 
     respond_to do |format|
       if @car.save

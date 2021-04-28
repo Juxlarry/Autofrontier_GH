@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
+  resources :roles
   resources :vehicle_types
   resources :car_drives
   resources :car_cylinders
@@ -23,6 +24,15 @@ Rails.application.routes.draw do
   get 'used_cars' => 'home#used_cars'
 
   get 'new_cars' => 'home#new_cars'
+
+  get '/users' => 'users#index'
+
+  get '/users/new' => 'users#new', :as => 'new_user'
+  get '/users/:id/edit' => 'users#edit', :as => 'edit_user'
+  get '/users/:id' => 'users#show', :as => 'user'
+  patch '/users/:id' => 'users#update', :as => 'update_user'
+
+  post 'create_user' => 'users#create', as: :create_user
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

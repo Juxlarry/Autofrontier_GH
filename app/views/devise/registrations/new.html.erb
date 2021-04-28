@@ -1,25 +1,144 @@
-<h2>Sign up</h2>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+    <meta name="description" content="Apex admin is super flexible, powerful, clean &amp; modern responsive bootstrap 4 admin template with unlimited possibilities.">
+    <meta name="keywords" content="admin template, Apex admin template, dashboard template, flat admin template, responsive admin template, web app">
+    <meta name="author" content="PIXINVENT">
+    <title>Register Page - Apex responsive bootstrap 4 admin template</title>
+    <link rel="shortcut icon" type="image/x-icon" href="../../../app-assets/img/ico/favicon.ico">
+    <link rel="shortcut icon" type="image/png" href="../../../app-assets/img/ico/favicon-32.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500,700,900%7CMontserrat:300,400,500,600,700,800,900" rel="stylesheet">
+    <!-- BEGIN VENDOR CSS-->
+    <!-- font icons-->
+    <link rel="stylesheet" type="text/css" href="/assets/style.min.css">
+    <link rel="stylesheet" type="text/css" href="/assets/style1.css">
+    <link rel="stylesheet" type="text/css" href="/assets/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/assets/perfect-scrollbar.min.css">
+    <link rel="stylesheet" type="text/css" href="/assets/prism.min.css">
+    <link rel="stylesheet" type="text/css" href="/assets/switchery.min.css">
+    <!-- END VENDOR CSS-->
+    <!-- BEGIN APEX CSS-->
+    <link rel="stylesheet" type="text/css" href="/assets/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="/assets/bootstrap-extended.css">
+    <link rel="stylesheet" type="text/css" href="/assets/colors.css">
+    <link rel="stylesheet" type="text/css" href="/assets/components.css">
+    <link rel="stylesheet" type="text/css" href="/assets/layout-dark.css">
+    <link rel="stylesheet" href="/assets/switchery.css">
+    <!-- END APEX CSS-->
+    <!-- BEGIN Page Level CSS-->
+    <link rel="stylesheet" href="/assets/authentication.css">
+    <!-- END Page Level CSS-->
+    <!-- BEGIN: Custom CSS
+    <link rel="stylesheet" type="text/css" href="../../../assets/css/style.css">
+         END: Custom CSS-->
+</head>
+<!-- END : Head-->
 
-<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= f.error_notification %>
+<!-- BEGIN : Body-->
 
-  <div class="form-inputs">
-    <%= f.input :email,
-                required: true,
-                autofocus: true,
-                input_html: { autocomplete: "email" }%>
-    <%= f.input :password,
-                required: true,
-                hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
-                input_html: { autocomplete: "new-password" } %>
-    <%= f.input :password_confirmation,
-                required: true,
-                input_html: { autocomplete: "new-password" } %>
-  </div>
-
-  <div class="form-actions">
-    <%= f.button :submit, "Sign up" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+<body class="vertical-layout vertical-menu 1-column auth-page navbar-sticky blank-page" data-menu="vertical-menu" data-col="1-column">
+    <!-- ////////////////////////////////////////////////////////////////////////////-->
+    <div class="wrapper">
+        <div class="main-panel">
+            <!-- BEGIN : Main Content-->
+            <div class="main-content">
+                <div class="content-overlay"></div>
+                <div class="content-wrapper">
+                    <!--Registration Page Starts-->
+                  <%= simple_form_for(resource, as: resource_name, onsubmit:"validateForm(event)", id:"signIn", url: registration_path(resource_name)) do |f| %>
+                    <section id="regestration" class="auth-height">
+                        <div class="row full-height-vh m-0">
+                            <div class="col-12 d-flex align-items-center justify-content-center">
+                                <div class="card overflow-hidden">
+                                    <div class="card-content" style="margin-bottom: -47px;">
+                                        <div class="card-body auth-img">
+                                            <div class="row m-0">
+                                                <div class="col-lg-6 d-none d-lg-flex justify-content-center align-items-center text-center auth-img-bg py-2">
+                                                    <img src="/assets/roadtrip.jpg" alt="" class="img-fluid" width="350" height="230" style="margin-top: -50px; height: 90% !important;">
+                                                </div>
+                                                <div class="col-lg-6 col-md-12 px-4 py-3" style="margin-top: -5px;">
+                                                    <h4 class="card-title mb-2">Create Account</h4>
+                                                    <p>Fill the form below to create an account.</p>
+                                                    <!--<input type="text" class="form-control mb-2" placeholder="Name">-->
+                                                    <%= f.input :firstname,
+                                                        required: true,
+                                                        label: false,
+                                                        autofocus: true,
+                                                        input_html: { placeholder: "First Name",  class: "form-control mb-2" } 
+                                                    %>
+                                                    <%= f.input :othernames,
+                                                        required: false,
+                                                        label: false,
+                                                        autofocus: true,
+                                                        input_html: { placeholder: "Other Names",  class: "form-control mb-2" } 
+                                                    %>
+                                                    <%= f.input :mobile_number,
+                                                        required: false,
+                                                        label: false,
+                                                        autofocus: true,
+                                                        input_html: { placeholder: "Mobile Number",  class: "form-control mb-2" } 
+                                                    %>
+                                                    <!--<input type="email" class="form-control mb-2" placeholder="Email">-->
+                                                    <%= f.input :username,
+                                                        required: true,
+                                                        label: false,
+                                                        autofocus: true,
+                                                        input_html: { placeholder: "Username",  class: "form-control mb-2" } 
+                                                    %>
+                                                    <%= f.input :email,
+                                                        required: true,
+                                                        label: false,
+                                                        autofocus: true,
+                                                        input_html: { placeholder: "Email",  class: "form-control mb-2"} 
+                                                    %>
+                                                    <!--<input type="password" class="form-control mb-2" placeholder="Password">-->
+                                                    <%= f.input :password,
+                                                        required: true,
+                                                        label: false,
+                                                        hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
+                                                        input_html: { placeholder: "Password", id:"signup_password", class:"form-control mb-2" } 
+                                                    %>
+                                                    <!--<input type="password" class="form-control mb-2" placeholder="Confirm Password">-->
+                                                    <%= f.input :password_confirmation,
+                                                        required: true,
+                                                        label: false,
+                                                        input_html: { placeholder: "Confirm Password", id:"signup_password_confirm", class:"form-control mb-2" } 
+                                                    %>
+                                                    <div class="checkbox auth-checkbox font-small-2 mb-3">
+                                                      <!--  <input type="checkbox" id="auth-ligin">
+                                                        <label for="auth-ligin"><span>I accept the terms & conditions</span></label>
+                                                        -->
+                                                    </div>
+                                                    <%= f.input :role_id, 
+                                                        collection: Role.all, 
+                                                        label_method: :role_name, 
+                                                        value_method: :id,
+                                                        class: "form-control mb-2" 
+                                                    %>
+                                                    <div class="d-flex justify-content-between flex-sm-row flex-column">
+                                                        <a href="auth-login.html" class="btn bg-light-primary mb-2 mb-sm-0">Back To Login</a>
+                                                        <!--<a href="auth-login.html" class="btn btn-primary">Register</a>-->
+                                                        <%= f.button :submit, "Register" %>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!--Registration Page Ends-->
+                  <% end%>
+                </div>
+            </div>
+            <!-- END : End Main Content-->
+        </div>
+    </div>
+    <!-- ////////////////////////////////////////////////////////////////////////////-->
+</body>
+<!-- END : Body-->
