@@ -1,0 +1,51 @@
+
+<style>
+  .blocktext {
+      margin-left: auto;
+      margin-right: auto;
+  
+      margin: 0;
+    position: relative;
+    left: 50%;
+    margin-right: -50%;
+  }
+</style>
+<main>
+  <section id="main-content">
+    <section class="wrapper">
+      <div class="row">
+        <div class="col-12">
+          <h1 class="blocktext">Role</h1>
+          <div class="separator mb-5"></div>
+        </div>
+      </div>
+      <div class="row mb-4">
+        <div class="col-12 mb-4">
+          <div class="card">
+            <div class="card-body">
+              <div class="table-responsive bs-example widget-shadow">
+                <div class="position-center">
+                  <%= simple_form_for(@role) do |f| %>
+                    <%= f.error_notification %>
+                    <div class="panel-body">
+                      <div class="position-center">
+                        <div class="ggg">
+                          <%= f.input :role_name, label: 'Porfolio' , autofocus: true ,html_input:{style:"width:70%;height:20%;"} %>
+                        </div>
+                        <br>
+                        <center>
+                          <div class="actions">
+                            <%= f.submit "Create",:class => 'btn-success',:style=>"width:auto;" %>
+                          </div>
+                        </center>
+                      <% end %>
+                      <br>
+                      <%= link_to "Back", :back %>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </section>
+        </main>
+

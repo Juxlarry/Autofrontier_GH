@@ -6,6 +6,9 @@
 
 
     <div class="form-inputs">
+    <div class="form-group">
+        <%= f.input :vehicle_type_id, collection: VehicleType.all, value_method: :id, label_method: :vehicle, required: true %>
+      </div>
       <div class="form-group">
         <%= f.input :car_name, :label => "Car Brand Name", required: true %>
       </div>
@@ -104,6 +107,7 @@
       <div class="form-group">
         <%= f.hidden_field :comments %>
       </div>
+      
       <div class="form-group">
         <%= f.hidden_field :status %>
       </div>

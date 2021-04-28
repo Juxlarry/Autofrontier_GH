@@ -1,0 +1,60 @@
+<style>
+  .blocktext {
+      margin-left: auto;
+      margin-right: auto;
+  
+      margin: 0;
+    position: relative;
+    left: 50%;
+    margin-right: -50%;
+  }
+</style>
+<main>
+  <section id="main-content">
+    <section class="wrapper">
+      <div class="row">
+        <div class="col-12">
+          <h1 class="blocktext">Users Setup</h1>
+          <div class="separator mb-5"></div>
+        </div>
+      </div>
+      <div class="row mb-4">
+        <div class="col-12 mb-4">
+          <div class="card">
+            <div class="card-body">
+              <div class="table-responsive bs-example widget-shadow">
+                <table class="table table-bordered">
+                  <thead>
+                    <tr>
+                      <th class="header-item">User name</th>
+                      <th class="header-item">Fullname </th>
+                      <th class="header-item">Email </th>
+                      <th class="header-item">Portfolio </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <% #count=1 %>
+                    <% @users.each do |user| %>
+                      <tr>
+                        <td style="width: 5px"><%= user.username %></td>
+                        <td style="width: 5px"><%= user.firstname%> <%= user.othernames %></td>
+                        <td style="width: 5px"><%= user.email %></td>
+                        <td style="width: 5px"> <%= user.a_role.role_name if user.a_role %>
+                          <td style="width: 5px"><%=link_to 'Edit', edit_user_path(user),  class:'"btn btn-primary btn-sm btn3d"'%></td>
+                          <!--  <td> <%#= link_to 'Remove',remove_contact_path(:id => user.id), :class => 'custom btn-sm btn-danger'%> </td -->
+                        </tr>
+                      <% end %>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <center>
+                <%= link_to 'New', new_user_path, class:'btn btn-primary ', style: 'color:white;'%>
+              </center>
+              <br>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+  </main>
