@@ -19307,7 +19307,7 @@
       </header>
     </section>
     <div id="app" class="app-root">
-      <!-- <main> -->
+      <main>
         <article class="fpa fpa--price-confidence fpa--new-buttons">
           <div class="advert-navigation-panel__outer">
             <div class="advert-navigation-panel">
@@ -19451,6 +19451,9 @@
                           href="/classified/advert/new/202103059787137?journey=deals&amp;fromHomepageNewCars=true&amp;modal=photos"
                           ><div
                             class="fpa-gallery__placeholder"
+                            style="
+                              background-image: url('https://m.atcdn.co.uk/a/media/w260h196/cd96efdbb3a0467488572d7225eae274.jpg');
+                            "
                           >
                             <% if @car.images.attached? %>
                                 <% @car.images.each do |image| %>
@@ -19458,7 +19461,20 @@
                                 <% end %>
                             <% end %>
 
-              
+                            
+                            <!--<img
+                              src="https://m.atcdn.co.uk/a/media/w800h600/cd96efdbb3a0467488572d7225eae274.jpg"
+                              sizes="(max-width: 320px) 300px,(max-width: 480px) 480px,(max-width: 600px) 600px, (max-width: 720px) 720px, 800px"
+                              srcset="
+                                https://m.atcdn.co.uk/a/media/w300h225/cd96efdbb3a0467488572d7225eae274.jpg 320w,
+                                https://m.atcdn.co.uk/a/media/w480h360/cd96efdbb3a0467488572d7225eae274.jpg 480w,
+                                https://m.atcdn.co.uk/a/media/w600h450/cd96efdbb3a0467488572d7225eae274.jpg 600w,
+                                https://m.atcdn.co.uk/a/media/w720h540/cd96efdbb3a0467488572d7225eae274.jpg 720w,
+                                https://m.atcdn.co.uk/a/media/w800h600/cd96efdbb3a0467488572d7225eae274.jpg 800w
+                              "
+                              alt=" "
+                              data-gui-test="master-image"
+                            /> -->
                             </div
                         ></a>
                       </li>
@@ -19506,7 +19522,7 @@
                             <path
                               d="M15.95 8H20v10H4V8h4.05l1.83-2h4.24l1.83 2zM9 4L7.17 6H4a2 2 0 0 0-2 2v10c0 1.1.9 2 2 2h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-3.17L15 4H9zm5 9c0-1.1-.9-2-2-2s-2 .9-2 2 .9 2 2 2 2-.9 2-2zm2 0c0 2.2-1.8 4-4 4s-4-1.8-4-4 1.8-4 4-4 4 1.8 4 4z"
                             ></path></svg></span></span
-                      >
+                      >1 of 31
                     </div>
                     <button
                       class="gallery__navigation navigation--right"
@@ -21407,7 +21423,7 @@
           </div>
           
         </article>
-      <!-- </main> -->
+      </main>
     </div>
 
     <script>
