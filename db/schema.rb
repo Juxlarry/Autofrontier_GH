@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_04_27_212936) do
+ActiveRecord::Schema.define(version: 2021_04_30_214034) do
 
   create_table "active_storage_attachments", charset: "utf8mb4", force: :cascade do |t|
     t.string "name", null: false
@@ -157,6 +157,7 @@ ActiveRecord::Schema.define(version: 2021_04_27_212936) do
     t.integer "car_model_year"
     t.integer "car_engine_id"
     t.integer "vehicle_type_id"
+    t.integer "car_user_id"
   end
 
   create_table "fuel_types", charset: "utf8mb4", force: :cascade do |t|
@@ -199,6 +200,19 @@ ActiveRecord::Schema.define(version: 2021_04_27_212936) do
     t.string "vehicle"
     t.text "comments"
     t.boolean "status"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "vehicleenquiries", charset: "utf8mb4", force: :cascade do |t|
+    t.string "firstname"
+    t.string "lastname"
+    t.string "email"
+    t.string "phonenumber"
+    t.string "message"
+    t.boolean "status"
+    t.integer "enquirer_user_id"
+    t.integer "vehicle_user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

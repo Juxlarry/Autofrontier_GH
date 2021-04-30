@@ -1,0 +1,208 @@
+<%= simple_form_for @order_request , html: { autocomplete: 'disabled' }  do |f| %>
+<main id="content" class="main__content">
+  <div class="form-housing fpa__lead fpa__lead__hide-navigation">
+    <div class="lead__holder lead--button-test">
+      <header class="back-title-link">
+        <div class="back-title-link__title-container">
+          <a
+            rel="external"
+            title="Back to advert link"
+            class="back-title-link__link"
+            href="/classified/advert/new/202104291990416?fromHomepageNewCars=true&amp;journey=deals&amp;journey=deals&amp;revisit=true"
+            ><span class="icon-svg back-title-link__icon"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="13"
+                height="12"
+                viewBox="0 0 13 12"
+              >
+                <path
+                  d="M3.4 7H12a1 1 0 0 0 0-2H3.4l3.3-3.3a1 1 0 0 0 0-1.4 1 1 0 0 0-1.4 0l-5 5a1 1 0 0 0 0 1.4l5 5a1 1 0 0 0 1.4-1.4z"
+                ></path></svg></span
+          ></a>
+          <h1
+            class="back-title-link__title atc-type-toledo atc-type-toledo--medium"
+          >
+            Your enquiry
+          </h1>
+        </div>
+      </header>
+      <div class="leads-form">
+        <h2 class="leads-form--title atc-type-fiesta">
+          Contact T J Vickers Telford about this Fiat 500
+        </h2>
+        <form novalidate="">
+          <div class="field-holder--finance atc-type-picanto"></div>
+          <div class="field-holder--inline-fields">
+            <div class="field-holder">
+              <div class="atc-field">
+                <input
+                  class="atc-field__input atc-field__input--floating"
+                  id="firstName"
+                  maxlength="50"
+                  placeholder="e.g. John"
+                  type="text"
+                  value=""
+                /><label
+                  for="firstName"
+                  class="atc-field__label atc-field__label-floating"
+                  >First name</label
+                >
+              </div>
+            </div>
+            <div class="field-holder">
+              <div class="atc-field">
+                <input
+                  class="atc-field__input atc-field__input--floating"
+                  id="lastName"
+                  maxlength="50"
+                  placeholder="e.g. Smith"
+                  type="text"
+                  value=""
+                /><label
+                  for="lastName"
+                  class="atc-field__label atc-field__label-floating"
+                  >Last name</label
+                >
+              </div>
+            </div>
+          </div>
+          <div class="field-holder" data-cy="email-error">
+            <div class="atc-field">
+              <input
+                class="atc-field__input atc-field__input--floating"
+                id="email"
+                maxlength="100"
+                placeholder="e.g. name@email.com"
+                required=""
+                type="email"
+                value=""
+              /><label
+                for="email"
+                class="atc-field__label atc-field__label-floating"
+                >Email</label
+              >
+            </div>
+          </div>
+          <div class="field-holder">
+            <div class="atc-field">
+              <input
+                class="atc-field__input atc-field__input--floating"
+                id="phoneNumber"
+                maxlength="20"
+                placeholder="e.g. 07770 000 000"
+                type="text"
+                value=""
+              /><label
+                for="phoneNumber"
+                class="atc-field__label atc-field__label-floating"
+                >Phone number (optional)</label
+              >
+            </div>
+          </div>
+          <div class="field-holder">
+            <div class="atc-field">
+              <textarea
+                id="message"
+                name="message-text-area"
+                class="tracking-standard-link atc-field__input atc-field__input--floating"
+                placeholder="Enter what you'd like to know. For example, you could ask for more details about the car or more photos."
+                maxlength="250"
+                aria-label="Your message (optional)"
+                spellcheck="true"
+                data-label="enquiry message"
+              >
+Hi, I'm interested in this Fiat 500 for £12,972. Please could you contact me back.</textarea
+              ><label
+                for="message"
+                class="atc-field__label atc-field__label-floating"
+                >Your message (optional)</label
+              >
+              <p class="c-form__textarea__character-count">
+                <span>82</span> / 250
+              </p>
+            </div>
+          </div>
+          <p
+            class="atc-type-smart leads-form__privacy leads-form__privacy--gdprtest"
+          >
+            By hitting "Send to seller", you're happy for us to pass your
+            details to the seller in accordance with our
+            <a
+              target="_blank"
+              rel="nofollow noopener"
+              class="privacy-policy_link"
+              href="/privacy-policy"
+              >privacy policy</a
+            >.
+          </p>
+          <div class="leads-form__actions-panel">
+            <button
+              type="submit"
+              class="atc-button atc-button--primary leads-form__button"
+            >
+              Send to seller
+            </button>
+          </div>
+          <div
+            class="g-recaptcha recaptcha-container"
+            data-testid="captcha-container"
+            data-sitekey="6LfJHYUUAAAAAMlO0BIu91QFQmQYaN263a4BKvln"
+            data-callback="_grecaptcha.data-callback"
+            data-expired-callback="_grecaptcha.data-expired-callback"
+            data-size="invisible"
+            data-badge="bottomright"
+          >
+            <div
+              class="grecaptcha-badge"
+              data-style="bottomright"
+              style="
+                width: 256px;
+                height: 60px;
+                display: block;
+                transition: right 0.3s ease 0s;
+                position: fixed;
+                bottom: 14px;
+                right: -186px;
+                box-shadow: gray 0px 0px 5px;
+                border-radius: 2px;
+                overflow: hidden;
+              "
+            >
+              <div class="grecaptcha-logo">
+                <iframe
+                  title="reCAPTCHA"
+                  src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6LfJHYUUAAAAAMlO0BIu91QFQmQYaN263a4BKvln&amp;co=aHR0cHM6Ly93d3cuYXV0b3RyYWRlci5jby51azo0NDM.&amp;hl=en&amp;v=9qx0v7NiOAe_XnW_ULNZm9e3&amp;size=invisible&amp;badge=bottomright&amp;cb=mzllr59mn2e1"
+                  width="256"
+                  height="60"
+                  role="presentation"
+                  name="a-eyttajimkhl"
+                  frameborder="0"
+                  scrolling="no"
+                  sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox"
+                ></iframe>
+              </div>
+              <div class="grecaptcha-error"></div>
+              <textarea
+                id="g-recaptcha-response"
+                name="g-recaptcha-response"
+                class="g-recaptcha-response"
+                style="
+                  width: 250px;
+                  height: 40px;
+                  border: 1px solid rgb(193, 193, 193);
+                  margin: 10px 25px;
+                  padding: 0px;
+                  resize: none;
+                  display: none;
+                "
+              ></textarea>
+            </div>
+            <iframe style="display: none"></iframe>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</main>
+<% end %>

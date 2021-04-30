@@ -20620,6 +20620,7 @@
                         href="/contact-dealer/13993/202103059787137?journey=deals&amp;fromHomepageNewCars=true&amp;leadType=fpanv"
                         >Message seller</a
                       >
+                      <%= link_to  'Message seller', make_enquiry_path(:id => @patient_id), {:remote => true, :class => "btn btn-primary btn-sm" ,'data-toggle' =>  "modal", 'data-target' => '#myModal'} %>
                     </div>
                   </div>
                 </section></span
@@ -22142,8 +22143,26 @@
       title="TTD Universal Pixel"
     ></iframe>
   </body>
+
   <iframe id="__JSBridgeIframe_1.0__" style="display: none"></iframe
   ><iframe id="__JSBridgeIframe_SetResult_1.0__" style="display: none"></iframe
   ><iframe id="__JSBridgeIframe__" style="display: none"></iframe
   ><iframe id="__JSBridgeIframe_SetResult__" style="display: none"></iframe>
 </html>
+
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content" >
+      <div class="modal-header">
+        <h4 class="modal-title"> Make Order</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body" id = 'boom'>
+        <%= render "make_order" %>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -137,7 +137,7 @@ class CarsController < ApplicationController
       params.require(:car).permit(:car_name, :car_type_id, :car_registration_number, 
         :car_registration_first_date, :car_price, :fuel_type_id, :mileage, :colour_id, :body_type_id, :description, 
         :transmission_type_id, :trim_details, :derivative_details, :make_id, :model_id, :variant_details, :car_cylinder, 
-        :drive_type, :car_keys, :car_primary_damage, :car_secondary_damage, :estimated_retail_price, :car_doc_id, 
+        :drive_type, :car_keys, :car_primary_damage, :car_secondary_damage, :estimated_retail_price, :car_doc_id, :car_user_id, 
         :car_highlights, :car_engine_id, :car_model_year, :seats,:doors, :vehicle_type_id, :status, :comments, images: [])
     end
 end
