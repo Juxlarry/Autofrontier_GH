@@ -35,7 +35,7 @@ Rails.application.routes.draw do
 
   post 'create_user' => 'users#create', as: :create_user
 
-  get  'make_enquiry' => 'vehicleenquiries#make_enquiry'
+  get  'make_enquiry' => 'cars#make_enquiry'
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

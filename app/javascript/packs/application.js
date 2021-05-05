@@ -3,11 +3,18 @@
 // a relevant structure within app/javascript and only use these pack files to reference
 // that code so it'll be compiled.
 
+// global.toastr = require("toastr")
 import Rails from "@rails/ujs"
 import Turbolinks from "turbolinks"
 import * as ActiveStorage from "@rails/activestorage"
 import "channels"
 import JQuery from 'jquery';
+import 'bootstrap/dist/js/bootstrap'
+import 'bootstrap/dist/css/bootstrap'
+import "../stylesheets/application";
+// import "../stylesheets/application.scss";
+// require("stylesheets/application.scss")
+
 
 Rails.start()
 Turbolinks.start()
@@ -17,22 +24,25 @@ ActiveStorage.start()
 //= require popper.min
 //= require bootstrap.min
 
+import toastr from "toastr";
+
 
 require("jquery")
 require("jquery-datetimepicker")
-// require ("bootstrap-datepicker")
-// require ("bootstrap-datepicker/locales/bootstrap-datepicker.en-GB.js")
 
-// window.jQuery = $;
-// window.$ = $;
 require("bootstrap")
-import "../stylesheets/application";
+
 document.addEventListener("turbolinks:load", function() {
     $(function () {
         $('[data-toggle="tooltip"]').tooltip()
         $('[data-toggle="popover"]').popover()
     })
 })
+
+// import './src/application.scss'
+
+// import toastr from 'toastr'
+window.toastr = toastr
 
 
 

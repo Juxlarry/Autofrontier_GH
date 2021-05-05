@@ -20615,12 +20615,17 @@
                   </div>
                   <div class="contact-card-container">
                     <div class="contact-card__cta-container">
-                      <a
+                      <!--<a
                         class="atc-button atc-button--primary split-btn split-btn-tertiary"
-                        href="/contact-dealer/13993/202103059787137?journey=deals&amp;fromHomepageNewCars=true&amp;leadType=fpanv"
+                        href= "#bookTicket"
+                        data-toggle="modal"
                         >Message seller</a
-                      >
-                      <%= link_to  'Message seller', make_enquiry_path(:id => @patient_id), {:remote => true, :class => "btn btn-primary btn-sm" ,'data-toggle' =>  "modal", 'data-target' => '#myModal'} %>
+                      > -->
+                      <%= link_to  'Message seller', make_enquiry_path(:id => @car_enquiry_id), {:remote => true,:id => "bookTicket1", :class => "atc-button atc-button--primary split-btn split-btn-tertiary" ,'data-toggle' =>  "modal", 'data-target' => '#bookTicket'} %>
+
+                      <!--<button href="#bookTicket" class="btn btn-lg btn-theme" data-toggle="modal" >Book Ticket</button>-->
+
+                      
                     </div>
                   </div>
                 </section></span
@@ -22150,19 +22155,19 @@
   ><iframe id="__JSBridgeIframe_SetResult__" style="display: none"></iframe>
 </html>
 
-<div id="myModal" class="modal fade" role="dialog">
-  <div class="modal-dialog">
-    <div class="modal-content" >
-      <div class="modal-header">
-        <h4 class="modal-title"> Make Order</h4>
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-      </div>
-      <div class="modal-body" id = 'boom'>
-        <%= render "make_order" %>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-      </div>
-    </div>
-  </div>
-</div>
+<!-- Trial Test -->
+                      <div class="modal fade" id="bookTicket" tabindex="-1" role="dialog" aria-labelledby="BookTicket">
+                          <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                              <div class="modal-body">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                 
+                                  <%= render "make_enquiry" %>
+                                  <button type="button" class="btn btn-default" data-dismiss="modal" style="float: right;">Close</button>
+                                </div>
+                              
+                              
+                            </div>
+                          </div>
+                        </div>
+                      <!-- End -->

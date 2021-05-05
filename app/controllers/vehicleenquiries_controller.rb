@@ -25,7 +25,7 @@ class VehicleenquiriesController < ApplicationController
 
     respond_to do |format|
       if @vehicleenquiry.save
-        format.html { redirect_to @vehicleenquiry, notice: "Vehicleenquiry was successfully created." }
+        format.html { redirect_back fallback_location: '/', notice: "Vehicleenquiry was successfully created." }
         format.json { render :show, status: :created, location: @vehicleenquiry }
       else
         format.html { render :new, status: :unprocessable_entity }

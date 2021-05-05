@@ -1,4 +1,125 @@
-<%= simple_form_for @order_request , html: { autocomplete: 'disabled' }  do |f| %>
+
+<style type="text/css">
+ .main__content{
+   margin: 0 0;
+ }
+
+
+.back-title-link{
+  margin-bottom: -30px;
+}
+
+.headoo{
+  margin-top: -30px;
+  margin-bottom: 25px;
+}
+
+.two-cols{
+  display: flex;
+  /* margin-bottom: 25px; */
+}
+
+.second-box{
+  margin-left: 15px;
+}
+
+.field-holder{
+  margin-bottom: 25px;
+}
+
+
+.atc-button {
+  font-size: 1em;
+  line-height: 1.125;
+  border-radius: 6.25em;
+  cursor: pointer;
+  display: inline-block;
+  margin: 0.5em 0;
+  min-width: 216px;
+  padding: 0.75em;
+  text-align: center;
+  text-decoration: none;
+  transition: background 0.2s linear;
+}
+
+.lead--button-test .atc-button--primary {
+    background-color: #0534ff;
+    color: #fff;
+}
+.lead--button-test .atc-button {
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    display: inline-block;
+    outline: none;
+    padding: 8px 24px;
+    text-align: center;
+    text-decoration: none;
+    transition: all .25s ease-in-out;
+    font-size: 16px;
+    line-height: 1.5;
+    font-family: "Fabriga Regular",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+}
+.fpa__lead .leads-form__button {
+    margin: 16px auto;
+}
+.fpa__lead .leads-form__button {
+    width: 90%;
+}
+
+.fpa__lead .leads-form__actions-panel {
+    background: #fff;
+    bottom: 0;
+    box-shadow: 0 -3px 4px -2px rgb(0 0 0 / 10%);
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    padding-bottom: 8px;
+    position: -webkit-sticky;
+    position: sticky;
+    margin: 0 -16px;
+    text-align: center;
+}
+
+
+
+.lead--button-test .atc-button--primary {
+    background-color: #0534ff;
+    color: #fff;
+}
+
+.lead--button-test .atc-button {
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    display: inline-block;
+    outline: none;
+    padding: 8px 24px;
+    text-align: center;
+    text-decoration: none;
+    transition: all .25s ease-in-out;
+    font-size: 16px;
+    line-height: 1.5;
+    font-family: "Fabriga Regular",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+}
+
+.fpa__lead .leads-form__button {
+    margin: 16px auto;
+}
+
+.fpa__lead .leads-form__button {
+    width: 90%;
+}
+
+
+.sell_button_modal{
+  border: none; 
+  background: none;
+  color: white; 
+  font-size: 1em; 
+}
+
+
+</style>
 <main id="content" class="main__content">
   <div class="form-housing fpa__lead fpa__lead__hide-navigation">
     <div class="lead__holder lead--button-test">
@@ -28,12 +149,14 @@
         </div>
       </header>
       <div class="leads-form">
-        <h2 class="leads-form--title atc-type-fiesta">
-          Contact T J Vickers Telford about this Fiat 500
+        <h2 class="leads-form--title atc-type-fiesta headoo" >
+        
+          Contact <%= @seller_username %> about this Fiat 500 <%#= @car_details%>
         </h2>
-        <form novalidate="">
+        <!--<form novalidate=""> -->
+        <%= simple_form_for @enquiry_request , html: { autocomplete: 'disabled' }  do |f| %>
           <div class="field-holder--finance atc-type-picanto"></div>
-          <div class="field-holder--inline-fields">
+          <div class="field-holder--inline-fields two-cols">
             <div class="field-holder">
               <div class="atc-field">
                 <input
@@ -43,6 +166,7 @@
                   placeholder="e.g. John"
                   type="text"
                   value=""
+                  name="vehicleenquiry[firstname]"
                 /><label
                   for="firstName"
                   class="atc-field__label atc-field__label-floating"
@@ -50,7 +174,7 @@
                 >
               </div>
             </div>
-            <div class="field-holder">
+            <div class="field-holder second-box">
               <div class="atc-field">
                 <input
                   class="atc-field__input atc-field__input--floating"
@@ -59,6 +183,7 @@
                   placeholder="e.g. Smith"
                   type="text"
                   value=""
+                  name="vehicleenquiry[lastname]"
                 /><label
                   for="lastName"
                   class="atc-field__label atc-field__label-floating"
@@ -77,6 +202,7 @@
                 required=""
                 type="email"
                 value=""
+                name="vehicleenquiry[firstname]"
               /><label
                 for="email"
                 class="atc-field__label atc-field__label-floating"
@@ -93,6 +219,7 @@
                 placeholder="e.g. 07770 000 000"
                 type="text"
                 value=""
+                name="vehicleenquiry[phonenumber]"
               /><label
                 for="phoneNumber"
                 class="atc-field__label atc-field__label-floating"
@@ -103,16 +230,15 @@
           <div class="field-holder">
             <div class="atc-field">
               <textarea
-                id="message"
-                name="message-text-area"
+                id=""
+                name="vehicleenquiry[message]"
                 class="tracking-standard-link atc-field__input atc-field__input--floating"
                 placeholder="Enter what you'd like to know. For example, you could ask for more details about the car or more photos."
                 maxlength="250"
                 aria-label="Your message (optional)"
                 spellcheck="true"
                 data-label="enquiry message"
-              >
-Hi, I'm interested in this Fiat 500 for £12,972. Please could you contact me back.</textarea
+              >   Hi, I'm interested in this Fiat 500 for £12,972. Please could you contact me back.</textarea
               ><label
                 for="message"
                 class="atc-field__label atc-field__label-floating"
@@ -123,6 +249,7 @@ Hi, I'm interested in this Fiat 500 for £12,972. Please could you contact me ba
               </p>
             </div>
           </div>
+          <% f.hidden_field :vehicle_user_id, value: @seller_id %>
           <p
             class="atc-type-smart leads-form__privacy leads-form__privacy--gdprtest"
           >
@@ -132,18 +259,22 @@ Hi, I'm interested in this Fiat 500 for £12,972. Please could you contact me ba
               target="_blank"
               rel="nofollow noopener"
               class="privacy-policy_link"
-              href="/privacy-policy"
+              href="/"
               >privacy policy</a
             >.
           </p>
+          
           <div class="leads-form__actions-panel">
-            <button
-              type="submit"
-              class="atc-button atc-button--primary leads-form__button"
+            <button 
+            type="submit" 
+            class="atc-button atc-button--primary leads-form__button"
             >
-              Send to seller
+              <span class="sell_button_modal">
+                <%= f.submit "Send to seller", input_html: {class:'sell_button_modal'} %>
+              </span>
             </button>
           </div>
+          
           <div
             class="g-recaptcha recaptcha-container"
             data-testid="captcha-container"
@@ -200,9 +331,9 @@ Hi, I'm interested in this Fiat 500 for £12,972. Please could you contact me ba
             </div>
             <iframe style="display: none"></iframe>
           </div>
-        </form>
+        <% end %>  
+        <!--</form> -->
       </div>
     </div>
   </div>
 </main>
-<% end %>
