@@ -116,6 +116,11 @@
   background: none;
   color: white; 
   font-size: 1em; 
+  font-family: "Fabriga Regular", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+}
+
+.close_modal{
+  
 }
 
 
@@ -129,7 +134,7 @@
             rel="external"
             title="Back to advert link"
             class="back-title-link__link"
-            href="/classified/advert/new/202104291990416?fromHomepageNewCars=true&amp;journey=deals&amp;journey=deals&amp;revisit=true"
+            data-dismiss="modal"
             ><span class="icon-svg back-title-link__icon"
               ><svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -143,14 +148,17 @@
           ></a>
           <h1
             class="back-title-link__title atc-type-toledo atc-type-toledo--medium"
+            style="margin-left:5px;"
           >
             Your enquiry
           </h1>
+
+          <!--<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button> -->
         </div>
       </header>
       <div class="leads-form">
         <h2 class="leads-form--title atc-type-fiesta headoo" >
-        
+        <% logger.info "tHIS LOGS ON the make enquiry page .. lets see the seller ---- #{@seller_username}"%>
           Contact <%= @seller_username %> about this Fiat 500 <%#= @car_details%>
         </h2>
         <!--<form novalidate=""> -->
@@ -270,11 +278,19 @@
             class="atc-button atc-button--primary leads-form__button"
             >
               <span class="sell_button_modal">
-                <%= f.submit "Send to seller", input_html: {class:'sell_button_modal'} %>
+                <%= f.submit "Send to seller", 
+                    style:"background:none; 
+                           border: none; 
+                           color: white;
+                           font-size: 1em;
+                           font-family: 'Fabriga Regular', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;"                   
+                %>
               </span>
             </button>
+
+            
           </div>
-          
+            <button type="button" class="btn btn-default" data-dismiss="modal" style="float: right; color:black; font-size: 1em; font-family: 'Fabriga Regular', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;" >Close</button>
           <div
             class="g-recaptcha recaptcha-container"
             data-testid="captcha-container"
