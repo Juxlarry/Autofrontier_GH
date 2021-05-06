@@ -1,0 +1,2 @@
+class Vehicleenquiry < ApplicationRecord
+end

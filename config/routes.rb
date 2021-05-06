@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :vehicleenquiries
   devise_for :users
   resources :roles
   resources :vehicle_types
@@ -33,6 +34,8 @@ Rails.application.routes.draw do
   patch '/users/:id' => 'users#update', :as => 'update_user'
 
   post 'create_user' => 'users#create', as: :create_user
+
+  get  'make_enquiry' => 'cars#make_enquiry'
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

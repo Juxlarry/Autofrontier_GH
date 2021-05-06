@@ -29,7 +29,7 @@ class ApplicationController < ActionController::Base
      # devise_parameter_sanitizer.for(:account_update) { |u| u.permit(:username, :fullname, :email, :password, :password_confirmation, :current_password,:role_id,) }
 
      
-    added_attrs = [:username, :firstname, :othernames, :email, :password, :password_confirmation, :role_id, :remember_me]
+    added_attrs = [:username, :firstname, :othernames, :email, :password, :password_confirmation, :role_id, :remember_me, :mobile_number, :logo, :avatar]
     devise_parameter_sanitizer.permit(:sign_up, keys: added_attrs)
     devise_parameter_sanitizer.permit(:sign_in, keys: added_attrs)
     devise_parameter_sanitizer.permit(:account_update, keys: added_attrs)

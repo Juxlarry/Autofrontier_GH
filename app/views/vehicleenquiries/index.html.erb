@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Vehicleenquiries</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Firstname</th>
+      <th>Lastname</th>
+      <th>Email</th>
+      <th>Phonenumber</th>
+      <th>Message</th>
+      <th>Status</th>
+      <th>Enquirer user</th>
+      <th>Vehicle user</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @vehicleenquiries.each do |vehicleenquiry| %>
+      <tr>
+        <td><%= vehicleenquiry.firstname %></td>
+        <td><%= vehicleenquiry.lastname %></td>
+        <td><%= vehicleenquiry.email %></td>
+        <td><%= vehicleenquiry.phonenumber %></td>
+        <td><%= vehicleenquiry.message %></td>
+        <td><%= vehicleenquiry.status %></td>
+        <td><%= vehicleenquiry.enquirer_user_id %></td>
+        <td><%= vehicleenquiry.vehicle_user_id %></td>
+        <td><%= link_to 'Show', vehicleenquiry %></td>
+        <td><%= link_to 'Edit', edit_vehicleenquiry_path(vehicleenquiry) %></td>
+        <td><%= link_to 'Destroy', vehicleenquiry, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Vehicleenquiry', new_vehicleenquiry_path %>

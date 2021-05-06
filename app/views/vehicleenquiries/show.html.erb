@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Firstname:</strong>
+  <%= @vehicleenquiry.firstname %>
+</p>
+
+<p>
+  <strong>Lastname:</strong>
+  <%= @vehicleenquiry.lastname %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @vehicleenquiry.email %>
+</p>
+
+<p>
+  <strong>Phonenumber:</strong>
+  <%= @vehicleenquiry.phonenumber %>
+</p>
+
+<p>
+  <strong>Message:</strong>
+  <%= @vehicleenquiry.message %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @vehicleenquiry.status %>
+</p>
+
+<p>
+  <strong>Enquirer user:</strong>
+  <%= @vehicleenquiry.enquirer_user_id %>
+</p>
+
+<p>
+  <strong>Vehicle user:</strong>
+  <%= @vehicleenquiry.vehicle_user_id %>
+</p>
+
+<%= link_to 'Edit', edit_vehicleenquiry_path(@vehicleenquiry) %> |
+<%= link_to 'Back', vehicleenquiries_path %>
