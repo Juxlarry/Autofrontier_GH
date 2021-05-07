@@ -35,7 +35,7 @@ class CarsController < ApplicationController
 
     @car_on_show = Car.where(id: params[:id])
 
-    @car_poster_id = @car_on_show.car_user_id
+    @car_poster_id = @car_on_show[0].car_user_id
 
     @car = Car.joins("
       INNER JOIN car_types ON car_types.id = cars.car_type_id

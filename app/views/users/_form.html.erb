@@ -37,6 +37,12 @@
 
       <%= f.input :username, required: true,input_html:{ class:"form-control",style:"width:90%;float:center;"} %>
 
+      <div class="form-group">
+       <%= f.label :avatar %>
+        <br>
+        <%= f.file_field :avatar, class: "form-control" %>
+      </div> 
+
       <%= f.input :fullname, required: true,input_html:{ class:"form-control",style:"width:90%;float:center;"} %>
 
        <%= f.input :mobile_number, input_html:{ class:"form-control",style:"width:100%;float:center;"} %>
@@ -53,6 +59,12 @@
 
       <%= f.association :a_role, collection: Role.all, label_method: :role_name, value_method: :id, include_blank: true, label: "Role:", style:"width:90%;", :input_html => {:class => 'form-control dropdown dropdown-toggle', style:"width:90%;float:center;"} %>
 
+
+      <div class="form-group">
+       <%= f.label :logo %>
+        <br>
+        <%= f.file_field :logo, class: "form-control" %>
+      </div> 
        
       <br/>
       <br/>

@@ -6,6 +6,9 @@ class User < ApplicationRecord
 
     has_many :cars, class_name: 'Cars', foreign_key: :car_user_id
 
+    has_one_attached :avatar
+
+    has_one_attached :logo
 
     attr_writer :login
     validate :validate_username 
@@ -15,7 +18,7 @@ class User < ApplicationRecord
         if User.where(email: username).exists?
             errors.add(:username, :invalid)
         end
-    end 
+    end  
 
 
     def displayname 

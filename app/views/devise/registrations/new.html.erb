@@ -64,31 +64,36 @@
                                                     <h4 class="card-title mb-2">Create Account</h4>
                                                     <p>Fill the form below to create an account.</p>
                                                     <!--<input type="text" class="form-control mb-2" placeholder="Name">-->
-                                                    <%= f.input :firstname,
-                                                        required: true,
-                                                        label: false,
-                                                        autofocus: true,
-                                                        input_html: { placeholder: "First Name",  class: "form-control mb-2" } 
-                                                    %>
-                                                    <%= f.input :othernames,
-                                                        required: false,
-                                                        label: false,
-                                                        autofocus: true,
-                                                        input_html: { placeholder: "Other Names",  class: "form-control mb-2" } 
-                                                    %>
-                                                    <%= f.input :mobile_number,
-                                                        required: false,
-                                                        label: false,
-                                                        autofocus: true,
-                                                        input_html: { placeholder: "Mobile Number",  class: "form-control mb-2" } 
-                                                    %>
-                                                    <!--<input type="email" class="form-control mb-2" placeholder="Email">-->
-                                                    <%= f.input :username,
-                                                        required: true,
-                                                        label: false,
-                                                        autofocus: true,
-                                                        input_html: { placeholder: "Username",  class: "form-control mb-2" } 
-                                                    %>
+                                                    <span style="display:flex;">
+                                                        <%= f.input :firstname,
+                                                            required: true,
+                                                            label: false,
+                                                            autofocus: true,
+                                                            input_html: { placeholder: "First Name",  class: "form-control mb-2" } 
+                                                        %>
+                                                        <%= f.input :othernames ,
+                                                            required: false,
+                                                            label: false,
+                                                            autofocus: true,
+                                                            input_html: { placeholder: "Other Names",  class: "form-control mb-2", style: "margin-left: 10px;" } 
+                                                        %>
+                                                    </span>
+                                                    
+                                                    <span style="display:flex;">
+                                                        <%= f.input :mobile_number,
+                                                            required: false,
+                                                            label: false,
+                                                            autofocus: true,
+                                                            input_html: { placeholder: "Mobile Number",  class: "form-control mb-2" } 
+                                                        %>
+                                                        <!--<input type="email" class="form-control mb-2" placeholder="Email">-->
+                                                        <%= f.input :username,
+                                                            required: true,
+                                                            label: false,
+                                                            autofocus: true,
+                                                            input_html: { placeholder: "Username",  class: "form-control mb-2", style: "margin-left: 10px;" } 
+                                                        %>
+                                                    </span>
                                                     <%= f.input :email,
                                                         required: true,
                                                         label: false,
@@ -96,32 +101,43 @@
                                                         input_html: { placeholder: "Email",  class: "form-control mb-2"} 
                                                     %>
                                                     <!--<input type="password" class="form-control mb-2" placeholder="Password">-->
-                                                    <%= f.input :password,
-                                                        required: true,
-                                                        label: false,
-                                                        hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
-                                                        input_html: { placeholder: "Password", id:"signup_password", class:"form-control mb-2" } 
-                                                    %>
-                                                    <!--<input type="password" class="form-control mb-2" placeholder="Confirm Password">-->
-                                                    <%= f.input :password_confirmation,
-                                                        required: true,
-                                                        label: false,
-                                                        input_html: { placeholder: "Confirm Password", id:"signup_password_confirm", class:"form-control mb-2" } 
-                                                    %>
-                                                    <div class="checkbox auth-checkbox font-small-2 mb-3">
-                                                      <!--  <input type="checkbox" id="auth-ligin">
-                                                        <label for="auth-ligin"><span>I accept the terms & conditions</span></label>
-                                                        -->
-                                                    </div>
+                                                    <span style="display:flex;">
+                                                        <%= f.input :password,
+                                                            required: true,
+                                                            label: false,
+                                                            hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
+                                                            input_html: { placeholder: "Password", id:"signup_password", class:"form-control mb-2" } 
+                                                        %>
+                                                        
+                                                        <%= f.input :password_confirmation,
+                                                            required: true,
+                                                            label: false,
+                                                            input_html: { placeholder: "Confirm Password", id:"signup_password_confirm", class:"form-control mb-2", style:"margin-left: 10px;" } 
+                                                        %>
+                                                    </span>
+                                                   
                                                     <%= f.input :role_id, 
-                                                        collection: Role.all, 
-                                                        label_method: :role_name, 
+                                                        collection: Role.where.not(id: 1), 
+                                                        label: false,
+                                                        label_method: :role_name,
                                                         value_method: :id,
-                                                        class: "form-control mb-2" 
+                                                        input_html: { placeholder: "Select a role",  class: "form-control mb-2"}
                                                     %>
+                                                    <%= f.label :logo, "Choose Logo" %> 
+                                                    <%= f.file_field :logo, 
+                                                        input_html: {  class: "form-control mb-2" }
+                                                    %>
+                                                    <br> <br>
+                                                    <%= f.label :avatar, "Choose Avatar" %> 
+                                                    <%= f.file_field :avatar, 
+                                                        input_html: {class: "form-control mb-2" }
+                                                    %>
+                                                    <br> <br>
+
+                                                    <span style="margin-left:60px;">I accept the terms & conditions</span>
+                                                     
                                                     <div class="d-flex justify-content-between flex-sm-row flex-column">
-                                                        <a href="auth-login.html" class="btn bg-light-primary mb-2 mb-sm-0">Back To Login</a>
-                                                        <!--<a href="auth-login.html" class="btn btn-primary">Register</a>-->
+                                                        <a href="/new_session_path" class="btn bg-light-primary mb-2 mb-sm-0">Back To Login</a>
                                                         <%= f.button :submit, "Register" %>
                                                     </div>
                                                 </div>
