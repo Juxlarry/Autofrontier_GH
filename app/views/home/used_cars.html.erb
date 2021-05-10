@@ -8184,6 +8184,7 @@
 
     .fronText{
       margin-top:20px;
+      font-weight: 500;
     }
   </style>
   <title data-rh="true">Used Cars For Sale | AutoTrader</title>
@@ -8218,14 +8219,12 @@
           <div class="atds-nav-wrapper">
             <div class="atds-header__group header__shift">
               <a href="/" class="atds-header__logo">
-                  <span style="display: inline; ">
-                    <img class="frontierLogo"
-                        src= "/assets/frontierlogo.png"
-                        >
-                        
-                               </span>
-
-                                 <span class="fronText">AutoFrontier</span>
+                <span style="display: inline; ">
+                  <img class="frontierLogo"
+                   src="/assets/frontierlogo.png"
+                  >    
+                </span>
+                <span class="fronText">AutoFrontier</span>
               </a>
               
               <div class="atds-header-tools wide-hide"><button
@@ -8235,48 +8234,47 @@
                   <div class="atds-menu-btn__outer" aria-hidden="true">
                     <div class="atds-menu-btn__inner" aria-hidden="true"></div>
                   </div><span><span class="visuallyhidden">Open / close </span>Menu</span>
-                </button><a href="/sell-my-car" class="atds-type-mini atds-header-tools__link"><svg
+                </button><a href="#" class="atds-type-mini atds-header-tools__link"><svg
                     xmlns="http://www.w3.org/2000/svg" height="16" width="16" class="atds-svg">
                     <title></title>
                     <path
                       d="M9.1982 11.1807C8.9382 11.1807 8.6982 11.0997 8.4882 11.0207C8.2882 10.9407 8.0972 10.8607 7.8882 10.7897C7.9382 10.5597 7.9582 10.2897 7.9582 9.96969C7.9582 9.70069 7.9082 9.45069 7.8282 9.20069H9.3282V8.43069H7.4982C7.2482 8.02069 7.0282 7.61069 7.0282 7.16969C7.0282 6.56069 7.3582 6.04969 8.0782 6.04969C8.8382 6.04969 9.1282 6.47969 9.1282 7.18069V7.22969H10.0082V7.12969C10.0082 6.02069 9.2672 5.27069 8.0972 5.27069C6.8472 5.27069 6.0882 6.02069 6.0882 7.11969V7.24969C6.0882 7.63969 6.2682 8.09069 6.4482 8.43069H5.8582V9.20069H6.8582C6.9882 9.46969 7.0882 9.75969 7.0882 10.0597C7.0882 10.2497 7.0682 10.4507 7.0492 10.6197H6.9782C6.0882 10.6507 5.6982 11.1807 5.7382 11.9197H6.5972C6.5972 11.5897 6.7782 11.4407 7.1772 11.4407C7.5382 11.4407 7.7672 11.5697 8.0882 11.7007C8.4082 11.8497 8.7282 11.9997 9.1882 11.9997C10.2192 11.9997 10.5682 11.3097 10.5972 10.6197V10.4997H9.7782C9.7982 10.9097 9.6282 11.1807 9.1982 11.1807ZM1.333 14V3.99999H4C4.231 3.99999 4.425 3.87499 4.545 3.69599L4.555 3.70299L5.69 1.99999H10.31L11.445 3.70299L11.455 3.69599C11.575 3.87499 11.769 3.99999 12 3.99999H14.667V14H1.333ZM14.667 2.66699H12.356L11.222 0.963992L11.211 0.970992C11.092 0.791992 10.897 0.666992 10.667 0.666992H5.333C5.103 0.666992 4.908 0.791992 4.789 0.970992L4.778 0.963992L3.644 2.66699H1.333C0.599 2.66699 0 3.26499 0 3.99999V14C0 14.735 0.599 15.333 1.333 15.333H14.667C15.401 15.333 16 14.735 16 14V3.99999C16 3.26499 15.401 2.66699 14.667 2.66699Z">
                     </path>
-                  </svg>Sell</a></div>
+                  </svg>Sell</a>
+              </div>
               <div class="atds-header-tools">
-                <% if user_signed_in? %>
-
-                <% else %>
-                <a href="/users/sign_up"
-                  class="atds-type-mini atds-header-tools__link"><svg xmlns="http://www.w3.org/2000/svg" height="16"
-                    width="16" class="atds-svg">
-                    <title></title>
-                    <path
-                      d="M8 14.185C5.115 11.428 1.333 6.968 1.333 4.454C1.333 2.298 2.713 1.333 4.081 1.333C5.1 1.333 6.157 1.83 7.058 2.73L8 3.672L8.942 2.73C9.843 1.83 10.9 1.333 11.919 1.333C13.287 1.333 14.667 2.298 14.667 4.454C14.667 6.964 10.884 11.426 8 14.185ZM11.919 0C10.632 0 9.226 0.561 8 1.787C6.774 0.561 5.369 0 4.081 0C1.866 0 0 1.661 0 4.454C0 8.872 8 16 8 16C8 16 16 8.872 16 4.454C16 1.66 14.134 0 11.919 0Z">
-                    </path>
-                  </svg>Sign Up</a> 
-                  <% end %>
                   <% if user_signed_in? %>
                     <a href="/users/sign_out" class="atds-header-tools__link atds-type-mini narrow-hide"
                       aria-label="Sign in to your Auto Trader Account">
-                      <span style="display:inline-flex;">
-                        <svg xmlns="http://www.w3.org/2000/svg" height="16"
-                        width="16" class="atds-svg" style="margin-left:-45px;">
-                        <title></title>
-                        <path
-                          d="M8 6.6666C7.265 6.6666 6.667 6.0676 6.667 5.3326C6.667 4.5976 7.265 3.9996 8 3.9996C8.735 3.9996 9.333 4.5976 9.333 5.3326C9.333 6.0676 8.735 6.6666 8 6.6666ZM8 2.6666C6.527 2.6666 5.333 3.8596 5.333 5.3326C5.333 6.8056 6.527 7.9996 8 7.9996C9.473 7.9996 10.667 6.8056 10.667 5.3326C10.667 3.8596 9.473 2.6666 8 2.6666ZM12.8823 12.524C12.0573 10.646 10.1833 9.333 8.0003 9.333C5.8173 9.333 3.9433 10.646 3.1173 12.524C2.0143 11.334 1.3333 9.747 1.3333 8C1.3333 5.427 2.7703 3.129 5.0843 2.003C5.9953 1.558 6.9763 1.333 8.0003 1.333C11.6753 1.333 14.6673 4.324 14.6673 8C14.6673 9.747 13.9863 11.334 12.8823 12.524ZM8.0003 14.667C6.5823 14.667 5.2683 14.217 4.1863 13.46C4.6993 11.842 6.2153 10.667 8.0003 10.667C9.7853 10.667 11.3003 11.842 11.8133 13.46C10.7313 14.217 9.4183 14.667 8.0003 14.667ZM8.0003 0C6.7453 0 5.5573 0.289 4.5003 0.804C1.8363 2.102 0.000301361 4.837 0.000301361 8C0.000301361 10.389 1.0533 12.527 2.7143 13.994C3.1133 14.346 3.5483 14.661 4.0133 14.928C5.1883 15.606 6.5473 16 8.0003 16C9.4533 16 10.8123 15.606 11.9863 14.928C12.4523 14.661 12.8863 14.346 13.2863 13.994C14.9473 12.527 16.0003 10.389 16.0003 8C16.0003 3.582 12.4183 0 8.0003 0Z">
-                        </path>
-                        </svg><span style="margin-left:10px; font-weight:400; font-family: 'ATFabriga', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;">Sign out<span></span>
-                    </a>
+                        <span style="display:inline-flex;">
+                          <svg xmlns="http://www.w3.org/2000/svg" height="16"
+                            width="16" class="atds-svg" style="margin-left:-45px;">
+                            <title></title>
+                            <path
+                              d="M8 6.6666C7.265 6.6666 6.667 6.0676 6.667 5.3326C6.667 4.5976 7.265 3.9996 8 3.9996C8.735 3.9996 9.333 4.5976 9.333 5.3326C9.333 6.0676 8.735 6.6666 8 6.6666ZM8 2.6666C6.527 2.6666 5.333 3.8596 5.333 5.3326C5.333 6.8056 6.527 7.9996 8 7.9996C9.473 7.9996 10.667 6.8056 10.667 5.3326C10.667 3.8596 9.473 2.6666 8 2.6666ZM12.8823 12.524C12.0573 10.646 10.1833 9.333 8.0003 9.333C5.8173 9.333 3.9433 10.646 3.1173 12.524C2.0143 11.334 1.3333 9.747 1.3333 8C1.3333 5.427 2.7703 3.129 5.0843 2.003C5.9953 1.558 6.9763 1.333 8.0003 1.333C11.6753 1.333 14.6673 4.324 14.6673 8C14.6673 9.747 13.9863 11.334 12.8823 12.524ZM8.0003 14.667C6.5823 14.667 5.2683 14.217 4.1863 13.46C4.6993 11.842 6.2153 10.667 8.0003 10.667C9.7853 10.667 11.3003 11.842 11.8133 13.46C10.7313 14.217 9.4183 14.667 8.0003 14.667ZM8.0003 0C6.7453 0 5.5573 0.289 4.5003 0.804C1.8363 2.102 0.000301361 4.837 0.000301361 8C0.000301361 10.389 1.0533 12.527 2.7143 13.994C3.1133 14.346 3.5483 14.661 4.0133 14.928C5.1883 15.606 6.5473 16 8.0003 16C9.4533 16 10.8123 15.606 11.9863 14.928C12.4523 14.661 12.8863 14.346 13.2863 13.994C14.9473 12.527 16.0003 10.389 16.0003 8C16.0003 3.582 12.4183 0 8.0003 0Z">
+                            </path>
+                          </svg><span style="margin-left:10px; font-weight:400; font-family: 'ATFabriga', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;">Sign out<span></span>
+                      </a>
                   <% else %>
-                    <a href="/users/sign_in" class="atds-header-tools__link atds-type-mini narrow-hide"
-                      aria-label="Sign in to your Auto Trader Account"><svg xmlns="http://www.w3.org/2000/svg" height="16"
+                    <a href="/users/sign_up"
+                      class="atds-type-mini atds-header-tools__link"><svg xmlns="http://www.w3.org/2000/svg" height="16"
                       width="16" class="atds-svg">
+                      <title></title>
+                      <path
+                        d="M8 14.185C5.115 11.428 1.333 6.968 1.333 4.454C1.333 2.298 2.713 1.333 4.081 1.333C5.1 1.333 6.157 1.83 7.058 2.73L8 3.672L8.942 2.73C9.843 1.83 10.9 1.333 11.919 1.333C13.287 1.333 14.667 2.298 14.667 4.454C14.667 6.964 10.884 11.426 8 14.185ZM11.919 0C10.632 0 9.226 0.561 8 1.787C6.774 0.561 5.369 0 4.081 0C1.866 0 0 1.661 0 4.454C0 8.872 8 16 8 16C8 16 16 8.872 16 4.454C16 1.66 14.134 0 11.919 0Z">
+                      </path>
+                      </svg>Sign Up
+                    </a> 
+                               
+                    <a href="/users/sign_in" class="atds-header-tools__link atds-type-mini narrow-hide"
+                       aria-label="Sign in to your Auto Trader Account"><svg xmlns="http://www.w3.org/2000/svg" height="16"
+                       width="16" class="atds-svg">
                       <title></title>
                       <path
                         d="M8 6.6666C7.265 6.6666 6.667 6.0676 6.667 5.3326C6.667 4.5976 7.265 3.9996 8 3.9996C8.735 3.9996 9.333 4.5976 9.333 5.3326C9.333 6.0676 8.735 6.6666 8 6.6666ZM8 2.6666C6.527 2.6666 5.333 3.8596 5.333 5.3326C5.333 6.8056 6.527 7.9996 8 7.9996C9.473 7.9996 10.667 6.8056 10.667 5.3326C10.667 3.8596 9.473 2.6666 8 2.6666ZM12.8823 12.524C12.0573 10.646 10.1833 9.333 8.0003 9.333C5.8173 9.333 3.9433 10.646 3.1173 12.524C2.0143 11.334 1.3333 9.747 1.3333 8C1.3333 5.427 2.7703 3.129 5.0843 2.003C5.9953 1.558 6.9763 1.333 8.0003 1.333C11.6753 1.333 14.6673 4.324 14.6673 8C14.6673 9.747 13.9863 11.334 12.8823 12.524ZM8.0003 14.667C6.5823 14.667 5.2683 14.217 4.1863 13.46C4.6993 11.842 6.2153 10.667 8.0003 10.667C9.7853 10.667 11.3003 11.842 11.8133 13.46C10.7313 14.217 9.4183 14.667 8.0003 14.667ZM8.0003 0C6.7453 0 5.5573 0.289 4.5003 0.804C1.8363 2.102 0.000301361 4.837 0.000301361 8C0.000301361 10.389 1.0533 12.527 2.7143 13.994C3.1133 14.346 3.5483 14.661 4.0133 14.928C5.1883 15.606 6.5473 16 8.0003 16C9.4533 16 10.8123 15.606 11.9863 14.928C12.4523 14.661 12.8863 14.346 13.2863 13.994C14.9473 12.527 16.0003 10.389 16.0003 8C16.0003 3.582 12.4183 0 8.0003 0Z">
                       </path>
                       </svg>
-                      Login
+                        Login
                     </a>
                   <% end %>
                 </div>
@@ -8311,13 +8309,13 @@
             </div>
             <div class="atds-header__drawer">
               <h2 class="visuallyhidden" id="primary-navigation">Main site menu</h2>
-              <div class="atds-drawer-account wide-hide"><a href="/secure/signin" class="atds-login-button"><svg
+              <div class="atds-drawer-account wide-hide"><a href="/users/sign_in" class="atds-login-button"><svg
                     xmlns="http://www.w3.org/2000/svg" height="16" width="16" class="atds-svg">
                     <title></title>
                     <path
                       d="M8 6.6666C7.265 6.6666 6.667 6.0676 6.667 5.3326C6.667 4.5976 7.265 3.9996 8 3.9996C8.735 3.9996 9.333 4.5976 9.333 5.3326C9.333 6.0676 8.735 6.6666 8 6.6666ZM8 2.6666C6.527 2.6666 5.333 3.8596 5.333 5.3326C5.333 6.8056 6.527 7.9996 8 7.9996C9.473 7.9996 10.667 6.8056 10.667 5.3326C10.667 3.8596 9.473 2.6666 8 2.6666ZM12.8823 12.524C12.0573 10.646 10.1833 9.333 8.0003 9.333C5.8173 9.333 3.9433 10.646 3.1173 12.524C2.0143 11.334 1.3333 9.747 1.3333 8C1.3333 5.427 2.7703 3.129 5.0843 2.003C5.9953 1.558 6.9763 1.333 8.0003 1.333C11.6753 1.333 14.6673 4.324 14.6673 8C14.6673 9.747 13.9863 11.334 12.8823 12.524ZM8.0003 14.667C6.5823 14.667 5.2683 14.217 4.1863 13.46C4.6993 11.842 6.2153 10.667 8.0003 10.667C9.7853 10.667 11.3003 11.842 11.8133 13.46C10.7313 14.217 9.4183 14.667 8.0003 14.667ZM8.0003 0C6.7453 0 5.5573 0.289 4.5003 0.804C1.8363 2.102 0.000301361 4.837 0.000301361 8C0.000301361 10.389 1.0533 12.527 2.7143 13.994C3.1133 14.346 3.5483 14.661 4.0133 14.928C5.1883 15.606 6.5473 16 8.0003 16C9.4533 16 10.8123 15.606 11.9863 14.928C12.4523 14.661 12.8863 14.346 13.2863 13.994C14.9473 12.527 16.0003 10.389 16.0003 8C16.0003 3.582 12.4183 0 8.0003 0Z">
                     </path>
-                  </svg> <!-- -->Sign up or sign in</a></div>
+                  </svg> <!-- -->Sign up or Sign in</a></div>
               <h3 class="visuallyhidden" id="channel-switcher-heading">Vehicle types</h3>
               <div class="wide-hide">
                 <ul class="atds-channel-switcher atds-type-mini" role="menu" aria-labelledby="channel-switcher-heading">
@@ -8352,7 +8350,7 @@
                     href="/used-cars" class="atds-primary-navigation__link">Used cars</a></li>
                 <li class="atds-primary-navigation__item" role="menuitem"><a href="/new_cars"
                     class="atds-primary-navigation__link">New cars</a></li>
-                <li class="atds-primary-navigation__item" role="menuitem"><a href="/car_sell"
+                <li class="atds-primary-navigation__item" role="menuitem"><a href="/sell_cars"
                     class="atds-primary-navigation__link">Sell your car</a></li>
                 <li class="atds-primary-navigation__item" role="menuitem"><a href="#"
                     class="atds-primary-navigation__link">Value your car</a></li>
