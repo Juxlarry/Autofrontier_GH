@@ -29,7 +29,9 @@ gem 'bootstrap-datepicker-rails'
 
 gem 'devise'
 
-
+#mysql2 gem for development only
+  # Use mysql as the database for Active Record
+  gem 'mysql2', '~> 0.5'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
@@ -49,9 +51,7 @@ group :development do
   # Can be configured to work on production as well see: https://github.com/MiniProfiler/rack-mini-profiler/blob/master/README.md
   # gem 'rack-mini-profiler', '~> 2.0'
 
-  #mysql2 gem for development only
-  # Use mysql as the database for Active Record
-  gem 'mysql2', '~> 0.5'
+  
 end
 
 group :test do
@@ -65,7 +65,7 @@ end
 group :production do
 
   #postgres for production
-  gem 'pg'
+  # gem 'pg'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
