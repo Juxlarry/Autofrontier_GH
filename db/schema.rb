@@ -12,7 +12,10 @@
 
 ActiveRecord::Schema.define(version: 2021_04_30_214034) do
 
-  create_table "active_storage_attachments", charset: "utf8mb4", force: :cascade do |t|
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
+  create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
     t.string "record_type", null: false
     t.bigint "record_id", null: false
@@ -22,7 +25,7 @@ ActiveRecord::Schema.define(version: 2021_04_30_214034) do
     t.index ["record_type", "record_id", "name", "blob_id"], name: "index_active_storage_attachments_uniqueness", unique: true
   end
 
-  create_table "active_storage_blobs", charset: "utf8mb4", force: :cascade do |t|
+  create_table "active_storage_blobs", force: :cascade do |t|
     t.string "key", null: false
     t.string "filename", null: false
     t.string "content_type"
@@ -34,13 +37,13 @@ ActiveRecord::Schema.define(version: 2021_04_30_214034) do
     t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
   end
 
-  create_table "active_storage_variant_records", charset: "utf8mb4", force: :cascade do |t|
+  create_table "active_storage_variant_records", force: :cascade do |t|
     t.bigint "blob_id", null: false
     t.string "variation_digest", null: false
     t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
   end
 
-  create_table "car_bodies", charset: "utf8mb4", force: :cascade do |t|
+  create_table "car_bodies", force: :cascade do |t|
     t.string "type_name"
     t.boolean "status"
     t.text "comments"
@@ -48,7 +51,7 @@ ActiveRecord::Schema.define(version: 2021_04_30_214034) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "car_colours", charset: "utf8mb4", force: :cascade do |t|
+  create_table "car_colours", force: :cascade do |t|
     t.string "name"
     t.boolean "status"
     t.text "comments"
@@ -56,7 +59,7 @@ ActiveRecord::Schema.define(version: 2021_04_30_214034) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "car_cylinders", charset: "utf8mb4", force: :cascade do |t|
+  create_table "car_cylinders", force: :cascade do |t|
     t.integer "cylinder"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -64,7 +67,7 @@ ActiveRecord::Schema.define(version: 2021_04_30_214034) do
     t.boolean "status"
   end
 
-  create_table "car_documents", charset: "utf8mb4", force: :cascade do |t|
+  create_table "car_documents", force: :cascade do |t|
     t.string "doc_type"
     t.boolean "doc_valid"
     t.datetime "created_at", precision: 6, null: false
@@ -73,7 +76,7 @@ ActiveRecord::Schema.define(version: 2021_04_30_214034) do
     t.boolean "status"
   end
 
-  create_table "car_drives", charset: "utf8mb4", force: :cascade do |t|
+  create_table "car_drives", force: :cascade do |t|
     t.string "drive_type"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -81,7 +84,7 @@ ActiveRecord::Schema.define(version: 2021_04_30_214034) do
     t.text "comments"
   end
 
-  create_table "car_engines", charset: "utf8mb4", force: :cascade do |t|
+  create_table "car_engines", force: :cascade do |t|
     t.string "engine_type"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -89,7 +92,7 @@ ActiveRecord::Schema.define(version: 2021_04_30_214034) do
     t.text "comments"
   end
 
-  create_table "car_makes", charset: "utf8mb4", force: :cascade do |t|
+  create_table "car_makes", force: :cascade do |t|
     t.string "name"
     t.boolean "status"
     t.text "comments"
@@ -97,7 +100,7 @@ ActiveRecord::Schema.define(version: 2021_04_30_214034) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "car_models", charset: "utf8mb4", force: :cascade do |t|
+  create_table "car_models", force: :cascade do |t|
     t.string "name"
     t.boolean "status"
     t.text "comments"
@@ -107,7 +110,7 @@ ActiveRecord::Schema.define(version: 2021_04_30_214034) do
     t.integer "model_date"
   end
 
-  create_table "car_transmissions", charset: "utf8mb4", force: :cascade do |t|
+  create_table "car_transmissions", force: :cascade do |t|
     t.string "name"
     t.boolean "status"
     t.text "comments"
@@ -115,7 +118,7 @@ ActiveRecord::Schema.define(version: 2021_04_30_214034) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "car_types", charset: "utf8mb4", force: :cascade do |t|
+  create_table "car_types", force: :cascade do |t|
     t.string "name"
     t.boolean "status"
     t.text "comments"
@@ -123,7 +126,7 @@ ActiveRecord::Schema.define(version: 2021_04_30_214034) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "cars", charset: "utf8mb4", force: :cascade do |t|
+  create_table "cars", force: :cascade do |t|
     t.string "car_name"
     t.integer "car_type_id"
     t.string "car_registration_number"
@@ -160,7 +163,7 @@ ActiveRecord::Schema.define(version: 2021_04_30_214034) do
     t.integer "car_user_id"
   end
 
-  create_table "fuel_types", charset: "utf8mb4", force: :cascade do |t|
+  create_table "fuel_types", force: :cascade do |t|
     t.string "fuel_type"
     t.boolean "status"
     t.text "comments"
@@ -168,35 +171,44 @@ ActiveRecord::Schema.define(version: 2021_04_30_214034) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "roles", charset: "utf8mb4", force: :cascade do |t|
+  create_table "roles", force: :cascade do |t|
     t.string "role_name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "users", charset: "utf8mb4", force: :cascade do |t|
-    t.string "email"
-    t.string "encrypted_password"
+  create_table "users", force: :cascade do |t|
+    t.string "email", default: "", null: false
+    t.string "encrypted_password", default: "", null: false
+    t.string "mobile_number"
+    t.integer "role_id"
+    t.boolean "status"
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.integer "sign_in_count"
+    t.integer "sign_in_count", default: 0, null: false
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
     t.string "current_sign_in_ip"
     t.string "last_sign_in_ip"
-    t.string "mobile_number"
-    t.integer "role_id"
-    t.boolean "status"
+    t.string "confirmation_token"
+    t.datetime "confirmed_at"
+    t.datetime "confirmation_sent_at"
+    t.string "unconfirmed_email"
+    t.integer "failed_attempts", default: 0, null: false
+    t.string "unlock_token"
+    t.datetime "locked_at"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "firstname"
     t.string "othernames"
     t.string "username"
+    t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
     t.index ["username"], name: "index_users_on_username", unique: true
   end
 
-  create_table "vehicle_types", charset: "utf8mb4", force: :cascade do |t|
+  create_table "vehicle_types", force: :cascade do |t|
     t.string "vehicle"
     t.text "comments"
     t.boolean "status"
@@ -204,7 +216,7 @@ ActiveRecord::Schema.define(version: 2021_04_30_214034) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "vehicleenquiries", charset: "utf8mb4", force: :cascade do |t|
+  create_table "vehicleenquiries", force: :cascade do |t|
     t.string "firstname"
     t.string "lastname"
     t.string "email"

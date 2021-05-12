@@ -1,0 +1,1224 @@
+
+---
+active_storage_attachments:
+  columns:
+  - id
+  - name
+  - record_type
+  - record_id
+  - blob_id
+  - created_at
+  records: 
+  - - 7
+    - images
+    - Car
+    - 4
+    - 7
+    - 2021-04-17 18:53:28.000000000 Z
+  - - 8
+    - images
+    - Car
+    - 4
+    - 8
+    - 2021-04-17 18:53:28.000000000 Z
+  - - 9
+    - images
+    - Car
+    - 4
+    - 9
+    - 2021-04-17 18:53:28.000000000 Z
+  - - 10
+    - images
+    - Car
+    - 4
+    - 10
+    - 2021-04-17 18:53:28.000000000 Z
+  - - 11
+    - images
+    - Car
+    - 4
+    - 11
+    - 2021-04-17 18:53:28.000000000 Z
+  - - 12
+    - images
+    - Car
+    - 4
+    - 12
+    - 2021-04-17 18:53:28.000000000 Z
+  - - 13
+    - images
+    - Car
+    - 4
+    - 13
+    - 2021-04-17 18:53:29.000000000 Z
+  - - 14
+    - images
+    - Car
+    - 4
+    - 14
+    - 2021-04-17 18:53:29.000000000 Z
+  - - 15
+    - images
+    - Car
+    - 4
+    - 15
+    - 2021-04-17 18:53:29.000000000 Z
+  - - 16
+    - images
+    - Car
+    - 4
+    - 16
+    - 2021-04-17 18:53:29.000000000 Z
+  - - 56
+    - images
+    - Car
+    - 1
+    - 56
+    - 2021-04-27 01:13:50.000000000 Z
+  - - 57
+    - images
+    - Car
+    - 1
+    - 57
+    - 2021-04-27 01:13:50.000000000 Z
+  - - 58
+    - images
+    - Car
+    - 1
+    - 58
+    - 2021-04-27 01:13:50.000000000 Z
+  - - 59
+    - images
+    - Car
+    - 1
+    - 59
+    - 2021-04-27 01:13:50.000000000 Z
+  - - 60
+    - images
+    - Car
+    - 1
+    - 60
+    - 2021-04-27 01:13:50.000000000 Z
+  - - 61
+    - images
+    - Car
+    - 1
+    - 61
+    - 2021-04-27 01:13:50.000000000 Z
+  - - 62
+    - images
+    - Car
+    - 1
+    - 62
+    - 2021-04-27 01:13:50.000000000 Z
+  - - 63
+    - images
+    - Car
+    - 1
+    - 63
+    - 2021-04-27 01:13:51.000000000 Z
+  - - 64
+    - images
+    - Car
+    - 1
+    - 64
+    - 2021-04-27 01:13:51.000000000 Z
+  - - 65
+    - images
+    - Car
+    - 1
+    - 65
+    - 2021-04-27 01:13:51.000000000 Z
+  - - 66
+    - images
+    - Car
+    - 2
+    - 66
+    - 2021-04-27 01:17:02.000000000 Z
+  - - 67
+    - images
+    - Car
+    - 2
+    - 67
+    - 2021-04-27 01:17:02.000000000 Z
+  - - 68
+    - images
+    - Car
+    - 2
+    - 68
+    - 2021-04-27 01:17:02.000000000 Z
+  - - 69
+    - images
+    - Car
+    - 2
+    - 69
+    - 2021-04-27 01:17:02.000000000 Z
+  - - 70
+    - images
+    - Car
+    - 2
+    - 70
+    - 2021-04-27 01:17:02.000000000 Z
+  - - 71
+    - images
+    - Car
+    - 2
+    - 71
+    - 2021-04-27 01:17:02.000000000 Z
+  - - 72
+    - images
+    - Car
+    - 2
+    - 72
+    - 2021-04-27 01:17:02.000000000 Z
+  - - 73
+    - images
+    - Car
+    - 2
+    - 73
+    - 2021-04-27 01:17:02.000000000 Z
+  - - 74
+    - images
+    - Car
+    - 2
+    - 74
+    - 2021-04-27 01:17:02.000000000 Z
+  - - 75
+    - images
+    - Car
+    - 2
+    - 75
+    - 2021-04-27 01:17:02.000000000 Z
+  - - 76
+    - images
+    - Car
+    - 3
+    - 76
+    - 2021-05-06 17:46:12.000000000 Z
+  - - 77
+    - avatar
+    - User
+    - 5
+    - 77
+    - 2021-05-07 00:59:15.000000000 Z
+  - - 78
+    - logo
+    - User
+    - 5
+    - 78
+    - 2021-05-07 00:59:15.000000000 Z
+
+---
+active_storage_blobs:
+  columns:
+  - id
+  - key
+  - filename
+  - content_type
+  - metadata
+  - service_name
+  - byte_size
+  - checksum
+  - created_at
+  records: 
+  - - 7
+    - 0e15l2a4wzyk8fxe9pwd5oxifk1z
+    - 30811361_Image_1.JPG
+    - image/jpeg
+    - '{"identified":true,"analyzed":true}'
+    - local
+    - 47058
+    - Sxd1VD6sVp3coEbsP76gkQ==
+    - 2021-04-17 18:53:28.000000000 Z
+  - - 8
+    - wli55hscpolsy99yehs4q5fd7jc2
+    - 30811361_Image_2.JPG
+    - image/jpeg
+    - '{"identified":true,"analyzed":true}'
+    - local
+    - 49697
+    - NgOoiaCA0jxo4y5DJeVffw==
+    - 2021-04-17 18:53:28.000000000 Z
+  - - 9
+    - gwppfs403aag9k6h7sp4hu5pfqha
+    - 30811361_Image_3.JPG
+    - image/jpeg
+    - '{"identified":true,"analyzed":true}'
+    - local
+    - 46213
+    - rWTnUE2aMZ8Ig1hBIbjAtA==
+    - 2021-04-17 18:53:28.000000000 Z
+  - - 10
+    - sk5m58s4k6lvk9jkk5qv3c8pme4r
+    - 30811361_Image_4.JPG
+    - image/jpeg
+    - '{"identified":true,"analyzed":true}'
+    - local
+    - 45692
+    - oMR6/tXvK/4hK2y+IIguGg==
+    - 2021-04-17 18:53:28.000000000 Z
+  - - 11
+    - fdvxny6ze342kgnoi2mttzvsi2kr
+    - 30811361_Image_5.JPG
+    - image/jpeg
+    - '{"identified":true,"analyzed":true}'
+    - local
+    - 43113
+    - JsBpmhQwkzE1HhnAP2HpJg==
+    - 2021-04-17 18:53:28.000000000 Z
+  - - 12
+    - rjvyrofnad0qwfktfnt9skkjaf0i
+    - 30811361_Image_6.JPG
+    - image/jpeg
+    - '{"identified":true,"analyzed":true}'
+    - local
+    - 36237
+    - 4PvH151xRMl7Y02/UY3DDA==
+    - 2021-04-17 18:53:28.000000000 Z
+  - - 13
+    - 4arxss12sl10edyi5c2mx7jz9grf
+    - 30811361_Image_7.JPG
+    - image/jpeg
+    - '{"identified":true,"analyzed":true}'
+    - local
+    - 51124
+    - SQvu8+/+QjHyehvmQd0PsQ==
+    - 2021-04-17 18:53:28.000000000 Z
+  - - 14
+    - 5q2mlif76hyy4b03g4wgky1pwn1k
+    - 30811361_Image_8.JPG
+    - image/jpeg
+    - '{"identified":true,"analyzed":true}'
+    - local
+    - 30511
+    - 2C83vzp9aQrCgZNsj3z7ig==
+    - 2021-04-17 18:53:29.000000000 Z
+  - - 15
+    - 0ctvhuoyis5v12ewm7lk0t7xx0q9
+    - 30811361_Image_9.JPG
+    - image/jpeg
+    - '{"identified":true,"analyzed":true}'
+    - local
+    - 47120
+    - Ye4CsElYP4E61uwObRgcXg==
+    - 2021-04-17 18:53:29.000000000 Z
+  - - 16
+    - dcje3dlh8nsookxu966cuqmok33i
+    - 30811361_Image_10.JPG
+    - image/jpeg
+    - '{"identified":true,"analyzed":true}'
+    - local
+    - 57111
+    - 2AZ+F4jBYlCany1u6WI1eA==
+    - 2021-04-17 18:53:29.000000000 Z
+  - - 56
+    - blkofj07bvkilvv4l77qwh03n9dn
+    - 30811361_Image_1.JPG
+    - image/jpeg
+    - '{"identified":true,"width":640,"height":480,"analyzed":true}'
+    - local
+    - 47058
+    - Sxd1VD6sVp3coEbsP76gkQ==
+    - 2021-04-27 01:13:50.000000000 Z
+  - - 57
+    - mqrc2e5o5iwjmy8daze59cno7b0u
+    - 30811361_Image_2.JPG
+    - image/jpeg
+    - '{"identified":true,"width":640,"height":480,"analyzed":true}'
+    - local
+    - 49697
+    - NgOoiaCA0jxo4y5DJeVffw==
+    - 2021-04-27 01:13:50.000000000 Z
+  - - 58
+    - k7orkcuc6000t909jqp8v1cqjqvr
+    - 30811361_Image_3.JPG
+    - image/jpeg
+    - '{"identified":true,"width":640,"height":480,"analyzed":true}'
+    - local
+    - 46213
+    - rWTnUE2aMZ8Ig1hBIbjAtA==
+    - 2021-04-27 01:13:50.000000000 Z
+  - - 59
+    - hp2awdzmt2sohpn7hp1lpn2q5a93
+    - 30811361_Image_4.JPG
+    - image/jpeg
+    - '{"identified":true,"width":640,"height":480,"analyzed":true}'
+    - local
+    - 45692
+    - oMR6/tXvK/4hK2y+IIguGg==
+    - 2021-04-27 01:13:50.000000000 Z
+  - - 60
+    - jbqys29vzlaefxg5na0blj98vues
+    - 30811361_Image_5.JPG
+    - image/jpeg
+    - '{"identified":true,"width":640,"height":480,"analyzed":true}'
+    - local
+    - 43113
+    - JsBpmhQwkzE1HhnAP2HpJg==
+    - 2021-04-27 01:13:50.000000000 Z
+  - - 61
+    - fuk903i4bzv2v4afe7rlc22g325d
+    - 30811361_Image_6.JPG
+    - image/jpeg
+    - '{"identified":true,"width":640,"height":480,"analyzed":true}'
+    - local
+    - 36237
+    - 4PvH151xRMl7Y02/UY3DDA==
+    - 2021-04-27 01:13:50.000000000 Z
+  - - 62
+    - br95uw9jk8s01hhnfpdwe362kb2g
+    - 30811361_Image_7.JPG
+    - image/jpeg
+    - '{"identified":true,"width":640,"height":480,"analyzed":true}'
+    - local
+    - 51124
+    - SQvu8+/+QjHyehvmQd0PsQ==
+    - 2021-04-27 01:13:50.000000000 Z
+  - - 63
+    - lzqpvugv3ec1mbvekc1bjd2ynu0r
+    - 30811361_Image_8.JPG
+    - image/jpeg
+    - '{"identified":true,"width":640,"height":480,"analyzed":true}'
+    - local
+    - 30511
+    - 2C83vzp9aQrCgZNsj3z7ig==
+    - 2021-04-27 01:13:50.000000000 Z
+  - - 64
+    - ud1delz16rkh2euxvo2u4f3oho94
+    - 30811361_Image_9.JPG
+    - image/jpeg
+    - '{"identified":true,"width":640,"height":480,"analyzed":true}'
+    - local
+    - 47120
+    - Ye4CsElYP4E61uwObRgcXg==
+    - 2021-04-27 01:13:51.000000000 Z
+  - - 65
+    - apcg0507hk2dlky3s0e2cfm06tuo
+    - 30811361_Image_10.JPG
+    - image/jpeg
+    - '{"identified":true,"width":640,"height":480,"analyzed":true}'
+    - local
+    - 57111
+    - 2AZ+F4jBYlCany1u6WI1eA==
+    - 2021-04-27 01:13:51.000000000 Z
+  - - 66
+    - gx4nxnbfislmfp9o3a7mprel4umv
+    - 30555941_Image_1.JPG
+    - image/jpeg
+    - '{"identified":true,"width":640,"height":480,"analyzed":true}'
+    - local
+    - 65515
+    - GI/u4E0sSNyCXA3LtfMRlA==
+    - 2021-04-27 01:17:02.000000000 Z
+  - - 67
+    - qy8oy29hgnhtwfgnp6gjcx2ldo9x
+    - 30555941_Image_2.JPG
+    - image/jpeg
+    - '{"identified":true,"width":640,"height":480,"analyzed":true}'
+    - local
+    - 63855
+    - m8F31m8Z4MyW5jgVNowGZg==
+    - 2021-04-27 01:17:02.000000000 Z
+  - - 68
+    - wq3d81lnb1z06wvaxqxn6qtogexo
+    - 30555941_Image_3.JPG
+    - image/jpeg
+    - '{"identified":true,"width":640,"height":480,"analyzed":true}'
+    - local
+    - 55547
+    - 8pwksLJstUKmVMdfQM/oVw==
+    - 2021-04-27 01:17:02.000000000 Z
+  - - 69
+    - f5qjjzymst4kby6cptl82kjtaydw
+    - 30555941_Image_4.JPG
+    - image/jpeg
+    - '{"identified":true,"width":640,"height":480,"analyzed":true}'
+    - local
+    - 56044
+    - ORyR5x6mQK1PyuhsWnb1KA==
+    - 2021-04-27 01:17:02.000000000 Z
+  - - 70
+    - r1jp7v40ubxcwk8t40yqqzwzah9m
+    - 30555941_Image_5.JPG
+    - image/jpeg
+    - '{"identified":true,"width":640,"height":480,"analyzed":true}'
+    - local
+    - 43583
+    - ER6P/w89FvxcaAjacVAedQ==
+    - 2021-04-27 01:17:02.000000000 Z
+  - - 71
+    - bfxwf57tvvb4u9x90d75bf5frw3e
+    - 30555941_Image_6.JPG
+    - image/jpeg
+    - '{"identified":true,"width":640,"height":480,"analyzed":true}'
+    - local
+    - 39646
+    - iGwe5LgynPcTNTQOos5I9g==
+    - 2021-04-27 01:17:02.000000000 Z
+  - - 72
+    - 9seyezsege6mg5873vgsrhcunbty
+    - 30555941_Image_7.JPG
+    - image/jpeg
+    - '{"identified":true,"width":640,"height":480,"analyzed":true}'
+    - local
+    - 55598
+    - Nhw5juSt10g+gT0eBgl1ag==
+    - 2021-04-27 01:17:02.000000000 Z
+  - - 73
+    - isg6b85h9q3t71zi2a512hvz6my2
+    - 30555941_Image_8.JPG
+    - image/jpeg
+    - '{"identified":true,"width":640,"height":480,"analyzed":true}'
+    - local
+    - 16975
+    - LDCAf++S4qgUlhT6G6dIHA==
+    - 2021-04-27 01:17:02.000000000 Z
+  - - 74
+    - acr7jrk5y2b25rolh2eutwwzdvg1
+    - 30555941_Image_9.JPG
+    - image/jpeg
+    - '{"identified":true,"width":640,"height":480,"analyzed":true}'
+    - local
+    - 71182
+    - 8cnbjTbvXF7QwuQDpgL4BA==
+    - 2021-04-27 01:17:02.000000000 Z
+  - - 75
+    - sbsevvq9a22a5vdeaqo8pme4wkz0
+    - 30555941_Image_10.JPG
+    - image/jpeg
+    - '{"identified":true,"width":640,"height":480,"analyzed":true}'
+    - local
+    - 64632
+    - "/Lv2GrzqftG7h8H8Q1wy3g=="
+    - 2021-04-27 01:17:02.000000000 Z
+  - - 76
+    - nrcn56my7vtritn16ac4cv9tf4z9
+    - Camry LE 2016.JPG
+    - image/jpeg
+    - '{"identified":true,"width":640,"height":480,"analyzed":true}'
+    - local
+    - 41442
+    - qLh0dvMLRJItrpd4pEKf9A==
+    - 2021-05-06 17:46:12.000000000 Z
+  - - 77
+    - ilgzxnan14t6qskbjf2ghz9u0y7k
+    - ss.jpg
+    - image/jpeg
+    - '{"identified":true,"width":463,"height":458,"analyzed":true}'
+    - local
+    - 43790
+    - QwW5Rl5NgpVmqZzuV+Dmqg==
+    - 2021-05-07 00:59:15.000000000 Z
+  - - 78
+    - 9cyd0hw0cfo9fnklbsndh639an72
+    - regis.jpg
+    - image/jpeg
+    - '{"identified":true,"width":1009,"height":486,"analyzed":true}'
+    - local
+    - 99245
+    - Ygq+Akqo74W8KsU2/AEz6w==
+    - 2021-05-07 00:59:15.000000000 Z
+
+---
+ar_internal_metadata:
+  columns:
+  - key
+  - value
+  - created_at
+  - updated_at
+  records: 
+  - - environment
+    - development
+    - 2021-04-15 18:19:49.257139000 Z
+    - 2021-04-15 18:19:49.257139000 Z
+
+---
+car_bodies:
+  columns:
+  - id
+  - type_name
+  - status
+  - comments
+  - created_at
+  - updated_at
+  records: 
+  - - 1
+    - Chassis Cab
+    - false
+    - ''
+    - 2021-04-16 00:29:51.307787000 Z
+    - 2021-04-16 00:29:51.307787000 Z
+  - - 2
+    - Camper
+    - false
+    - ''
+    - 2021-04-16 00:30:45.259130000 Z
+    - 2021-04-16 00:30:45.259130000 Z
+  - - 3
+    - SUV
+    - false
+    - ''
+    - 2021-04-16 00:30:53.594465000 Z
+    - 2021-04-16 00:30:53.594465000 Z
+  - - 4
+    - Pickup
+    - false
+    - ''
+    - 2021-04-16 00:31:08.580921000 Z
+    - 2021-04-16 00:31:08.580921000 Z
+  - - 5
+    - Saloon
+    - false
+    - ''
+    - 2021-04-16 00:31:19.597730000 Z
+    - 2021-04-16 00:31:19.597730000 Z
+  - - 6
+    - Estate
+    - false
+    - ''
+    - 2021-04-16 00:31:31.449501000 Z
+    - 2021-04-16 00:31:31.449501000 Z
+  - - 7
+    - Coupe
+    - false
+    - ''
+    - 2021-04-16 00:31:47.604832000 Z
+    - 2021-04-16 00:31:47.604832000 Z
+  - - 10
+    - Convertible
+    - false
+    - ''
+    - 2021-04-16 00:45:57.023263000 Z
+    - 2021-04-16 00:45:57.023263000 Z
+  - - 11
+    - Tipper
+    - false
+    - ''
+    - 2021-04-16 01:09:50.245550000 Z
+    - 2021-04-16 01:09:50.245550000 Z
+  - - 12
+    - Limousine
+    - false
+    - ''
+    - 2021-04-16 03:59:17.126335000 Z
+    - 2021-04-16 03:59:17.126335000 Z
+  - - 13
+    - Tipper
+    - false
+    - ''
+    - 2021-04-16 04:00:14.334105000 Z
+    - 2021-04-16 04:00:14.334105000 Z
+  - - 14
+    - Hatchback
+    - false
+    - ''
+    - 2021-04-16 04:04:02.226816000 Z
+    - 2021-04-16 04:04:02.226816000 Z
+  - - 15
+    - Minibus
+    - false
+    - ''
+    - 2021-04-16 04:27:30.695616000 Z
+    - 2021-04-16 04:27:30.695616000 Z
+  - - 16
+    - Combi van
+    - false
+    - ''
+    - 2021-04-16 04:28:50.064228000 Z
+    - 2021-04-16 04:28:50.064228000 Z
+
+---
+car_colours:
+  columns:
+  - id
+  - name
+  - status
+  - comments
+  - created_at
+  - updated_at
+  records: 
+  - - 1
+    - Black
+    - false
+    - ''
+    - 2021-04-15 21:28:43.136427000 Z
+    - 2021-04-15 21:28:43.136427000 Z
+  - - 2
+    - Blue
+    - false
+    - ''
+    - 2021-04-15 23:10:29.545423000 Z
+    - 2021-04-15 23:10:29.545423000 Z
+  - - 3
+    - red
+    - false
+    - ''
+    - 2021-04-15 23:19:43.271153000 Z
+    - 2021-04-15 23:19:43.271153000 Z
+  - - 4
+    - Silver
+    - false
+    - ''
+    - 2021-04-15 23:52:02.453457000 Z
+    - 2021-04-15 23:52:02.453457000 Z
+  - - 5
+    - Yellow
+    - false
+    - ''
+    - 2021-04-15 23:55:47.345183000 Z
+    - 2021-04-15 23:55:47.345183000 Z
+  - - 6
+    - Gold
+    - false
+    - ''
+    - 2021-04-16 04:33:29.270357000 Z
+    - 2021-04-16 04:33:29.270357000 Z
+  - - 7
+    - Bronze
+    - false
+    - ''
+    - 2021-04-16 04:36:35.421912000 Z
+    - 2021-04-16 04:36:35.421912000 Z
+  - - 8
+    - White
+    - false
+    - ''
+    - 2021-04-23 20:40:35.067011000 Z
+    - 2021-04-23 20:40:35.067011000 Z
+  - - 9
+    - Charcoal
+    - false
+    - ''
+    - 2021-04-24 07:58:10.244775000 Z
+    - 2021-04-24 07:58:10.244775000 Z
+  - - 10
+    - Gray
+    - false
+    - ''
+    - 2021-04-24 08:09:24.506324000 Z
+    - 2021-04-24 08:09:24.506324000 Z
+
+---
+car_cylinders:
+  columns:
+  - id
+  - cylinder
+  - created_at
+  - updated_at
+  - comments
+  - status
+  records: 
+  - - 1
+    - 5
+    - 2021-04-24 07:01:39.929785000 Z
+    - 2021-04-24 07:01:59.243461000 Z
+    -
+    - false
+  - - 2
+    - 4
+    - 2021-04-24 07:02:13.157069000 Z
+    - 2021-04-24 07:02:13.157069000 Z
+    -
+    - false
+
+---
+car_documents:
+  columns:
+  - id
+  - doc_type
+  - doc_valid
+  - created_at
+  - updated_at
+  - comments
+  - status
+  records: 
+  - - 1
+    - PA - CERTIFICATE OF SALVAGE
+    - true
+    - 2021-04-24 05:34:02.626529000 Z
+    - 2021-04-24 05:34:02.626529000 Z
+    -
+    - false
+  - - 2
+    - MD - CERT OF SALVAGE > 75% DAMAGE
+    - true
+    - 2021-04-24 05:40:02.210891000 Z
+    - 2021-04-24 05:40:02.210891000 Z
+    -
+    - false
+
+---
+car_drives:
+  columns:
+  - id
+  - drive_type
+  - created_at
+  - updated_at
+  - status
+  - comments
+  records: 
+  - - 1
+    - 'Front-wheel '
+    - 2021-04-24 06:47:03.437382000 Z
+    - 2021-04-24 06:47:03.437382000 Z
+    - false
+    -
+
+---
+car_engines:
+  columns:
+  - id
+  - engine_type
+  - created_at
+  - updated_at
+  - status
+  - comments
+  records: 
+  - - 1
+    - 2.5L 4
+    - 2021-04-24 06:03:32.765001000 Z
+    - 2021-04-24 06:03:32.765001000 Z
+    - false
+    -
+
+---
+car_makes:
+  columns:
+  - id
+  - name
+  - status
+  - comments
+  - created_at
+  - updated_at
+  records: 
+  - - 1
+    - Audi
+    - false
+    - ''
+    - 2021-04-16 05:11:21.779411000 Z
+    - 2021-04-16 05:11:21.779411000 Z
+  - - 2
+    - Ascari
+    - false
+    - ''
+    - 2021-04-16 05:12:52.545843000 Z
+    - 2021-04-16 05:12:52.545843000 Z
+  - - 4
+    - Alfa Romeo
+    - false
+    - ''
+    - 2021-04-16 05:16:30.999274000 Z
+    - 2021-04-16 05:16:30.999274000 Z
+  - - 5
+    - Ariel
+    - false
+    - ''
+    - 2021-04-16 05:18:17.735193000 Z
+    - 2021-04-16 05:18:17.735193000 Z
+  - - 6
+    - BMW
+    - false
+    - ''
+    - 2021-04-16 05:18:47.832565000 Z
+    - 2021-04-16 05:18:47.832565000 Z
+  - - 7
+    - Toyota
+    - false
+    - ''
+    - 2021-04-17 18:49:39.788472000 Z
+    - 2021-04-17 18:49:39.788472000 Z
+
+---
+car_models:
+  columns:
+  - id
+  - name
+  - status
+  - comments
+  - created_at
+  - updated_at
+  - make_id
+  - model_date
+  records: 
+  - - 1
+    - M8 Gran Coupe
+    - false
+    - ''
+    - 2021-04-16 19:40:45.181055000 Z
+    - 2021-04-16 19:40:45.181055000 Z
+    - 6
+    -
+  - - 2
+    - 3 series
+    - false
+    - ''
+    - 2021-04-16 19:50:32.552077000 Z
+    - 2021-04-16 19:50:32.552077000 Z
+    - 6
+    -
+  - - 3
+    - A7
+    - false
+    - ''
+    - 2021-04-17 17:50:06.287627000 Z
+    - 2021-04-17 17:50:06.287627000 Z
+    - 1
+    -
+  - - 4
+    - Camry
+    - false
+    - ''
+    - 2021-04-17 18:50:31.310171000 Z
+    - 2021-04-24 07:42:30.781421000 Z
+    - 7
+    - 2012
+
+---
+car_transmissions:
+  columns:
+  - id
+  - name
+  - status
+  - comments
+  - created_at
+  - updated_at
+  records: 
+  - - 1
+    - Automatic
+    - false
+    - ''
+    - 2021-04-16 21:20:41.667857000 Z
+    - 2021-04-16 21:20:41.667857000 Z
+  - - 3
+    - Manual
+    - false
+    - ''
+    - 2021-04-16 21:30:27.208091000 Z
+    - 2021-04-16 21:30:27.208091000 Z
+
+---
+car_types:
+  columns:
+  - id
+  - name
+  - status
+  - comments
+  - created_at
+  - updated_at
+  records: 
+  - - 1
+    - New
+    - false
+    - ''
+    - 2021-04-16 21:37:46.406107000 Z
+    - 2021-04-16 21:37:46.406107000 Z
+  - - 2
+    - Used
+    - false
+    - ''
+    - 2021-04-16 21:38:34.072818000 Z
+    - 2021-04-16 21:38:34.072818000 Z
+
+---
+cars:
+  columns:
+  - id
+  - car_name
+  - car_type_id
+  - car_registration_number
+  - car_registration_first_date
+  - car_price
+  - fuel_type_id
+  - mileage
+  - colour_id
+  - body_type_id
+  - description
+  - transmission_type_id
+  - trim_details
+  - derivative_details
+  - make_id
+  - model_id
+  - variant_details
+  - seats
+  - doors
+  - status
+  - comments
+  - created_at
+  - updated_at
+  - car_primary_damage
+  - car_secondary_damage
+  - estimated_retail_price
+  - car_keys
+  - drive_type
+  - car_cylinder
+  - car_doc_id
+  - car_highlights
+  - car_model_year
+  - car_engine_id
+  - vehicle_type_id
+  - car_user_id
+  records: 
+  - - 1
+    - Base
+    - 1
+    - ''
+    -
+    - 12635.0
+    - 9
+    - 93615.0
+    - 9
+    - 5
+    - ''
+    - 1
+    - ''
+    - ''
+    - 7
+    - 4
+    - ''
+    - 5
+    - 4
+    - false
+    - ''
+    - 2021-04-27 01:13:50.288518000 Z
+    - 2021-04-30 20:26:06.121820000 Z
+    - ''
+    - ''
+    -
+    - true
+    - 1
+    - 2
+    - 1
+    - Run and Drive
+    - 2012
+    - 1
+    - 1
+    - 1
+  - - 2
+    - L
+    - 1
+    - ''
+    -
+    - 15253.0
+    - 9
+    - 64322.0
+    - 10
+    - 5
+    - ''
+    - 1
+    - ''
+    - ''
+    - 7
+    - 4
+    - ''
+    - 5
+    - 4
+    - false
+    - ''
+    - 2021-04-27 01:17:02.006120000 Z
+    - 2021-04-27 01:17:02.285315000 Z
+    - Rear End
+    - ''
+    -
+    - true
+    - 1
+    - 2
+    - 2
+    - ''
+    - 2018
+    - 1
+    - 1
+    -
+  - - 3
+    - Base
+    - 2
+    - ''
+    -
+    - 29000.0
+    - 4
+    - 36300.0
+    - 8
+    - 5
+    - ''
+    - 1
+    - ''
+    - ''
+    - 2
+    - 2
+    - ''
+    - 5
+    - 4
+    - false
+    - ''
+    - 2021-05-06 17:46:12.339045000 Z
+    - 2021-05-06 17:46:12.425203000 Z
+    - ''
+    - ''
+    - 25000.0
+    - true
+    - 1
+    - 1
+    - 1
+    - Run and Drive
+    - 2019
+    - 1
+    - 1
+    -
+
+---
+fuel_types:
+  columns:
+  - id
+  - fuel_type
+  - status
+  - comments
+  - created_at
+  - updated_at
+  records: 
+  - - 1
+    - Bi Fuel
+    - false
+    - ''
+    - 2021-04-16 22:17:05.382866000 Z
+    - 2021-04-16 22:17:05.382866000 Z
+  - - 2
+    - Diesel
+    - false
+    - ''
+    - 2021-04-16 22:17:20.810314000 Z
+    - 2021-04-16 22:17:20.810314000 Z
+  - - 3
+    - Diesel Hybrid
+    - false
+    - ''
+    - 2021-04-16 22:17:36.935486000 Z
+    - 2021-04-16 22:17:36.935486000 Z
+  - - 4
+    - Electric
+    - false
+    - ''
+    - 2021-04-16 22:17:59.577119000 Z
+    - 2021-04-16 22:17:59.577119000 Z
+  - - 5
+    - Petrol
+    - false
+    - ''
+    - 2021-04-16 22:18:14.451699000 Z
+    - 2021-04-16 22:18:14.451699000 Z
+  - - 6
+    - Natural Gas
+    - false
+    - ''
+    - 2021-04-16 22:18:22.348041000 Z
+    - 2021-04-16 22:18:22.348041000 Z
+  - - 7
+    - Petrol Hybrid
+    - false
+    - ''
+    - 2021-04-16 22:18:46.395232000 Z
+    - 2021-04-16 22:18:46.395232000 Z
+  - - 8
+    - Hydrogen
+    - false
+    - ''
+    - 2021-04-16 22:19:01.178675000 Z
+    - 2021-04-16 22:19:01.178675000 Z
+  - - 9
+    - Gas
+    - false
+    - ''
+    - 2021-04-24 08:05:37.812426000 Z
+    - 2021-04-24 08:05:37.812426000 Z
+
+---
+roles:
+  columns:
+  - id
+  - role_name
+  - created_at
+  - updated_at
+  records: 
+  - - 1
+    - Admin
+    - 2021-04-26 21:35:40.683203000 Z
+    - 2021-04-26 21:35:40.683203000 Z
+  - - 2
+    - Vendor
+    - 2021-04-26 21:37:31.173374000 Z
+    - 2021-04-26 21:37:31.173374000 Z
+  - - 3
+    - Buyer
+    - 2021-04-26 21:37:59.450433000 Z
+    - 2021-04-26 21:37:59.450433000 Z
+
+---
+vehicle_types:
+  columns:
+  - id
+  - vehicle
+  - comments
+  - status
+  - created_at
+  - updated_at
+  records: 
+  - - 1
+    - Cars
+    - ''
+    - false
+    - 2021-04-26 19:02:05.875400000 Z
+    - 2021-04-26 19:02:05.875400000 Z
+  - - 2
+    - Prestige Cars
+    - ''
+    - false
+    - 2021-04-26 19:02:42.518514000 Z
+    - 2021-04-26 19:02:42.518514000 Z
+  - - 3
+    - Bikes
+    - ''
+    - false
+    - 2021-04-26 19:02:49.023419000 Z
+    - 2021-04-26 19:02:49.023419000 Z
+  - - 4
+    - Vans
+    - ''
+    - false
+    - 2021-04-26 19:02:57.630237000 Z
+    - 2021-04-26 19:02:57.630237000 Z
+
+---
+vehicleenquiries:
+  columns:
+  - id
+  - firstname
+  - lastname
+  - email
+  - phonenumber
+  - message
+  - status
+  - enquirer_user_id
+  - vehicle_user_id
+  - created_at
+  - updated_at
+  records: 
+  - - 1
+    - juxlarry@gmail.com
+    - jay
+    -
+    -
+    - Hello, test enquiry
+    - false
+    -
+    -
+    - 2021-05-05 21:39:44.274792000 Z
+    - 2021-05-05 21:39:44.274792000 Z
+  - - 2
+    - law@alwfirm.com
+    - rence
+    -
+    - '020799993'
+    - Test 2
+    - false
+    -
+    -
+    - 2021-05-05 21:49:37.287554000 Z
+    - 2021-05-05 21:49:37.287554000 Z

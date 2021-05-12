@@ -30,8 +30,14 @@ gem 'bootstrap-datepicker-rails'
 gem 'devise'
 
 #mysql2 gem for development only
-  # Use mysql as the database for Active Record
-  gem 'mysql2', '~> 0.5'
+# Use mysql as the database for Active Record
+gem 'mysql2', '~> 0.5'
+
+#moved to postgres for app development
+gem 'pg'
+
+#for easy db dump and migration
+gem 'yaml_db'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
