@@ -8212,6 +8212,11 @@
         max-width: 280px;
         transform: translate(-50%, -50%);
       }
+
+      .nav-pad{
+        padding: 10px;
+        color: black;
+      }
     }
 
 
@@ -8293,15 +8298,22 @@
                       </a>
                   <% else %>
 
-                    <a href="/users/sign_in" class="atds-header-tools__link atds-type-mini narrow-hide"
-                       aria-label="Sign in to your Auto Trader Account">
-                        Login
+                    <a href="/"
+                       class="atds-type-mini atds-header-tools__link"\
+                       aria-label="Sign in for an Auto Frontier Account"
+                      >
+                        <%= link_to "Login",  new_user_session_path, class: "nav-pad" %>
                     </a>
-
-                    <a href="/users/sign_up"
-                      class="atds-type-mini atds-header-tools__link">
-                        Sign Up
-                    </a> 
+                      
+                    <a
+                      href="/"
+                      class="atds-header-tools__link atds-type-mini narrow-hide"
+                      aria-label="Sign Up for an Auto Frontier Account"
+                      >
+                    
+                      <%= link_to "Sign Up", new_user_registration_path, class: "nav-pad" %>
+                      
+                    </a>
                                
                     
                   <% end %>
