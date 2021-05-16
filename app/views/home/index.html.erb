@@ -5744,6 +5744,194 @@
         margin-top: 24px;
         color: rgb(153, 153, 153);
       }
+
+      @media(max-width: 712px){
+        .fronText {
+          font-size: 22px;
+          vertical-align: middle;
+          margin-top: -30px;
+          font-family: "ATFabriga", "Segoe UI", Helvetica, Arial,-apple-system, BlinkMacSystemFont, sans-serif;
+          color: black;
+          margin-left: 50px;
+          font-weight: 800;
+        }
+
+        .frontierLogo{
+          width:35%;
+        }
+
+        .home-page__hero-placeholder {
+          position: absolute;
+          top: 50%;
+          left: 52%;
+          width: 100%;
+          max-width: 280px;
+          transform: translate(-50%, -50%);
+        }
+
+        
+      }
+
+
+      /*!sc*/
+      .ctgCoH li:last-child {
+        margin-right: 0;
+      }
+
+      /*!sc*/
+      .ctgCoH li svg path:last-child {
+        fill: #666666;
+      }
+
+      /*!sc*/
+      .ctgCoH li:hover svg path:last-child {
+        fill: #29dcff;
+      }
+
+      /*!sc*/
+      data-styled.g17[id="sc-krVALI"] {
+        content: "ctgCoH,"
+      }
+
+      /*!sc*/
+      .bGhnMd {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        margin: 16px 0;
+      }
+
+      /*!sc*/
+      data-styled.g18[id="sc-hCcOGj"] {
+        content: "bGhnMd,"
+      }
+
+      /*!sc*/
+      .ksiCvx {
+        background: transparent;
+        border: 0;
+        display: block;
+        margin: 0 auto 16px;
+        text-align: center;
+      }
+
+      /*!sc*/
+      .ksiCvx .icon-chevron {
+        display: inline-block;
+        margin-bottom: 8px;
+      }
+
+      /*!sc*/
+      .ksiCvx p {
+        color: #222b5e;
+      }
+
+      /*!sc*/
+      data-styled.g19[id="sc-folSmy"] {
+        content: "ksiCvx,"
+      }
+
+      /*!sc*/
+      .weMpm {
+        font-size: 0.7rem;
+        margin-top: 24px;
+        color: #999999;
+      }
+
+      /*!sc*/
+      .weMpm span {
+        display: block;
+        margin-bottom: 8px;
+      }
+
+      /*!sc*/
+      .weMpm small {
+        font-size: inherit;
+      }
+
+      /*!sc*/
+      .weMpm address {
+        font-style: normal;
+      }
+
+      /*!sc*/
+      data-styled.g20[id="sc-fFCXAk"] {
+        content: "weMpm,"
+      }
+
+      /*!sc*/
+      .eAYOki {
+        margin-top: 16px;
+      }
+
+      /*!sc*/
+      .eAYOki svg {
+        fill: #666666;
+      }
+
+      /*!sc*/
+      .eAYOki:hover {
+        cursor: pointer;
+      }
+
+      /*!sc*/
+      .eAYOki:hover .footer__nav-mobile {
+        cursor: pointer;
+        color: #29dcff;
+      }
+
+      /*!sc*/
+      .eAYOki:hover svg {
+        cursor: pointer;
+        fill: #29dcff;
+      }
+
+      /*!sc*/
+      data-styled.g21[id="sc-bjLpWZ"] {
+        content: "eAYOki,"
+      }
+
+      /*!sc*/
+      .fnmaMD {
+        background: none;
+        border: 0;
+        color: #666666;
+        padding: 0;
+      }
+
+      /*!sc*/
+      data-styled.g22[id="sc-ieCRpK"] {
+        content: "fnmaMD,"
+      }
+
+      /*!sc*/
+      .cYLxIE {
+        background: none;
+        border: 0;
+        cursor: pointer;
+        margin-top: 16px;
+      }
+
+      /*!sc*/
+      data-styled.g23[id="sc-dILjMz"] {
+        content: "cYLxIE,"
+      }
+
+
+
+
+      .frontierLogo{
+        width: 35%;
+      }
+
+
+      .fronText{
+        margin-top: -30px;
+        margin-left: 65px;
+        font-weight: 600;
+      }
+
+      
     </style>
 
     <link
@@ -5775,12 +5963,10 @@
                 <a href="/" class="atds-header__logo">
                   <span style="display: inline; ">
                     <img class="frontierLogo"
-                        src=<%=asset_path("/assets/frontierlogo.png")%>
-                        >
-                        
-                               </span>
-
-                                 <span class="fronText">AutoFrontier</span>
+                      src=<%=asset_path("/assets/frontierlogo.png")%>
+                    >
+                    <p class="fronText">AutoFrontier </p>
+                  </span>
                 </a>
                 <div class="atds-header-tools wide-hide">
                   <button
@@ -5817,40 +6003,23 @@
                     >Sell</a
                   >
                 </div>
-                <div class="atds-header-tools">
-                  <a
-                    href="/"
-                    class="atds-type-mini atds-header-tools__link"
-                    >
-                      <% if user_signed_in? %>
+                <div class="atds-header-tools" style="padding: 10px;">
+                  <% if user_signed_in? %>
+                    <a
+                      href="/"
+                      class="atds-type-mini atds-header-tools__link"
+                      >
+                        
                         Welcome, <%= current_user.displayname %>
-                      <% else %>
-                        <%= link_to "Login", new_user_session_path %>
-                      <% end %>
+                        
+                      </a
+                    >
 
-                  </a
-                  ><a
-                    href="/search-form"
-                    class="atds-type-mini atds-header-tools__link wide-hide"
-                    ><svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      height="16"
-                      width="16"
-                      class="atds-svg"
+                    <a
+                      href="/"
+                      class="atds-header-tools__link atds-type-mini narrow-hide"
+                      aria-label="Logout of your Auto Frontier Account"
                     >
-                      <title></title>
-                      <path
-                        d="M6 10.667C3.427 10.667 1.333 8.573 1.333 6C1.333 3.427 3.427 1.333 6 1.333C8.573 1.333 10.667 3.427 10.667 6C10.667 8.573 8.573 10.667 6 10.667ZM10.686 9.742C11.506 8.716 12 7.416 12 6C12 2.687 9.313 0 6 0C2.687 0 0 2.687 0 6C0 9.313 2.687 12 6 12C7.417 12 8.716 11.506 9.742 10.686L15.058 16L16 15.057L10.686 9.742Z"
-                      ></path></svg
-                    >Search</a
-                  >
-                  
-                  <a
-                    href="/"
-                    class="atds-header-tools__link atds-type-mini narrow-hide"
-                    aria-label="Sign in to your Auto Frontier Account"
-                    >
-                    <% if user_signed_in? %>
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         height="16"
@@ -5864,10 +6033,27 @@
                       </svg>
                     
                       <%= link_to "Logout", destroy_user_session_path, method: :delete, data: { confirm: 'Are you sure?' }%>
-                    <% else %>
-                    <%= link_to "Sign Up", new_user_registration_path %>
-                    <% end %>
-                  </a>
+                      </a
+                    >
+
+                  <% else %>
+                    <a href="/"
+                       class="atds-type-mini atds-header-tools__link"\
+                       aria-label="Sign in for an Auto Frontier Account"
+                      >
+                        <%= link_to "Login", new_user_session_path %>
+                    </a>
+                      
+                    <a
+                      href="/"
+                      class="atds-header-tools__link atds-type-mini narrow-hide"
+                      aria-label="Sign Up for an Auto Frontier Account"
+                      >
+                    
+                      <%= link_to "Sign Up", new_user_registration_path %>
+                      
+                    </a>
+                  <% end %>
                 </div>
                 <a
                   href="/safety_and_security_centre"

@@ -8186,6 +8186,101 @@
       margin-top:20px;
       font-weight: 500;
     }
+
+
+
+    @media(max-width: 799px){
+
+      #content {
+        margin-top: 0 !important; 
+        margin-left: 0 !important; 
+      }
+
+      .fronText {
+        font-size: 22px;
+        vertical-align: middle;
+        margin-top: -30px;
+        font-family: "ATFabriga", "Segoe UI", Helvetica, Arial,-apple-system, BlinkMacSystemFont, sans-serif;
+        color: black;
+        margin-left: 50px;
+        font-weight: 800;
+      }
+
+      .frontierLogo{
+        width:35%;
+      }
+
+      .home-page__hero-placeholder {
+        position: absolute;
+        top: 50%;
+        left: 52%;
+        width: 100%;
+        max-width: 280px;
+        transform: translate(-50%, -50%);
+      }
+
+      .nav-pad{
+        padding: 10px;
+        color: black;
+      }
+    }
+
+
+    @media(max-width: 396px){
+
+      .fronText {
+        font-size: 19px;
+        margin-top: -24px;
+        margin-left: 55px;
+        font-weight: 800;
+      }
+
+      .frontierLogo{
+        width:30%;
+        margin-left: 5px;
+        margin-top: -5px;
+      }
+
+      .home-page__hero-placeholder {
+        position: absolute;
+        top: 50%;
+        left: 52%;
+        width: 100%;
+        max-width: 280px;
+        transform: translate(-50%, -50%);
+      }
+
+      .nav-pad{
+        padding: 0;
+        margin-top: 10px;
+      }
+
+      .nav-pad-2{
+        padding: 10px; 
+        padding-left: 10px
+      }
+
+      .nav-pad-3{
+        margin-top: 20px;
+      }
+
+      .frontierLogo-span{
+        margin-left: 10px;
+      }
+    }
+
+
+    @media (min-width: 37.5em){
+
+      .atds-hero.atds-container {
+        margin-bottom: 45px !important;
+        margin-top: 24px !important;
+        margin-left: 200px !important;
+        margin-right: 24px !important;
+      }
+    }
+
+
   </style>
   <title data-rh="true">Used Cars For Sale | AutoTrader</title>
   <meta data-rh="true" name="description"
@@ -8219,12 +8314,13 @@
           <div class="atds-nav-wrapper">
             <div class="atds-header__group header__shift">
               <a href="/" class="atds-header__logo">
-                <span style="display: inline; ">
+                <span style="display: inline; " class="frontierLogo-span">
                   <img class="frontierLogo"
                    src="/assets/frontierlogo.png"
-                  >    
+                  > 
+                  <p class="fronText">AutoFrontier</p>   
                 </span>
-                <span class="fronText">AutoFrontier</span>
+                
               </a>
               
               <div class="atds-header-tools wide-hide"><button
@@ -8243,44 +8339,45 @@
                   </svg>Sell</a>
               </div>
               <div class="atds-header-tools">
-                  <% if user_signed_in? %>
-                    <a href="/users/sign_out" class="atds-header-tools__link atds-type-mini narrow-hide"
-                      aria-label="Sign in to your Auto Trader Account">
-                        <span style="display:inline-flex;">
-                          <svg xmlns="http://www.w3.org/2000/svg" height="16"
-                            width="16" class="atds-svg" style="margin-left:-45px;">
-                            <title></title>
-                            <path
-                              d="M8 6.6666C7.265 6.6666 6.667 6.0676 6.667 5.3326C6.667 4.5976 7.265 3.9996 8 3.9996C8.735 3.9996 9.333 4.5976 9.333 5.3326C9.333 6.0676 8.735 6.6666 8 6.6666ZM8 2.6666C6.527 2.6666 5.333 3.8596 5.333 5.3326C5.333 6.8056 6.527 7.9996 8 7.9996C9.473 7.9996 10.667 6.8056 10.667 5.3326C10.667 3.8596 9.473 2.6666 8 2.6666ZM12.8823 12.524C12.0573 10.646 10.1833 9.333 8.0003 9.333C5.8173 9.333 3.9433 10.646 3.1173 12.524C2.0143 11.334 1.3333 9.747 1.3333 8C1.3333 5.427 2.7703 3.129 5.0843 2.003C5.9953 1.558 6.9763 1.333 8.0003 1.333C11.6753 1.333 14.6673 4.324 14.6673 8C14.6673 9.747 13.9863 11.334 12.8823 12.524ZM8.0003 14.667C6.5823 14.667 5.2683 14.217 4.1863 13.46C4.6993 11.842 6.2153 10.667 8.0003 10.667C9.7853 10.667 11.3003 11.842 11.8133 13.46C10.7313 14.217 9.4183 14.667 8.0003 14.667ZM8.0003 0C6.7453 0 5.5573 0.289 4.5003 0.804C1.8363 2.102 0.000301361 4.837 0.000301361 8C0.000301361 10.389 1.0533 12.527 2.7143 13.994C3.1133 14.346 3.5483 14.661 4.0133 14.928C5.1883 15.606 6.5473 16 8.0003 16C9.4533 16 10.8123 15.606 11.9863 14.928C12.4523 14.661 12.8863 14.346 13.2863 13.994C14.9473 12.527 16.0003 10.389 16.0003 8C16.0003 3.582 12.4183 0 8.0003 0Z">
-                            </path>
-                          </svg><span style="margin-left:10px; font-weight:400; font-family: 'ATFabriga', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;">Sign out<span></span>
-                      </a>
-                  <% else %>
-                    <a href="/users/sign_up"
-                      class="atds-type-mini atds-header-tools__link"><svg xmlns="http://www.w3.org/2000/svg" height="16"
-                      width="16" class="atds-svg">
-                      <title></title>
-                      <path
-                        d="M8 14.185C5.115 11.428 1.333 6.968 1.333 4.454C1.333 2.298 2.713 1.333 4.081 1.333C5.1 1.333 6.157 1.83 7.058 2.73L8 3.672L8.942 2.73C9.843 1.83 10.9 1.333 11.919 1.333C13.287 1.333 14.667 2.298 14.667 4.454C14.667 6.964 10.884 11.426 8 14.185ZM11.919 0C10.632 0 9.226 0.561 8 1.787C6.774 0.561 5.369 0 4.081 0C1.866 0 0 1.661 0 4.454C0 8.872 8 16 8 16C8 16 16 8.872 16 4.454C16 1.66 14.134 0 11.919 0Z">
-                      </path>
-                      </svg>Sign Up
-                    </a> 
-                               
-                    <a href="/users/sign_in" class="atds-header-tools__link atds-type-mini narrow-hide"
-                       aria-label="Sign in to your Auto Trader Account"><svg xmlns="http://www.w3.org/2000/svg" height="16"
-                       width="16" class="atds-svg">
-                      <title></title>
-                      <path
-                        d="M8 6.6666C7.265 6.6666 6.667 6.0676 6.667 5.3326C6.667 4.5976 7.265 3.9996 8 3.9996C8.735 3.9996 9.333 4.5976 9.333 5.3326C9.333 6.0676 8.735 6.6666 8 6.6666ZM8 2.6666C6.527 2.6666 5.333 3.8596 5.333 5.3326C5.333 6.8056 6.527 7.9996 8 7.9996C9.473 7.9996 10.667 6.8056 10.667 5.3326C10.667 3.8596 9.473 2.6666 8 2.6666ZM12.8823 12.524C12.0573 10.646 10.1833 9.333 8.0003 9.333C5.8173 9.333 3.9433 10.646 3.1173 12.524C2.0143 11.334 1.3333 9.747 1.3333 8C1.3333 5.427 2.7703 3.129 5.0843 2.003C5.9953 1.558 6.9763 1.333 8.0003 1.333C11.6753 1.333 14.6673 4.324 14.6673 8C14.6673 9.747 13.9863 11.334 12.8823 12.524ZM8.0003 14.667C6.5823 14.667 5.2683 14.217 4.1863 13.46C4.6993 11.842 6.2153 10.667 8.0003 10.667C9.7853 10.667 11.3003 11.842 11.8133 13.46C10.7313 14.217 9.4183 14.667 8.0003 14.667ZM8.0003 0C6.7453 0 5.5573 0.289 4.5003 0.804C1.8363 2.102 0.000301361 4.837 0.000301361 8C0.000301361 10.389 1.0533 12.527 2.7143 13.994C3.1133 14.346 3.5483 14.661 4.0133 14.928C5.1883 15.606 6.5473 16 8.0003 16C9.4533 16 10.8123 15.606 11.9863 14.928C12.4523 14.661 12.8863 14.346 13.2863 13.994C14.9473 12.527 16.0003 10.389 16.0003 8C16.0003 3.582 12.4183 0 8.0003 0Z">
-                      </path>
+                <% if user_signed_in? %>
+                  <a href="/users/sign_out" class="atds-header-tools__link atds-type-mini narrow-hide"
+                    aria-label="Sign in to your Auto Trader Account">
+                    <span style="display:inline-flex;">
+                      <svg xmlns="http://www.w3.org/2000/svg" height="16"
+                        width="16" class="atds-svg" style="margin-left:-45px;">
+                        <title></title>
+                        <path
+                          d="M8 6.6666C7.265 6.6666 6.667 6.0676 6.667 5.3326C6.667 4.5976 7.265 3.9996 8 3.9996C8.735 3.9996 9.333 4.5976 9.333 5.3326C9.333 6.0676 8.735 6.6666 8 6.6666ZM8 2.6666C6.527 2.6666 5.333 3.8596 5.333 5.3326C5.333 6.8056 6.527 7.9996 8 7.9996C9.473 7.9996 10.667 6.8056 10.667 5.3326C10.667 3.8596 9.473 2.6666 8 2.6666ZM12.8823 12.524C12.0573 10.646 10.1833 9.333 8.0003 9.333C5.8173 9.333 3.9433 10.646 3.1173 12.524C2.0143 11.334 1.3333 9.747 1.3333 8C1.3333 5.427 2.7703 3.129 5.0843 2.003C5.9953 1.558 6.9763 1.333 8.0003 1.333C11.6753 1.333 14.6673 4.324 14.6673 8C14.6673 9.747 13.9863 11.334 12.8823 12.524ZM8.0003 14.667C6.5823 14.667 5.2683 14.217 4.1863 13.46C4.6993 11.842 6.2153 10.667 8.0003 10.667C9.7853 10.667 11.3003 11.842 11.8133 13.46C10.7313 14.217 9.4183 14.667 8.0003 14.667ZM8.0003 0C6.7453 0 5.5573 0.289 4.5003 0.804C1.8363 2.102 0.000301361 4.837 0.000301361 8C0.000301361 10.389 1.0533 12.527 2.7143 13.994C3.1133 14.346 3.5483 14.661 4.0133 14.928C5.1883 15.606 6.5473 16 8.0003 16C9.4533 16 10.8123 15.606 11.9863 14.928C12.4523 14.661 12.8863 14.346 13.2863 13.994C14.9473 12.527 16.0003 10.389 16.0003 8C16.0003 3.582 12.4183 0 8.0003 0Z">                            </path>
                       </svg>
-                        Login
-                    </a>
+                      <span style="margin-left:10px; font-weight:400; font-family: 'ATFabriga', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;">
+                        Sign out
+                      <span>
+                    </span>
+                  </a>
+                <% else %>
+
+                  <a href="/"
+                    class="atds-type-mini atds-header-tools__link"\
+                    aria-label="Sign in for an Auto Frontier Account"
+                    >
+                    <%= link_to "Login",  new_user_session_path, class: "nav-pad nav-pad-2" %>
+                  </a>
+                      
+                  <a
+                    href="/"
+                    class="atds-header-tools__link atds-type-mini narrow-hide"
+                    aria-label="Sign Up for an Auto Frontier Account"
+                  >    
+                    <%= link_to "Sign Up", new_user_registration_path, class: "nav-pad nav-pad-3" %>
+                      
+                  </a>
+
                   <% end %>
                 </div>
                 <a href="#" role="menuitem"
-                class="atds-header-tools-security atds-type-smart wide-hide" tabindex="-1"><span
-                  class="atds-header__label">Security advice</span></a>
+                  class="atds-header-tools-security atds-type-smart wide-hide" tabindex="-1"><span
+                  class="atds-header__label">Security advice</span>
+                </a>
             </div>
             <div class="narrow-hide">
               <ul class="atds-channel-switcher atds-type-mini" role="menu" aria-labelledby="channel-switcher-heading">
