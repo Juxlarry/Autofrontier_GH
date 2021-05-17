@@ -6559,6 +6559,90 @@
             margin-top:20px;
             font-weight: 500;
         }
+
+
+        @media(max-width: 799px){
+
+            #content {
+                margin-top: 0 !important; 
+                margin-left: 0 !important; 
+            }
+
+            .fronText {
+                font-size: 22px;
+                vertical-align: middle;
+                font-family: "ATFabriga", "Segoe UI", Helvetica, Arial,-apple-system, BlinkMacSystemFont, sans-serif;
+                color: black;
+                font-weight: 700;
+                margin-left: -5px;
+                margin-top: -28px;
+            }
+
+            .frontierLogo{
+                width:30%;
+                margin-left: -45px;
+                margin-top: 10px;
+            }
+
+            .home-page__hero-placeholder {
+                position: absolute;
+                top: 50%;
+                left: 52%;
+                width: 100%;
+                max-width: 280px;
+                transform: translate(-50%, -50%);
+            }
+
+            .nav-pad{
+                padding: 10px;
+                color: black;
+            }
+        }
+
+
+        @media(max-width: 396px){
+
+            .fronText {
+                font-size: 19px;
+                margin-top: -24px;
+                margin-left: 55px;
+                font-weight: 800;
+            }
+
+            .frontierLogo{
+                width:30%;
+                margin-left: 5px;
+                margin-top: -5px;
+            }
+
+            .home-page__hero-placeholder {
+                position: absolute;
+                top: 50%;
+                left: 52%;
+                width: 100%;
+                max-width: 280px;
+                transform: translate(-50%, -50%);
+            }
+
+            .nav-pad{
+                padding: 0;
+                margin-top: 10px;
+            }
+
+            .nav-pad-2{
+                padding: 10px; 
+                padding-left: 10px
+            }
+
+            .nav-pad-3{
+                margin-top: 20px;
+            }
+
+            .frontierLogo-span{
+                margin-left: 10px;
+            }
+        }
+
     </style>
     <meta data-rh="true" name="description"
         content="Find your 21 reg plate today. 1000s of brand-new cars available today, including new car deals on 21 plates and flexible finance options." />
@@ -6596,12 +6680,13 @@
                     <div class="atds-nav-wrapper">
                         <div class="atds-header__group">
                             <a href="/" class="atds-header__logo">
-                                <span style="display: inline; ">
+                                <span style="display: inline; " class="frontierLogo-span">
                                 <img class="frontierLogo"
                                 src="/assets/frontierlogo.png"
-                                >    
+                                > 
+                                <p class="fronText">AutoFrontier</p>   
                                 </span>
-                                <span class="fronText">AutoFrontier</span>
+                                
                             </a>
                             <div class="atds-header-tools wide-hide"><button
                                     class="atds-menu-btn atds-type-mini atds-header-tools__link atds-header-tools__link--menu"
