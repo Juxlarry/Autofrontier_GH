@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :newsletter_requests
   resources :vehicleenquiries
   devise_for :users
   resources :roles
