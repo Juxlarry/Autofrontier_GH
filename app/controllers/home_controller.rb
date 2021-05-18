@@ -27,4 +27,8 @@ class HomeController < ApplicationController
       ).where(car_type_id: 1 )
   
   end
+
+  def new_cars
+    @newsletter_request = NewsletterRequest.new
+  end 
 end
