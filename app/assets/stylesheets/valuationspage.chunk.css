@@ -1,0 +1,344 @@
+#content{
+    margin-left:0;
+}
+
+.factors-summary {
+  margin-bottom: 48px;
+  width: 100%;
+}
+@media (min-width: 48em) {
+  .factors-summary {
+    -ms-grid-row: 3;
+    grid-row: 3;
+    margin-bottom: 0;
+  }
+}
+.factors-summary:last-child {
+  margin-bottom: 0;
+}
+.factors-summary__image {
+  margin-bottom: -24px;
+  margin-left: -48px;
+  max-width: none;
+  position: relative;
+  width: calc(100% + 96px);
+}
+@media (min-width: 48em) {
+  .factors-summary__image {
+    margin-left: -24px;
+    width: calc(100% + 48px);
+  }
+}
+.factors-summary__highlight {
+  background-color: #f7f6f5;
+  margin: 0 24px 48px;
+}
+@media (min-width: 48em) {
+  .factors-summary__highlight {
+    margin: 0 0 48px;
+  }
+}
+.factors-summary__description {
+  padding: 24px;
+}
+@media (min-width: 64em) {
+  .factors-summary__description {
+    text-align: center;
+  }
+}
+@media (min-width: 48em) and (max-width: 59em) {
+  .factors-summary__description {
+    min-height: 123px;
+  }
+}
+.factors-summary__accordion {
+  margin-top: 24px;
+}
+@media (min-width: 60em) {
+  .factors-summary__heading {
+    max-width: 67.5%;
+  }
+}
+@media (min-width: 75em) {
+  .factors-summary__heading {
+    max-width: 100%;
+  }
+}
+@media (min-width: 48em) {
+  .factors-summary + .factors-summary {
+    -ms-grid-column: 3;
+    grid-column: 2;
+  }
+}
+.key-spec-tag {
+  align-items: center;
+  background-color: #fff;
+  border-radius: 32px;
+  display: inline-flex;
+  padding: 8px 16px;
+}
+.key-spec-tag__icon {
+  margin-right: 12px;
+  opacity: 0.6;
+}
+.key-spec-tag__label {
+  line-height: 1;
+}
+.valuations-form__fields {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.valuations-form__fields .atds-field:not(.valuations__btn-container) {
+  display: inline-flex;
+  flex: 0 0 auto;
+  margin-bottom: 16px;
+  min-width: 120px;
+  text-align: left;
+  width: calc(50% - 8px);
+}
+.valuations-form__fields
+  .atds-field:not(.valuations__btn-container)
+  input:-ms-input-placeholder {
+  font-size: 0.9em;
+}
+.valuations-form__fields
+  .atds-field:not(.valuations__btn-container)
+  input::placeholder {
+  font-size: 0.9em;
+}
+@media (min-width: 22em) {
+  .valuations-form__fields
+    .atds-field:not(.valuations__btn-container)
+    input:-ms-input-placeholder {
+    font-size: inherit;
+  }
+  .valuations-form__fields
+    .atds-field:not(.valuations__btn-container)
+    input::placeholder {
+    font-size: inherit;
+  }
+}
+.valuations-form__fields .atds-field:not(.valuations__btn-container) input {
+  text-transform: uppercase;
+  width: 100%;
+}
+.valuations-form__fields
+  .atds-field:not(.valuations__btn-container)
+  :-ms-input-placeholder {
+  text-transform: none;
+}
+.valuations-form__fields
+  .atds-field:not(.valuations__btn-container)
+  ::placeholder {
+  text-transform: none;
+}
+.valuations-form .valuations__btn-container {
+  flex-basis: 100%;
+  flex-shrink: 0;
+  margin: 0 0 16px;
+}
+.valuations-form__button-only .atds-field__number,
+.valuations-form__button-only .atds-field__text {
+  display: none;
+}
+.valuations-form__submit {
+  min-width: 100%;
+}
+body,
+main {
+  background-color: #fff !important;
+}
+.valuations-landing-page {
+  overflow-x: hidden;
+}
+.valuations-landing-page .benefits .atds-content-card__image {
+  margin-top: 0;
+}
+.valuations-landing-page
+  .promo-section--improve-car-value
+  .promo-section__content {
+  background-color: #123b2a;
+}
+.valuations-landing-page
+  .promo-section--improve-car-value
+  .promo-section__insight__content {
+  background-position: 50%;
+}
+.valuations-landing-page
+  .promo-section--improve-car-value
+  .promo-section__insight__content:before {
+  background-color: #123b2a;
+}
+@media (max-width: 39.99em) {
+  .valuations-landing-page .spec-tags {
+    text-align: left;
+  }
+}
+@media (min-width: 37.5em) {
+  .valuations-landing-page .spec-tags {
+    margin-top: 32px;
+    margin-bottom: -48px;
+  }
+}
+.valuations-landing-page .spec-tags > div {
+  margin: 0 4px 8px;
+}
+@media (max-width: 26em) {
+  .valuations-landing-page .promo-section__image {
+    bottom: 3em;
+  }
+}
+.valuations-landing-page .promo-section__insight__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+@media (max-width: 26em) {
+  .valuations-landing-page .promo-section__insight__copy {
+    margin-bottom: 0;
+    padding: 2em 4.25em 0 2em;
+  }
+}
+@media (max-width: 21.875em) {
+  .valuations-landing-page .promo-section__insight__copy {
+    margin-bottom: 0;
+    padding: 2em 1em 0;
+  }
+}
+.valuations-hero {
+  background-image: url(https://www.autotrader.co.uk/valuations/images/static/valuation-hero-600.jpg);
+  background-image: -webkit-image-set(
+    url(https://www.autotrader.co.uk/valuations/images/static/valuation-hero-600.jpg) 1x,
+    url(https://www.autotrader.co.uk/valuations/images/static/valuation-hero-600@2x.jpg) 2x
+  );
+  background-image: image-set(
+    url(https://www.autotrader.co.uk/valuations/images/static/valuation-hero-600.jpg) 1x,
+    url(https://www.autotrader.co.uk/valuations/images/static/valuation-hero-600@2x.jpg) 2x
+  );
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@media (min-width: 37.5em) {
+  .valuations-hero {
+    background-image: url(https://www.autotrader.co.uk/valuations/images/static/valuation-hero-720.jpg);
+    background-image: -webkit-image-set(
+      url(https://www.autotrader.co.uk/valuations/images/static/valuation-hero-720.jpg) 1x,
+      url(https://www.autotrader.co.uk/valuations/images/static/valuation-hero-720@2x.jpg) 2x
+    );
+    background-image: image-set(
+      url(https://www.autotrader.co.uk/valuations/images/static/valuation-hero-720.jpg) 1x,
+      url(https://www.autotrader.co.uk/valuations/images/static/valuation-hero-720@2x.jpg) 2x
+    );
+  }
+}
+@media (min-width: 64em) {
+  .valuations-hero {
+    background-image: url(https://www.autotrader.co.uk/valuations/images/static/valuation-hero-972.jpg);
+    background-image: -webkit-image-set(
+      url(https://www.autotrader.co.uk/valuations/images/static/valuation-hero-972.jpg) 1x,
+      url(https://www.autotrader.co.uk/valuations/images/static/valuation-hero-972@2x.jpg) 2x
+    );
+    background-image: image-set(
+      url(https://www.autotrader.co.uk/valuations/images/static/valuation-hero-972.jpg) 1x,
+      url(https://www.autotrader.co.uk/valuations/images/static/valuation-hero-972@2x.jpg) 2x
+    );
+  }
+}
+@media (min-width: 76.5em) {
+  .valuations-hero {
+    background-image: url(https://www.autotrader.co.uk/valuations/images/static/valuation-hero-1224.jpg);
+    background-image: -webkit-image-set(
+      url(https://www.autotrader.co.uk/valuations/images/static/valuation-hero-1224.jpg) 1x,
+      url(https://www.autotrader.co.uk/valuations/images/static/valuation-hero-1224@2x.jpg) 2x
+    );
+    background-image: image-set(
+      url(https://www.autotrader.co.uk/valuations/images/static/valuation-hero-1224.jpg) 1x,
+      url(https://www.autotrader.co.uk/valuations/images/static/valuation-hero-1224@2x.jpg) 2x
+    );
+  }
+}
+.valuations-hero-ctas {
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0 14px 44px -24px rgba(0, 0, 0, 0.3);
+  display: inline-block;
+  max-width: 320px;
+  padding: 16px;
+  position: relative;
+  z-index: 10;
+}
+.valuations-hero-ctas__title {
+  margin: 4px 0 8px;
+}
+.valuations-hero-ctas__tagline {
+  color: #1b283a;
+  margin-bottom: 16px;
+}
+@media (min-width: 43.75em) {
+  .valuations-hero-ctas__tagline {
+    margin-bottom: 24px;
+  }
+}
+.valuations-hero__action {
+  padding-bottom: 16px;
+  position: relative;
+  text-align: center;
+}
+@media (max-width: 37.5em) {
+  .valuations-hero__action:after {
+    background-color: #fff;
+    bottom: -17px;
+    content: "";
+    display: block;
+    height: calc(50% + 8px);
+    left: -16px;
+    position: absolute;
+    width: 100vw;
+    z-index: 0;
+  }
+}
+.valuations-factors {
+  display: -ms-grid;
+  display: grid;
+}
+@media (min-width: 48em) {
+  .valuations-factors {
+    -ms-grid-columns: 1fr 48px 1fr;
+    grid-column-gap: 48px;
+    grid-template-columns: 1fr 1fr;
+    padding: 0 24px;
+  }
+}
+.valuations-factors__sub-title,
+.valuations-factors__title {
+  grid-column: 1/-1;
+  -ms-grid-column-span: 3;
+  width: 100%;
+}
+@media (min-width: 48em) {
+  .valuations-factors__sub-title,
+  .valuations-factors__title {
+    text-align: center;
+  }
+}
+.valuations-factors__title {
+  -ms-grid-row: 1;
+  grid-row: 1;
+  margin-bottom: 16px;
+}
+.valuations-factors__sub-title {
+  -ms-grid-row: 2;
+  grid-row: 2;
+  margin-bottom: 32px;
+}
+@media (min-width: 48em) {
+  .valuations-factors__sub-title {
+    margin-bottom: 48px;
+    text-align: center;
+  }
+  .valuations-factors__sub-title span {
+    display: inline-block;
+    max-width: 48ch;
+  }
+}
