@@ -8669,20 +8669,19 @@
                         <h2 class="atds-type-phantom">Send me great Auto Trader offers and the latest vehicle reviews.
                         </h2>
                     </header>
-                    <form class="atds-newsletter__form newsletter__form">
+                    <form class="atds-newsletter__form newsletter__form" action="/newsletter_requests" method="post">
                         <div
                             class="atds-field atds-field__email atds-newsletter__email-input newsletter__email-input atds-field--inline">
                             <label for="newsletter-email" class="atds-field__label atds-type-prius">Your
-                                email</label><input type="email" id="newsletter-email" name="newsletter-email"
-                                aria-invalid="false" class="atds-field__input atds-type-fiesta" required=""
+                                email</label><input type="email" id="newsletter-email" name="newsletter_request[email]"
+                                aria-invalid="false" class="atds-field__input atds-type-fiesta" required="required"
                                 placeholder="e.g name@example.com" /></div><button
-                            class="sc-eCImvq bwHhQo atds-button atds-type-fiesta atds-newsletter__cta newsletter__cta"
+                            class="sc-eCQjjX haZwpt atds-button atds-type-fiesta atds-newsletter__cta newsletter__cta"
                             type="submit">Sign up</button><small
                             class="atds-newsletter__small-print atds-type-smart newsletter__small-print">By signing up,
                             you agree to receive marketing emails in accordance with our
                             <!-- --> <a class="atds-link " href="#">privacy notice</a>. You can
-                            unsubscribe at any time.
-                        </small>
+                            unsubscribe at any time.</small>
                     </form>
                 </section>
                 <div class="error-container"></div>

@@ -26,9 +26,25 @@ class HomeController < ApplicationController
       "
       ).where(car_type_id: 1 )
   
+
+      @newsletter_request = NewsletterRequest.new
   end
 
   def new_cars
     @newsletter_request = NewsletterRequest.new
   end 
+
+  def used_cars
+    @newsletter_request = NewsletterRequest.new
+  end 
+
+  def sell_cars
+    @newsletter_request = NewsletterRequest.new
+  end 
+
+  def value_cars
+    @newsletter_request = NewsletterRequest.new
+  end 
+
+
 end
