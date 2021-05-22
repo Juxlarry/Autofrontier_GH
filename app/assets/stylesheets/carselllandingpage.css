@@ -1,0 +1,1109 @@
+.content-blocks__items {
+    display: flex;
+    flex-direction: column
+}
+
+@media (min-width:46.875em) {
+    .content-blocks__items {
+        flex-direction: row;
+        justify-content: space-between
+    }
+}
+
+.content-blocks-item {
+    border: 1px solid #e8e7e6;
+    border-radius: 4px;
+    color: #242d3d;
+    display: inline-block;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: calc(50% - 12px);
+    margin-top: 12px;
+    padding: 24px;
+    text-align: center
+}
+
+@media (min-width:46.875em) {
+    .content-blocks-item {
+        margin-top: 0
+    }
+}
+
+.content-blocks-item__image {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    text-align: center;
+    margin-bottom: 32px;
+    min-height: 120px
+}
+
+@media (max-width:46.8125em) {
+    .content-blocks-item__image {
+        display: none
+    }
+}
+
+.content-blocks-item__image:before {
+    background-color: #f7f6f5;
+    border-radius: 100%;
+    content: "";
+    display: block;
+    left: 50%;
+    height: 120px;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 120px
+}
+
+.content-blocks-item__image .atds-image__container {
+    max-height: 120px
+}
+
+.content-blocks-item__image .atds-image {
+    max-width: 7.5rem
+}
+
+.content-blocks-item__text {
+    min-height: 3.25rem
+}
+
+@media (min-width:46.875em) and (max-width:63.9375em) {
+    .content-blocks-item__heading {
+        min-height: 2.5rem
+    }
+}
+
+@media (min-width:48.75em) {
+    .content-blocks-item__content {
+        margin: 0 auto
+    }
+}
+
+@media (min-width:64em) {
+    .content-blocks-item__content {
+        margin: 0 auto;
+        max-width: 70%
+    }
+}
+
+.content-blocks-item__button {
+    margin-top: 32px
+}
+
+.content-blocks-item__usps {
+    list-style: none;
+    margin-top: 24px 0
+}
+
+.content-blocks-item__usps .atds-usps.atds-usps {
+    margin: 8px auto 24px;
+    flex-direction: column;
+    align-items: normal;
+    max-width: none;
+    padding: 0
+}
+
+@media (min-width:64em) {
+    .content-blocks-item__usps .atds-usps.atds-usps {
+        max-width: 15.3125rem
+    }
+}
+
+.content-blocks-item__usps .atds-usps__item {
+    max-width: none
+}
+
+@media (min-width:46.875em) {
+    .content-blocks-item__usps .atds-usps__item+.atds-usps__item {
+        margin-top: 8px
+    }
+}
+
+@media (min-width:46.875em) {
+    .content-blocks-item__cta {
+        margin: 0 48px
+    }
+}
+
+.faqs-list {
+    margin: 0 auto;
+    max-width: 720px
+}
+
+.faqs-list h3 {
+    margin: 0
+}
+
+/*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
+.atds-trustpilot__aggregate {
+    display: none
+}
+
+.atds-trustpilot-rating:hover {
+    color: #1b283a
+}
+
+.atds-trustpilot-count {
+    text-align: center
+}
+
+.atds-trustpilot--grouped {
+    margin-bottom: 16px
+}
+
+/*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
+html {
+    line-height: 1.15;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    box-sizing: border-box
+}
+
+*,
+:after,
+:before {
+    box-sizing: inherit
+}
+
+body {
+    margin: 0
+}
+
+article,
+aside,
+footer,
+header,
+nav,
+section {
+    display: block
+}
+
+h1 {
+    font-size: 2em;
+    margin: .67em 0
+}
+
+figcaption,
+figure,
+main {
+    display: block
+}
+
+figure {
+    margin: 1em 40px
+}
+
+hr {
+    box-sizing: content-box;
+    height: 0;
+    overflow: visible
+}
+
+pre {
+    font-family: monospace;
+    font-size: 1em
+}
+
+a {
+    background-color: transparent;
+    -webkit-text-decoration-skip: objects
+}
+
+abbr[title] {
+    border-bottom: none;
+    text-decoration: underline;
+    -webkit-text-decoration: underline dotted;
+    text-decoration: underline dotted
+}
+
+b,
+strong {
+    font-weight: inherit;
+    font-weight: bolder
+}
+
+code,
+kbd,
+samp {
+    font-family: monospace;
+    font-size: 1em
+}
+
+dfn {
+    font-style: italic
+}
+
+mark {
+    background-color: #ff0;
+    color: #000
+}
+
+small {
+    font-size: 80%
+}
+
+sub,
+sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline
+}
+
+sub {
+    bottom: -.25em
+}
+
+sup {
+    top: -.5em
+}
+
+audio,
+video {
+    display: inline-block
+}
+
+audio:not([controls]) {
+    display: none;
+    height: 0
+}
+
+img {
+    border-style: none
+}
+
+svg:not(:root) {
+    overflow: hidden
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+    font-family: sans-serif;
+    font-size: 100%;
+    line-height: 1.15;
+    margin: 0
+}
+
+button,
+input {
+    overflow: visible
+}
+
+button,
+select {
+    text-transform: none
+}
+
+[type=reset],
+[type=submit],
+button,
+html [type=button] {
+    -webkit-appearance: button
+}
+
+[type=button]::-moz-focus-inner,
+[type=reset]::-moz-focus-inner,
+[type=submit]::-moz-focus-inner,
+button::-moz-focus-inner {
+    border-style: none;
+    padding: 0
+}
+
+[type=button]:-moz-focusring,
+[type=reset]:-moz-focusring,
+[type=submit]:-moz-focusring,
+button:-moz-focusring {
+    outline: 1px dotted ButtonText
+}
+
+fieldset {
+    padding: .35em .75em .625em
+}
+
+legend {
+    box-sizing: border-box;
+    color: inherit;
+    display: table;
+    max-width: 100%;
+    padding: 0;
+    white-space: normal
+}
+
+progress {
+    display: inline-block;
+    vertical-align: baseline
+}
+
+textarea {
+    overflow: auto
+}
+
+[type=checkbox],
+[type=radio] {
+    box-sizing: border-box;
+    padding: 0
+}
+
+[type=number]::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button {
+    height: auto
+}
+
+[type=search] {
+    -webkit-appearance: textfield;
+    outline-offset: -2px
+}
+
+[type=search]::-webkit-search-cancel-button,
+[type=search]::-webkit-search-decoration {
+    -webkit-appearance: none
+}
+
+::-webkit-file-upload-button {
+    -webkit-appearance: button;
+    font: inherit
+}
+
+details,
+menu {
+    display: block
+}
+
+summary {
+    display: list-item
+}
+
+canvas {
+    display: inline-block
+}
+
+template {
+    display: none
+}
+
+[hidden] {
+    display: none
+}
+
+.atds-container {
+    display: block;
+    margin: 0 0 48px;
+    max-width: auto;
+    position: relative
+}
+
+.atds-container--fixed-wide {
+    margin: 0 auto 48px;
+    max-width: 1224px
+}
+
+@media (min-width:40em) {
+    .atds-container--fixed-wide {
+        margin: 0 24px 72px
+    }
+}
+
+@media (min-width:1256px) {
+    .atds-container--fixed-wide {
+        margin: 0 auto 72px
+    }
+}
+
+.atds-container--constrained {
+    margin: 0 16px 48px;
+    max-width: 1224px
+}
+
+@media (min-width:40em) {
+    .atds-container--constrained {
+        margin: 0 24px 72px
+    }
+}
+
+@media (min-width:1256px) {
+    .atds-container--constrained {
+        margin: 0 auto 72px
+    }
+}
+
+.atds-container--scrollable {
+    overflow-x: auto;
+    overflow-y: visible
+}
+
+.grid-row {
+    display: grid;
+    display: -ms-grid;
+    grid-template-columns: repeat(one, 1fr);
+    -ms-grid-columns: (1fr)[one];
+    grid-gap: 4px;
+    gap: 4px
+}
+
+@media (min-width:20em) {
+    .grid-row {
+        grid-template-columns: repeat(two, 1fr);
+        -ms-grid-columns: (1fr)[two];
+        grid-gap: 4px;
+        gap: 4px
+    }
+}
+
+@media (min-width:40em) {
+    .grid-row {
+        grid-template-columns: repeat(four, 1fr);
+        -ms-grid-columns: (1fr)[four];
+        grid-gap: 4px;
+        gap: 4px
+    }
+}
+
+.scrollable-row {
+    display: grid;
+    display: -ms-grid;
+    grid-auto-columns: calc(100% - 32px);
+    grid-auto-flow: column;
+    grid-gap: 8px;
+    max-width: 1224px;
+    overflow-x: auto;
+    padding: 0 8px 16px;
+    -ms-scroll-snap-type: x proximity;
+    scroll-snap-type: x proximity
+}
+
+.scrollable-row:after {
+    content: "";
+    width: 8px
+}
+
+@media (min-width:25em) {
+    .scrollable-row {
+        grid-auto-columns: calc(50% - 20px)
+    }
+}
+
+@media (min-width:40em) {
+    .scrollable-row {
+        grid-auto-columns: calc(33.33333% - 16px)
+    }
+}
+
+@media (min-width:60em) {
+    .scrollable-row {
+        grid-auto-columns: auto;
+        -ms-grid-columns: (1fr)[4];
+        grid-template-columns: repeat(4, 1fr)
+    }
+
+    .scrollable-row:after,
+    .scrollable-row:before {
+        display: none
+    }
+}
+
+@media (min-width:1256px) {
+    .scrollable-row {
+        margin: 0 auto
+    }
+}
+
+@media (min-width:30em) {
+    .scrollable-row {
+        display: grid;
+        display: -ms-grid;
+        grid-auto-columns: calc(100% - 48px);
+        grid-auto-flow: column;
+        grid-gap: 8px;
+        max-width: 1224px;
+        overflow-x: auto;
+        padding: 0 16px 16px;
+        -ms-scroll-snap-type: x proximity;
+        scroll-snap-type: x proximity
+    }
+
+    .scrollable-row:after {
+        content: "";
+        width: 16px
+    }
+}
+
+@media (min-width:30em) and (min-width:25em) {
+    .scrollable-row {
+        grid-auto-columns: calc(50% - 28px)
+    }
+}
+
+@media (min-width:30em) and (min-width:40em) {
+    .scrollable-row {
+        grid-auto-columns: calc(33.33333% - 21.33333px)
+    }
+}
+
+@media (min-width:30em) and (min-width:60em) {
+    .scrollable-row {
+        grid-auto-columns: auto;
+        -ms-grid-columns: (1fr)[4];
+        grid-template-columns: repeat(4, 1fr)
+    }
+
+    .scrollable-row:after,
+    .scrollable-row:before {
+        display: none
+    }
+}
+
+@media (min-width:30em) and (min-width:1256px) {
+    .scrollable-row {
+        margin: 0 auto
+    }
+}
+
+.atds-section-title {
+    margin: 0 16px 24px
+}
+
+@media (min-width:40em) {
+    .atds-section-title {
+        margin-bottom: 32px;
+        text-align: center
+    }
+}
+
+.atds-section-footer {
+    margin-top: 24px;
+    text-align: center
+}
+
+@media (min-width:1224px) {
+    .atds-section-footer {
+        margin-top: 48px
+    }
+}
+
+@font-face {
+    font-display: optional;
+    font-family: "ATFabriga";
+    font-style: normal;
+    font-weight: 400;
+    src: local("ATFabriga-Regular"), url(https://c.atcdn.co.uk/fonts/ATFabriga-Regular.woff2?v=1.0) format("woff2"), url(https://c.atcdn.co.uk/fonts/ATFabriga-Regular.woff?v=1.0) format("woff")
+}
+
+@font-face {
+    font-display: optional;
+    font-family: "ATFabriga";
+    font-style: normal;
+    font-weight: 300;
+    src: local("ATFabriga-Light"), url(https://c.atcdn.co.uk/fonts/ATFabriga-Light.woff2?v=1.0) format("woff2"), url(https://c.atcdn.co.uk/fonts/ATFabriga-Light.woff?v=1.0) format("woff")
+}
+
+@font-face {
+    font-display: optional;
+    font-family: "ATFabriga";
+    font-style: normal;
+    font-weight: 500;
+    src: local("ATFabriga-Medium"), url(https://c.atcdn.co.uk/fonts/ATFabriga-Medium.woff2?v=1.0) format("woff2"), url(https://c.atcdn.co.uk/fonts/ATFabriga-Medium.woff?v=1.0) format("woff")
+}
+
+@font-face {
+    font-display: optional;
+    font-family: "ATFabriga";
+    font-style: normal;
+    font-weight: 700;
+    src: local("ATFabriga-Bold"), url(https://c.atcdn.co.uk/fonts/ATFabriga-Bold.woff2?v=1.0) format("woff2"), url(https://c.atcdn.co.uk/fonts/ATFabriga-Bold.woff?v=1.0) format("woff")
+}
+
+body {
+    color: #666;
+    font-size: 1rem;
+    line-height: 1.5;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale
+}
+
+.atds-type-cherokee,
+body {
+    font-family: "ATFabriga", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif
+}
+
+.atds-type-cherokee {
+    font-size: 3rem;
+    line-height: 1.125;
+    font-weight: 700;
+    letter-spacing: -1px
+}
+
+@media screen and (min-width:20rem) {
+    .atds-type-cherokee {
+        font-size: calc(3rem + 5.30973vw - 16.99115px)
+    }
+}
+
+@media screen and (min-width:76.5rem) {
+    .atds-type-cherokee {
+        font-size: 6rem;
+        line-height: 1.16667
+    }
+}
+
+.atds-type-hummer {
+    font-size: 4.5rem;
+    line-height: 1.08333;
+    font-weight: 700;
+    letter-spacing: -1px;
+    font-family: "ATFabriga", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif
+}
+
+@media screen and (min-width:20rem) {
+    .atds-type-hummer {
+        font-size: calc(4.5rem + 7.9646vw - 25.48673px)
+    }
+}
+
+@media screen and (min-width:76.5rem) {
+    .atds-type-hummer {
+        font-size: 9rem;
+        line-height: 1.04167
+    }
+}
+
+.atds-type-discovery {
+    font-size: 1.625rem;
+    line-height: 1.23077;
+    font-weight: 300;
+    font-family: "ATFabriga", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif
+}
+
+@media screen and (min-width:20rem) {
+    .atds-type-discovery {
+        font-size: calc(1.625rem + 1.54867vw - 4.95575px)
+    }
+}
+
+@media screen and (min-width:76.5rem) {
+    .atds-type-discovery {
+        font-size: 2.5rem;
+        line-height: 1.15
+    }
+}
+
+.atds-type-phantom {
+    font-size: 1.25rem;
+    line-height: 1.2;
+    font-weight: 300;
+    font-family: "ATFabriga", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif
+}
+
+@media screen and (min-width:20rem) {
+    .atds-type-phantom {
+        font-size: calc(1.25rem + 1.32743vw - 4.24779px)
+    }
+}
+
+@media screen and (min-width:76.5rem) {
+    .atds-type-phantom {
+        font-size: 2rem;
+        line-height: 1.1875
+    }
+}
+
+.atds-type-insignia {
+    font-size: 1.25rem;
+    line-height: 1.3;
+    font-weight: 300;
+    font-family: "ATFabriga", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif
+}
+
+@media screen and (min-width:20rem) {
+    .atds-type-insignia {
+        font-size: calc(1.25rem + .66372vw - 2.12389px)
+    }
+}
+
+@media screen and (min-width:76.5rem) {
+    .atds-type-insignia {
+        font-size: 1.625rem;
+        line-height: 1.23077
+    }
+}
+
+.atds-type-toledo {
+    font-size: 1.125rem;
+    line-height: 1.33333;
+    font-weight: 300;
+    font-family: "ATFabriga", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif
+}
+
+@media screen and (min-width:20rem) {
+    .atds-type-toledo {
+        font-size: calc(1.125rem + .22124vw - .70796px)
+    }
+}
+
+@media screen and (min-width:76.5rem) {
+    .atds-type-toledo {
+        font-size: 1.25rem;
+        line-height: 1.3
+    }
+}
+
+.atds-type-picanto {
+    font-size: .875rem;
+    line-height: 1.28571;
+    font-weight: 500;
+    letter-spacing: 1.75px;
+    text-transform: uppercase;
+    font-family: "ATFabriga", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif
+}
+
+@media screen and (min-width:20rem) {
+    .atds-type-picanto {
+        font-size: calc(.875rem + .22124vw - .70796px)
+    }
+}
+
+@media screen and (min-width:76.5rem) {
+    .atds-type-picanto {
+        font-size: 1rem;
+        line-height: 1.25
+    }
+}
+
+.atds-type-fiesta {
+    font-weight: 400
+}
+
+.atds-type-beetle,
+.atds-type-fiesta {
+    font-size: 1rem;
+    line-height: 1.5;
+    font-family: "ATFabriga", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif
+}
+
+.atds-type-beetle {
+    font-weight: 300
+}
+
+@media screen and (min-width:20rem) {
+    .atds-type-beetle {
+        font-size: calc(1rem + .22124vw - .70796px)
+    }
+}
+
+@media screen and (min-width:76.5rem) {
+    .atds-type-beetle {
+        font-size: 1.125rem;
+        line-height: 1.33333
+    }
+}
+
+.atds-type-smart {
+    font-size: .75rem;
+    line-height: 1.33333;
+    font-weight: 400;
+    font-family: "ATFabriga", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif
+}
+
+@media screen and (min-width:20rem) {
+    .atds-type-smart {
+        font-size: calc(.75rem + .22124vw - .70796px)
+    }
+}
+
+@media screen and (min-width:76.5rem) {
+    .atds-type-smart {
+        font-size: .875rem;
+        line-height: 1.42857
+    }
+}
+
+.atds-type-prius {
+    font-size: .875rem;
+    line-height: 1.42857
+}
+
+.atds-type-mini,
+.atds-type-prius {
+    font-weight: 400;
+    font-family: "ATFabriga", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif
+}
+
+.atds-type-mini {
+    font-size: .75rem;
+    line-height: 1.33333
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    color: #242d3d
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+li,
+p {
+    margin: 0
+}
+
+p~p {
+    margin-top: 16px
+}
+
+.hidden {
+    display: none !important;
+    visibility: hidden
+}
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px
+}
+
+.invisible {
+    visibility: hidden
+}
+
+.group:after,
+.group:before {
+    content: " ";
+    display: table
+}
+
+.group:after {
+    clear: both
+}
+
+@keyframes animate-left-to-right {
+    0% {
+        transform: translateX(-100%)
+    }
+
+    to {
+        transform: translateX(100%)
+    }
+}
+
+.atds-skeleton-load {
+    position: relative;
+    overflow: hidden;
+    color: transparent;
+    background-color: #f2f2ef;
+    border-radius: 4px
+}
+
+.atds-skeleton-load a,
+.atds-skeleton-load button,
+.atds-skeleton-load h1,
+.atds-skeleton-load h2,
+.atds-skeleton-load h3,
+.atds-skeleton-load h4,
+.atds-skeleton-load p {
+    color: transparent;
+    z-index: 1
+}
+
+.atds-skeleton-load a:hover,
+.atds-skeleton-load button:hover,
+.atds-skeleton-load h1:hover,
+.atds-skeleton-load h2:hover,
+.atds-skeleton-load h3:hover,
+.atds-skeleton-load h4:hover,
+.atds-skeleton-load p:hover {
+    color: transparent;
+    cursor: default
+}
+
+.atds-skeleton-load svg {
+    display: none
+}
+
+.atds-skeleton-load:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transform: translateX(-150%);
+    animation: animate-left-to-right 1.25s infinite;
+    background-image: linear-gradient(110deg, hsla(0, 0%, 100%, 0), hsla(0, 0%, 100%, .1) 20%, #fff 50%, hsla(0, 0%, 100%, .1) 80%, hsla(0, 0%, 100%, 0))
+}
+
+body {
+    background: #fff
+}
+
+.sell-car-landing-page {
+    overflow: hidden
+}
+
+.sell-car-landing-page .atds-masthead {
+    margin: 48px 0
+}
+
+.sell-car-landing-page .atds-hero__sell-car {
+    background-color: #fff
+}
+
+@media (min-width:40em) {
+    .sell-car-landing-page .atds-hero__sell-car {
+        border-radius: 4px;
+        padding: 16px;
+        width: 320px
+    }
+}
+
+.sell-car-landing-page .atds-hero__mma {
+    text-align: center
+}
+
+.sell-car-landing-page .atds-hero__content {
+    display: none
+}
+
+.sell-car-landing-page .atds-masthead {
+    text-align: center
+}
+
+@media (max-width:39.999em) {
+    .sell-car-landing-page .atds-masthead {
+        margin-top: 24px;
+        margin-bottom: 24px
+    }
+}
+
+@media (max-width:39.999em) {
+    .sell-car-landing-page .paygo-form {
+        margin: 16px 16px 0;
+        padding-bottom: 16px
+    }
+}
+
+.sell-car-landing-page .paygo-form .atds-field {
+    margin-right: 0
+}
+
+.sell-car-landing-page .paygo-form .atds-field__number,
+.sell-car-landing-page .paygo-form .atds-field__text {
+    flex: unset;
+    margin: 0 0 8px;
+    width: calc(50% - 8px)
+}
+
+.sell-car-landing-page .atds-heroimg-sell-car {
+    background-image: url(/sell-my-car/images/static/sell-car-hero-bar.jpg);
+    background-position-y: 46%;
+    background-repeat: no-repeat;
+    background-size: cover
+}
+
+@media (min-width:40em) {
+    .sell-car-landing-page .atds-heroimg-sell-car {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: -1
+    }
+}
+
+.sell-car-landing-page .atds-usps {
+    margin: 24px auto 16px
+}
+
+@media (max-width:37.5em) {
+    .sell-car-landing-page .atds-usps {
+        align-items: flex-start;
+        padding: 0 16px;
+        max-width: 320px
+    }
+}
+
+.sell-car-landing-page .small-print {
+    display: block;
+    margin: 0 auto 16px;
+    max-width: 80ch
+}
+
+.sell-car-landing-page .sell-car-landing-page__signpost {
+    display: flex;
+    justify-content: center;
+    margin-top: -16px
+}
+
+@media (min-width:40em) {
+    .sell-car-landing-page .sell-car-landing-page__signpost {
+        margin-top: -32px
+    }
+}
+
+.sell-car__trustpilot-rating .trustpilot-count {
+    text-align: center
+}
+
+.sell-car__value-proposition .atds-value-proposition-media-bg__ul {
+    width: 80%
+}
+
+.sell-car__value-proposition .atds-value-proposition-media-bg__component {
+    width: 100%
+}
+
+.sell-car__value-proposition .atds-value-proposition-media-bg__component__text,
+.sell-car__value-proposition .atds-value-proposition-media-bg__component__title {
+    color: #999;
+    text-align: center;
+    width: 100%
+}
+
+.sell-car__value-proposition .atds-value-proposition-media-bg__component__title--blue {
+    color: #242d3d
+}
+
+.sell-car__value-proposition .atds-value-proposition-media-bg__component__title span {
+    display: block;
+    font-size: 48px;
+    line-height: 72px;
+    margin-top: -16px
+}
+
+@media (min-width:48.75em) {
+    .sell-car__value-proposition .atds-value-proposition-media-bg__component__title span {
+        margin-top: -24px
+    }
+}
+
+.atds-heroimg-sell-car {
+    background-image: url(/sell-my-car/images/static/sell-car-hero-bar.jpg);
+    background-position-y: 65%;
+    background-repeat: no-repeat;
+    background-size: cover
+}
+
+.atds-heroimg-sell-car:before {
+    content: "";
+    display: block;
+    padding-top: 42.85714%
+}
+
+/*# sourceMappingURL=SellLandingPage.acaa4874.chunk.css.map */
