@@ -116,29 +116,45 @@
                                                         %>
                                                     </span>
                                                    
-                                                    <%= f.input :role_id, 
-                                                        collection: Role.where.not(id: 1), 
-                                                        label: false,
-                                                        label_method: :role_name,
-                                                        value_method: :id,
-                                                        input_html: { placeholder: "Select a role",  class: "form-control mb-2"}
-                                                    %>
-                                                    <%= f.label :logo, "Choose Logo" %> 
-                                                    <%= f.file_field :logo, 
-                                                        input_html: {  class: "form-control mb-2" }
-                                                    %>
-                                                    <br> <br>
-                                                    <%= f.label :avatar, "Choose Avatar" %> 
-                                                    <%= f.file_field :avatar, 
-                                                        input_html: {class: "form-control mb-2" }
-                                                    %>
-                                                    <br> <br>
+                                                    <% if user_signed_in? %>
+                                                        <% if  current_user.role_id == 1%>
+                                                            <%= f.input :role_id, 
+                                                                collection: Role.where.not(id: 1), 
+                                                                label: false,
+                                                                label_method: :role_name,
+                                                                value_method: :id,
+                                                                input_html: { placeholder: "Select a role",  class: "form-control mb-2"}
+                                                            %>
+                                                        <% end %>
+                                                    <% else %>
+                                                        <%= f.input :role_id, 
+                                                            collection: Role.where.not(id: 1), 
+                                                            label: false,
+                                                            label_method: :role_name,
+                                                            value_method: :id,
+                                                            input_html: { placeholder: "Select a role",  class: "form-control mb-2"}
+                                                        %>
+                                                    <% end %>
+
+                                                    <div class="fileattachment" >
+                                                        <%= f.label :logo, "Choose Logo" %> 
+                                                        <%= f.file_field :logo, 
+                                                            input_html: {  class: "form-control mb-2" }
+                                                        %>
+                                                        <br> <br>
+                                                        <%= f.label :avatar, "Choose Avatar" %> 
+                                                        <%= f.file_field :avatar, 
+                                                            input_html: {class: "form-control mb-2" }
+                                                        %>
+                                                    </div>
+                                                    <br>
+                                                    
 
                                                     <span style="margin-left:60px;">I accept the terms & conditions</span>
                                                      
                                                     <div class="d-flex justify-content-between flex-sm-row flex-column">
-                                                        <a href="/new_session_path" class="btn bg-light-primary mb-2 mb-sm-0">Back To Login</a>
                                                         <%= f.button :submit, "Register" %>
+                                                        <a href="/new_session_path" class="btn bg-light-primary mb-2 mb-sm-0">Back To Login</a>
                                                     </div>
                                                 </div>
                                             </div>
