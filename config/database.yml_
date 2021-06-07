@@ -10,11 +10,11 @@
 #   https://dev.mysql.com/doc/refman/5.7/en/password-hashing.html
 #
 default: &default
-  adapter: mysql2
-  encoding: utf8mb4
-  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  username: root
-  password: Germany@1234
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  username: hp
+  password: qazxcv&95
   host: localhost
 
 development:
@@ -48,8 +48,12 @@ test:
 # Read https://guides.rubyonrails.org/configuring.html#configuring-a-database
 # for a full overview on how database connection configuration can be specified.
 #
+
+#setting database url for heroku
+DATABASE_URL: mysql2://b9605492d32781:e170a8d9@us-cdbr-east-03.cleardb.com/heroku_1e35bcd1e4be00d?reconnect=true
+
 production:
   <<: *default
-  database: autofrontier_production
-  username: autofrontier
-  password: <%= ENV['AUTOFRONTIER_DATABASE_PASSWORD'] %>
+  # database: <%= ENV['DATABASE_URL'] %>
+  database: postgres://htwxndlqtcazzt:4444ebe492bd25d7fec8732ed8376528960999fec5f33dde0815c05555c37c66@ec2-52-4-111-46.compute-1.amazonaws.com:5432/d5fk7003gdv7ia
+  # password: <%= ENV['AUTOFRONTIER_DATABASE_PASSWORD'] %>

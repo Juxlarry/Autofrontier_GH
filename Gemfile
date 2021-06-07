@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.6.6'
+ruby '2.6.5'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem 'rails', '~> 6.1.3', '>= 6.1.3.1'
@@ -34,7 +34,7 @@ gem 'devise'
 gem 'mysql2', '~> 0.5'
 
 #moved to postgres for app development
-gem 'pg'
+# gem 'pg'
 
 #for easy db dump and migration
 gem 'yaml_db'
