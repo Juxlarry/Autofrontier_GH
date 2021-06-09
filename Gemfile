@@ -34,7 +34,7 @@ gem 'devise'
 gem 'mysql2', '~> 0.5'
 
 #moved to postgres for app development
-gem 'pg'
+# gem 'pg'
 
 #for easy db dump and migration
 gem 'yaml_db'
