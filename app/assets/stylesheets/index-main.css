@@ -1,0 +1,654 @@
+.search-form {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  position: relative;
+  width: 100%;
+  z-index: 10;
+}
+.search-form__copy {
+  margin-bottom: 16px;
+  text-align: center;
+}
+.search-form__container {
+  background-color: #fff;
+  z-index: 10;
+}
+@media (min-width: 60em) {
+  .search-form__container {
+    margin: 0 auto;
+    position: relative;
+  }
+}
+.search-form .search-fields,
+.search-form__container {
+  max-width: 100%;
+  width: 100%;
+}
+.search-form .atds-field__text:not(.location-field__postcode),
+.search-form__dual-field {
+  margin: 6px 0 !important;
+}
+.search-form__field {
+  display: -webkit-inline-flex;
+  display: inline-flex;
+  margin-bottom: 16px;
+  width: calc(50% - 8px);
+}
+@media (min-width: 17.8125em) {
+  .search-form__postcode .atds-field__error-text {
+    position: absolute;
+    top: 100%;
+    margin-top: 4px;
+  }
+}
+.search-form__postcode .location-field__postcode {
+  width: 100%;
+}
+.search-form__submit {
+  min-width: 100%;
+}
+.search-form__submit button {
+  width: 100%;
+}
+.search-form__tagline {
+  font-size: 1.25em;
+  margin-bottom: 16px;
+  text-align: center;
+}
+.search-form .field-panel {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+.search-form .field-panel__filter-pair {
+  margin: 0;
+}
+.search-form .field-panel__legend {
+  display: inline;
+  height: 1px;
+  visibility: hidden;
+}
+.search-form .field-panel__toggle {
+  margin: 6px 0 8px;
+}
+.search-form .field-panel .search-select,
+.search-form .field-panel p {
+  display: none;
+}
+.search-form .quick-search__btn {
+  margin-top: 0;
+  width: 100%;
+}
+.search-form .atds-hero__btn-container {
+  margin-top: 0 !important;
+  max-height: 68px;
+  width: 100% !important;
+}
+.search-form .atds-hero__search-button,
+.search-form .quick-search__btn {
+  margin: 0 0 -4px !important;
+}
+.search-form .field-panel__filter-pair {
+  margin-bottom: -2px;
+}
+.search-form.search-form--vans .atds-hero__btn-container {
+  margin-top: 0 !important;
+  max-height: 64px;
+  min-height: auto;
+}
+.search-form.search-form--vans .atds-hero__search-button {
+  margin: 0 0 -6px !important;
+}
+.search-form.search-form--vans .atds-hero__search-utils {
+  margin-top: 2px;
+}
+.search-form.search-form--vans .quick-search__btn {
+  margin: 0 0 -6px !important;
+}
+.search-form.search-form--vans .field-panel__filter-pair {
+  margin-bottom: -4px;
+}
+.atds-hero__action {
+  padding-bottom: 8px;
+  position: relative;
+}
+@media (max-width: 37.4375em) {
+  .atds-hero__action:before {
+    background-color: #fff;
+    bottom: -17px;
+    content: "";
+    display: block;
+    height: calc(50% + 8px);
+    left: -16px;
+    position: absolute;
+    width: 100vw;
+    z-index: 0;
+  }
+}
+.atds-hero__btn-container {
+  margin-top: 0;
+  max-height: 80px;
+}
+.atds-hero__search-utils {
+  -webkit-align-items: center;
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  padding-top: 0.65em;
+}
+.atds-hero__search-utils .quick-search-reset-button {
+  background: none !important;
+  border-bottom: 1px solid #0534ff;
+  border-radius: 0;
+  max-height: 1.5em;
+  padding: 0 0.25em;
+  text-align: left;
+}
+.atds-hero__more-options {
+  margin: 0 !important;
+}
+.search-form__container {
+  border-radius: 4px;
+  box-shadow: 0 14px 44px -24px rgba(0, 0, 0, 0.3);
+  margin: 0 auto;
+  max-width: 320px;
+  padding: 16px;
+  position: relative;
+}
+@media (max-width: 47.9375em) {
+  .search-form__container {
+    max-width: 100%;
+    width: 100%;
+  }
+}
+.search-form__container .search-form__field:last-child {
+  margin-bottom: 0;
+}
+.search-form__container .search-form__field:nth-child(odd):not(:last-child) {
+  margin-right: 16px;
+}
+.search-form__container .search-form__title {
+  margin: 4px 0 8px;
+}
+.search-form__container .search-form__tagline {
+  color: #242d3d;
+  font-size: 1.25em;
+}
+.search-form__container .search-form__copy,
+.search-form__container .search-form__tagline {
+  margin-bottom: 0;
+}
+.search-form__container .search-form__submit .atds-button {
+  min-width: 100%;
+}
+.search-form__container .search-form .location-field__geolocation-button {
+  top: 5px;
+}
+.search-form__container .atds-field__help-text--error {
+  background: #fff;
+  padding-bottom: 0.75em;
+  position: absolute;
+  top: 3.5em;
+  z-index: 10;
+}
+.search-form__container .atds-field__label {
+  height: 1px;
+  visibility: hidden;
+}
+.search-form--caravans .atds-hero__search-utils,
+.search-form--motorhomes .atds-hero__search-utils {
+  padding-top: 0.25em;
+}
+.search-form--caravans .atds-hero__btn-container,
+.search-form--motorhomes .atds-hero__btn-container,
+.search-form--vans .atds-hero__btn-container {
+  margin-top: 0;
+  max-height: 72px;
+}
+.search-form--caravans .atds-hero__btn-container .atds-hero__search-button,
+.search-form--caravans .atds-hero__btn-container .quick-search__btn,
+.search-form--motorhomes .atds-hero__btn-container .atds-hero__search-button,
+.search-form--motorhomes .atds-hero__btn-container .quick-search__btn,
+.search-form--vans .atds-hero__btn-container .atds-hero__search-button,
+.search-form--vans .atds-hero__btn-container .quick-search__btn {
+  margin-top: 0;
+}
+.search-form--caravans .search-form .field-panel__toggle,
+.search-form--caravans .search-form__dual-field,
+.search-form--motorhomes .search-form .field-panel__toggle,
+.search-form--motorhomes .search-form__dual-field,
+.search-form--vans .search-form .field-panel__toggle,
+.search-form--vans .search-form__dual-field {
+  margin: 1px 0 !important;
+}
+.search-form--caravans .search-form__dual-field:first-of-type,
+.search-form--motorhomes .search-form__dual-field:first-of-type,
+.search-form--vans .search-form__dual-field:first-of-type {
+  margin: 2px 0 0 !important;
+}
+.search-form--caravans .search-form__field-wrapper,
+.search-form--motorhomes .search-form__field-wrapper,
+.search-form--vans .search-form__field-wrapper {
+  margin: -5px 0 5px;
+}
+.search-form--caravans .field-panel,
+.search-form--motorhomes .field-panel,
+.search-form--vans .field-panel {
+  margin-top: 5px;
+}
+.search-form--caravans .field-panel__filter-pair,
+.search-form--motorhomes .field-panel__filter-pair,
+.search-form--vans .field-panel__filter-pair {
+  margin-top: 2px;
+}
+.search-form--caravans,
+.search-form--motorhomes {
+  padding: 12px 16px;
+}
+.search-form--caravans .atds-hero__btn-container,
+.search-form--caravans .atds-hero__search-button,
+.search-form--caravans .quick-search__btn,
+.search-form--motorhomes .atds-hero__btn-container,
+.search-form--motorhomes .atds-hero__search-button,
+.search-form--motorhomes .quick-search__btn {
+  margin: 0 !important;
+}
+.search-form--farm .atds-hero__more-options,
+.search-form--plant .atds-hero__more-options,
+.search-form--trucks .atds-hero__more-options {
+  display: none;
+}
+.search-form--farm .atds-hero__search-utils,
+.search-form--plant .atds-hero__search-utils,
+.search-form--trucks .atds-hero__search-utils {
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+.search-form--trucks .atds-hero__btn-container {
+  margin-top: 0.7em !important;
+}
+.search-form--farm .atds-hero__btn-container,
+.search-form--plant .atds-hero__btn-container {
+  margin-top: 0.35em !important;
+}
+.search-form--farm
+  .search-form
+  .atds-field__text:not(.location-field__postcode),
+.search-form--farm .search-form__dual-field,
+.search-form--farm .search-form__field-wrapper,
+.search-form--plant
+  .search-form
+  .atds-field__text:not(.location-field__postcode),
+.search-form--plant .search-form__dual-field,
+.search-form--plant .search-form__field-wrapper {
+  margin: 0 !important;
+}
+.search-form--vans {
+  padding: 8px 16px;
+}
+.search-form--vans__search-utils {
+  padding-top: 0.5em;
+}
+.search-form--farm,
+.search-form--plant {
+  padding: 12px 16px;
+}
+.search-form small {
+  font-size: 10px;
+  height: 1em;
+  margin: 1px 0 3px;
+}
+.deals-adverts {
+  background-color: hsla(0, 0%, 100%, 0.8);
+  padding: 48px 48px 32px;
+}
+.home-page-guides,
+.home-page-latest {
+  background-color: hsla(0, 0%, 100%, 0.8);
+  padding: 48px 48px 0;
+}
+.home-page-guides .atds-container {
+  padding-bottom: 48px;
+}
+.deals-adverts .deals-adverts__footer {
+  text-align: center;
+  margin-top: 24px;
+}
+.deals-adverts .deals-adverts__title {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+@media (min-width: 40em) {
+  .deals-adverts .deals-adverts__title {
+    margin-bottom: 32px;
+  }
+}
+.deals-adverts .deals-adverts__list {
+  display: grid;
+  display: -ms-grid;
+  grid-auto-columns: calc(100% - 32px);
+  grid-auto-flow: column;
+  grid-gap: 16px;
+  max-width: 1224px;
+  overflow-x: auto;
+  padding: 0 0 16px;
+  -ms-scroll-snap-type: x proximity;
+  scroll-snap-type: x proximity;
+  -ms-scroll-snap-type: none;
+  scroll-snap-type: none;
+}
+.deals-adverts .deals-adverts__list:after {
+  content: "";
+  width: 0;
+}
+@media (min-width: 28.125em) {
+  .deals-adverts .deals-adverts__list {
+    grid-auto-columns: calc(80% - 28.8px);
+  }
+}
+@media (min-width: 31.25em) {
+  .deals-adverts .deals-adverts__list {
+    grid-auto-columns: calc(66.66667% - 26.66667px);
+  }
+}
+@media (min-width: 37.5em) {
+  .deals-adverts .deals-adverts__list {
+    grid-auto-columns: calc(44.44444% - 23.11111px);
+  }
+}
+@media (min-width: 43.75em) {
+  .deals-adverts .deals-adverts__list {
+    grid-auto-columns: calc(40% - 22.4px);
+  }
+}
+@media (min-width: 46.875em) {
+  .deals-adverts .deals-adverts__list {
+    grid-auto-columns: calc(34.48276% - 21.51724px);
+  }
+}
+@media (min-width: 59.375em) {
+  .deals-adverts .deals-adverts__list {
+    grid-auto-columns: calc(25.7732% - 20.12371px);
+  }
+}
+@media (min-width: 1256px) {
+  .deals-adverts .deals-adverts__list {
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 630px) {
+  .deals-adverts .deals-adverts__list {
+    display: grid;
+    display: -ms-grid;
+    grid-auto-columns: calc(100% - 64px);
+    grid-auto-flow: column;
+    grid-gap: 16px;
+    max-width: 1224px;
+    overflow-x: auto;
+    padding: 0 16px 16px;
+    -ms-scroll-snap-type: x proximity;
+    scroll-snap-type: x proximity;
+  }
+  .deals-adverts .deals-adverts__list:after {
+    content: "";
+    width: 16px;
+  }
+}
+@media screen and (max-width: 630px) and (min-width: 28.125em) {
+  .deals-adverts .deals-adverts__list {
+    grid-auto-columns: calc(80% - 54.4px);
+  }
+}
+@media screen and (max-width: 630px) and (min-width: 31.25em) {
+  .deals-adverts .deals-adverts__list {
+    grid-auto-columns: calc(66.66667% - 48px);
+  }
+}
+@media screen and (max-width: 630px) and (min-width: 37.5em) {
+  .deals-adverts .deals-adverts__list {
+    grid-auto-columns: calc(44.44444% - 37.33333px);
+  }
+}
+@media screen and (max-width: 630px) and (min-width: 43.75em) {
+  .deals-adverts .deals-adverts__list {
+    grid-auto-columns: calc(40% - 35.2px);
+  }
+}
+@media screen and (max-width: 630px) and (min-width: 46.875em) {
+  .deals-adverts .deals-adverts__list {
+    grid-auto-columns: calc(34.48276% - 32.55172px);
+  }
+}
+@media screen and (max-width: 630px) and (min-width: 59.375em) {
+  .deals-adverts .deals-adverts__list {
+    grid-auto-columns: calc(25.7732% - 28.37113px);
+  }
+}
+@media screen and (max-width: 630px) and (min-width: 1256px) {
+  .deals-adverts .deals-adverts__list {
+    margin: 0 auto;
+  }
+}
+.deals-adverts .deals-adverts__list .deals-adverts__item {
+  margin-bottom: 4px;
+  margin-top: 4px;
+  overflow: hidden;
+  min-width: 100%;
+}
+@media (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .deals-adverts .deals-adverts__list .deals-adverts__item {
+    -ms-grid-row: 1;
+    grid-row: 1;
+    min-width: auto;
+    width: 95%;
+  }
+  .deals-adverts .deals-adverts__list .deals-adverts__item:first-child {
+    -ms-grid-column: 1;
+    grid-column: 1;
+  }
+  .deals-adverts .deals-adverts__list .deals-adverts__item:nth-child(2) {
+    -ms-grid-column: 2;
+    grid-column: 2;
+  }
+  .deals-adverts .deals-adverts__list .deals-adverts__item:nth-child(3) {
+    -ms-grid-column: 3;
+    grid-column: 3;
+  }
+}
+.home-page .new-car-deals .new-car-deals__item {
+  min-width: auto;
+}
+.home-page .new-car-deals .slick-slide {
+  padding-right: 16px;
+}
+.home-page .new-car-deals .slick-list {
+  padding-left: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+.home-page .covid-panel-container {
+  margin-bottom: 48px;
+  margin-top: 0;
+}
+.home-page .social-strip {
+  border: none;
+  padding-bottom: 48px;
+}
+.home-page__hero-cta {
+  background-color: #fff;
+  padding: 12px 24px;
+  width: 100%;
+  border-radius: 4px;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+@media (min-width: 47.9375em) {
+  .home-page__hero-cta {
+    margin: 16px;
+  }
+}
+.home-page .atds-showroom {
+  margin-top: 48px;
+}
+.home-page .atds-brand-panel {
+  background-color: #fff;
+}
+.home-page-trucks .home-page__hero {
+  background-image: url(/home-pages/images/static/truck-hero-small.jpg);
+  background-image: -webkit-image-set(
+    url(/home-pages/images/static/truck-hero-small.jpg) 1x,
+    url(/home-pages/images/static/truck-hero.jpg) 600px
+  );
+  background-image: image-set(
+    url(/home-pages/images/static/truck-hero-small.jpg) 1x,
+    url(/home-pages/images/static/truck-hero.jpg) 600px
+  );
+}
+@media (min-width: 47.9375em) {
+  .home-page-trucks .home-page__hero {
+    background-image: url(/home-pages/images/static/truck-hero.jpg);
+  }
+}
+.home-page-plant .home-page__hero {
+  background-image: url(/home-pages/images/static/plant-hero-small.jpg);
+  background-image: -webkit-image-set(
+    url(/home-pages/images/static/plant-hero-small.jpg) 1x,
+    url(/home-pages/images/static/plant-hero.jpg) 600px
+  );
+  background-image: image-set(
+    url(/home-pages/images/static/plant-hero-small.jpg) 1x,
+    url(/home-pages/images/static/plant-hero.jpg) 600px
+  );
+}
+@media (min-width: 47.9375em) {
+  .home-page-plant .home-page__hero {
+    background-image: url(/home-pages/images/static/plant-hero.jpg);
+  }
+}
+.home-page-farm .home-page__hero {
+  background: url(/home-pages/images/static/farm-hero.jpg);
+}
+.home-page-farm .home-page__hero-cta,
+.home-page-plant .home-page__hero-cta,
+.home-page-trucks .home-page__hero-cta {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+}
+@media (max-width: 600px) {
+  .home-page-farm .home-page__hero-cta,
+  .home-page-plant .home-page__hero-cta,
+  .home-page-trucks .home-page__hero-cta {
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    margin: 0.75em 0;
+    text-align: center;
+  }
+}
+.home-page-farm .home-page__hero,
+.home-page-plant .home-page__hero,
+.home-page-trucks .home-page__hero {
+  background-size: cover;
+  max-height: 373px;
+  background-position: 100%;
+}
+@media screen and (max-width: 47.9375em) {
+  .home-page-farm .home-page__hero,
+  .home-page-plant .home-page__hero,
+  .home-page-trucks .home-page__hero {
+    background-position: 80%;
+  }
+}
+.home-page-farm .home-page__hero-content,
+.home-page-plant .home-page__hero-content,
+.home-page-trucks .home-page__hero-content {
+  -webkit-flex-direction: column;
+  flex-direction: column;
+}
+@media (min-width: 47.9375em) {
+  .home-page-farm .home-page__hero-content,
+  .home-page-plant .home-page__hero-content,
+  .home-page-trucks .home-page__hero-content {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    -webkit-align-items: flex-end;
+    align-items: flex-end;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+}
+.home-page-farm .home-page__search,
+.home-page-plant .home-page__search,
+.home-page-trucks .home-page__search {
+  max-width: 320px;
+  width: 100%;
+  position: static;
+}
+@media screen and (max-width: 47.9375em) {
+  .home-page-farm .home-page__search,
+  .home-page-plant .home-page__search,
+  .home-page-trucks .home-page__search {
+    max-width: 100%;
+  }
+}
+.home-page-farm .home-page__display-fallback,
+.home-page-plant .home-page__display-fallback,
+.home-page-trucks .home-page__display-fallback {
+  display: none;
+}
+.home-page-farm .promo-section--sell-promo,
+.home-page-plant .promo-section--sell-promo,
+.home-page-trucks .promo-section--sell-promo {
+  margin-top: 48px;
+}
+@media (max-width: 47.9375em) {
+  .home-page-farm .promo-section--sell-promo .promo-section__content,
+  .home-page-plant .promo-section--sell-promo .promo-section__content,
+  .home-page-trucks .promo-section--sell-promo .promo-section__content {
+    text-align: center;
+  }
+}
+.home-page-farm .promo-section--sell-promo .promo-section__insight__content,
+.home-page-plant .promo-section--sell-promo .promo-section__insight__content,
+.home-page-trucks .promo-section--sell-promo .promo-section__insight__content {
+  background-position: 50%;
+}
+@media (max-width: 47.9375em) {
+  .home-page-farm
+    .promo-section--sell-promo
+    .promo-section__insight__content:after,
+  .home-page-plant
+    .promo-section--sell-promo
+    .promo-section__insight__content:after,
+  .home-page-trucks
+    .promo-section--sell-promo
+    .promo-section__insight__content:after {
+    height: auto;
+  }
+}
+.home-page-farm .promo-section--sell-promo .promo-section__action:before,
+.home-page-plant .promo-section--sell-promo .promo-section__action:before,
+.home-page-trucks .promo-section--sell-promo .promo-section__action:before {
+  background-color: #f7f7f5;
+}
