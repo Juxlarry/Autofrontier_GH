@@ -40,6 +40,7 @@
 
 <!-- BEGIN : Body-->
 
+
 <body class="vertical-layout vertical-menu 1-column auth-page navbar-sticky blank-page" data-menu="vertical-menu" data-col="1-column">
     <!-- ////////////////////////////////////////////////////////////////////////////-->
     <div class="wrapper">
@@ -62,7 +63,7 @@
                                                 </div>
                                                 <div class="col-lg-6 col-md-12 px-4 py-3" style="margin-top: -5px;">
                                                     <h4 class="card-title mb-2">Create Account</h4>
-                                                    <p>Fill the form below to create an account.</p>
+                                                    <p id="signup_instructions">Fill the form below to create an account.</p>
                                                     <!--<input type="text" class="form-control mb-2" placeholder="Name">-->
                                                     <span style="display:flex;">
                                                         <%= f.input :firstname,
@@ -141,7 +142,7 @@
                                                         <%= f.file_field :logo, 
                                                             input_html: {  class: "form-control mb-2" }
                                                         %>
-                                                        <br> <br>
+                                                        <br id="file_breaker"> <br>
                                                         <%= f.label :avatar, "Choose Avatar" %> 
                                                         <%= f.file_field :avatar, 
                                                             input_html: {class: "form-control mb-2" }
@@ -150,7 +151,7 @@
                                                     <br>
                                                     
 
-                                                    <span style="margin-left:60px;">I accept the terms & conditions</span>
+                                                    <span id="terms_acceptance" >I accept the terms & conditions</span>
                                                      
                                                     <div class="d-flex justify-content-between flex-sm-row flex-column">
                                                         <%= f.button :submit, "Register" %>
