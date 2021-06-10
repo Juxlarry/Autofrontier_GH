@@ -7095,7 +7095,9 @@
 
 
         #content{
-          margin-top:0;
+            margin-top:0;
+            margin-left: 25px;
+            margin-right: 25px;
         }
 
         .logo-span{
@@ -7164,10 +7166,17 @@
             }
         }
 
+        @media(max-width:768px){
+            .home-page__display-fallback img {
+                max-width: 500px !important;
+                left: 79% !important;
+            }
+        }
 
         @media(max-width:540px){
             .home-page__display-fallback img {
-                max-width: 508px;
+                max-width: 540px !important;
+                left: 50% !important;
             }
         }
 
@@ -7189,10 +7198,17 @@
             }
 
             .home-page__display-fallback img {
-                max-width: 400px;
+                max-width: 400px !important;
+                left: 60% !important;
             }
 
 
+        }
+
+        @media (max-width: 385px){
+           .home-page__display-fallback img {
+                left: 52% !important;
+            }
         }
 
 
@@ -7215,9 +7231,9 @@
                 font-size: 18px;
             }
 
-            .home-page__display-fallback img {
-                max-width: 400px;
-            }
+            /* .home-page__display-fallback img {
+                max-width: 400px !important;
+            } */
 
         }
 
@@ -7241,7 +7257,7 @@
             }
 
             .home-page__display-fallback img {
-                max-width: 325px;
+                max-width: 325px !important;
             }
 
         }
@@ -7260,8 +7276,18 @@
             left: 65%;
         }
 
+
         .home-page__display-fallback img {
-            max-width: 500px;
+            max-width: 700px;
+            left: 66%;
+        }
+
+
+        .home-page__display-fallback {
+            background-image: url("/assets/header_index.jpg");
+            position: absolute;
+            background-position: center center;
+            background-size: cover;
         }
     </style>
     <meta charset="utf-8">
@@ -12152,10 +12178,10 @@
             <header class="home-page__header o-page-align home-page--search-desktop home-page--button-test">
                 <div class="home-page__hero">
                     <div class="home-page__display-fallback">
-                        <img src="/assets/header_index.jpg"
+                        <!--<img src="/assets/header_index.jpg"
                             alt="Header Image"
                             class="home-page__hero-placeholder home-page__hero-cars"
-                        />
+                        />-->
                     </div>
                     <section class="home-page__display"></section>
                 </div>
