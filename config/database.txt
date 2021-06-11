@@ -14,7 +14,7 @@ default: &default
   encoding: utf8mb4
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   username: root
-  password: Germany@1234
+  password: Qazxcv&95
   host: localhost
 
 development:
@@ -50,6 +50,6 @@ test:
 #
 production:
   <<: *default
-  database: autofrontier_production
-  username: autofrontier
-  password: <%= ENV['AUTOFRONTIER_DATABASE_PASSWORD'] %>
+  # database: <%= ENV['DATABASE_URL'] %>
+  database: postgres://htwxndlqtcazzt:4444ebe492bd25d7fec8732ed8376528960999fec5f33dde0815c05555c37c66@ec2-52-4-111-46.compute-1.amazonaws.com:5432/d5fk7003gdv7ia
+  # password: <%= ENV['AUTOFRONTIER_DATABASE_PASSWORD'] %>
