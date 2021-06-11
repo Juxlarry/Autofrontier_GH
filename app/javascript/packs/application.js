@@ -32,12 +32,15 @@ require("jquery-datetimepicker")
 
 require("bootstrap")
 
-document.addEventListener("turbolinks:load", function() {
-    $(function () {
-        $('[data-toggle="tooltip"]').tooltip()
-        $('[data-toggle="popover"]').popover()
+
+
+    document.addEventListener("turbolinks:load", function() {
+        $(function() {
+            $('[data-toggle="tooltip"]').tooltip()
+            $('[data-toggle="popover"]').popover()
+        })
     })
-})
+
 
 // import './src/application.scss'
 
@@ -46,6 +49,6 @@ window.toastr = toastr
 
 
 
-window.jQuery = $;
+// window.jQuery = $;
 window.$ = $;
 

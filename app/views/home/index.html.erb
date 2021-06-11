@@ -7096,7 +7096,7 @@
 
         #content{
             margin-top:0;
-            margin-left: 25px;
+            margin-left: 170px;
             margin-right: 25px;
         }
 
@@ -7124,11 +7124,34 @@
         }
 
 
+        @media(max-width:1364px) {
+            
+            #content{
+                margin-top:0;
+                margin-left: 100px;
+                margin-right: 25px;
+            }
+
+        }
+        
+        
+        @media(max-width:1052px) {
+            
+            #content{
+                margin-top:0;
+                margin-left: 25px;
+                margin-right: 25px;
+            }
+
+        }
+
+
         @media(min-width:800px) {
             
             .atds-header__logo{
                 margin-left: 10px !important;
             }
+
 
         }
 
@@ -12016,7 +12039,8 @@
                                         <path
                                             d="M9.1982 11.1807C8.9382 11.1807 8.6982 11.0997 8.4882 11.0207C8.2882 10.9407 8.0972 10.8607 7.8882 10.7897C7.9382 10.5597 7.9582 10.2897 7.9582 9.96969C7.9582 9.70069 7.9082 9.45069 7.8282 9.20069H9.3282V8.43069H7.4982C7.2482 8.02069 7.0282 7.61069 7.0282 7.16969C7.0282 6.56069 7.3582 6.04969 8.0782 6.04969C8.8382 6.04969 9.1282 6.47969 9.1282 7.18069V7.22969H10.0082V7.12969C10.0082 6.02069 9.2672 5.27069 8.0972 5.27069C6.8472 5.27069 6.0882 6.02069 6.0882 7.11969V7.24969C6.0882 7.63969 6.2682 8.09069 6.4482 8.43069H5.8582V9.20069H6.8582C6.9882 9.46969 7.0882 9.75969 7.0882 10.0597C7.0882 10.2497 7.0682 10.4507 7.0492 10.6197H6.9782C6.0882 10.6507 5.6982 11.1807 5.7382 11.9197H6.5972C6.5972 11.5897 6.7782 11.4407 7.1772 11.4407C7.5382 11.4407 7.7672 11.5697 8.0882 11.7007C8.4082 11.8497 8.7282 11.9997 9.1882 11.9997C10.2192 11.9997 10.5682 11.3097 10.5972 10.6197V10.4997H9.7782C9.7982 10.9097 9.6282 11.1807 9.1982 11.1807ZM1.333 14V3.99999H4C4.231 3.99999 4.425 3.87499 4.545 3.69599L4.555 3.70299L5.69 1.99999H10.31L11.445 3.70299L11.455 3.69599C11.575 3.87499 11.769 3.99999 12 3.99999H14.667V14H1.333ZM14.667 2.66699H12.356L11.222 0.963992L11.211 0.970992C11.092 0.791992 10.897 0.666992 10.667 0.666992H5.333C5.103 0.666992 4.908 0.791992 4.789 0.970992L4.778 0.963992L3.644 2.66699H1.333C0.599 2.66699 0 3.26499 0 3.99999V14C0 14.735 0.599 15.333 1.333 15.333H14.667C15.401 15.333 16 14.735 16 14V3.99999C16 3.26499 15.401 2.66699 14.667 2.66699Z">
                                         </path>
-                                    </svg>Sell</a></div>
+                                    </svg>Sell</a>
+                            </div>
                             <div class="atds-header-tools">
                                 <% if user_signed_in? %>
 
@@ -12101,7 +12125,14 @@
                                         aria-current="false" class="atds-channel-switcher__link ">Plant</a></li>
                                 <li role="none" class="atds-channel-switcher__item"><a
                                         href="#" role="menuitem" aria-current="false"
-                                        class="atds-channel-switcher__link  narrow-hide">Security advice</a></li>
+                                        class="atds-channel-switcher__link  narrow-hide">Security advice</a>
+                                </li>
+                                <% if user_signed_in? %>
+                                    <li role="none" class="atds-channel-switcher__item"><a
+                                        href="/cars" role="menuitem" aria-current="false"
+                                        class="atds-channel-switcher__link  narrow-hide">All Cars</a>
+                                    </li>
+                                <% end %>
                             </ul>
                         </div>
                         <div class="atds-header__drawer">
@@ -12145,6 +12176,12 @@
                                     <li role="none" class="atds-channel-switcher__item"><a
                                             href="#" role="menuitem" aria-current="false"
                                             class="atds-channel-switcher__link  narrow-hide">Security advice</a></li>
+                                    <% if user_signed_in? %>
+                                        <li role="none" class="atds-channel-switcher__item"><a
+                                            href="/cars" role="menuitem" aria-current="false"
+                                            class="atds-channel-switcher__link  narrow-hide">All Cars</a>
+                                        </li>
+                                    <% end %>
                                 </ul>
                             </div>
                             <p class="visuallyhidden"><span class="visuallyhidden">Currently in the </span>cars<span
@@ -12562,12 +12599,12 @@
                                     </div>
                                     <p class="atds-type-mini">Finance examples for
                                         <!-- --> <a target="_blank"
-                                            href="/content/guides/buying-a-car-using-hire-purchase-hp">HP,</a> <a
+                                            href="#">HP,</a> <a
                                             target="_blank"
-                                            href="/content/guides/buying-a-car-using-hire-purchase-hp">CS</a>
+                                            href="#">CS</a>
                                         <!-- -->and
                                         <!-- --> <a target="_blank"
-                                            href="/content/guides/buying-a-car-using-a-personal-contract-plan-pcp">PCP</a>
+                                            href="#">PCP</a>
                                         <!-- -->will be returned if available, based on 48 month term, £1,000 deposit
                                         and 10,000 miles/year. Finance subject to status.</p>
                                 </fieldset>
@@ -12584,7 +12621,7 @@
                                 <div class="atds-hero__search-utils"><button data-gui="search-reset-button"
                                         class="sc-eCApnc daTblh atds-button atds-type-fiesta quick-search-reset-button"
                                         type="button">Reset filters</button><a class="atds-hero__more-options"
-                                        href="/search-form?moreOptions=visible&amp;&amp;advertising-location=at_cars">More
+                                        href="#">More
                                         options</a></div>
                             </div>
                         </div>
@@ -12597,7 +12634,7 @@
                         <h1 class="atds-type-discovery">Buy from home</h1>
                         <p class="atds-type-insignia">Find cars available for Home Delivery and Click &amp; Collect</p>
                         <a class="sc-eCApnc iiWrFO atds-button atds-type-fiesta"
-                            href="https://www.autotrader.co.uk/cars/buying-online" data-gui="covid-panel-cta">Find out
+                            href="#" data-gui="covid-panel-cta">Find out
                             more</a>
                     </div><img src="https://www.autotrader.co.uk/home-pages/images/static/covid-panel/blue-car-v2.png"
                         class="covid-panel__car covid-panel__car--blue" alt="" /><img
@@ -12612,7 +12649,7 @@
                         </h1>
                         <div class="vehicle-strip__sub-heading-container"><a
                                 class="atc-signpost atc-signpost--primary atc-signpost--forward atc-type-fiesta vehicle-strip__link"
-                                href="/cars/deals?journey=deals&amp;fromHomepageNewCars=true">View more deals<svg
+                                href="#">View more deals<svg
                                     viewBox="0 0 13 12" class="atc-signpost__icon">
                                     <path
                                         d="M3.4 5H12c.55 0 1 .45 1 1s-.45 1-1 1H3.4l3.3 3.3c.4.38.4 1.02 0 1.4s-1.02.4-1.4 0l-5-5c-.4-.38-.4-1.02 0-1.4l5-5c.38-.4 1.02-.4 1.4 0s.4 1.02 0 1.4L3.4 5z">
@@ -12674,7 +12711,7 @@
                         src="https://m.atcdn.co.uk/ect/media/w1024/e1a30b2a9073495f91f6ce0bb6240589.jpg" alt=""
                         loading="lazy" decoding="async" />
                     <p><a class="atc-button atc-button--tertiary content__feature-cta"
-                            href="https://www.autotrader.co.uk/content/longterm-reviews/living-with-a-renault-clio-e-tech-hybrid-month-1">Read
+                            href="#">Read
                             more</a><span class="atc-type-beetle">Auto Trader latest</span><strong
                             class="atc-type-phantom">Living with a… Renault Clio E-Tech Hybrid (Month 5)</strong></p>
                 </figure>
@@ -12703,34 +12740,34 @@
                             <h6 class="sc-pNWdM cHRGQv atds-type-fiesta">Auto Frontier Group</h6>
                             <ul class="sc-jrsJWt dJdFwe">
                                 <li class="sc-kEqXSa bZXxtG footer__nav-listing"><a
-                                        class="atds-link tracking-footer-link atds-type-mini" href="/contact-us">
+                                        class="atds-link tracking-footer-link atds-type-mini" href="#">
                                         <!-- -->Contact us</a></li>
                                 <li class="sc-kEqXSa bZXxtG footer__nav-listing"><a
                                         class="atds-link tracking-footer-link atds-type-mini"
-                                        href="https://plc.autotrader.co.uk/">
+                                        href="#">
                                         <!-- -->About Auto Trader</a></li>
                                 <li class="sc-kEqXSa bZXxtG footer__nav-listing"><a
                                         class="atds-link tracking-footer-link atds-type-mini"
-                                        href="https://careers.autotrader.co.uk">
+                                        href="#">
                                         <!-- -->Careers</a></li>
                                 <li class="sc-kEqXSa bZXxtG footer__nav-listing"><a
                                         class="atds-link tracking-footer-link atds-type-mini"
-                                        href="https://plc.autotrader.co.uk/investors">
+                                        href="#">
                                         <!-- -->Investor information</a></li>
                                 <li class="sc-kEqXSa bZXxtG footer__nav-listing"><a
-                                        class="atds-link tracking-footer-link atds-type-mini" href="/privacy-policy">
+                                        class="atds-link tracking-footer-link atds-type-mini" href="#">
                                         <!-- -->Privacy policies and terms</a></li>
                                 <li class="sc-kEqXSa bZXxtG footer__nav-listing"><a
                                         class="atds-link tracking-footer-link atds-type-mini"
-                                        href="https://www.autotrader.co.uk/terms-and-conditions/advertising">
+                                        href="#">
                                         <!-- -->Selling terms &amp; conditions</a></li>
                                 <li class="sc-kEqXSa bZXxtG footer__nav-listing"><a
                                         class="atds-link tracking-footer-link atds-type-mini"
-                                        href="https://advertising.autotrader.co.uk/">
+                                        href="#">
                                         <!-- -->Display advertising</a></li>
                                 <li class="sc-kEqXSa bZXxtG footer__nav-listing"><a
                                         class="atds-link tracking-footer-link atds-type-mini"
-                                        href="https://www.carzone.ie">
+                                        href="#">
                                         <!-- -->Carzone.ie</a></li>
                                 <li class="sc-kEqXSa bZXxtG footer__nav-listing"><button
                                         class="sc-dIvrsQ govYVV tracking-footer-link atds-type-mini">Manage
@@ -12779,7 +12816,7 @@
                                         class="atds-link tracking-footer-link atds-type-mini" href="#">
                                         <!-- -->Retailer awards</a></li>
                                 <li class="sc-kEqXSa bZXxtG footer__nav-listing"><a
-                                        class="atds-link tracking-footer-link atds-type-mini" href="/new_cars">
+                                        class="atds-link tracking-footer-link atds-type-mini" href="#">
                                         <!-- -->New car awards</a></li>
                                 <li class="sc-kEqXSa bZXxtG footer__nav-listing"><a
                                         class="atds-link tracking-footer-link atds-type-mini" href="#">
@@ -13167,7 +13204,6 @@
     <%= javascript_pack_tag 'custom/homem', media: 'all' %>
     <%= javascript_pack_tag 'custom/homereact', media: 'all' %>
     <%= javascript_pack_tag 'custom/homeven', media: 'all' %>
-    <!-- <script src="/home-pages/bundles/lib/static/js/main.0999e7c4.chunk.js"></script> -->
 </body>
 
 </html>
