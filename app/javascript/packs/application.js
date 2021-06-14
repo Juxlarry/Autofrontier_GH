@@ -8,7 +8,7 @@ import Rails from "@rails/ujs"
 import Turbolinks from "turbolinks"
 import * as ActiveStorage from "@rails/activestorage"
 import "channels"
-import JQuery from 'jquery';
+// import JQuery from 'jquery';
 import 'bootstrap/dist/js/bootstrap'
 import 'bootstrap/dist/css/bootstrap'
 import "../stylesheets/application";
@@ -30,7 +30,7 @@ import toastr from "toastr";
 require("jquery")
 require("jquery-datetimepicker")
 
-require("bootstrap")
+
 
 document.addEventListener("turbolinks:load", function() {
     $(function () {
@@ -39,6 +39,7 @@ document.addEventListener("turbolinks:load", function() {
     })
 })
 
+require("bootstrap")
 // import './src/application.scss'
 
 // import toastr from 'toastr'
@@ -46,6 +47,6 @@ window.toastr = toastr
 
 
 
-window.jQuery = $;
-window.$ = $;
+// window.jQuery = $;
+// window.$ = $;
 
