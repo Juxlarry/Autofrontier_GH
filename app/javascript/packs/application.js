@@ -49,6 +49,6 @@ window.toastr = toastr
 
 
 
-// window.jQuery = $;
+window.jQuery = $;
 window.$ = $;
 
