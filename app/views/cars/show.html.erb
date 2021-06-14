@@ -43,17 +43,17 @@
     <script src="//www.youtube.com/iframe_api"></script>
     <script src="//www.youtube.com/iframe_api"></script>
     <script src="//www.youtube.com/iframe_api"></script>
-    <script
+    <!--<script
       type="text/javascript"
       async=""
       src="https://analytics.tiktok.com/i18n/pixel/config.js?sdkid=BV8B4C9G18MG0UVLTLRG"
-    ></script>
+    ></script> 
     <script
       src="https://rules.quantcount.com/rules-p-30XWBB9rlzR2E.js"
       async=""
-    ></script>
+    ></script>-->
     <script src="//www.youtube.com/iframe_api"></script>
-    <script
+    <!--<script
       type="text/javascript"
       async=""
       src="https://analytics.tiktok.com/i18n/pixel/events.js?sdkid=BV8B4C9G18MG0UVLTLRG&amp;lib=ttq"
@@ -71,7 +71,7 @@
       charset="utf-8"
       id="utag_558"
       src="//collector-8067.tvsquared.com/tv2track.js"
-    ></script>
+    ></script> -->
     <script
       type="text/javascript"
       async=""
@@ -97,7 +97,7 @@
       id="utag_571"
       src="https://secure.quantserve.com/quant.js"
     ></script>
-    <script
+    <!--<script
       type="text/javascript"
       async=""
       charset="utf-8"
@@ -122,12 +122,12 @@
       charset="utf-8"
       id="utag_515"
       src="//js.adsrvr.org/up_loader.1.1.0.js"
-    ></script>
+    ></script> -->
     <script
       async=""
       src="https://secure-ds.serving-sys.com/SemiCachedScripts/ebOneTag.js?id=1073742440"
     ></script>
-    <script
+    <!--<script
       type="text/javascript"
       async=""
       charset="utf-8"
@@ -168,7 +168,7 @@
       async=""
       id="tealium-tag-3005"
       src="https://sb.scorecardresearch.com/cs/6035755/beacon.js"
-    ></script>
+    ></script> -->
     <script
       type="text/javascript"
       async=""
@@ -202,12 +202,12 @@
 
       document.getElementsByTagName("head")[0].appendChild(scriptTag);
     </script>
-    <script
+    <!--<script
       src="https://www.googletagservices.com/tag/js/gpt.js"
       async=""
     ></script>
 
-    <!-- <script src="https://www.autotrader.co.uk/bundles/runtime-bd1b487a891839be5538-bundle.js"></script>
+     <script src="https://www.autotrader.co.uk/bundles/runtime-bd1b487a891839be5538-bundle.js"></script>
 
     <script src="https://www.autotrader.co.uk/bundles/desktop-484d74e55acc10f2d5d3-bundle.js"></script> -->
     <meta
@@ -18918,64 +18918,61 @@
                 </a>
               </div>
               <div class="atds-header-tools">
-                <a
-                  href="/secure/saved-adverts"
-                  class="atds-type-mini atds-header-tools__link"
-                  aria-label="Go to your saved adverts"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    height="16"
-                    width="16"
-                    class="atds-svg"
-                  >
-                    <path
-                      d="M8 14.185C5.115 11.428 1.333 6.968 1.333 4.454C1.333 2.298 2.713 1.333 4.081 1.333C5.1 1.333 6.157 1.83 7.058 2.73L8 3.672L8.942 2.73C9.843 1.83 10.9 1.333 11.919 1.333C13.287 1.333 14.667 2.298 14.667 4.454C14.667 6.964 10.884 11.426 8 14.185ZM11.919 0C10.632 0 9.226 0.561 8 1.787C6.774 0.561 5.369 0 4.081 0C1.866 0 0 1.661 0 4.454C0 8.872 8 16 8 16C8 16 16 8.872 16 4.454C16 1.66 14.134 0 11.919 0Z"
-                    ></path></svg
-                  >Saved
-                </a>
+                <% if user_signed_in? %>
 
-                <a
-                  href="/search-form"
-                  class="atds-type-mini atds-header-tools__link wide-hide"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    height="16"
-                    width="16"
-                    class="atds-svg"
-                  >
-                    <title></title>
-                    <path
-                      d="M6 10.667C3.427 10.667 1.333 8.573 1.333 6C1.333 3.427 3.427 1.333 6 1.333C8.573 1.333 10.667 3.427 10.667 6C10.667 8.573 8.573 10.667 6 10.667ZM10.686 9.742C11.506 8.716 12 7.416 12 6C12 2.687 9.313 0 6 0C2.687 0 0 2.687 0 6C0 9.313 2.687 12 6 12C7.417 12 8.716 11.506 9.742 10.686L15.058 16L16 15.057L10.686 9.742Z"
-                    ></path>
-                  </svg>
-                  Search
-                </a>
-                <a
-                  href="/secure/signin"
-                  class="atds-header-tools__link atds-type-mini narrow-hide"
-                  aria-label="Sign in to your Auto Trader Account"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    height="16"
-                    width="16"
-                    class="atds-svg"
-                  >
-                    <path
-                      d="M8 6.6666C7.265 6.6666 6.667 6.0676 6.667 5.3326C6.667 4.5976 7.265 3.9996 8 3.9996C8.735 3.9996 9.333 4.5976 9.333 5.3326C9.333 6.0676 8.735 6.6666 8 6.6666ZM8 2.6666C6.527 2.6666 5.333 3.8596 5.333 5.3326C5.333 6.8056 6.527 7.9996 8 7.9996C9.473 7.9996 10.667 6.8056 10.667 5.3326C10.667 3.8596 9.473 2.6666 8 2.6666ZM12.8823 12.524C12.0573 10.646 10.1833 9.333 8.0003 9.333C5.8173 9.333 3.9433 10.646 3.1173 12.524C2.0143 11.334 1.3333 9.747 1.3333 8C1.3333 5.427 2.7703 3.129 5.0843 2.003C5.9953 1.558 6.9763 1.333 8.0003 1.333C11.6753 1.333 14.6673 4.324 14.6673 8C14.6673 9.747 13.9863 11.334 12.8823 12.524ZM8.0003 14.667C6.5823 14.667 5.2683 14.217 4.1863 13.46C4.6993 11.842 6.2153 10.667 8.0003 10.667C9.7853 10.667 11.3003 11.842 11.8133 13.46C10.7313 14.217 9.4183 14.667 8.0003 14.667ZM8.0003 0C6.7453 0 5.5573 0.289 4.5003 0.804C1.8363 2.102 0.000301361 4.837 0.000301361 8C0.000301361 10.389 1.0533 12.527 2.7143 13.994C3.1133 14.346 3.5483 14.661 4.0133 14.928C5.1883 15.606 6.5473 16 8.0003 16C9.4533 16 10.8123 15.606 11.9863 14.928C12.4523 14.661 12.8863 14.346 13.2863 13.994C14.9473 12.527 16.0003 10.389 16.0003 8C16.0003 3.582 12.4183 0 8.0003 0Z"
-                    ></path>
-                  </svg>
-                  Sign in
-                </a>
-                <a
-                  href="/safety_and_security_centre"
-                  role="menuitem"
-                  class="atds-header-tools-security atds-type-smart wide-hide"
-                >
-                  <span class="atds-header__label">Security advice</span>
-                </a>
+                  <a href="#"
+                    class="atds-type-mini atds-header-tools__link"><svg
+                        xmlns="http://www.w3.org/2000/svg" height="16" width="16" class="atds-svg">
+                        <title></title>
+                        <path
+                            d="M8 14.185C5.115 11.428 1.333 6.968 1.333 4.454C1.333 2.298 2.713 1.333 4.081 1.333C5.1 1.333 6.157 1.83 7.058 2.73L8 3.672L8.942 2.73C9.843 1.83 10.9 1.333 11.919 1.333C13.287 1.333 14.667 2.298 14.667 4.454C14.667 6.964 10.884 11.426 8 14.185ZM11.919 0C10.632 0 9.226 0.561 8 1.787C6.774 0.561 5.369 0 4.081 0C1.866 0 0 1.661 0 4.454C0 8.872 8 16 8 16C8 16 16 8.872 16 4.454C16 1.66 14.134 0 11.919 0Z">
+                        </path>
+                    </svg>Welcome, <%= current_user.displayname %></a><a href="#"
+                    class="atds-type-mini atds-header-tools__link wide-hide"><svg
+                        xmlns="http://www.w3.org/2000/svg" height="16" width="16" class="atds-svg">
+                        <title></title>
+                        <path
+                            d="M6 10.667C3.427 10.667 1.333 8.573 1.333 6C1.333 3.427 3.427 1.333 6 1.333C8.573 1.333 10.667 3.427 10.667 6C10.667 8.573 8.573 10.667 6 10.667ZM10.686 9.742C11.506 8.716 12 7.416 12 6C12 2.687 9.313 0 6 0C2.687 0 0 2.687 0 6C0 9.313 2.687 12 6 12C7.417 12 8.716 11.506 9.742 10.686L15.058 16L16 15.057L10.686 9.742Z">
+                        </path>
+                    </svg>Search</a><a href="/users/sign_out"
+                    class="atds-header-tools__link atds-type-mini narrow-hide"
+                    aria-label="Sign in to your Auto Trader Account"><svg
+                        xmlns="http://www.w3.org/2000/svg" height="16" width="16" class="atds-svg">
+                        <title></title>
+                        <path
+                            d="M8 6.6666C7.265 6.6666 6.667 6.0676 6.667 5.3326C6.667 4.5976 7.265 3.9996 8 3.9996C8.735 3.9996 9.333 4.5976 9.333 5.3326C9.333 6.0676 8.735 6.6666 8 6.6666ZM8 2.6666C6.527 2.6666 5.333 3.8596 5.333 5.3326C5.333 6.8056 6.527 7.9996 8 7.9996C9.473 7.9996 10.667 6.8056 10.667 5.3326C10.667 3.8596 9.473 2.6666 8 2.6666ZM12.8823 12.524C12.0573 10.646 10.1833 9.333 8.0003 9.333C5.8173 9.333 3.9433 10.646 3.1173 12.524C2.0143 11.334 1.3333 9.747 1.3333 8C1.3333 5.427 2.7703 3.129 5.0843 2.003C5.9953 1.558 6.9763 1.333 8.0003 1.333C11.6753 1.333 14.6673 4.324 14.6673 8C14.6673 9.747 13.9863 11.334 12.8823 12.524ZM8.0003 14.667C6.5823 14.667 5.2683 14.217 4.1863 13.46C4.6993 11.842 6.2153 10.667 8.0003 10.667C9.7853 10.667 11.3003 11.842 11.8133 13.46C10.7313 14.217 9.4183 14.667 8.0003 14.667ZM8.0003 0C6.7453 0 5.5573 0.289 4.5003 0.804C1.8363 2.102 0.000301361 4.837 0.000301361 8C0.000301361 10.389 1.0533 12.527 2.7143 13.994C3.1133 14.346 3.5483 14.661 4.0133 14.928C5.1883 15.606 6.5473 16 8.0003 16C9.4533 16 10.8123 15.606 11.9863 14.928C12.4523 14.661 12.8863 14.346 13.2863 13.994C14.9473 12.527 16.0003 10.389 16.0003 8C16.0003 3.582 12.4183 0 8.0003 0Z">
+                        </path>
+                    </svg>Sign out</a></div><a href="#" role="menuitem"
+                  class="atds-header-tools-security atds-type-smart wide-hide" tabindex="-1"><span
+                    class="atds-header__label">Security advice</span></a>
+
+                <% else %>
+                  <a href="/users/sign_up"
+                      class="atds-type-mini atds-header-tools__link"><svg
+                          xmlns="http://www.w3.org/2000/svg" height="16" width="16" class="atds-svg">
+                          <title></title>
+                          <path
+                              d="M8 14.185C5.115 11.428 1.333 6.968 1.333 4.454C1.333 2.298 2.713 1.333 4.081 1.333C5.1 1.333 6.157 1.83 7.058 2.73L8 3.672L8.942 2.73C9.843 1.83 10.9 1.333 11.919 1.333C13.287 1.333 14.667 2.298 14.667 4.454C14.667 6.964 10.884 11.426 8 14.185ZM11.919 0C10.632 0 9.226 0.561 8 1.787C6.774 0.561 5.369 0 4.081 0C1.866 0 0 1.661 0 4.454C0 8.872 8 16 8 16C8 16 16 8.872 16 4.454C16 1.66 14.134 0 11.919 0Z">
+                          </path>
+                      </svg>Register</a><a href="#"
+                      class="atds-type-mini atds-header-tools__link wide-hide"><svg
+                          xmlns="http://www.w3.org/2000/svg" height="16" width="16" class="atds-svg">
+                          <title></title>
+                          <path
+                              d="M6 10.667C3.427 10.667 1.333 8.573 1.333 6C1.333 3.427 3.427 1.333 6 1.333C8.573 1.333 10.667 3.427 10.667 6C10.667 8.573 8.573 10.667 6 10.667ZM10.686 9.742C11.506 8.716 12 7.416 12 6C12 2.687 9.313 0 6 0C2.687 0 0 2.687 0 6C0 9.313 2.687 12 6 12C7.417 12 8.716 11.506 9.742 10.686L15.058 16L16 15.057L10.686 9.742Z">
+                          </path>
+                      </svg>Search</a><a href="/users/sign_in"
+                      class="atds-header-tools__link atds-type-mini narrow-hide"
+                      aria-label="Sign in to your Auto Trader Account"><svg
+                          xmlns="http://www.w3.org/2000/svg" height="16" width="16" class="atds-svg">
+                          <title></title>
+                          <path
+                              d="M8 6.6666C7.265 6.6666 6.667 6.0676 6.667 5.3326C6.667 4.5976 7.265 3.9996 8 3.9996C8.735 3.9996 9.333 4.5976 9.333 5.3326C9.333 6.0676 8.735 6.6666 8 6.6666ZM8 2.6666C6.527 2.6666 5.333 3.8596 5.333 5.3326C5.333 6.8056 6.527 7.9996 8 7.9996C9.473 7.9996 10.667 6.8056 10.667 5.3326C10.667 3.8596 9.473 2.6666 8 2.6666ZM12.8823 12.524C12.0573 10.646 10.1833 9.333 8.0003 9.333C5.8173 9.333 3.9433 10.646 3.1173 12.524C2.0143 11.334 1.3333 9.747 1.3333 8C1.3333 5.427 2.7703 3.129 5.0843 2.003C5.9953 1.558 6.9763 1.333 8.0003 1.333C11.6753 1.333 14.6673 4.324 14.6673 8C14.6673 9.747 13.9863 11.334 12.8823 12.524ZM8.0003 14.667C6.5823 14.667 5.2683 14.217 4.1863 13.46C4.6993 11.842 6.2153 10.667 8.0003 10.667C9.7853 10.667 11.3003 11.842 11.8133 13.46C10.7313 14.217 9.4183 14.667 8.0003 14.667ZM8.0003 0C6.7453 0 5.5573 0.289 4.5003 0.804C1.8363 2.102 0.000301361 4.837 0.000301361 8C0.000301361 10.389 1.0533 12.527 2.7143 13.994C3.1133 14.346 3.5483 14.661 4.0133 14.928C5.1883 15.606 6.5473 16 8.0003 16C9.4533 16 10.8123 15.606 11.9863 14.928C12.4523 14.661 12.8863 14.346 13.2863 13.994C14.9473 12.527 16.0003 10.389 16.0003 8C16.0003 3.582 12.4183 0 8.0003 0Z">
+                          </path>
+                      </svg>Sign in</a></div><a href="#" role="menuitem"
+                    class="atds-header-tools-security atds-type-smart wide-hide" tabindex="-1"><span
+                      class="atds-header__label">Security advice</span></a>
+                <% end %>
               </div>
             </div>
             <div class="narrow-hide">
@@ -18997,7 +18994,7 @@
                 </li>
                 <!-- <li role="none" class="atds-channel-switcher__item">
                   <a
-                    href="/top-marques"
+                    href="#"
                     role="menuitem"
                     class="atds-channel-switcher__link tracking-navigation-link"
                     data-label="Prestige cars"
@@ -19006,7 +19003,7 @@
                 </li>
                 <li role="none" class="atds-channel-switcher__item">
                   <a
-                    href="/vans"
+                    href="#"
                     role="menuitem"
                     class="atds-channel-switcher__link tracking-navigation-link"
                     data-label="Vans"
@@ -19015,7 +19012,7 @@
                 </li>
                 <li role="none" class="atds-channel-switcher__item">
                   <a
-                    href="/bikes"
+                    href="#"
                     role="menuitem"
                     class="atds-channel-switcher__link tracking-navigation-link"
                     data-label="Bikes"
@@ -19024,7 +19021,7 @@
                 </li>
                 <li role="none" class="atds-channel-switcher__item">
                   <a
-                    href="/motorhomes"
+                    href="#"
                     role="menuitem"
                     class="atds-channel-switcher__link tracking-navigation-link"
                     data-label="Motorhomes"
@@ -19033,7 +19030,7 @@
                 </li>
                 <li role="none" class="atds-channel-switcher__item">
                   <a
-                    href="/caravans"
+                    href="#"
                     role="menuitem"
                     class="atds-channel-switcher__link tracking-navigation-link"
                     data-label="Caravans"
@@ -19042,7 +19039,7 @@
                 </li>
                 <li role="none" class="atds-channel-switcher__item">
                   <a
-                    href="http://trucks.autotrader.co.uk"
+                    href="#"
                     role="menuitem"
                     class="atds-channel-switcher__link tracking-navigation-link"
                     data-label="Trucks"
@@ -19051,7 +19048,7 @@
                 </li>
                 <li role="none" class="atds-channel-switcher__item">
                   <a
-                    href="http://farm.autotrader.co.uk"
+                    href="#"
                     role="menuitem"
                     class="atds-channel-switcher__link tracking-navigation-link"
                     data-label="Farm"
@@ -19060,7 +19057,7 @@
                 </li>
                 <li role="none" class="atds-channel-switcher__item">
                   <a
-                    href="http://plant.autotrader.co.uk"
+                    href="#"
                     role="menuitem"
                     class="atds-channel-switcher__link tracking-navigation-link"
                     data-label="Plant"
@@ -19069,7 +19066,7 @@
                 </li>
                 <li role="none" class="atds-channel-switcher__item">
                   <a
-                    href="/safety_and_security_centre"
+                    href="#"
                     role="menuitem"
                     class="atds-channel-switcher__link tracking-navigation-link"
                     data-label="Security advice"
@@ -19083,7 +19080,7 @@
                 Main site menu
               </h2>
               <div class="atds-drawer-account wide-hide">
-                <a href="/secure/my-auto-trader" class="atds-login-button">
+                <a href="/users/sign_in" class="atds-login-button">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     height="16"
@@ -19120,7 +19117,7 @@
                   </li>
                   <li role="none" class="atds-channel-switcher__item">
                     <a
-                      href="/top-marques"
+                      href="#"
                       role="menuitem"
                       class="atds-channel-switcher__link tracking-navigation-link"
                       data-label="Prestige cars"
@@ -19129,7 +19126,7 @@
                   </li>
                   <li role="none" class="atds-channel-switcher__item">
                     <a
-                      href="/vans"
+                      href="#"
                       role="menuitem"
                       class="atds-channel-switcher__link tracking-navigation-link"
                       data-label="Vans"
@@ -19138,7 +19135,7 @@
                   </li>
                   <li role="none" class="atds-channel-switcher__item">
                     <a
-                      href="/bikes"
+                      href="#"
                       role="menuitem"
                       class="atds-channel-switcher__link tracking-navigation-link"
                       data-label="Bikes"
@@ -19147,7 +19144,7 @@
                   </li>
                   <li role="none" class="atds-channel-switcher__item">
                     <a
-                      href="/motorhomes"
+                      href="#"
                       role="menuitem"
                       class="atds-channel-switcher__link tracking-navigation-link"
                       data-label="Motorhomes"
@@ -19156,7 +19153,7 @@
                   </li>
                   <li role="none" class="atds-channel-switcher__item">
                     <a
-                      href="/caravans"
+                      href="#"
                       role="menuitem"
                       class="atds-channel-switcher__link tracking-navigation-link"
                       data-label="Caravans"
@@ -19165,7 +19162,7 @@
                   </li>
                   <li role="none" class="atds-channel-switcher__item">
                     <a
-                      href="http://trucks.autotrader.co.uk"
+                      href="#"
                       role="menuitem"
                       class="atds-channel-switcher__link tracking-navigation-link"
                       data-label="Trucks"
@@ -19174,7 +19171,7 @@
                   </li>
                   <li role="none" class="atds-channel-switcher__item">
                     <a
-                      href="http://farm.autotrader.co.uk"
+                      href="#"
                       role="menuitem"
                       class="atds-channel-switcher__link tracking-navigation-link"
                       data-label="Farm"
@@ -19183,7 +19180,7 @@
                   </li>
                   <li role="none" class="atds-channel-switcher__item">
                     <a
-                      href="http://plant.autotrader.co.uk"
+                      href="#"
                       role="menuitem"
                       class="atds-channel-switcher__link tracking-navigation-link"
                       data-label="Plant"
@@ -19192,7 +19189,7 @@
                   </li>
                   <li role="none" class="atds-channel-switcher__item">
                     <a
-                      href="/safety_and_security_centre"
+                      href="#"
                       role="menuitem"
                       class="atds-channel-switcher__link tracking-navigation-link"
                       data-label="Security advice"
@@ -19210,7 +19207,7 @@
               >
                 <li class="atds-primary-navigation__item" role="menuitem">
                   <a
-                    href="/used-cars"
+                    href="/used_cars"
                     class="atds-primary-navigation__link tracking-navigation-link"
                     data-label="Used cars"
                     >Used cars</a
@@ -19218,7 +19215,7 @@
                 </li>
                 <li class="atds-primary-navigation__item" role="menuitem">
                   <a
-                    href="/new-cars"
+                    href="/new_cars"
                     class="atds-primary-navigation__link tracking-navigation-link"
                     data-label="New cars"
                     >New cars</a
@@ -19226,7 +19223,7 @@
                 </li>
                 <li class="atds-primary-navigation__item" role="menuitem">
                   <a
-                    href="/sell-my-car"
+                    href="/sell_cars"
                     class="atds-primary-navigation__link tracking-navigation-link"
                     data-label="Sell your car"
                     >Sell your car</a
@@ -19234,7 +19231,7 @@
                 </li>
                 <li class="atds-primary-navigation__item" role="menuitem">
                   <a
-                    href="/car-valuation"
+                    href="/value_cars"
                     class="atds-primary-navigation__link tracking-navigation-link"
                     data-label="Value your car"
                     >Value your car</a
@@ -19242,7 +19239,7 @@
                 </li>
                 <!-- <li class="atds-primary-navigation__item" role="menuitem">
                   <a
-                    href="/content"
+                    href="#"
                     class="atds-primary-navigation__link tracking-navigation-link"
                     data-label="Car reviews"
                     >Car reviews</a
@@ -19250,7 +19247,7 @@
                 </li>
                 <li class="atds-primary-navigation__item" role="menuitem">
                   <a
-                    href="/cars/leasing"
+                    href="#"
                     class="atds-primary-navigation__link tracking-navigation-link"
                     data-label="Car leasing"
                     >Car leasing</a
@@ -19258,7 +19255,7 @@
                 </li>
                 <li class="atds-primary-navigation__item" role="menuitem">
                   <a
-                    href="/car-finance"
+                    href="#"
                     class="atds-primary-navigation__link tracking-navigation-link"
                     data-label="Finance"
                     >Finance</a
@@ -19266,7 +19263,7 @@
                 </li>
                 <li class="atds-primary-navigation__item" role="menuitem">
                   <a
-                    href="/insurance"
+                    href="#"
                     class="atds-primary-navigation__link tracking-navigation-link"
                     data-label="Insurance"
                     >Insurance</a
@@ -19420,7 +19417,7 @@
                         <a
                           class="fpa-gallery__link"
                           aria-label="Open gallery"
-                          href="/classified/advert/new/202103059787137?journey=deals&amp;fromHomepageNewCars=true&amp;modal=photos"
+                          href="#"
                           ><div
                             class="fpa-gallery__placeholder"
                           >
@@ -19809,7 +19806,7 @@
                     >
                     <!-- <a
                       class="review-link__link--read-more atc-type-picanto atc-type-picanto--medium"
-                      href="/owner-reviews/peugeot/2008/959938a7cedf497b81b9fe6dc8cef42b"
+                      href="#"
                       rel="external"
                       >Read 15 reviews</a
                     > -->
@@ -19818,7 +19815,7 @@
               </div>
               <!-- <a
                 class="part-exchange-promo"
-                href="/part-ex-guide?advertId=202103059787137&amp;advertUrl=%2Fclassified%2Fadvert%2Fnew%2F202103059787137&amp;advertising-location=at_cars&amp;originUri=%2Fclassified%2Fadvert%2Fnew%2F202103059787137%3FfromHomepageNewCars%3Dtrue%26journey%3Ddeals%26revisit%3Dtrue&amp;selectedDid=13993&amp;originLocation=deal-builder"
+                href="#"
                 ><p
                   class="part-exchange-promo__title atc-type-insignia atc-type-insignia--medium"
                 >
@@ -20383,7 +20380,7 @@
                         >RRP </span
                       ><span
                         class="price-confidence__manufacturer-rrp-strike atc-type-fiesta atc-type-fiesta--medium"
-                        >$<%= @price_to_pay %></span
+                        >$<%= @car.car_price %></span
                       >
                     </p>
                     <h2
@@ -20521,7 +20518,7 @@
                                 href="#"
                                 >Enquire now
                               </a> -->
-                              <%= link_to  'Enquire now', make_enquiry_path(:id => @car_enquiry_id), {:remote => true,:id => "bookTicket1", :class => "atc-button atc-button--quaternary total-price-panel__contact-seller" ,'data-toggle' =>  "modal", 'data-target' => '#bookTicket'} %>
+                              <%= link_to  'Enquire now', make_enquiry_path(:id => @car_enquiry_id), {:remote => true,:id => "bookTicket", :class => "atc-button atc-button--quaternary total-price-panel__contact-seller" ,'data-toggle' =>  "modal", 'data-target' => '#bookTicket'} %>
                             </p>
                           </div>
                         </section>
@@ -20595,7 +20592,7 @@
                         data-toggle="modal"
                         >Message seller</a
                       > -->
-                      <%= link_to  'Message seller', make_enquiry_path(:id => @car_enquiry_id), {:remote => true,:id => "bookTicket1", :class => "atc-button atc-button--primary split-btn split-btn-tertiary" ,'data-toggle' =>  "modal", 'data-target' => '#bookTicket'} %>
+                      <%= link_to  'Message seller', make_enquiry_path(:id => @car_enquiry_id), {:remote => true,:id => "bookTicket", :class => "atc-button atc-button--primary split-btn split-btn-tertiary" ,'data-toggle' =>  "modal", 'data-target' => '#bookTicket'} %>
 
                     </div>
                   </div>
@@ -20660,7 +20657,7 @@
                           rel="external"
                           >Enquire now</a
                         >--> 
-                        <%= link_to  'Enquire now', make_enquiry_path(:id => @car_enquiry_id), {:remote => true,:id => "bookTicket1", :class => "atc-button atc-button--quaternary total-price-panel__contact-seller" ,'data-toggle' =>  "modal", 'data-target' => '#bookTicket'} %>
+                        <%= link_to  'Enquire now', make_enquiry_path(:id => @car_enquiry_id), {:remote => true,:id => "bookTicket", :class => "atc-button atc-button--quaternary total-price-panel__contact-seller" ,'data-toggle' =>  "modal", 'data-target' => '#bookTicket'} %>
                       </div>
                     </section>
                   </div>
@@ -21023,7 +21020,7 @@
               </div>
             </div>
           </div>
-          <div class="fpa__stock-strip">
+          <!--<div class="fpa__stock-strip">
             <div class="similarvehicles">
               <h4
                 id="title"
@@ -21344,7 +21341,7 @@
                 </div>
               </div>
             </div>
-          </div>
+          </div> -->
           <div
             class="fpa__wrapper fpa__page-bottom fpa__page-bottom--buying-safely"
           >
@@ -22128,7 +22125,7 @@
 </html>
 
 <!-- Trial Test -->
-                      <div class="modal fade" id="bookTicket" tabindex="-1" role="dialog" aria-labelledby="BookTicket">
+                      <div class="modal " id="bookTicket" tabindex="-1" role="dialog" aria-labelledby="BookTicket">
                           <div class="modal-dialog" role="document">
                             <div class="modal-content">
                               <div class="modal-body" id ="boom">
