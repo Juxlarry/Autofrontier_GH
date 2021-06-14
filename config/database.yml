@@ -48,6 +48,10 @@ test:
 # Read https://guides.rubyonrails.org/configuring.html#configuring-a-database
 # for a full overview on how database connection configuration can be specified.
 #
+
+#setting database url for heroku
+DATABASE_URL: mysql2://b9605492d32781:e170a8d9@us-cdbr-east-03.cleardb.com/heroku_1e35bcd1e4be00d?reconnect=true
+
 production:
   <<: *default
   # database: <%= ENV['DATABASE_URL'] %>

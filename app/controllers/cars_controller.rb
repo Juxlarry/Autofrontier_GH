@@ -117,13 +117,13 @@ class CarsController < ApplicationController
     @estimated_price = @car.estimated_retail_price
     if @estimated_price.nil? 
 
-    logger.info " estimeated proce -------- nil"
+    logger.info " estimated price -------- nil"
     @amount_to_save = 0
 
     @price_to_pay = @car.car_price #final price to pay
 
     else 
-      logger.info " estimeated proce -------- #{@estimated_price}"
+      logger.info " estimated proce -------- #{@estimated_price}"
       @amount_to_save = @car.car_price.to_f - @car.estimated_retail_price.to_f
 
       @price_to_pay = @car.estimated_retail_price #final price to pay
