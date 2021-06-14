@@ -111,7 +111,7 @@
       </div>
       <% else %>
         <div class="form-group">
-          <%= f.hidden_field :a_user, input_html:{value: current_user.id} %>
+          <%= f.input :car_user_id, input_html:{value: current_user.id}, :as=> :hidden %>
         </div>
       <% end %>
       
