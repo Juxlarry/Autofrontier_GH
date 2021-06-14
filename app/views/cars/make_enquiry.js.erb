@@ -1,10 +1,7 @@
+$("#enquiry").html("<%= escape_javascript (render 'make_enquiry') %>");
+//$('#bookTicket').modal('show');
+$("#modal-window").html("<%= escape_javascript(render 'make_enquiry') %>");
+$('#modal-window').modal('show');
 
-$("#boom").html("<%= escape_javascript (render 'make_enquiry') %>");
-$('#bookTicket').modal('show');
-
-$("#bookTicket").modal().modal-dialog-scrollable;
+//$("#bookTicket").modal().modal-dialog-scrollable;
 //$('body').removeClass('modal-open');
-
-
-
-
