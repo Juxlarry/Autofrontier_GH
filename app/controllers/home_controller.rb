@@ -30,6 +30,14 @@ class HomeController < ApplicationController
       @newsletter_request = NewsletterRequest.new
   end
 
+
+  # GET /cars/1/edit
+  def stepform
+    @car_form = Car.new
+  end
+
+
+
   def new_cars
     @newsletter_request = NewsletterRequest.new
   end 

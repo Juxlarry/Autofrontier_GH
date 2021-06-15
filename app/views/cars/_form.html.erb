@@ -6,7 +6,7 @@
 
 
     <div class="form-inputs">
-    <div class="form-group">
+      <div class="form-group">
         <%#= f.input :vehicle_type_id, collection: VehicleType.all, value_method: :id, label_method: :vehicle, required: true %>
         <%= f.association :a_vehicle, collection: VehicleType.all, label_method: :vehicle, value_method: :id, required: true, include_blank: true, label: "Vehicle:", style:"width:90%;", :input_html => {:class => 'form-control dropdown dropdown-toggle', style:"width:90%;float:center;"} %>
       </div>

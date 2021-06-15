@@ -27,6 +27,8 @@ Rails.application.routes.draw do
 
   get 'new_cars' => 'home#new_cars'
 
+  get 'userform' => 'home#stepform'
+
   get '/users' => 'users#index'
 
   get '/users/new' => 'users#new', :as => 'new_user'
