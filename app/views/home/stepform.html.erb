@@ -66,6 +66,13 @@ input.invalid {
   margin: 0;
   }
 
+  main {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
   /* mobile friendly alternative to using background-attachment: fixed */
   body::before {
   content: '';
@@ -319,6 +326,11 @@ body a {
 .content__title--m-sm {
     margin-bottom: 10px;
 }
+
+form{
+    height:550px;
+}
+
 .multisteps-form__progress {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
@@ -399,6 +411,7 @@ body a {
     height: auto;
     opacity: 1;
     visibility: visible;
+    width: 550px;
 }
 .multisteps-form__panel[data-animation="scaleOut"] {
     transform: scale(1.1);
@@ -457,451 +470,232 @@ body a {
 
 </style>
 
+<main>
 
-<!-- One "tab" for each step in the form: -->
+    <!-- One "tab" for each step in the form: -->
 
-<div class="container">
-    
-    <!--content title-->
-    <h2 class="content__title">Click on steps or 'Prev' and 'Next' buttons</h2>
-</div>
+    <div class="container">
+        
+        <!--content title-->
+        <h2 class="content__title">Click on steps or 'Prev' and 'Next' buttons</h2>
+    </div>
 
-<div class="container overflow-hidden">
-<!--multisteps-form-->
-<div class="multisteps-form">
-     <!--progress bar-->
-    <div class="row">
-        <div class="col-12 col-lg-8 ml-auto mr-auto mb-4">
-            <div class="multisteps-form__progress"><button class="multisteps-form__progress-btn js-active" type="button" title="User Info">User Info</button><button class="multisteps-form__progress-btn" type="button" title="Address">Address</button><button class="multisteps-form__progress-btn" type="button" title="Order Info">Order Info</button><button class="multisteps-form__progress-btn" type="button" title="Comments">Comments </button></div>
+    <div class="container overflow-hidden">
+        <!--multisteps-form-->
+        <div class="multisteps-form">
+            <!--progress bar-->
+            <div class="row">
+                <div class="col-12 col-lg-8 ml-auto mr-auto mb-4">
+                    <div class="multisteps-form__progress"><button class="multisteps-form__progress-btn js-active" type="button" title="User Info">User Info</button><button class="multisteps-form__progress-btn" type="button" title="Address">Address</button><button class="multisteps-form__progress-btn" type="button" title="Order Info">Order Info</button><button class="multisteps-form__progress-btn" type="button" title="Comments">Comments </button></div>
+                </div>
+            </div>
+
+            <!--form panels-->
+            <div class="row">
+                <div class="col-12 col-lg-8 m-auto">
+                    <%= simple_form_for(@car_form, id:"carForm", class:"multisteps-form__form") do |f| %>
+                        <!--single form panel-->
+                        <div class="tab div-tab">
+                            <div class="multisteps-form__panel shadow p-4 rounded bg-white js-active" data-animation="scaleIn">
+                                <h3 class="multisteps-form__title">Car Model Details</h3>
+                                <div class="multisteps-form__content">
+                                    <div class="form-row mt-4">
+                                        <div class="col-12 col-sm-6"><%= f.association :a_vehicle, collection: VehicleType.all, label_method: :vehicle, value_method: :id,  include_blank: true, label: "Vehicle:", required: true, style:"width:90%;", :input_html => {:class => 'form-control dropdown dropdown-toggle selectedTab', style:"width:90%;float:center;"} %></div>
+                                        <div class="col-12 col-sm-6 mt-4 mt-sm-0"><%= f.input :make_id, collection: CarMake.all, value_method: :id, label_method: :name, :input_html => {:class => 'selectedTab'}, required: true %></div>
+                                    </div>
+                                    <div class="form-row mt-4">
+                                        <div class="col-12 col-sm-6"><%= f.input :model_id, collection: CarModel.all, value_method: :id, label_method: :name, :input_html => {:class => 'selectedTab'}, required: true %></div>
+                                        <div class="col-12 col-sm-6 mt-4 mt-sm-0"><%= f.input :car_model_year, :label => "Year of Car Model", :input_html => {:class => 'selectedTab'}, required: true %></div>
+                                    </div>
+                                    
+                                    <!--<div class="button-row d-flex mt-4"><button class="btn btn-primary ml-auto js-btn-next" type="button" title="Next">Next</button></div> -->
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <!--single form panel-->
+                        <div class="tab div-tab">
+                            <div class="multisteps-form__panel shadow p-4 rounded bg-white js-active" data-animation="scaleIn">
+                                <h3 class="multisteps-form__title">Your Registration Details</h3>
+                                <div class="multisteps-form__content">
+                                    <div class="form-row mt-4">
+                                        <div class="col-12 col-sm-6"><%= f.input :car_name, :label => "Car Brand Name", required: true %></div>
+                                        <div class="col-12 col-sm-6 mt-4 mt-sm-0"><%= f.input :car_doc_id, collection: CarDocument.all, value_method: :id, label_method: :doc_type, required: true %></div>
+                                    </div>
+                                    <div class="form-row mt-4">
+                                        <div class="col-12 col-sm-6"><%= f.input :car_registration_number, :label => "Car Registration Number" %></div>
+                                        <div class="col-12 col-sm-6 mt-4 mt-sm-0"><%= f.date_field :car_registration_first_date, label: "Date of First Registration", as: :string, class: 'form-control datepicker', input_html: { id: "datepicker1", placeholder: 'dd-mm-yy' }  %></div>
+                                    </div>
+                                    
+                                    <div class="form-row mt-4">
+                                        <div class="col-12 col-sm-6"><%= f.input :car_price, :label => "Car Price in GH", required: true %></div>
+                                        <div class="col-12 col-sm-6 mt-4 mt-sm-0"><%= f.input :estimated_retail_price, :label => "Estimated retail Price" %></div>
+                                    </div>
+                                    <!--<div class="button-row d-flex mt-4"><button class="btn btn-primary ml-auto js-btn-next" type="button" title="Next">Next</button></div>-->
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab div-tab">
+                            <div class="multisteps-form__panel shadow p-4 rounded bg-white js-active" data-animation="scaleIn">
+                                <h3 class="multisteps-form__title">Car Performance Details</h3>
+                                <div class="multisteps-form__content">
+                                    <div class="form-row mt-4">
+                                        <div class="col-12 col-sm-6"><%= f.input :car_engine_id, collection: CarEngine.all, value_method: :id, label_method: :engine_type, required: true %></div>
+                                        <div class="col-12 col-sm-6 mt-4 mt-sm-0"> <%= f.input :car_cylinder, collection: CarCylinder.all, value_method: :id, label_method: :cylinder, required: true %></div>
+                                    </div>
+
+                                    <div class="form-row mt-4">
+                                        <div class="col-12 col-sm-6"><%= f.input :fuel_type_id, collection: FuelType.all, value_method: :id, label_method: :fuel_type, required: true %></div>
+                                        <div class="col-12 col-sm-6 mt-4 mt-sm-0"><%= f.input :mileage, :label => "Car mileage" %></div>
+                                    </div>
+
+                                    
+                                    
+                                    <!--<div class="button-row d-flex mt-4"><button class="btn btn-primary ml-auto js-btn-next" type="button" title="Next">Next</button></div> -->
+                                </div>
+                            </div>
+                        </div>
+
+        
+                
+                        <!--single form panel-->
+                        <div class="tab div-tab">
+                            <div class="multisteps-form__panel shadow p-4 rounded bg-white js-active" data-animation="scaleIn">
+                                <h3 class="multisteps-form__title">Car Appeal Details</h3>
+                                <div class="multisteps-form__content">
+                                    
+                                    <div class="form-row mt-4">
+                                        <div class="col-12 col-sm-6"><%= f.input :car_type_id, collection: CarType.all, value_method: :id, label_method: :name, required: true %></div>
+                                        <div class="col-12 col-sm-6 mt-4 mt-sm-0"><%= f.input :body_type_id, collection: CarBody.all, value_method: :id, label_method: :type_name, required: true %></div>
+                                    </div>
+
+                                    <div class="form-row mt-4">
+                                        <div class="col-12 col-sm-6"><%= f.input :colour_id, collection: CarColour.all, value_method: :id, label_method: :name, required: true %></div>
+                                        <div class="col-12 col-sm-6"><%= f.input :car_highlights, :label => "Car Highlight" %></div>
+                                    </div>
+                                    <!--<div class="button-row d-flex mt-4"><button class="btn btn-primary ml-auto js-btn-next" type="button" title="Next">Next</button></div> -->
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <!--single form panel-->
+                        <div class="tab div-tab">
+                            <div class="multisteps-form__panel shadow p-4 rounded bg-white js-active" data-animation="scaleIn">
+                                <h3 class="multisteps-form__title">Car View Details</h3>
+                                <div class="multisteps-form__content">
+                                    <div class="form-row mt-4">
+                                        <div class="col-12 col-sm-6"><%= f.input :seats, :label => "Car Seat Number", required: true %></div>
+                                        <div class="col-12 col-sm-6 mt-4 mt-sm-0"><%= f.input :doors, :label => "Car Door Number", required: true %></div>
+                                    </div>
+                                    <div class="form-row mt-4">
+                                        <div class="col-12 col-sm-6"><%= f.input :car_primary_damage, :label => "Car Primary Damage" %></div>
+                                        <div class="col-12 col-sm-6 mt-4 mt-sm-0"><%= f.input :car_secondary_damage, :label => "Car Secondary Damage" %></div>
+                                    </div>
+                                    <!--<div class="button-row d-flex mt-4"><button class="btn btn-primary ml-auto js-btn-next" type="button" title="Next">Next</button></div> -->
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="tab div-tab">
+                            <div class="multisteps-form__panel shadow p-4 rounded bg-white js-active" data-animation="scaleIn">
+                                <h3 class="multisteps-form__title">Car View Details</h3>
+                                <div class="multisteps-form__content">
+                                    <div class="form-row mt-4">
+                                        <div class="col-12 col-sm-6"><%= f.input :derivative_details, :label => "Car Derivative Details" %></div>
+                                        <div class="col-12 col-sm-6 mt-4 mt-sm-0"><%= f.input :variant_details, :label => "Car Variant Details" %></div>
+                                    </div>
+                                    <div class="form-row mt-4">
+                                        <div class="col-12 col-sm-6"><%= f.input :trim_details, :label => "Car Trim Details" %></div>
+                                    </div>
+                                    <!--<div class="button-row d-flex mt-4"><button class="btn btn-primary ml-auto js-btn-next" type="button" title="Next">Next</button></div> -->
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="tab div-tab">
+                            <div class="multisteps-form__panel shadow p-4 rounded bg-white js-active" data-animation="scaleIn">
+                                <h3 class="multisteps-form__title">Car Seller Details</h3>
+                                <div class="multisteps-form__content">
+                                    <div class="form-row mt-4">
+                                        <% if current_user.role_id == 1%>
+                                            <%= f.association :a_user, collection: User.all, label_method: :username, value_method: :id, include_blank: true, label: "User:", style:"width:90%;", :input_html => {:class => 'form-control dropdown dropdown-toggle', style:"width:90%;float:center;"} %>
+                                        <% else %>
+                                            <%= f.input :car_user_id, input_html:{value: current_user.id} %>
+                                        <% end %>
+                                    </div>
+                                    <div class="form-row mt-4">
+                                        <div class="col-12 col-sm-6"><%= f.hidden_field :comments %></div>
+                                        <div class="col-12 col-sm-6"><%= f.hidden_field :status %></div>
+                                    </div>
+                                    <!--<div class="button-row d-flex mt-4"><button class="btn btn-primary ml-auto js-btn-next" type="button" title="Next">Next</button></div> -->
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <!--single form panel-->
+                        <div class="tab div-tab">
+                            <div class="multisteps-form__panel shadow p-4 rounded bg-white js-active" data-animation="scaleIn">
+                                <h3 class="multisteps-form__title">Car Extra Info</h3>
+                                <div class="multisteps-form__content">
+                                    <div class="form-row mt-4">
+                                        
+                                        <div class="col-12 col-sm-6 mt-4 mt-sm-0"><%= f.input :car_keys, :label => "Car Keys" %></div>
+                                    </div>
+                                    <div class="form-row mt-4">
+                                        <div class="col-12 col-sm-6"><%= f.file_field :images, class: "form-control", multiple:true %></div>
+                                    </div>
+                                    <div class="form-row mt-4">
+                                        <div class="col-12 col-sm-6"><%= f.text_area :description, :label => "Car Description" %></div>
+                                    </div>
+                                    <div class="form-actions" style="text-align:center;margin-top: 20px;">
+                                        <button type="button"  class ="btn btn-success" style="color:white;">
+                                            <i class="btn-icon-prepend" data-feather="check-square"></i>
+                                            <%= f.button :submit, "Add Car", style: 'color:white' %>
+                                        </button>
+                                       
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div style="overflow:auto; margin-top:340px">
+                            <div class="button-row d-flex mt-4">
+                                <button type="button" class="btn btn-warning btn-sm" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
+                                <button type="button" class="btn btn-primary btn-sm" id="nextBtn" onclick="nextPrev(1)">Next</button>
+                            </div>
+                        </div>
+
+                    <% end %>
+                </div>
+            </div>
+        
+
+
+            
+
+            <!-- Circles which indicates the steps of the form: -->
+            <div style="text-align:center;margin-top:40px;">
+                <span class="step"></span>
+                <span class="step"></span>
+                <span class="step"></span>
+                <span class="step"></span>
+                <span class="step"></span>
+                <span class="step"></span>
+                <span class="step"></span>
+            </div>
         </div>
     </div>
 
-    <!--form panels-->
-     <div class="row">
-        <div class="col-12 col-lg-8 m-auto">
-            <%= simple_form_for(@car_form, id:"trimesterForm", class:"multisteps-form__form") do |f| %>
-            <!--single form panel-->
-            <div class="multisteps-form__panel shadow p-4 rounded bg-white js-active" data-animation="scaleIn">
-                <h3 class="multisteps-form__title">Your User Info</h3>
-                <div class="multisteps-form__content">
-                    <div class="form-row mt-4">
-                        <div class="col-12 col-sm-6"><input class="multisteps-form__input form-control" type="text" placeholder="First Name" /></div>
-                        <div class="col-12 col-sm-6 mt-4 mt-sm-0"><input class="multisteps-form__input form-control" type="text" placeholder="Last Name" /></div>
-                    </div>
-                    <div class="form-row mt-4">
-                        <div class="col-12 col-sm-6"><input class="multisteps-form__input form-control" type="text" placeholder="Login" /></div>
-                        <div class="col-12 col-sm-6 mt-4 mt-sm-0"><input class="multisteps-form__input form-control" type="email" placeholder="Email" /></div>
-                    </div>
-                    <div class="form-row mt-4">
-                        <div class="col-12 col-sm-6"><input class="multisteps-form__input form-control" type="password" placeholder="Password" /></div>
-                        <div class="col-12 col-sm-6 mt-4 mt-sm-0"><input class="multisteps-form__input form-control" type="password" placeholder="Repeat Password" /></div>
-                    </div>
-                    <div class="button-row d-flex mt-4"><button class="btn btn-primary ml-auto js-btn-next" type="button" title="Next">Next</button></div>
-                </div>
-            </div>
 
-    <%= simple_form_for(@car_form, id:"trimesterForm") do |f| %>
-        <div class="tab div-tab">
-
-
-            <h2 style="margin-bottom: 15px; text-align:center; font-weight:600; font-size: 20px;"> HEAD SCAN: </h2>
-            <ul class="ul-pad">
-                <div style="display:flex;">
-                <input type="radio" name="all"   class="allhead" onclick="checkAllHead($(this));" /><p id="select_all"> Select All </p> 
-                <input type="radio" name="all" class="allheadySecond" onclick="checkAllHead($(this));" /><p id="select_all"> Deselect All </p><br><br>
-                </div>
-
-                <li style="list-style: decimal; padding: 10px 0;">
-                <div class="field">
-                <%= f.label :a_vehicle %>
-                <div style="display: flex;">
-                    <%= f.association :a_vehicle, collection: VehicleType.all, label_method: :vehicle, value_method: :id, required: true, include_blank: true, label: "Vehicle:", style:"width:90%;", :input_html => {:class => 'form-control dropdown dropdown-toggle', style:"width:90%;float:center;"} %>
-                </div>
-
-                </div>
-                </li>
-
-                <li style="list-style: decimal; padding: 10px 0;">
-                <div class="field">
-                    <%= f.label :make_id %>
-                    <div style="display: flex;">
-
-                    <%= f.input :make_id, collection: CarMake.all, value_method: :id, label_method: :name, required: true %>
-
-                </div>
-                </li>
-                <li style="list-style: decimal; padding: 10px 0;">
-                <div class="field">
-                    <%= f.label :car_name %>
-                    <div style="display: flex;">
-                    <%= f.input :car_name, :label => "Car Brand Name", required: true %>
-                </div>
-                </li>
-
-                <li style="list-style: decimal; padding: 10px 0;">
-                <div class="field">
-                    <%= f.label :model_id %>
-
-                    <%= f.input :model_id, collection: CarModel.all, value_method: :id, label_method: :name, required: true %>
-                </div>
-                </li>
-
-            </ul>
-        </div> 
-
-        <div class="tab div-tab">
-
-        <h2 style="margin-bottom: 15px; text-align:center; font-weight:600; font-size: 20px;"> FACE SCAN: </h2>
-
-        
-            <div style="display:flex;">
-                <input type="radio" name="all" class="allface" onclick="checkAllface($(this));" /><p id="select_all"> Select All </p> 
-                <input type="radio" name="all" class="allfacesecond" onclick="checkAllface($(this));" /><p id="select_all"> Deselect All </p> <br><br>
-            </div>
-
-        <ul class="ul-pad">
-        <li style="list-style: decimal; padding: 10px 0;">
-            <div class="field">
-
-                <%= f.label :car_engine_id %>
-
-                <div style="display: flex;">
-                    <%= f.input :car_engine_id, collection: CarEngine.all, value_method: :id, label_method: :engine_type, required: true %>
-                </div>
-            </div>
-        </li>
-
-        <li style="list-style: decimal; padding: 10px 0;">
-            <div class="field">
-                <%= f.label :car_model_year %>
-                <div style="display: flex;">
-                    <%= f.input :car_model_year, :label => "Year of Car Model",  required: true %>
-                </div>
-            </div>
-        </li>
-        <li style="list-style: decimal; padding: 10px 0;">
-            <div class="field">
-                <%= f.label :car_registration_number %>
-                <div style="display: flex;">
-                    <%= f.input :car_registration_number, :label => "Car Registration Number" %>
-                </div>
-
-            </div>
-        </li>
-
-        <li style="list-style: decimal; padding: 10px 0;">
-            <div class="field">
-                <%= f.label :car_registration_first_date %>
-
-                <%= f.date_field :car_registration_first_date, label: "Date of First Registration", as: :string, class: 'form-control datepicker', input_html: { id: "datepicker1", placeholder: 'dd-mm-yy' }  %>
-            </div>
-        </li>
-
-        <li style="list-style: decimal; padding: 10px 0;">
-            <div class="field">
-                <%= f.label :car_doc_id %>
-                <div style="display: flex;">
-                    <%= f.input :car_doc_id, collection: CarDocument.all, value_method: :id, label_method: :doc_type, required: true %>
-                </div>
-            </div>
-        </li>
-
-        <li style="list-style: decimal; padding: 10px 0;">
-
-            <div class="field">
-                <%= f.label :car_price %>
-                <div style="display: flex;">
-                    <%= f.input :car_price, :label => "Car Price in GH", required: true %>
-                </div>
-            </div>
-        </li>
-
-        <li style="list-style: decimal; padding: 10px 0;">
-
-            <div class="field">
-                <%= f.label :estimated_retail_price %>
-                <div style="display: flex;">
-                    <%= f.input :estimated_retail_price, :label => "Estimated retail Price" %>
-                </div>
-            </div>
-        </li>
-
-        </ul> 
-
-        </div>
-
-        <div class="tab div-tab">
-
-        <h2 style="margin-bottom: 15px; text-align:center; font-weight:600; font-size: 20px;"> CHEST SCAN: </h2>
-
-        <ul class="ul-pad">
-
-        <div style="display:flex;">
-        <input type="radio" name="all" class="allchest" onclick="checkAllchest($(this));" /><p id="select_all"> Select All </p> 
-        <input type="radio" name="all" class="allchestsecond" onclick="checkAllchest($(this));" /><p id="select_all"> Deselect All </p> <br><br>
-        </div>
-
-
-        <li style="list-style: decimal; padding: 10px 0;">
-            <div class="field">
-                <%= f.label :car_type_id %>
-                <div style="display: flex;">
-                    <%= f.input :car_type_id, collection: CarType.all, value_method: :id, label_method: :name, required: true %>
-                </div>
-            </div>
-        </li>
-        <li style="list-style: decimal; padding: 10px 0;">
-            <div class="field">
-                <%= f.label :body_type_id %>
-                <div style="display: flex;">
-                    <%= f.input :body_type_id, collection: CarBody.all, value_method: :id, label_method: :type_name, required: true %>
-                </div>
-            </div>
-        </li>
-        <li style="list-style: decimal; padding: 10px 0;">
-            <div class="field">
-                <%= f.label :fuel_type_id %>
-                <div style="display: flex;">
-                    <%= f.input :fuel_type_id, collection: FuelType.all, value_method: :id, label_method: :fuel_type, required: true %>
-                </div>
-            </div>
-        </li>
-        <li style="list-style: decimal; padding: 10px 0;">
-            <div class="field">
-                <%= f.label :mileage %>
-                <div style="display: flex;">
-                    <%= f.input :mileage, :label => "Car mileage" %>
-                </div>
-            </div>
-        </li>
-
-        <li style="list-style: decimal; padding: 10px 0;">
-            <div class="field">
-                <%= f.label :car_cylinder %>
-                <div style="display: flex;">
-                    <%= f.input :car_cylinder, collection: CarCylinder.all, value_method: :id, label_method: :cylinder, required: true %>
-                </div>
-            </div>
-        </li>
     
-        </ul>
-        </div>
-
-        <div class="tab div-tab">
-
-        <h2 style="margin-bottom: 15px; text-align:center; font-weight:600; font-size: 20px;"> ABDOMEN SCAN: </h2>
-
-        <ul class="ul-pad"> 
-
-        <div style="display:flex;">
-        <input type="radio" name="all" class="allabdomen" onclick="checkAllabdomen($(this));" /><p id="select_all"> Select All </p> 
-        <input type="radio" name="all" class="allabdomensecond" onclick="checkAllabdomen($(this));" /><p id="select_all"> Deselect All </p> <br><br>
-        </div>
-
-
-        <li style="list-style: decimal; padding: 10px 0;">
-            <div class="field">
-                <%= f.label :drive_type %>
-                <div style="display: flex;">
-                    <%= f.input :drive_type, collection: CarDrive.all, value_method: :id, label_method: :drive_type, required: true %>
-                </div>
-            </div>
-        </li>
-
-
-        <li style="list-style: decimal; padding: 10px 0;">
-            <div class="field">
-                <%= f.label :transmission_type_id %>
-                <div style="display: flex;">
-                    <%= f.input :transmission_type_id, collection: CarTransmission.all, value_method: :id, label_method: :name, required: true %>
-                </div>
-            </div>
-        </li>
-
-
-        <li style="list-style: decimal; padding: 10px 0;">
-            <div class="field">
-                <%= f.label :colour_id %>
-                <div style="display: flex;">
-                    <%= f.input :colour_id, collection: CarColour.all, value_method: :id, label_method: :name, required: true %>
-                </div>
-            </div>
-        </li>
-
-        </ul>
-        </div>
-
-        <div class="tab div-tab">
-
-        <h2 style="margin-bottom: 15px; text-align:center; font-weight:600; font-size: 20px;"> POSITION SCAN: </h2>
-
-        <ul class="ul-pad">
-
-        <div style="display:flex;">
-        <input type="radio" name="all" class="allposition" onclick="checkAllposition($(this));" /><p id="select_all"> Select All </p> 
-        <input type="radio" name="all" class="allpositionsecond" onclick="checkAllposition($(this));" /><p id="select_all"> Deselect All </p> <br><br>
-        </div>
-
-        <li style="list-style: decimal; padding: 10px 0;">
-            <div class="field">
-                <%= f.label :trim_details %>
-                <div style="display: flex;">
-                    <%= f.input :trim_details, :label => "Car Trim Details" %>
-                </div>
-            </div>
-        </li>
-
-
-        <li style="list-style: decimal; padding: 10px 0;">
-            <div class="field">
-                <%= f.label :derivative_details %>
-                <div style="display: flex;">
-                    <%= f.input :derivative_details, :label => "Car Derivative Details" %>
-                </div>
-            </div>
-        </li>
-
-
-        <li style="list-style: decimal; padding: 10px 0;">
-            <div class="field">
-                <%= f.label :variant_details %>
-                <div style="display: flex;">
-                    <%= f.input :variant_details, :label => "Car Variant Details" %>
-                </div>
-            </div>
-        </li>
-
-        <li style="list-style: decimal; padding: 10px 0;">
-            <div class="field">
-                <%= f.label :car_primary_damage %>
-                <div style="display: flex;">
-                    <%= f.input :car_primary_damage, :label => "Car Primary Damage" %>
-                </div>
-            </div>
-        </li>
-
-        <li style="list-style: decimal; padding: 10px 0;">
-            <div class="field">
-                <%= f.label :car_secondary_damage %>
-                <div style="display: flex;">
-                    <%= f.input :car_secondary_damage, :label => "Car Secondary Damage" %>
-                </div>
-            </div>
-        </li>
-
-
-
-        </ul>
-
-        </div>
-
-        <div class="tab div-tab">
-
-        <h2 style="margin-bottom: 15px; text-align:center; font-weight:600; font-size: 20px;"> SKELETAL SCAN: </h2>
-
-
-        <ul class="ul-pad">
-        <div style="display:flex;">
-        <input type="radio" name="all" class="allFirst" onclick="checkAll($(this));" /><p id="select_all"> Select All </p> 
-        <input type="radio" name="all" class="allSecond" onclick="checkAll($(this));" /><p id="select_all"> Deselect All </p>  <br> <br>
-        </div>
-
-
-        <li style="list-style: decimal; padding: 10px 0;">
-            <div class="field">
-                <%= f.label :seats %>
-                <div style="display: flex;">
-                    <%= f.input :seats, :label => "Car Seat Number", required: true %>
-                </div>
-            </div>
-        </li>
-
-
-        <li style="list-style: decimal; padding: 10px 0;">
-            <div class="field">
-                <%= f.label :doors %>
-                <div style="display: flex;">
-                    <%= f.input :doors, :label => "Car Door Number", required: true %>
-                </div>
-            </div>
-        </li>
-
-        <li style="list-style: decimal; padding: 10px 0;">
-            <div class="field">
-                <%= f.label :car_highlights %>
-                <div style="display: flex;">
-                    <%= f.input :car_highlights, :label => "Car Highlight" %>
-                </div>
-            </div>
-        </li>
-
-
-        <li style="list-style: decimal; padding: 10px 0;">
-            <div class="field">
-                <%= f.label :car_keys %>
-                <div style="display: flex;">
-                    <%= f.input :car_keys, :label => "Car Highlight" %>
-                </div>
-            </div>
-        </li>
-
-        </div>
-
-        <div class="tab div-tab">
-
-        <h2 style="margin-bottom: 15px; text-align:center; font-weight:600; font-size: 20px;"> GENDER SCAN: </h2>
-
-        <div class="field"> 
-
-            <li style="list-style: decimal; padding: 10px 0;">
-                <div class="field">
-                    <%= f.label :images %>
-                    <div style="display: flex;">
-                        <%= f.file_field :images, class: "form-control", multiple:true %>
-                    </div>
-                </div>
-            </li>
-
-            <li style="list-style: decimal; padding: 10px 0;">
-                <div class="field">
-                    <%= f.label :description %>
-                    <div style="display: flex;">
-                        <%= f.text_area :description, :label => "Car Description" %>
-                    </div>
-                </div>
-            </li>
-
-        </div>
-
-
-
-        <div class="actions">
-        <%= f.submit "Submit", hidden:true %>
-        </div>
-        </div>
-    <% end %>
-</div>
-</div>
-
-
-
-<div style="overflow:auto;">
-<div style="float:right; font-size:20px;">
-<button type="button" class="btn btn-warning btn-sm" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
-<button type="button" class="btn btn-primary btn-sm" id="nextBtn" onclick="nextPrev(1)">Next</button>
-</div>
-</div>
-
-<!-- Circles which indicates the steps of the form: -->
-<div style="text-align:center;margin-top:40px;">
-<span class="step"></span>
-<span class="step"></span>
-<span class="step"></span>
-<span class="step"></span>
-<span class="step"></span>
-<span class="step"></span>
-<span class="step"></span>
-</div>
+</main>
 
 <script src="assets/index.js"></script>
 

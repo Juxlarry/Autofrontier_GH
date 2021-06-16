@@ -32,7 +32,7 @@ function nextPrev(n) {
   // if you have reached the end of the form... :
   if (currentTab >= x.length) {
     //...the form gets submitted:
-    document.getElementById("trimesterForm").submit();
+    document.getElementById("carForm").submit();
     return false;
   }
   // Otherwise, display the correct tab:
@@ -41,19 +41,57 @@ function nextPrev(n) {
 
 function validateForm() {
   // This function deals with validation of the form fields
-  var x, y, i, valid = true;
+  var x, y, i = 0, c, rs, ri, valid = true;
   x = document.getElementsByClassName("tab");
   y = x[currentTab].getElementsByTagName("input");
+  z = x[currentTab].getElementsByTagName("select");
+  c = x[currentTab].getElementsByClassName("selectedTab");
+ 
   // A loop that checks every input field in the current tab:
-  for (i = 0; i < y.length; i++) {
-    // If a field is empty...
-    if (y[i].value == "") {
-      // add an "invalid" class to the field:
-      y[i].className += " invalid";
+
+
+  console.log("selected tab object --" + JSON.stringify(c));
+
+
+  console.log("length of inputs --" + y.length);
+
+  console.log("length of selects --" + z.length);
+  console.log("number in class selectedTab --" + c.length);
+
+
+
+
+  $('.selectedTab').each(function(){
+
+     console.log(i);
+
+     console.log($(this));
+
+     var res = $(this).prop('value');
+
+     console.log("results from input --- " +res);
+
+    if($(this).prop('required') && res != ""){
+      console.log(" Valid True 1");
+    } else if (!$(this).prop('required') && res == ""){
+      console.log(" Valid True 2");
+    } 
+    else if($(this).prop('required') &&  res == "") { 
+      console.log("Valid False");
+
+      $(this).addClass( "invalid" );
+
+      // var newClass = $(this).prop('className');
+
+      // newClass += " invalid";
       // and set the current valid status to false:
       valid = false;
     }
-  }
+
+    i++;
+
+  })
+
   // If the valid status is true, mark the step as finished and valid:
   if (valid) {
     document.getElementsByClassName("step")[currentTab].className += " finish";
