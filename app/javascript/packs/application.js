@@ -21,6 +21,7 @@ Turbolinks.start()
 ActiveStorage.start()
 
 //= require jquery-3.2.1.slim.min
+//= require jquery_ujs
 //= require popper.min
 //= require bootstrap.min
 

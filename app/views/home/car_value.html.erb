@@ -7959,6 +7959,20 @@
     <link data-chunk="main" rel="stylesheet" href="/assets/value.m.chunk.css">
     <link data-chunk="ValuationsPage" rel="stylesheet"
         href="/assets/valuationspage.chunk.css">
+
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+
+
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
 </head>
 
 <body>
@@ -7985,14 +7999,41 @@
                                 </p>
                             </a>
                             
-                            <div class="atds-header-tools wide-hide"><button
+                            <div class="atds-header-tools wide-hide">
+                                <!--<button
                                     class="atds-menu-btn atds-type-mini atds-header-tools__link atds-header-tools__link--menu"
                                     aria-expanded="false" aria-haspopup="true" aria-controls="atc-navigation"
                                     aria-label="Show mobile menu" data-gui-header-btn-toggle-mobile-nav="true">
                                     <div class="atds-menu-btn__outer" aria-hidden="true">
                                         <div class="atds-menu-btn__inner" aria-hidden="true"></div>
                                     </div><span><span class="visuallyhidden">Open / close </span>Menu</span>
-                                </button><a href="/sell_cars" class="atds-type-mini atds-header-tools__link"><svg
+                                </button>-->
+
+                                <!-- NEW MENU BUTTON FOR MOBILE-->
+                                <button
+                                    class="
+                                        navbar-toggler
+                                        atds-menu-btn atds-type-mini
+                                        atds-header-tools__link atds-header-tools__link--menu
+                                    "
+                                    type="button"
+                                    data-toggle="collapse"
+                                    data-target="#navbarToggleExternalContent"
+                                    aria-controls="navbarToggleExternalContent"
+                                    aria-expanded="false"
+                                    aria-label="Toggle navigation"
+                                >
+                                    <div class="atds-menu-btn__outer" aria-hidden="true">
+                                    <div
+                                        class="atds-menu-btn__inner"
+                                        aria-hidden="true"
+                                    ></div>
+                                    </div>
+                                    <span class="visuallyhidden"> Menu </span>
+                                </button>
+                                <!-- END---NEW MENU BUTTON FOR MOBILE-->
+                                
+                                <a href="/sell_cars" class="atds-type-mini atds-header-tools__link"><svg
                                         xmlns="http://www.w3.org/2000/svg" height="16" width="16" class="atds-svg">
                                         <title></title>
                                         <path
@@ -8086,7 +8127,7 @@
                                         class="atds-channel-switcher__link  narrow-hide">Security advice</a></li>
                             </ul>
                         </div>
-                        <div class="atds-header__drawer">
+                        <!--<div class="atds-header__drawer">
                             <h2 class="visuallyhidden" id="primary-navigation">Main site menu</h2>
                             <div class="atds-drawer-account wide-hide"><a href="/users/sign_in"
                                     class="atds-login-button"><svg xmlns="http://www.w3.org/2000/svg" height="16"
@@ -8095,7 +8136,7 @@
                                         <path
                                             d="M8 6.6666C7.265 6.6666 6.667 6.0676 6.667 5.3326C6.667 4.5976 7.265 3.9996 8 3.9996C8.735 3.9996 9.333 4.5976 9.333 5.3326C9.333 6.0676 8.735 6.6666 8 6.6666ZM8 2.6666C6.527 2.6666 5.333 3.8596 5.333 5.3326C5.333 6.8056 6.527 7.9996 8 7.9996C9.473 7.9996 10.667 6.8056 10.667 5.3326C10.667 3.8596 9.473 2.6666 8 2.6666ZM12.8823 12.524C12.0573 10.646 10.1833 9.333 8.0003 9.333C5.8173 9.333 3.9433 10.646 3.1173 12.524C2.0143 11.334 1.3333 9.747 1.3333 8C1.3333 5.427 2.7703 3.129 5.0843 2.003C5.9953 1.558 6.9763 1.333 8.0003 1.333C11.6753 1.333 14.6673 4.324 14.6673 8C14.6673 9.747 13.9863 11.334 12.8823 12.524ZM8.0003 14.667C6.5823 14.667 5.2683 14.217 4.1863 13.46C4.6993 11.842 6.2153 10.667 8.0003 10.667C9.7853 10.667 11.3003 11.842 11.8133 13.46C10.7313 14.217 9.4183 14.667 8.0003 14.667ZM8.0003 0C6.7453 0 5.5573 0.289 4.5003 0.804C1.8363 2.102 0.000301361 4.837 0.000301361 8C0.000301361 10.389 1.0533 12.527 2.7143 13.994C3.1133 14.346 3.5483 14.661 4.0133 14.928C5.1883 15.606 6.5473 16 8.0003 16C9.4533 16 10.8123 15.606 11.9863 14.928C12.4523 14.661 12.8863 14.346 13.2863 13.994C14.9473 12.527 16.0003 10.389 16.0003 8C16.0003 3.582 12.4183 0 8.0003 0Z">
                                         </path>
-                                    </svg> <!-- -->Sign up or sign in</a></div>
+                                    </svg> <!-- Sign up or sign in</a></div>
                             <h3 class="visuallyhidden" id="channel-switcher-heading">Vehicle types</h3>
                             <div class="wide-hide">
                                 <ul class="atds-channel-switcher atds-type-mini" role="menu"
@@ -8149,6 +8190,92 @@
                                         class="atds-primary-navigation__link">Finance</a></li>
                                 <li class="atds-primary-navigation__item" role="menuitem"><a href="#"
                                         class="atds-primary-navigation__link">Insurance</a></li>
+                            </ul>
+                        </div> --> 
+
+
+                        <!-- NEW BOOTSTRAP TOGGLE DIV-->
+                        <div class="collapse" id="navbarToggleExternalContent">
+                            <h2 class="visuallyhidden" id="primary-navigation"> Main site menu </h2>
+                            <div class="atds-drawer-account wide-hide">
+                                <a href="/users/sign_in" class="atds-login-button"
+                                    ><svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    height="16"
+                                    width="16"
+                                    class="atds-svg"
+                                    >
+                                    <title></title>
+                                    <path
+                                        d="M8 6.6666C7.265 6.6666 6.667 6.0676 6.667 5.3326C6.667 4.5976 7.265 3.9996 8 3.9996C8.735 3.9996 9.333 4.5976 9.333 5.3326C9.333 6.0676 8.735 6.6666 8 6.6666ZM8 2.6666C6.527 2.6666 5.333 3.8596 5.333 5.3326C5.333 6.8056 6.527 7.9996 8 7.9996C9.473 7.9996 10.667 6.8056 10.667 5.3326C10.667 3.8596 9.473 2.6666 8 2.6666ZM12.8823 12.524C12.0573 10.646 10.1833 9.333 8.0003 9.333C5.8173 9.333 3.9433 10.646 3.1173 12.524C2.0143 11.334 1.3333 9.747 1.3333 8C1.3333 5.427 2.7703 3.129 5.0843 2.003C5.9953 1.558 6.9763 1.333 8.0003 1.333C11.6753 1.333 14.6673 4.324 14.6673 8C14.6673 9.747 13.9863 11.334 12.8823 12.524ZM8.0003 14.667C6.5823 14.667 5.2683 14.217 4.1863 13.46C4.6993 11.842 6.2153 10.667 8.0003 10.667C9.7853 10.667 11.3003 11.842 11.8133 13.46C10.7313 14.217 9.4183 14.667 8.0003 14.667ZM8.0003 0C6.7453 0 5.5573 0.289 4.5003 0.804C1.8363 2.102 0.000301361 4.837 0.000301361 8C0.000301361 10.389 1.0533 12.527 2.7143 13.994C3.1133 14.346 3.5483 14.661 4.0133 14.928C5.1883 15.606 6.5473 16 8.0003 16C9.4533 16 10.8123 15.606 11.9863 14.928C12.4523 14.661 12.8863 14.346 13.2863 13.994C14.9473 12.527 16.0003 10.389 16.0003 8C16.0003 3.582 12.4183 0 8.0003 0Z"
+                                    ></path>
+                                    </svg>
+                                    Sign up or sign in</a
+                                >
+                            </div>
+                            <h3 class="visuallyhidden" id="channel-switcher-heading"> Vehicle types </h3>
+                            <div class="wide-hide"></div>
+                            <p class="visuallyhidden">
+                                <span class="visuallyhidden">Currently in the </span>cars<span
+                                    class="visuallyhidden"
+                                >
+                                    channel</span
+                                >
+                            </p>
+                            <ul
+                                id="menu-nav"
+                                role="menubar"
+                                class="
+                                    atds-primary-navigation atds-type-prius
+                                    atds-primary-navigation--active
+                                "
+                            >
+                                <li class="atds-primary-navigation__item" role="menuitem">
+                                    <a href="/used_cars" class="atds-primary-navigation__link"
+                                    >Used cars</a
+                                    >
+                                </li>
+                                <li class="atds-primary-navigation__item" role="menuitem">
+                                    <a href="/new_cars" class="atds-primary-navigation__link"
+                                    >New cars</a
+                                    >
+                                </li>
+                                <li class="atds-primary-navigation__item" role="menuitem">
+                                    <a href="/sell_cars" class="atds-primary-navigation__link"
+                                    >Sell your car</a
+                                    >
+                                </li>
+                                <li class="atds-primary-navigation__item" role="menuitem">
+                                    <a
+                                    href="/value_cars"
+                                    class="atds-primary-navigation__link"
+                                    >Value your car</a
+                                    >
+                                </li>
+                                <li class="atds-primary-navigation__item" role="menuitem">
+                                    <a href="#" class="atds-primary-navigation__link"
+                                    >Car reviews</a
+                                    >
+                                </li>
+                                <li class="atds-primary-navigation__item" role="menuitem">
+                                    <a
+                                    href="#"
+                                    class="atds-primary-navigation__link"
+                                    >Car leasing</a
+                                    >
+                                </li>
+                                <li class="atds-primary-navigation__item" role="menuitem">
+                                    <a
+                                    href="#"
+                                    class="atds-primary-navigation__link"
+                                    >Electric cars</a
+                                    >
+                                </li>
+                                <li class="atds-primary-navigation__item" role="menuitem">
+                                    <a href="#" class="atds-primary-navigation__link"
+                                    >Finance</a
+                                    >
+                                </li>
                             </ul>
                         </div>
                     </div>

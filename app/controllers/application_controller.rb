@@ -10,7 +10,7 @@ class ApplicationController < ActionController::Base
   # protect_from_forgery except: []
 
 
-  before_action :authenticate_user!
+  # before_action :authenticate_user!
   # before_filter :authenticate_user!
 
   add_flash_types :success, :warning, :danger, :info

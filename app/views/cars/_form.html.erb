@@ -1,140 +1,847 @@
+<style>
+  #trimesterForm {
+    margin: 100px auto;
+    padding: 40px;
+    width: 70%;
+    min-width: 300px;
+  }
+
+  /* Style the input fields */
+
+  /* Mark input boxes that gets an error on validation: */
+  input.invalid {
+    background-color: #ffdddd;
+  }
+
+  /* Hide all steps by default: */
+  .tab {
+    display: none;
+    color:black;
+  }
+
+  /* Make circles that indicate the steps of the form: */
+  .step {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbbbbb;
+    border: none;
+    border-radius: 50%;
+    display: inline-block;
+    opacity: 0.5;
+  }
+
+  /* Mark the active step: */
+  .step.active {
+    opacity: 1;
+  }
+
+  /* Mark the steps that are finished and valid: */
+  .step.finish {
+    background-color: #4CAF50;
+  }
+
+  @import url('https://fonts.googleapis.com/css?family=Poppins:200i,400&display=swap');
+  @import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
+  :root {
+    --color-white: #f3f3f3;
+    --color-darkblue: #1b1b32;
+    --color-darkblue-alpha: rgba(27, 27, 50, 0.8);
+    --color-green: #37af65;
+  }
+
+  *,
+  *::before,
+  *::after {
+  box-sizing: border-box;
+  }
+
+  body {
+ 
+    /* font-size: 1rem; */
+    font-weight: 400;
+    line-height: 1.4;
+    /* color: var(--color-white); */
+    margin: 0;
+  }
+
+  main {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: -155px;
+    margin-bottom: 0;
+  }
+
+  /* mobile friendly alternative to using background-attachment: fixed */
+  body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  h1 {
+    font-weight: 400;
+    line-height: 1.2;
+  }
+
+  p {
+    font-size: 1.125rem;
+  }
+
+  h1{
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+  }
+
+  label {
+    display: flex;
+    align-items: center;
+    font-size: 0.85rem;
+    margin-bottom: 0.5rem;
+    color:black;
+    font-family: "Nunito", sans-serif;
+    line-height: 1.3rem;
+  }
+
+  input,
+  button,
+  select,
+  textarea {
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+  }
+
+  button {
+    border: none;
+  }
+
+  .container {
+    width: 100%;
+    margin: 3.125rem auto 0 auto;
+  }
+
+  @media (min-width: 576px) {
+    .container {
+        max-width: 540px;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+  }
+
+  .header {
+    padding: 0 0.625rem;
+    margin-bottom: 1.875rem;
+  }
+
+  .description {
+    font-style: italic;
+    font-weight: 200;
+    color: black;
+  }
+
+  .clue {
+    margin-left: 0.25rem;
+    font-size: 0.9rem;
+    color: black;
+  }
+
+  
+
+  /* form */
+
+  #trimesterForm {
+    margin-top: -20px;
+    width: 100%;
+    padding: 2.5rem 0.625rem;
+    border-radius: 0.25rem;
+
+
+  }
+
+  @media (min-width: 480px) {
+    #trimesterForm {
+      padding: 2.5rem;
+    }
+  }
+
+  #trimesterForm-group {
+    margin: 0 auto 1.25rem auto;
+    padding: 0.25rem;
+  }
+
+  #trimesterForm-control {
+  display: block;
+  width: 100%;
+  height: 2.375rem;
+  padding: 0.375rem 0.75rem;
+  color:black;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  }
+
+  #trimesterForm-control:focus {
+  border-color: #80bdff;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  }
+
+  .input-radio,
+  .input-checkbox {
+  display: inline-block;
+  margin-right: 0.625rem;
+  min-height: 1.25rem;
+  min-width: 1.25rem;
+  }
+
+  .input-textarea {
+  min-height: 120px;
+  width: 100%;
+  padding: 0.625rem;
+  resize: vertical;
+  }
+
+  .submit-button {
+  display: block;
+  width: 100%;
+  padding: 0.75rem;
+  background: var(--color-green);
+  color: inherit;
+  border-radius: 2px;
+  cursor: pointer;
+  }
+
+
+  input[type=checkbox]{
+    width: 7%;
+    height: 25px;
+  }
+
+
+
+  input[type="text"]{
+    width: 100%;
+  height: 50px;
+  }
+
+  .yesNoRadioText{
+    padding: 0 10px;
+    font-size: 0.85rem;
+    line-height: 1.3rem;
+    font-family: "Nunito", sans-serif;
+  }
+
+  .ul-pad{
+    padding: 10px 0px;
+  }
+
+
+  .div-tab{
+    font-size: 0.85rem;
+    line-height: 1.3rem;
+  }
+
+  #select_all{
+    font-size: 0.85rem;
+    font-family: 'Nunito', sans-serif;
+    padding: 0 5px;
+    color: #732020;
+    margin-right: 30px;
+  }
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    color: #2c2c2c;
+}
+body a {
+    color: inherit;
+    text-decoration: none;
+}
+.header__btn {
+    transition-property: all;
+    transition-duration: 0.2s;
+    transition-timing-function: linear;
+    transition-delay: 0s;
+    padding: 10px 20px;
+    display: inline-block;
+    margin-right: 10px;
+    background-color: #fff;
+    border: 1px solid #2c2c2c;
+    border-radius: 3px;
+    cursor: pointer;
+    outline: none;
+}
+.header__btn:last-child {
+    margin-right: 0;
+}
+.header__btn:hover, .header__btn.js-active {
+    color: #fff;
+    background-color: #2c2c2c;
+}
+.header {
+    max-width: 600px;
+    margin: 50px auto;
+    text-align: center;
+}
+.header__title {
+    margin-bottom: 30px;
+    font-size: 2.1rem;
+}
+.content {
+    width: 95%;
+    margin: 0 auto 50px;
+}
+.content__title {
+    margin-bottom: 40px;
+    font-size: 20px;
+    text-align: center;
+}
+.content__title--m-sm {
+    margin-bottom: 10px;
+}
+
+form{
+    height:550px;
+}
+
+.multisteps-form__progress {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+}
+.multisteps-form__progress-btn {
+    transition-property: all;
+    transition-duration: 0.15s;
+    transition-timing-function: linear;
+    transition-delay: 0s;
+    position: relative;
+    padding-top: 20px;
+    color: rgba(108, 117, 125, .7);
+    text-indent: -9999px;
+    border: none;
+    background-color: transparent;
+    outline: none !important;
+    cursor: pointer;
+}
+@media (min-width: 500px) {
+    .multisteps-form__progress-btn {
+        text-indent: 0;
+   }
+}
+.multisteps-form__progress-btn:before {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    display: block;
+    width: 13px;
+    height: 13px;
+    content: '';
+    transform: translateX(-50%);
+    transition: all 0.15s linear 0s, transform 0.15s cubic-bezier(0.05, 1.09, 0.16, 1.4) 0s;
+    border: 2px solid currentColor;
+    border-radius: 50%;
+    background-color: #fff;
+    box-sizing: border-box;
+    z-index: 3;
+}
+.multisteps-form__progress-btn:after {
+    position: absolute;
+    top: 5px;
+    left: calc(-50% - 13px / 2);
+    transition-property: all;
+    transition-duration: 0.15s;
+    transition-timing-function: linear;
+    transition-delay: 0s;
+    display: block;
+    width: 100%;
+    height: 2px;
+    content: '';
+    background-color: currentColor;
+    z-index: 1;
+}
+.multisteps-form__progress-btn:first-child:after {
+    display: none;
+}
+.multisteps-form__progress-btn.js-active {
+    color: #007bff;
+}
+.multisteps-form__progress-btn.js-active:before {
+    transform: translateX(-50%) scale(1.2);
+    background-color: currentColor;
+}
+.multisteps-form__form {
+    position: relative;
+}
+.multisteps-form__panel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    opacity: 0;
+    visibility: hidden;
+}
+.multisteps-form__panel.js-active {
+    height: auto;
+    opacity: 1;
+    visibility: visible;
+    width: 550px;
+}
+.multisteps-form__panel[data-animation="scaleOut"] {
+    transform: scale(1.1);
+}
+.multisteps-form__panel[data-animation="scaleOut"].js-active {
+    transition-property: all;
+    transition-duration: 0.2s;
+    transition-timing-function: linear;
+    transition-delay: 0s;
+    transform: scale(1);
+}
+.multisteps-form__panel[data-animation="slideHorz"] {
+    left: 50px;
+}
+.multisteps-form__panel[data-animation="slideHorz"].js-active {
+    transition-property: all;
+    transition-duration: 0.25s;
+    transition-timing-function: cubic-bezier(0.2, 1.13, 0.38, 1.43);
+    transition-delay: 0s;
+    left: 0;
+}
+.multisteps-form__panel[data-animation="slideVert"] {
+    top: 30px;
+}
+.multisteps-form__panel[data-animation="slideVert"].js-active {
+    transition-property: all;
+    transition-duration: 0.2s;
+    transition-timing-function: linear;
+    transition-delay: 0s;
+    top: 0;
+}
+.multisteps-form__panel[data-animation="fadeIn"].js-active {
+    transition-property: all;
+    transition-duration: 0.3s;
+    transition-timing-function: linear;
+    transition-delay: 0s;
+}
+.multisteps-form__panel[data-animation="scaleIn"] {
+    transform: scale(0.9);
+}
+.multisteps-form__panel[data-animation="scaleIn"].js-active {
+    transition-property: all;
+    transition-duration: 0.2s;
+    transition-timing-function: linear;
+    transition-delay: 0s;
+    transform: scale(1);
+}
+
+.main-wrapper {
+  height: -webkit-fill-available;
+  max-height: -webkit-fill-available;
+}
+
+.nxtprevClass{
+  margin-top: 340px;
+  margin-left: -7%;
+}
+
+.nxtPrev{
+  margin-left: 10%;
+  margin-right: 0;
+  width: 200px;
+  height: 40px;
+  color: white !important;
+}
+
+
+
+.multisteps-form__panel.js-active {
+    height: auto;
+    opacity: 1;
+    visibility: visible;
+    width: 528px;
+    margin-left: 5px;
+}
+
+.container {
+  margin-top: -120px;
+}
+
+.container.overflow-hidden {
+    margin-top: 0px;
+}
+
+input#car_car_registration_first_date{
+  height: 50px;
+  margin-top: 20px;
+}
+
+input[type="radio"], input[type="checkbox"] {
+    margin-top: 0;
+}
+
+
+@media (max-width:420px){ 
+  .container{
+    margin-top: -70px;
+  }
+
+  .content__title{
+    display: none;
+  }
+
+  .multisteps-form__panel.js-active {
+    height: auto;
+    opacity: 1;
+    visibility: visible;
+    width: 95%;
+    margin-left: 2px;
+  }
+
+  .multisteps-form{
+    margin-top: -50px;
+  }
+
+
+  .nxtprevClass{
+    margin-top: 560px;
+    margin-left: -22px;
+  }
+
+  .nxtPrev{
+    font-size: 15px;
+    margin-left: 3%;
+    margin-right: 0;
+    width: 200px;
+    height: 40px;
+    color: white !important;
+  }
+
+  input[type="radio"], input[type="checkbox"] {
+    margin-top: 0;
+  }
+
+
+  
+}
+
+
+
+
+@media (max-width:375px){ 
+  .container{
+    margin-top: -70px;
+  }
+
+  .content__title{
+    display: none;
+  }
+
+  h3.multisteps-form__title{
+    font-size: 20px;
+    margin-top: -15px;
+    text-align: center;
+  }
+
+  .multisteps-form__content{
+    font-size: 12px;
+  }
+
+  .multisteps-form__panel.js-active {
+    height: auto;
+    opacity: 1;
+    visibility: visible;
+    width: 95%;
+    margin-left: 2px;
+  }
+
+  .multisteps-form {
+    margin-top: -70px;
+  }
+
+
+  .nxtprevClass {
+    margin-top: 518px;
+    margin-left: -22px;
+  }
+
+  .nxtPrev{
+    font-size: 1.0rem;
+    margin-left: 3%;
+    margin-right: 0;
+    width: 160px;
+    height: 40px;
+    color: white !important;
+  }
+
+  input[type="radio"], input[type="checkbox"] {
+    margin-top: 0;
+  }
+
+
+  
+}
+
+</style>
+
+
 
 <main>
-  <%= simple_form_for(@car) do |f| %>
-    <%= f.error_notification %>
-    <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+
+    <!-- One "tab" for each step in the form: -->
+
+    <div class="container">
+      <!--content title-->
+      <h2 class="content__title">Click on 'Previous' and 'Next' buttons</h2>
+    </div>
+
+    <div class="container overflow-hidden">
+      <button type="button" class="btn btn-primary" style="color:white; margin-top: 0; margin-left: 0;">
+				<%= link_to 'Back', cars_path %>
+			</button>
+        <!--multisteps-form-->
+        <div class="multisteps-form">
+            <!--progress bar-->
+            <div class="row">
+              <div class="col-12 col-lg-8 ml-auto mr-auto mb-4">
+                <div class="multisteps-form__progress">
+
+                  <!-- Circles which indicates the steps of the form: -->
+                  <div style="text-align:center;margin-top:40px;">
+                    <span class="step"></span>
+                    <span class="step"></span>
+                    <span class="step"></span>
+                    <span class="step"></span>
+                    <span class="step"></span>
+                    <span class="step"></span>
+                    <span class="step"></span>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+            
+
+            <!--form panels-->
+            <div class="row">
+              <div class="col-12 col-lg-8 m-auto">
+                <%= simple_form_for(@car, id:"carForm", class:"multisteps-form__form") do |f| %>
+                  <%= f.error_notification %>
+                  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+
+                    <!--single form panel-->
+                    <div class="tab div-tab">
+                      <div class="multisteps-form__panel shadow p-4 rounded bg-white js-active" data-animation="scaleIn">
+                        <h3 class="multisteps-form__title">Car Model Details</h3>
+                        <div class="multisteps-form__content">
+                          <div class="form-row mt-4">
+                            <div class="col-12 col-sm-6"><%= f.association :a_vehicle, collection: VehicleType.all, label_method: :vehicle, value_method: :id,  include_blank: true, label: "Vehicle:", required: true, style:"width:90%;", :input_html => {:class => 'form-control dropdown dropdown-toggle selectedTab', style:"width:90%;float:center;"} %></div>
+                            <div class="col-12 col-sm-6 mt-4 mt-sm-0"><%= f.input :make_id, collection: CarMake.all, value_method: :id, label_method: :name, :input_html => {:class => 'selectedTab'}, required: true %></div>
+                          </div>
+                          <div class="form-row mt-4">
+                            <div class="col-12 col-sm-6"><%= f.input :model_id, collection: CarModel.all, value_method: :id, label_method: :name, :input_html => {:class => 'selectedTab'}, required: true %></div>
+                            <div class="col-12 col-sm-6 mt-4 mt-sm-0"><%= f.input :car_model_year, :label => "Year of Car Model", :input_html => {:class => 'selectedTab'}, required: true %></div>
+                          </div>
+                          <!--<div class="button-row d-flex mt-4"><button class="btn btn-primary ml-auto js-btn-next" type="button" title="Next">Next</button></div> -->
+                        </div>
+                      </div>
+                    </div>
 
 
-    <div class="form-inputs">
-      <div class="form-group">
-        <%#= f.input :vehicle_type_id, collection: VehicleType.all, value_method: :id, label_method: :vehicle, required: true %>
-        <%= f.association :a_vehicle, collection: VehicleType.all, label_method: :vehicle, value_method: :id, required: true, include_blank: true, label: "Vehicle:", style:"width:90%;", :input_html => {:class => 'form-control dropdown dropdown-toggle', style:"width:90%;float:center;"} %>
-      </div>
-      <div class="form-group">
-        <%= f.input :make_id, collection: CarMake.all, value_method: :id, label_method: :name, required: true %>
-      </div>
-      <div class="form-group">
-        <%= f.input :car_name, :label => "Car Brand Name", required: true %>
-      </div>
-      
-      <div class="form-group">
-        <%= f.input :model_id, collection: CarModel.all, value_method: :id, label_method: :name, required: true %>
-      </div>
-      <div class="form-group">
-        <%= f.input :car_engine_id, collection: CarEngine.all, value_method: :id, label_method: :engine_type, required: true %>
-      </div>
-      <div class="form-group">
-        <%= f.input :car_model_year, :label => "Year of Car Model",  required: true %>
-      </div>
-      <div class="form-group">
-        <%= f.input :car_registration_number, :label => "Car Registration Number" %>
-      </div>
-      <div class="form-group">
-        <%= f.label :car_registration_first_date %>
-        <br>
-        <%= f.date_field :car_registration_first_date, label: "Date of First Registration", as: :string, class: 'form-control datepicker', input_html: { id: "datepicker1", placeholder: 'dd-mm-yy' }  %>
-      </div>
-      <div class="form-group">
-        <%= f.input :car_doc_id, collection: CarDocument.all, value_method: :id, label_method: :doc_type, required: true %>
-      </div>
-      <div class="form-group">
-        <%= f.input :car_price, :label => "Car Price in GH", required: true %>
-      </div>
-      <div class="form-group">
-        <%= f.input :estimated_retail_price, :label => "Estimated retail Price" %>
-      </div>
-      <div class="form-group">
-        <%= f.input :car_type_id, collection: CarType.all, value_method: :id, label_method: :name, required: true %>
-      </div>
-      <div class="form-group">
-        <%= f.input :body_type_id, collection: CarBody.all, value_method: :id, label_method: :type_name, required: true %>
-      </div>
-      <div class="form-group">
-        <%= f.input :fuel_type_id, collection: FuelType.all, value_method: :id, label_method: :fuel_type, required: true %>
-      </div>
-      <div class="form-group">
-        <%= f.input :mileage, :label => "Car mileage" %>
-      </div>
-      <div class="form-group">
-        <%= f.input :car_cylinder, collection: CarCylinder.all, value_method: :id, label_method: :cylinder, required: true %>
-      </div>
-      <div class="form-group">
-        <%= f.input :drive_type, collection: CarDrive.all, value_method: :id, label_method: :drive_type, required: true %>
-      </div>
-      <div class="form-group">
-        <%= f.input :transmission_type_id, collection: CarTransmission.all, value_method: :id, label_method: :name, required: true %>
-      </div>
-      <div class="form-group">
-        <%= f.input :colour_id, collection: CarColour.all, value_method: :id, label_method: :name, required: true %>
-      </div>
-      <div class="form-group">
-        <%= f.input :trim_details, :label => "Car Trim Details" %>
-      </div>
-      <div class="form-group">
-        <%= f.input :derivative_details, :label => "Car Derivative Details" %>
-      </div>
-      <div class="form-group">
-        <%= f.input :variant_details, :label => "Car Variant Details" %>
-      </div>
-      <div class="form-group">
-        <%= f.input :seats, :label => "Car Seat Number", required: true %>
-      </div>
-      <div class="form-group">
-        <%= f.input :doors, :label => "Car Door Number", required: true %>
-      </div>
-      <div class="form-group">
-        <%= f.input :car_highlights, :label => "Car Highlight" %>
-      </div>
-      <div class="form-group">
-        <%= f.input :car_keys, :label => "Car Keys Available", as: :select, collection: [['Yes',true], ['No', false]], required: true%>
-      </div>
-      <div class="form-group">
-        <%= f.input :car_primary_damage, :label => "Car Primary Damage" %>
-      </div>
-      <div class="form-group">
-        <%= f.input :car_secondary_damage, :label => "Car Secondary Damage" %>
-      </div>
+                    <!--single form panel-->
+                    <div class="tab div-tab">
+                      <div class="multisteps-form__panel shadow p-4 rounded bg-white js-active" data-animation="scaleIn">
+                        <h3 class="multisteps-form__title">Your Registration Details</h3>
+                        <div class="multisteps-form__content">
+                          <div class="form-row mt-4">
+                            <div class="col-12 col-sm-6"><%= f.input :car_name, :label => "Car Brand Name", required: true %></div>
+                            <div class="col-12 col-sm-6 mt-4 mt-sm-0"><%= f.input :car_doc_id, collection: CarDocument.all, value_method: :id, label_method: :doc_type, required: true %></div>
+                          </div>
+                          <div class="form-row mt-4">
+                            <div class="col-12 col-sm-6"><%= f.input :car_registration_number, :label => "Car Registration Number" %></div>
+                            <div class="col-12 col-sm-6 mt-4 mt-sm-0">
+                              <%= f.date_field :car_registration_first_date, label: "Date of First Registration", as: :string, class: 'form-control datepicker', input_html: { id: "datepicker1", placeholder: 'dd-mm-yy', :style=> "margin-top: 21px; height: 47px;" }  %>
+                            </div>
+                          </div>
+                          
+                          <div class="form-row mt-4">
+                            <div class="col-12 col-sm-6"><%= f.input :car_price, :label => "Car Price in GH", required: true %></div>
+                            <div class="col-12 col-sm-6 mt-4 mt-sm-0"><%= f.input :estimated_retail_price, :label => "Estimated retail Price" %></div>
+                          </div>
+                          <!--<div class="button-row d-flex mt-4"><button class="btn btn-primary ml-auto js-btn-next" type="button" title="Next">Next</button></div>-->
+                        </div>
+                      </div>
+                    </div>
 
-      <div class="form-group">
-       <%= f.label :images %>
-        <br>
-        <%= f.file_field :images, class: "form-control", multiple:true %>
-      </div> 
+                    <div class="tab div-tab">
+                      <div class="multisteps-form__panel shadow p-4 rounded bg-white js-active" data-animation="scaleIn">
+                          <h3 class="multisteps-form__title">Car Performance Details</h3>
+                          <div class="multisteps-form__content">
+                              <div class="form-row mt-4">
+                                  <div class="col-12 col-sm-6"><%= f.input :car_engine_id, collection: CarEngine.all, value_method: :id, label_method: :engine_type, required: true %></div>
+                                  <div class="col-12 col-sm-6 mt-4 mt-sm-0"> <%= f.input :car_cylinder, collection: CarCylinder.all, value_method: :id, label_method: :cylinder, required: true %></div>
+                              </div>
 
-      <div class="form-group">
-        <%= f.text_area :description, :label => "Car Description", required: true %>
-      </div>
+                              <div class="form-row mt-4">
+                                  <div class="col-12 col-sm-6"><%= f.input :fuel_type_id, collection: FuelType.all, value_method: :id, label_method: :fuel_type, required: true %></div>
+                                  <div class="col-12 col-sm-6 mt-4 mt-sm-0"><%= f.input :mileage, :label => "Car mileage" %></div>
+                              </div>
+
+                              
+                              
+                              <!--<div class="button-row d-flex mt-4"><button class="btn btn-primary ml-auto js-btn-next" type="button" title="Next">Next</button></div> -->
+                          </div>
+                      </div>
+                    </div>
+
+    
+            
+                    <!--single form panel-->
+                    <div class="tab div-tab">
+                        <div class="multisteps-form__panel shadow p-4 rounded bg-white js-active" data-animation="scaleIn">
+                            <h3 class="multisteps-form__title">Car Appeal Details</h3>
+                            <div class="multisteps-form__content">
+                                
+                                <div class="form-row mt-4">
+                                    <div class="col-12 col-sm-6"><%= f.input :car_type_id, collection: CarType.all, value_method: :id, label_method: :name, required: true %></div>
+                                    <div class="col-12 col-sm-6 mt-4 mt-sm-0"><%= f.input :body_type_id, collection: CarBody.all, value_method: :id, label_method: :type_name, required: true %></div>
+                                </div>
+
+                                <div class="form-row mt-4">
+                                    <div class="col-12 col-sm-6"><%= f.input :colour_id, collection: CarColour.all, value_method: :id, label_method: :name, required: true %></div>
+                                    <div class="col-12 col-sm-6 mt-4 mt-sm-0"><%= f.input :car_highlights, :label => "Car Highlight" %></div>
+                                </div>
+                                <!--<div class="button-row d-flex mt-4"><button class="btn btn-primary ml-auto js-btn-next" type="button" title="Next">Next</button></div> -->
+                            </div>
+                        </div>
+                    </div>
 
 
-      <% if current_user.role_id == 1%>
-      <div class="form-group">
-        <%= f.association :a_user, collection: User.all, label_method: :username, value_method: :id, include_blank: true, label: "User:", style:"width:90%;", :input_html => {:class => 'form-control dropdown dropdown-toggle', style:"width:90%;float:center;"} %>
-      </div>
-      <% else %>
-        <div class="form-group">
-          <%= f.input :car_user_id, input_html:{value: current_user.id}, :as=> :hidden %>
+                    <!--single form panel-->
+                    <div class="tab div-tab">
+                        <div class="multisteps-form__panel shadow p-4 rounded bg-white js-active" data-animation="scaleIn">
+                            <h3 class="multisteps-form__title">Car View Details</h3>
+                            <div class="multisteps-form__content">
+                                <div class="form-row mt-4">
+                                    <div class="col-12 col-sm-6"><%= f.input :seats, :label => "Car Seat Number", required: true %></div>
+                                    <div class="col-12 col-sm-6 mt-4 mt-sm-0"><%= f.input :doors, :label => "Car Door Number", required: true %></div>
+                                </div>
+                                <div class="form-row mt-4">
+                                    <div class="col-12 col-sm-6"><%= f.input :car_primary_damage, :label => "Car Primary Damage" %></div>
+                                    <div class="col-12 col-sm-6 mt-4 mt-sm-0"><%= f.input :car_secondary_damage, :label => "Car Secondary Damage" %></div>
+                                </div>
+                                <!--<div class="button-row d-flex mt-4"><button class="btn btn-primary ml-auto js-btn-next" type="button" title="Next">Next</button></div> -->
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="tab div-tab">
+                        <div class="multisteps-form__panel shadow p-4 rounded bg-white js-active" data-animation="scaleIn">
+                            <h3 class="multisteps-form__title">Car View Details</h3>
+                            <div class="multisteps-form__content">
+                                <div class="form-row mt-4">
+                                    <div class="col-12 col-sm-6"><%= f.input :derivative_details, :label => "Car Derivative Details" %></div>
+                                    <div class="col-12 col-sm-6 mt-4 mt-sm-0"><%= f.input :variant_details, :label => "Car Variant Details" %></div>
+                                </div>
+                                <div class="form-row mt-4">
+                                    <div class="col-12"><%= f.input :trim_details, :label => "Car Trim Details" %></div>
+                                </div>
+                                <!--<div class="button-row d-flex mt-4"><button class="btn btn-primary ml-auto js-btn-next" type="button" title="Next">Next</button></div> -->
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="tab div-tab">
+                        <div class="multisteps-form__panel shadow p-4 rounded bg-white js-active" data-animation="scaleIn">
+                            <h3 class="multisteps-form__title">Car Seller Details</h3>
+                            <div class="multisteps-form__content">
+                                <div class="form-row mt-4">
+                                    <% if current_user.role_id == 1%>
+                                        <%= f.association :a_user, collection: User.all, label_method: :username, value_method: :id, include_blank: true, label: "User:", style:"width:90%;", :input_html => {:class => 'form-control dropdown dropdown-toggle', style:"width:90%;float:center;"} %>
+                                    <% else %>
+                                        <%= f.input :car_user_id, input_html:{value: current_user.id} %>
+                                    <% end %>
+                                </div>
+                                <div class="form-row mt-4">
+                                    <div class="col-12 col-sm-6"><%= f.hidden_field :comments %></div>
+                                    <div class="col-12 col-sm-6"><%= f.hidden_field :status %></div>
+                                </div>
+                                <!--<div class="button-row d-flex mt-4"><button class="btn btn-primary ml-auto js-btn-next" type="button" title="Next">Next</button></div> -->
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <!--single form panel-->
+                    <div class="tab div-tab">
+                        <div class="multisteps-form__panel shadow p-4 rounded bg-white js-active" data-animation="scaleIn">
+                            <h3 class="multisteps-form__title">Car Extra Info</h3>
+                            <div class="multisteps-form__content">
+                                <div class="form-row mt-4">
+                                    
+                                    <div class="col-12 col-sm-6 " style="margin-top:10px;"><%= f.input :car_keys, :label => "Car Keys", :style=> "margin-top: 0px;" %></div>
+                                </div>
+                                <div class="form-row mt-4">
+                                    <div class="col-12 col-sm-6"><%= f.file_field :images, class: "form-control", multiple:true %></div>
+                                </div>
+                                <div class="form-row mt-4">
+                                    <div class="col-12 col-sm-6"><%= f.input :description, :label => false, :input_html => {placeholder: "Enter additional car descriptionns"}, :as=> :hidden %></div>
+                                </div>
+                                <div class="form-actions" style="text-align:center;margin-top: 20px;">
+                                    <button type="button"  class ="btn btn-success" style="color:white;">
+                                        <%= f.button :submit, "Add Car", style: 'color:white' %>
+                                    </button>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="nxtprevClass" style="overflow:auto;">
+                        <div class="button-row d-flex mt-4">
+                            <button type="button" class="btn btn-warning btn-sm nxtPrev" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
+                            <button type="button" class="btn btn-primary btn-sm nxtPrev" id="nextBtn" onclick="nextPrev(1)">Next</button>
+                        </div>
+                    </div>
+
+                <% end %>
+              </div>
+            </div>
         </div>
-      <% end %>
-      
-      <div class="form-group">
-        <%= f.hidden_field :comments %>
-      </div>
-      
-      <div class="form-group">
-        <%= f.hidden_field :status %>
-      </div>
     </div>
 
-    <div class="form-actions" style="text-align:center;margin-top: 20px;">
-      <button type="button"  class ="btn btn-success" style="color:white;">
-        <i class="btn-icon-prepend" data-feather="check-square"></i>
-        <%= f.button :submit, "Add Car", style: 'color:white' %>
-      </button>
-    </div>
-  </div>
-  <% end %>
+
+    
 </main>
 
+<script type="text/javascript" src="/assets/index.js"></script>
+<%= javascript_pack_tag 'custom/carForm', media: 'all' %>
 
 <script type="text/javascript">
   $('#datepicker1').datetimepicker({
