@@ -17,7 +17,9 @@ Rails.application.routes.draw do
   resources :car_types
   resources :cars
 
-  root 'home#index'
+  root 'home#welcome'
+
+  get 'dashboard' => 'home#index'
 
   get 'sell_cars' => 'home#car_sell'
 
@@ -26,6 +28,8 @@ Rails.application.routes.draw do
   get 'used_cars' => 'home#used_cars'
 
   get 'new_cars' => 'home#new_cars'
+
+  get 'userform' => 'home#stepform'
 
   get '/users' => 'users#index'
 

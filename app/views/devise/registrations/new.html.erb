@@ -87,7 +87,7 @@
                                                             autofocus: true,
                                                             input_html: { placeholder: "Mobile Number",  class: "form-control mb-2" } 
                                                         %>
-                                                        <!--<input type="email" class="form-control mb-2" placeholder="Email">-->
+                                                        
                                                         <%= f.input :username,
                                                             required: true,
                                                             label: false,
@@ -101,7 +101,7 @@
                                                         autofocus: true,
                                                         input_html: { placeholder: "Email",  class: "form-control mb-2"} 
                                                     %>
-                                                    <!--<input type="password" class="form-control mb-2" placeholder="Password">-->
+                                                    
                                                     <span style="display:flex;">
                                                         <%= f.input :password,
                                                             required: true,
@@ -154,8 +154,9 @@
                                                     <span id="terms_acceptance" >I accept the terms & conditions</span>
                                                      
                                                     <div class="d-flex justify-content-between flex-sm-row flex-column">
-                                                        <%= f.button :submit, "Register" %>
                                                         <a href="/new_session_path" class="btn bg-light-primary mb-2 mb-sm-0">Back To Login</a>
+                                                        <%= f.button :submit, "Register", class:"btn bg-light-primary mb-2 mb-sm-0" %>
+                                                        
                                                     </div>
                                                 </div>
                                             </div>

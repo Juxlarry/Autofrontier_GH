@@ -1,0 +1,144 @@
+
+
+
+
+<main>
+  <%= simple_form_for(@car) do |f| %>
+    <%= f.error_notification %>
+    <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+
+
+    <div class="form-inputs">
+      <div class="form-group">
+        <%#= f.input :vehicle_type_id, collection: VehicleType.all, value_method: :id, label_method: :vehicle, required: true %>
+        <%= f.association :a_vehicle, collection: VehicleType.all, label_method: :vehicle, value_method: :id, required: true, include_blank: true, label: "Vehicle:", style:"width:90%;", :input_html => {:class => 'form-control dropdown dropdown-toggle', style:"width:90%;float:center;"} %>
+      </div>
+      <div class="form-group">
+        <%= f.input :make_id, collection: CarMake.all, value_method: :id, label_method: :name, required: true %>
+      </div>
+      <div class="form-group">
+        <%= f.input :car_name, :label => "Car Brand Name", required: true %>
+      </div>
+      
+      <div class="form-group">
+        <%= f.input :model_id, collection: CarModel.all, value_method: :id, label_method: :name, required: true %>
+      </div>
+      <div class="form-group">
+        <%= f.input :car_engine_id, collection: CarEngine.all, value_method: :id, label_method: :engine_type, required: true %>
+      </div>
+      <div class="form-group">
+        <%= f.input :car_model_year, :label => "Year of Car Model",  required: true %>
+      </div>
+      <div class="form-group">
+        <%= f.input :car_registration_number, :label => "Car Registration Number" %>
+      </div>
+      <div class="form-group">
+        <%= f.label :car_registration_first_date %>
+        <br>
+        <%= f.date_field :car_registration_first_date, label: "Date of First Registration", as: :string, class: 'form-control datepicker', input_html: { id: "datepicker1", placeholder: 'dd-mm-yy' }  %>
+      </div>
+      <div class="form-group">
+        <%= f.input :car_doc_id, collection: CarDocument.all, value_method: :id, label_method: :doc_type, required: true %>
+      </div>
+      <div class="form-group">
+        <%= f.input :car_price, :label => "Car Price in GH", required: true %>
+      </div>
+      <div class="form-group">
+        <%= f.input :estimated_retail_price, :label => "Estimated retail Price" %>
+      </div>
+      <div class="form-group">
+        <%= f.input :car_type_id, collection: CarType.all, value_method: :id, label_method: :name, required: true %>
+      </div>
+      <div class="form-group">
+        <%= f.input :body_type_id, collection: CarBody.all, value_method: :id, label_method: :type_name, required: true %>
+      </div>
+      <div class="form-group">
+        <%= f.input :fuel_type_id, collection: FuelType.all, value_method: :id, label_method: :fuel_type, required: true %>
+      </div>
+      <div class="form-group">
+        <%= f.input :mileage, :label => "Car mileage" %>
+      </div>
+      <div class="form-group">
+        <%= f.input :car_cylinder, collection: CarCylinder.all, value_method: :id, label_method: :cylinder, required: true %>
+      </div>
+      <div class="form-group">
+        <%= f.input :drive_type, collection: CarDrive.all, value_method: :id, label_method: :drive_type, required: true %>
+      </div>
+      <div class="form-group">
+        <%= f.input :transmission_type_id, collection: CarTransmission.all, value_method: :id, label_method: :name, required: true %>
+      </div>
+      <div class="form-group">
+        <%= f.input :colour_id, collection: CarColour.all, value_method: :id, label_method: :name, required: true %>
+      </div>
+      <div class="form-group">
+        <%= f.input :trim_details, :label => "Car Trim Details" %>
+      </div>
+      <div class="form-group">
+        <%= f.input :derivative_details, :label => "Car Derivative Details" %>
+      </div>
+      <div class="form-group">
+        <%= f.input :variant_details, :label => "Car Variant Details" %>
+      </div>
+      <div class="form-group">
+        <%= f.input :seats, :label => "Car Seat Number", required: true %>
+      </div>
+      <div class="form-group">
+        <%= f.input :doors, :label => "Car Door Number", required: true %>
+      </div>
+      <div class="form-group">
+        <%= f.input :car_highlights, :label => "Car Highlight" %>
+      </div>
+      <div class="form-group">
+        <%= f.input :car_keys, :label => "Car Keys Available", as: :select, collection: [['Yes',true], ['No', false]], required: true%>
+      </div>
+      <div class="form-group">
+        <%= f.input :car_primary_damage, :label => "Car Primary Damage" %>
+      </div>
+      <div class="form-group">
+        <%= f.input :car_secondary_damage, :label => "Car Secondary Damage" %>
+      </div>
+
+      <div class="form-group">
+       <%= f.label :images %>
+        <br>
+        <%= f.file_field :images, class: "form-control", multiple:true %>
+      </div> 
+
+      <div class="form-group">
+        <%= f.text_area :description, :label => "Car Description", required: true %>
+      </div>
+
+
+      <% if current_user.role_id == 1%>
+      <div class="form-group">
+        <%= f.association :a_user, collection: User.all, label_method: :username, value_method: :id, include_blank: true, label: "User:", style:"width:90%;", :input_html => {:class => 'form-control dropdown dropdown-toggle', style:"width:90%;float:center;"} %>
+      </div>
+      <% else %>
+        <div class="form-group">
+          <%= f.input :car_user_id, input_html:{value: current_user.id}, :as=> :hidden %>
+        </div>
+      <% end %>
+      
+      <div class="form-group">
+        <%= f.hidden_field :comments %>
+      </div>
+      
+      <div class="form-group">
+        <%= f.hidden_field :status %>
+      </div>
+    </div>
+
+    <div class="form-actions" style="text-align:center;margin-top: 20px;">
+      <button type="button"  class ="btn btn-success" style="color:white;">
+        <i class="btn-icon-prepend" data-feather="check-square"></i>
+        <%= f.button :submit, "Add Car", style: 'color:white' %>
+      </button>
+    </div>
+  </div>
+  <% end %>
+</main>
+
+
+
+
+

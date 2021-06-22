@@ -8,8 +8,14 @@
     left: 50%;
     margin-right: -50%;
   }
+
+  .nav-backend{
+    margin-left: 37px;
+    margin-bottom: 20px;
+    margin-top: -25px;
+  }
 </style>
-<main style="margin-left: 0">
+<main style="margin-left: 0; margin-top: 0;">
   <section id="main-content">
     <section class="wrapper" style="width: 100%;">
       <div class="row">
@@ -19,6 +25,49 @@
         </div>
       </div>
       <div class="row mb-4">
+        <% if current_user.role_id == 1 || current_user.role_id == 2 #role of admin%> 
+          <div class="nav-backend">
+            <ul class="atds-channel-switcher atds-type-mini" role="menu"
+              aria-labelledby="channel-switcher-heading">
+              <li role="none" class="atds-channel-switcher__item"><a href="/car_types" role="menuitem"
+                      aria-current="true"
+                      class="atds-channel-switcher__link atds-channel-switcher__link--selected">Car Types</a>
+              </li>
+              <li role="none" class="atds-channel-switcher__item"><a href="/car_drives"
+                      role="menuitem" aria-current="false"
+                      class="atds-channel-switcher__link ">Drive Type</a></li>
+              <li role="none" class="atds-channel-switcher__item"><a href="/car_cylinders" role="menuitem"
+                      aria-current="false" class="atds-channel-switcher__link ">Cylinders</a></li>
+              <li role="none" class="atds-channel-switcher__item"><a href="/car_engines" role="menuitem"
+                      aria-current="false" class="atds-channel-switcher__link ">Engines</a></li>
+              <li role="none" class="atds-channel-switcher__item"><a href="/car_models"
+                      role="menuitem" aria-current="false"
+                      class="atds-channel-switcher__link ">Models</a></li>
+              <li role="none" class="atds-channel-switcher__item"><a href="/car_makes" role="menuitem"
+                      aria-current="false" class="atds-channel-switcher__link ">Makes</a></li>
+              <li role="none" class="atds-channel-switcher__item"><a href="/car_transmissions" role="menuitem"
+                      aria-current="false" class="atds-channel-switcher__link ">Transmissions</a></li>
+              <li role="none" class="atds-channel-switcher__item"><a href="/car_bodies" role="menuitem"
+                      aria-current="false" class="atds-channel-switcher__link ">Body Type</a></li>
+              <li role="none" class="atds-channel-switcher__item"><a href="/car_colours" role="menuitem"
+                      aria-current="false" class="atds-channel-switcher__link ">Car Colours</a></li>
+              <li role="none" class="atds-channel-switcher__item"><a
+                      href="/fuel_types" role="menuitem" aria-current="false"
+                      class="atds-channel-switcher__link  narrow-hide">Fuel Type</a>
+              </li>
+              <li role="none" class="atds-channel-switcher__item"><a
+                      href="/car_documents" role="menuitem" aria-current="false"
+                      class="atds-channel-switcher__link  narrow-hide">Documents</a>
+              </li>
+              <!--<% if user_signed_in? %>
+                  <li role="none" class="atds-channel-switcher__item"><a
+                      href="/cars" role="menuitem" aria-current="false"
+                      class="atds-channel-switcher__link  narrow-hide">All Cars</a>
+                  </li>
+              <% end %>-->
+            </ul>
+          </div>
+        <% end %>
         <div class="col-12 mb-4">
           <div class="card" style="width:100%; margin-left: 2%;">
             <div class="card-body">

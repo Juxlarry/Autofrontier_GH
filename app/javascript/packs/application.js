@@ -8,11 +8,13 @@ import Rails from "@rails/ujs"
 import Turbolinks from "turbolinks"
 import * as ActiveStorage from "@rails/activestorage"
 import "channels"
-// import JQuery from 'jquery';
 import 'bootstrap/dist/js/bootstrap'
 import 'bootstrap/dist/css/bootstrap'
 import "../stylesheets/application";
-// import "../stylesheets/application.scss";
+import toastr from "toastr";
+import "@fortawesome/fontawesome-free/scss/regular.scss"
+import "@fortawesome/fontawesome-free/scss/fontawesome.scss"
+import "../stylesheets/application.scss";
 // require("stylesheets/application.scss")
 
 
@@ -20,31 +22,32 @@ Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
 
-//= require jquery-3.2.1.slim.min
+
+//= require jquery
+//= require jquery_ujs
+//= require jquery-ui
 //= require popper.min
-//= require bootstrap.min
 
-import toastr from "toastr";
+//= require daterangepicker
+ 
 
 
-require("jquery")
-require("jquery-datetimepicker")
+
+// require("jquery-datetimepicker")
+
+// require("@fortawesome/fontawesome-free");
 
 
 
 document.addEventListener("turbolinks:load", function() {
-    $(function () {
+    $(function() {
         $('[data-toggle="tooltip"]').tooltip()
         $('[data-toggle="popover"]').popover()
     })
 })
 
-require("bootstrap")
-// import './src/application.scss'
 
-// import toastr from 'toastr'
 window.toastr = toastr
-
 
 
 // window.jQuery = $;

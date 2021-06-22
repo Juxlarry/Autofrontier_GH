@@ -15693,6 +15693,7 @@
                             "aria-label": "Show mobile menu",
                             "data-gui-header-btn-toggle-mobile-nav": "true",
                             onClick: function () {
+                              console.log("I am shere")
                               var e = !a,
                                 t = m.current,
                                 n = f.current,

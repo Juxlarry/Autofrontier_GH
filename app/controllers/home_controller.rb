@@ -1,5 +1,5 @@
 class HomeController < ApplicationController
-  def index
+  def welcome
     @cars_display = Car.joins("
       INNER JOIN car_types ON car_types.id = cars.car_type_id
       INNER JOIN fuel_types ON fuel_types.id = cars.fuel_type_id
@@ -29,6 +29,30 @@ class HomeController < ApplicationController
 
       @newsletter_request = NewsletterRequest.new
   end
+
+
+  def index 
+    @car_sales = Car.where(status: "1").count
+
+		@car_stats = Car.all.count
+
+    @new_cars_stock = Car.where(car_type_id: "1").count
+
+    @used_cars_stock = Car.where(car_type_id: "2").count
+
+    @totalVendors = User.where(:role_id => 2).count
+
+    @totalBuyers = User.where(:role_id => 3).count
+
+  end 
+
+
+  # GET /cars/1/edit
+  def stepform
+    @car_form = Car.new
+  end
+
+
 
   def new_cars
     @newsletter_request = NewsletterRequest.new
