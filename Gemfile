@@ -39,6 +39,8 @@ gem 'pg'
 #for easy db dump and migration
 gem 'yaml_db'
 
+gem "rails_feather"
+
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 

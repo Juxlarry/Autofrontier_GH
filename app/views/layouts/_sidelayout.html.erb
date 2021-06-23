@@ -1,0 +1,326 @@
+<!----NEW SIDEMUN---->
+<!DOCTYPE html>
+<html lang="en">
+    <style>
+        nav.navbar.fixed-top {
+            width: 100%;
+        }
+
+        .footer_col{
+            display: contents;
+        }
+    
+    </style>
+    <% if user_signed_in? %>
+    <body id="app-container" class="menu-default">
+        
+
+        <!-- Navbar (Header) Ends-->
+        <nav class="navbar fixed-top">
+            <div class="d-flex align-items-center navbar-left"><a href="#" class="menu-button d-none d-md-block"><svg
+                        class="main" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 17">
+                <rect x="0.48" y="0.5" width="7" height="1" />
+                <rect x="0.48" y="7.5" width="7" height="1" />
+                <rect x="0.48" y="15.5" width="7" height="1" /></svg> <svg class="sub"
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 17">
+                <rect x="1.56" y="0.5" width="16" height="1" />
+                <rect x="1.56" y="7.5" width="16" height="1" />
+                <rect x="1.56" y="15.5" width="16" height="1" /></svg> </a><a href="#"
+                    class="menu-button-mobile d-xs-block d-sm-block d-md-none"><svg xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 26 17">
+                <rect x="0.5" y="0.5" width="25" height="1" />
+                <rect x="0.5" y="7.5" width="25" height="1" />
+                <rect x="0.5" y="15.5" width="25" height="1" /></svg></a>
+                <!--<div class="custom-switch custom-switch-primary-inverse custom-switch-small pl-1"
+                    data-toggle="tooltip" data-placement="left" title="Dark Mode">
+                    <input class="custom-switch-input"id="switchDark" type="checkbox" checked="checked"> 
+                    <label class="custom-switch-btn" for="switchDark"></label>
+                </div> -->
+                <div>
+
+                    <span style="display: inline; " class="logo-span">
+                        <img class="frontierLogo" src="/assets/frontierlogo.png">
+                    </span>
+                    <p class="fronText">
+                        <span class="frontext-inline"> AutoFrontier <span>
+                    </p>
+                </div>
+            </div>
+            <a class="navbar-logo" href="/"><span class="logo d-none d-xs-block"></span> <span
+                class="logo-mobile d-block d-xs-none"></span>
+            </a>
+            <div class="navbar-right">
+                <div class="header-icons d-inline-block align-middle">
+                    <div class="d-none d-md-inline-block align-text-bottom mr-3"></div>
+                    <button class="header-icon btn btn-empty d-none d-sm-inline-block" type="button" id="fullScreenButton">
+                        <i class="simple-icon-size-fullscreen"></i> <i class="simple-icon-size-actual"></i>
+                    </button>
+                </div>
+                <% if user_signed_in? %>
+                    <div class="user d-inline-block">
+                        <button class="btn btn-empty p-0" type="button" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false"><span class="name">Hi, <%= current_user.username %></span> <span><img
+                                alt="Profile Picture" src="https://res.cloudinary.com/sahanana/image/upload/v1586685522/medapp/images/profile-pic-l_ppksiy.jpg"></span>
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-right mt-3">
+                            <% if current_user.role_id == 4 %>
+                            <%= link_to 'Roles'.html_safe,roles_path, :class=>" dropdown-item" %>
+                            <%= link_to 'Users'.html_safe,users_path, :class=>" dropdown-item" %>
+                            <%#= link_to 'Edit Profile'.html_safe,edit_user_registration_path, :class=>" dropdown-item" %>
+                            <%#= link_to 'Service Categories'.html_safe,categories_path, :class=>" dropdown-item" %>
+                            <%#= link_to 'Services setup'.html_safe,services_inventories_path, :class=>" dropdown-item" %>
+                            <%= link_to 'Log out',destroy_user_session_path, :method=> 'delete',:class=>"dropdown-item" %>
+                            <%else%>
+                            <%= link_to 'Edit Profile'.html_safe,edit_user_registration_path, :class=>" dropdown-item" %>
+                            <%= link_to 'Log out',destroy_user_session_path, :method=> 'delete',:class=>"dropdown-item" %>
+                            <%end%>
+                        </div>
+                    </div>
+                <%else%>
+                <div class="user d-inline-block">
+                    <%= link_to "Login", new_user_session_path,:class=>"btn btn-empty p-0" %>
+                </div>
+                <%end %>
+            </div>
+        </nav>
+        <div class="menu">
+                <!-- RECEPTONIST -->
+            <% if current_user.role_id == 2 %>
+                <div class="main-menu">
+                    <div class="scroll">
+                        <ul class="list-unstyled">
+                            <li class="active"><a href="/"><i class="iconsminds-dashboard"></i><span>Dashboard</span></a></li>
+                            <li><a href="#vehicles"><i class="iconsminds-digital-drawing"></i> Vehicles</a></li>
+                            <li><a href="#aesthetics"><i class="iconsminds-credit-card"></i> Aesthetics</a></li>
+                            <li><a href="#enquiry"><i class="iconsminds-digital-drawing"></i> Enquiry</a></li>
+                            <li><a href="#documentation"><i class="iconsminds-credit-card"></i> Documentation</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="sub-menu">
+                    <div class="scroll">
+                        <ul class="list-unstyled" data-link="vehicles" id="vehicles">
+                            <li>
+                                <a href="#" data-toggle="collapse" data-target="#collapseAuthorization" aria-expanded="true"
+                                   aria-controls="collapseAuthorization" class="rotate-arrow-icon opacity-50">
+                                   <i class="simple-icon-arrow-down"></i> 
+                                   <span class="d-inline-block">Actions</span>
+                                </a>
+                                <div id="collapseAuthorization" class="collapse show">
+                                    <ul class="list-unstyled inner-level-menu">
+                                        <li>
+                                            <span><%= link_to "Cars",cars_path,:class=>"d-inline-block" %></span>
+                                        </li>
+                                        <li>
+                                            <span><%= link_to "Vehicles",vehicle_types_path,:class=>"d-inline-block" %></span>
+                                        </li>
+                                        <!--<li>
+                                            <span><%= link_to "Cars",cars_path,:class=>"d-inline-block" %></span>
+                                        </li>
+                                        <li>
+                                            <span><%= link_to "Cars",cars_path,:class=>"d-inline-block" %></span>
+                                        </li>
+                                        <li>
+                                            <span><%= link_to "Cars",cars_path,:class=>"d-inline-block" %></span>
+                                        </li> -->
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+
+                        <!-- Aesthetics-->
+                        <ul class="list-unstyled" data-link="aesthetics" id="aesthetics">
+                            <li>
+                                <a href="#" data-toggle="collapse" data-target="#collapseAuthorization" aria-expanded="true"
+                                    aria-controls="collapseAuthorization" class="rotate-arrow-icon opacity-50"><i
+                                    class="simple-icon-arrow-down"></i> <span
+                                    class="d-inline-block">Actions</span>
+                                </a>
+                                <div id="collapseAuthorization" class="collapse show">
+                                    <ul class="list-unstyled inner-level-menu">
+                                        <li>
+                                            <%= link_to "Car Bodies",car_bodies_path, target: "_blank"  %>
+                                        </li>
+                                        <li>
+                                            <%= link_to "Colors",car_colours_path, target: "_blank"  %>
+                                        </li>
+                                        <li>
+                                            <%= link_to "Car Drive",car_drives_path, target: "_blank"  %>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+
+                        <!-- INVENTORY -->
+                        <ul class="list-unstyled" data-link="enquiry" id="enquiry">
+                            <li>
+                                <a href="#" data-toggle="collapse" data-target="#collapseAuthorization" aria-expanded="true"
+                                    aria-controls="collapseAuthorization" class="rotate-arrow-icon opacity-50"><i
+                                    class="simple-icon-arrow-down"></i> <span
+                                    class="d-inline-block">Actions</span>
+                                </a>
+                                <div id="collapseAuthorization" class="collapse show">
+                                    <ul class="list-unstyled inner-level-menu">
+                                        <li>
+                                            <span><%= link_to "Enquiries",vehicleenquiries_path,:class=>"d-inline-block" %></span>
+                                        </li>
+                                        <% if current_user.role_id == 1%>
+                                            <li>
+                                                <span><%= link_to "Newletter Subscribers",newsletter_requests_path,:class=>"d-inline-block" %></span>
+                                            </li>
+                                        <% end %>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+
+                        <!-- Documentation-->
+                        <ul class="list-unstyled" data-link="documentation" id="documentation">
+                            <li>
+                                <a href="#" data-toggle="collapse" data-target="#collapseAuthorization" aria-expanded="true"
+                                   aria-controls="collapseAuthorization" class="rotate-arrow-icon opacity-50">
+                                   <i class="simple-icon-arrow-down"></i> 
+                                   <span class="d-inline-block">Actions</span>
+                                </a>
+                                <div id="collapseAuthorization" class="collapse show">
+                                    <ul class="list-unstyled inner-level-menu">
+                                        <li>
+                                            <span><%= link_to "Car Documents",car_documents_path,:class=>"d-inline-block" %></span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                        
+                    </div>
+                </div>
+            <!-- NURSES END -->
+            <!-- DOCTORS -->
+            <% elsif current_user.role_id == 2 %>
+                <div class="main-menu">
+                    <div class="scroll">
+                        <ul class="list-unstyled">
+                        <li class="active"><a href="/"><i class="iconsminds-dashboard"></i>
+                            <span>Dashboard</span></a></li>
+                        <li><a href="#layouts"><i class="iconsminds-digital-drawing"></i> Nurses</a></li>
+                        <li><a href="/bill_temps"><i class="iconsminds-credit-card"></i> Bills</a></li>
+                        <li><a href="#inventory"><i class="iconsminds-digital-drawing"></i> Inventory</a></li>
+                        <li><a href="/incident_reports"><i class="iconsminds-credit-card"></i> Incident <br>
+                            Reporting</a></li>
+                        <li><a href="#books"><i class="iconsminds-book"></i> Books</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="sub-menu">
+                    <div class="scroll">
+                        <ul class="list-unstyled" data-link="layouts" id="layouts">
+                            <li>
+                                <a href="#" data-toggle="collapse" data-target="#collapseAuthorization" aria-expanded="true"
+                                    aria-controls="collapseAuthorization" class="rotate-arrow-icon opacity-50"><i
+                                    class="simple-icon-arrow-down"></i> 
+                                    <span class="d-inline-block">Actions</span>
+                                </a>
+                                <div id="collapseAuthorization" class="collapse show">
+                                    <ul class="list-unstyled inner-level-menu">
+                                        <li>
+                                            <span ><%= link_to "Cars",cars_path,:class=>"d-inline-block" %></span>
+                                        </li>
+                                        <li>
+                                            <span ><%= link_to "Cars",cars_path,:class=>"d-inline-block" %></span>
+                                        </li>
+                                        <li>
+                                            <span ><%= link_to "Cars",cars_path,:class=>"d-inline-block" %></span>
+                                        </li>
+                                        <li>
+                                            <span ><%= link_to "Cars",cars_path,:class=>"d-inline-block" %></span>
+                                        </li>
+                                        <li>
+                                            <span ><%= link_to "Cars",cars_path,:class=>"d-inline-block" %></span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                        <ul class="list-unstyled" data-link="books" id="books">
+                            <li>
+                                <a href="#" data-toggle="collapse" data-target="#collapseAuthorization" aria-expanded="true"
+                                    aria-controls="collapseAuthorization" class="rotate-arrow-icon opacity-50"><i
+                                    class="simple-icon-arrow-down"></i> <span
+                                    class="d-inline-block">Books</span>
+                                </a>
+                                <div id="collapseAuthorization" class="collapse show">
+                                    <ul class="list-unstyled inner-level-menu">
+                                        <li>
+                                            <%= link_to "Cars",cars_path, target: "_blank"  %>
+                                        </li>
+                                        <li>
+                                            <%= link_to "Cars",cars_path, target: "_blank"  %>
+                                        </li>
+                                        <li>
+                                            <%= link_to "Cars",cars_path, target: "_blank"  %>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                        <!-- INVENTORY -->
+                        <ul class="list-unstyled" data-link="inventory" id="inventory">
+                            <li>
+                                <a href="#" data-toggle="collapse" data-target="#collapseAuthorization" aria-expanded="true"
+                                    aria-controls="collapseAuthorization" class="rotate-arrow-icon opacity-50"><i
+                                    class="simple-icon-arrow-down"></i> <span
+                                    class="d-inline-block">Inventory</span>
+                                </a>
+                                <div id="collapseAuthorization" class="collapse show">
+                                    <ul class="list-unstyled inner-level-menu">
+                                        <li>
+                                            <span><%= link_to "Cars",cars_path, :class=>"d-inline-block" %></span>
+                                        </li>
+                                        <li>
+                                            <span><%= link_to "Cars",cars_path, :class=>"d-inline-block" %></span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            <!-- NURSES END -->
+            <!-- DOCTORS -->
+          <% end%>
+        </div>
+        <footer class="page-footer">
+          <div class="footer-content">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-12 col-sm-6 footer_col">
+                  <span class="mb-0 text-muted">© 2021 - Present | Autofrontier. All rights reserved | Developed by <a href="www.devdex.software">Devdex Software</a></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </footer>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="https://res.cloudinary.com/sahanana/raw/upload/v1586685486/medapp/javascripts/vendor/bootstrap.bundle.min_p8qqjg.js"></script>
+      </script>
+      <script src="https://res.cloudinary.com/sahanana/raw/upload/v1586685488/medapp/javascripts/vendor/perfect-scrollbar.min_lknb38.js"></script>
+      <script src="https://res.cloudinary.com/sahanana/raw/upload/v1586685488/medapp/javascripts/vendor/progressbar.min_ymgruj.js"></script>
+      <script src="https://res.cloudinary.com/sahanana/raw/upload/v1586685486/medapp/javascripts/vendor/jquery.barrating.min_pntots.js"></script>
+      <script src="https://res.cloudinary.com/sahanana/raw/upload/v1586685489/medapp/javascripts/vendor/select2.full_wxcuyz.js"></script>
+      <script src="https://res.cloudinary.com/sahanana/raw/upload/v1586685488/medapp/javascripts/vendor/nouislider.min_vooyso.js"></script>
+      <script src="https://res.cloudinary.com/sahanana/raw/upload/v1586685488/medapp/javascripts/vendor/Sortable_p6vmgb.js"></script>
+      <script src="https://res.cloudinary.com/sahanana/raw/upload/v1586685487/medapp/javascripts/vendor/mousetrap.min_fe4rry.js"></script>
+      <!--   <script src="/assets/dore.script.js"></script> -->
+      <script src="https://res.cloudinary.com/sahanana/raw/upload/v1586685484/medapp/javascripts/dore.script_g7xpbd.js"></script>
+      <script src="https://res.cloudinary.com/sahanana/raw/upload/v1586685483/medapp/javascripts/scripts_mphfcd.js"></script>
+      <!--    FORMS -->
+      <!--     NOTIFY -->
+      <script src="https://res.cloudinary.com/sahanana/raw/upload/v1586685484/medapp/javascripts/vendor/bootstrap-notify.min_dzvx1j.js"></script>
+      <!-- 
+     DATEPICKER -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.min.js"></script>
+      <script type="text/javascript" src="https://res.cloudinary.com/sahanana/raw/upload/v1586685484/medapp/javascripts/bootstrap-datetimepicker_bsqd1z.js"></script>
+    <%end%>
+  </body>
+</html>
