@@ -23,3 +23,146 @@
 // @import "@fortawesome/fontawesome-free/scss/fontawesome";
 // @import "@fortawesome/fontawesome-free/scss/solid";
 
+
+
+
+  /* .container-fluid {
+    margin-top: -30px;
+  } */
+
+  /* .main-content {
+    margin-top: -30px;
+  } */
+
+  /* .card_btm_boxes {
+    margin-top: -60px;
+  }
+
+  .card_boxes{
+    height: 50%;
+  } */
+
+  .logo-span {
+    margin-left: 0;
+  }
+
+  .row.cards_tag {
+    margin-left: 75px;
+    margin-top: 80px;
+  }
+
+  .extra_tag{
+    margin-top: 50px !important;
+  }
+
+
+  .frontierLogo {
+
+    width: 10%;
+    // margin-left: 0;
+    margin-top: 0;
+    height: 18px;
+  }
+
+
+  .fronText {
+    margin-top: -24px;
+    margin-left: 0;
+    font-weight: 700;
+    font-size: 20px;
+    vertical-align: middle;
+    font-family: ATFabriga, "Segoe UI", Helvetica, Arial, -apple-system, BlinkMacSystemFont, sans-serif;
+    color: black;
+  }
+
+  span.logo-span {
+    margin-top: -17px;
+  }
+
+
+  .frontext-inline {
+    font-size: 14px;
+  }
+
+  span.frontext-inline {
+    margin-left: 30px;
+  }
+
+
+  @media(max-width:799px){
+            
+    .logo-span{
+        margin-left: -10px;
+    }
+
+
+    .frontierLogo{
+        width: 30%;
+        margin-left: -40px;
+        margin-top: 0px;
+    }
+
+
+    .fronText{
+        margin-top: -26px;
+        margin-left: -10px;
+        font-weight: 700;
+    }
+
+
+    .frontext-inline {
+        font-size: 22px;
+    }
+
+  }
+
+
+
+
+  @media(max-width:430px){
+            
+    .logo-span{
+        margin-left: 7px;
+    }
+
+    .fronText{
+        margin-left: 5px;
+    }
+
+    .frontierLogo {
+        width: 27%;
+        margin-left: -40px;
+        margin-top: -2px;
+    }
+
+    .home-page__display-fallback img {
+        max-width: 400px !important;
+        left: 60% !important;
+    }
+
+
+  }
+
+
+
+   @media(max-width:375px){
+            
+
+    .fronText{
+        margin-left: 20px;
+        font-weight: 700;
+        margin-top: -26px;
+    }
+
+    .frontierLogo {
+        width: 20%;
+        margin-left: -15px;
+        margin-top: -10px;
+    }
+
+    .frontext-inline {
+        font-size: 18px;
+    }
+
+  }
+

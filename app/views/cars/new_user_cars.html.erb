@@ -35,7 +35,7 @@
           <div class="col-xl-8 col-lg-12 col-12">
             <div class="card shopping-cart">
               <div class="card-header pb-2">
-                <h4 class="card-title mb-1">Cars</h4>
+                <h4 class="card-title mb-1">New Cars</h4>
                 <%= link_to 'Add Car', new_car_path, class:'btn btn-primary', style:'color:white; float:right;' %>
               </div>
               <div class="card-content">
@@ -52,7 +52,7 @@
                           </tr>
                       </thead>
                       <tbody>
-                        <% @cars.each do |car_show| %>
+                        <% @cars_user.each do |car_show| %>
                           <tr>
                             <td>
                               <%= image_tag(car_show.images[0], class:"height-50", alt:"Dynamic Car Placeholder image")   if car_show.images.length > 0 %>
@@ -78,11 +78,8 @@
     </div>
 
     <!-- Scroll to top button -->
-    <button class="btn btn-primary scroll-top" type="button"><i class="ft-arrow-up"></i></button>
+    <button class="btn btn-primary scroll-top" type="button"><%= feather_icon "arrow-up" %></button>
 
   </div>
 </div>
 
-        
-
-<!-- ////////////////////////////////////////////////////////////////////////////-->

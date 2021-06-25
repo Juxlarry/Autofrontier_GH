@@ -8,6 +8,17 @@
     left: 50%;
     margin-right: -50%;
   }
+
+  section.wrapper {
+    margin-top: -32px;
+  }
+
+  .addBtn{
+    color: white;
+    /* float: right; */
+    margin: ;
+    margin-left: 85%;
+  }
 </style>
 <main>
   <section id="main-content">
@@ -19,6 +30,7 @@
         </div>
       </div>
       <div class="row mb-4">
+        <%= link_to 'Add Car Document', new_car_document_path , class:'btn btn-primary addBtn', style:'color:white' %>
         <div class="col-12 mb-4">
           <div class="card">
             <div class="card-body">
@@ -48,9 +60,6 @@
                 <br>
               </div>
             </div>
-          </div>
-          <div class="blocktext" style="margin-top:5%; color:white">
-            <%= link_to 'Add Car Document', new_car_document_path , class:'btn btn-primary', style:'color:white' %>
           </div>
       </div>
     </section>

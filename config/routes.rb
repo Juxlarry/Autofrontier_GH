@@ -21,6 +21,10 @@ Rails.application.routes.draw do
 
   get 'dashboard' => 'home#index'
 
+  get 'new_user_cars' => 'cars#new_user_cars'
+
+  get 'used_user_cars' => 'cars#used_user_cars'
+
   get 'sell_cars' => 'home#car_sell'
 
   get 'value_cars' => 'home#car_value'

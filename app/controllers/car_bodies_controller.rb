@@ -3,7 +3,7 @@ class CarBodiesController < ApplicationController
 
   # GET /car_bodies or /car_bodies.json
   def index
-    @car_bodies = CarBody.all
+    @pagy, @car_bodies = pagy(CarBody.all.order('id desc'), items: 5)
   end
 
   # GET /car_bodies/1 or /car_bodies/1.json
