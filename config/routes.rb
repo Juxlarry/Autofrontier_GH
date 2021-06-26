@@ -27,6 +27,8 @@ Rails.application.routes.draw do
 
   get 'sell_cars' => 'home#car_sell'
 
+  get 'show_cars' => 'cars#show'
+
   get 'value_cars' => 'home#car_value'
 
   get 'used_cars' => 'home#used_cars'

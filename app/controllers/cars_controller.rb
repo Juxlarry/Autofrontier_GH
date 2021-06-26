@@ -25,7 +25,7 @@ class CarsController < ApplicationController
         INNER JOIN users ON users.id = cars.car_user_id
         "
       ).select(
-        " cars.id, car_types.id as car_type_id, car_types.name as car_type, car_name, car_price, 
+        " cars.id, cars.status as car_status, car_types.id as car_type_id, car_types.name as car_type, car_name, car_price, 
           mileage as car_mileage, car_model_year, cars.description as car_description, car_registration_number,
           car_registration_first_date, trim_details, variant_details, cars.seats as car_seat, cars.doors as car_door, 
           cars.comments as comment_on_car, car_keys, car_primary_damage, car_secondary_damage, estimated_retail_price, 
@@ -53,7 +53,7 @@ class CarsController < ApplicationController
         INNER JOIN users ON users.id = cars.car_user_id
         "
       ).select(
-        " cars.id, car_types.id as car_type_id, car_types.name as car_type, car_name, car_price, 
+        " cars.id, cars.status as car_status, car_types.id as car_type_id, car_types.name as car_type, car_name, car_price, 
           mileage as car_mileage, car_model_year, cars.description as car_description, car_registration_number,
           car_registration_first_date, trim_details, 
           variant_details, cars.seats as car_seat, cars.doors as car_door, cars.comments as comment_on_car,

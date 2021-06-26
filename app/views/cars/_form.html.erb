@@ -563,13 +563,13 @@ input[type="radio"], input[type="checkbox"] {
 
 
 @media (max-width:420px){ 
-  .container{
+  /* .container{
     margin-top: -70px;
-  }
+  } */
 
-  .content__title{
+  /* .content__title{
     display: none;
-  }
+  } */
 
   .multisteps-form__panel.js-active {
     height: auto;
@@ -583,57 +583,304 @@ input[type="radio"], input[type="checkbox"] {
     margin-top: -50px;
   }
 
+
   .multisteps-form__content {
-    margin-top: -32px;
+    margin-top: -29px;
   }
 
 
   .nxtprevClass{
-    margin-top: -120px;
-    margin-left: 15px;
+    margin-top: -150px;
+    margin-left: -10px;
   }
 
-  .nxtPrev{
-    font-size: 15px;
 
-    margin-left: 13%;
-    margin-right: 20px;
-    width: 200px;
-    height: 40px;
+  .nxtPrev {
+    font-size: 13px !important;
+    margin-left: 10%;
+    margin-right: 21px;
+    width: 80px;
+    padding: 5px;
+    height: 32px;
     color: white !important;
   }
+
 
   input[type="radio"], input[type="checkbox"] {
     margin-top: 0;
   }
 
 
-  .multisteps-form__panel.shadow.p-4.rounded.bg-white.js-active {
+  /* .multisteps-form__panel.shadow.p-4.rounded.bg-white.js-active {
     margin-top: -5px;
-    width: 350px;
-  }
+    width: 184px;
+  } */
 
 
   h3.multisteps-form__title {
     text-align: center;
     font-weight: 500;
-    font-size: 19px;
+    font-size: 13px;
     margin-top: -20px;
+    margin-left: -8px;
   }
 
   .form-row.mt-4 {
-    margin-top: 3.0rem !important;
+    margin-top: 3.5rem !important;
   }
 
 
   input#car_car_name {
-    margin-top: -14px;
+    margin-top: -20px;
+    width: 100%;
+    height: 25px;
   }
 
 
   select#car_car_doc_id {
-    margin-top: -14px;
+    margin-top: -20px;
+    width: 100%;
+    height: 25px;
   }
+
+  label.select.required {
+    font-size: 10px;
+  }
+
+  label.integer.required {
+    font-size: 10px;
+  }
+
+  select#car_vehicle_type_id {
+    height: 30px;
+    margin-top: -15px;
+    width: 100%;
+  }
+
+  select#car_make_id {
+    margin-top: -15px;
+    height: 30px;
+    width: 100%;
+  }
+
+  .form-group.select.required.car_model_id {
+    margin-top: -30px;
+  }
+
+  select#car_model_id {
+    margin-top: -15px;
+    height: 30px;
+    width: 100%;
+  }
+
+  .form-group.integer.required.car_car_model_year {
+    margin-top: 3px;
+  }
+
+  input#car_car_model_year {
+    margin-top: -15px;
+    width: 100%;
+    height: 30px;
+  }
+
+  .form-group.string.optional.car_car_registration_number {
+    margin-top: -25px;
+  }
+
+  label.string.optional {
+    font-size: 10px;
+  }
+
+  input#car_car_registration_number {
+    margin-top: -20px;
+    width: 100%;
+    height: 25px;
+  }
+
+
+  input#car_car_registration_first_date {
+    height: 30px;
+    margin-top: -4px;
+    /* width: 25px; */
+    margin-left: 0;
+    padding-left: 5px;
+  }
+
+  .form-group.float.required.car_car_price {
+    margin-top: -20px;
+  }
+
+
+  input#car_car_price {
+    margin-top: -20px;
+    width: 100%;
+    height: 30px;
+  }
+
+  .form-group.float.optional.car_estimated_retail_price {
+    margin-top: 10px;
+  }
+
+
+  label.float.optional {
+    font-size: 10px;
+  }
+
+  input#car_estimated_retail_price {
+    margin-top: -20px;
+    width: 100%;
+    height: 25px;
+  }
+
+
+  select#car_car_engine_id {
+    margin-top: -20px;
+    width: 100%;
+    height: 30px;
+  }
+
+  .form-group.select.required.car_car_cylinder {
+    margin-top: 10px;
+  }
+
+
+  select#car_car_cylinder {
+    width: 100%;
+    height: 30px;
+    margin-top: -20px;
+  }
+
+  .form-group.select.required.car_fuel_type_id {
+    margin-top: -25px;
+  }
+
+
+  select#car_fuel_type_id {
+    width: 100%;
+    height: 30px;
+    margin-top: -20px;
+  }
+
+
+  .form-group.float.optional.car_mileage {
+    margin-top: 15px;
+  }
+
+
+  input#car_mileage {
+    margin-top: -20px;
+    width: 100%;
+    height: 30px;
+  }
+
+  select#car_car_type_id {
+    margin-top: -15px;
+    width: 100%;
+    height: 30px;
+  }
+
+  .form-group.select.required.car_body_type_id {
+    margin-top: 10px;
+  }
+
+  select#car_body_type_id {
+    width: 100%;
+    height: 30px;
+    margin-top: -15px;
+  }
+
+  .form-group.select.required.car_colour_id {
+    margin-top: -30px;
+  }
+
+
+  select#car_colour_id {
+    margin-top: -15px;
+    width: 100%;
+    height: 30px;
+  }
+
+  .form-group.string.optional.car_car_highlights {
+    margin-top: 10px;
+  }
+
+  input#car_car_highlights {
+    margin-top: -15px;
+    width: 100%;
+    height: 30px;
+  }
+
+  input#car_seats {
+    margin-top: -15px;
+    width: 100%;
+    height: 30px;
+  }
+
+  .form-group.integer.required.car_doors {
+    margin-top: 10px;
+  }
+
+  input#car_doors {
+    margin-top: -15px;
+    width: 100%;
+    height: 30px;
+  }
+
+  .form-group.string.optional.car_car_primary_damage {
+    margin-top: -30px;
+  }
+
+  input#car_car_primary_damage {
+    margin-top: -15px;
+    width: 100%;
+    height: 30px;
+  }
+
+
+  .form-group.string.optional.car_car_secondary_damage {
+    margin-top: 20px;
+  }
+
+  input#car_car_secondary_damage {
+    margin-top: -15px;
+    width: 100%;
+    height: 30px;
+  }
+
+  .multisteps-form__panel.shadow.p-4.rounded.bg-white.js-active {
+    margin-top: 0;
+    width: 270px;
+  }
+
+
+  input#car_derivative_details {
+    margin-top: -15px;
+    width: 100%;
+    height: 30px;
+  }
+
+  .form-group.string.optional.car_variant_details {
+    margin-top: 10px;
+  }
+
+  input#car_variant_details {
+    margin-top: -15px;
+    width: 100%;
+    height: 30px;
+  }
+
+  .form-group.string.optional.car_trim_details {
+    margin-top: -15px;
+  }
+
+
+  input#car_trim_details {
+    margin-top: -15px;
+    width: 100%;
+    height: 30px;
+  }
+
+
 
 
   
@@ -646,13 +893,13 @@ input[type="radio"], input[type="checkbox"] {
 
 
 @media (max-width:375px){ 
-  .container{
+  /* .container{
     margin-top: -70px;
   }
 
   .content__title{
     display: none;
-  }
+  } */
 
   h3.multisteps-form__title{
     font-size: 20px;
@@ -1029,12 +1276,12 @@ input[type="radio"], input[type="checkbox"] {
                         <% if current_user.role_id == 1%>
                             <%= f.association :a_user, collection: User.all, label_method: :username, value_method: :id, include_blank: true, label: "User:", style:"width:90%;", :input_html => {:class => 'form-control dropdown dropdown-toggle', style:"width:90%;float:center;"} %>
                         <% else %>
-                            <%= f.input :car_user_id, label_method: :username, value_method: :id, input_html:{value: current_user.id} %>
+                            <%= f.input :car_user_id, :label_method=> "#{current_user.username}", value_method: :id, input_html:{value: current_user.id} %>
                         <% end %>
                       </div>
                       <div class="form-row mt-4">
                         <div class="col-12 col-sm-6"><%= f.hidden_field :comments %></div>
-                        <div class="col-12 col-sm-6"><%= f.hidden_field :status %></div>
+                        <div class="col-12 col-sm-6"><%= f.hidden_field :status, input_html:{value: 0} %></div>
                       </div>
                       <!--<div class="button-row d-flex mt-4"><button class="btn btn-primary ml-auto js-btn-next" type="button" title="Next">Next</button></div> -->
                     </div>

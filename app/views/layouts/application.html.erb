@@ -13,7 +13,7 @@
   </head>
 
   <body>
-    <% if user_signed_in? && (params[:action] != "welcome") %>
+    <% if user_signed_in? && (params[:action] != "welcome") && (params[:action] != "sell_cars")  && (params[:action] != "value_cars") && (params[:action] != "used_cars")  && (params[:action] != "new_cars") && (params[:action] != "show") %>
 
       <%= render 'layouts/sidelayout' %>
       
