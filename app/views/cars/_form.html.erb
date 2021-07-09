@@ -1273,15 +1273,24 @@ input[type="radio"], input[type="checkbox"] {
                     <h3 class="multisteps-form__title">Car Seller Details</h3>
                     <div class="multisteps-form__content">
                       <div class="form-row mt-4">
-                        <% if current_user.role_id == 1%>
+                        <div class="col-12 col-sm-6">
+                          <% if current_user.role_id == 1%>
                             <%= f.association :a_user, collection: User.all, label_method: :username, value_method: :id, include_blank: true, label: "User:", style:"width:90%;", :input_html => {:class => 'form-control dropdown dropdown-toggle', style:"width:90%;float:center;"} %>
-                        <% else %>
-                            <%= f.input :car_user_id, :label_method=> "#{current_user.username}", value_method: :id, input_html:{value: current_user.id} %>
-                        <% end %>
+                          <% else %>
+                              <%= f.input :car_user_id, :label_method=> "#{current_user.username}", value_method: :id, input_html:{value: current_user.id} %>
+                          <% end %>
+                        </div>
+                        <div class="col-12 col-sm-6 mt-4 mt-sm-0">
+                          <%= f.input :drive_type, collection: CarDrive.all, value_method: :id, label_method: :drive_type, required: true %>
+                        </div>
                       </div>
                       <div class="form-row mt-4">
+                        <div class="col-12">
+                          <%= f.input :transmission_type_id, collection: CarTransmission.all, value_method: :id, label_method: :name, required: true %>
+                        </div>
+                        
                         <div class="col-12 col-sm-6"><%= f.hidden_field :comments %></div>
-                        <div class="col-12 col-sm-6"><%= f.hidden_field :status, input_html:{value: 0} %></div>
+                        <div class="col-12 col-sm-6"><%= f.hidden_field :status, input_html:{:value => 0} %></div>
                       </div>
                       <!--<div class="button-row d-flex mt-4"><button class="btn btn-primary ml-auto js-btn-next" type="button" title="Next">Next</button></div> -->
                     </div>

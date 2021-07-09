@@ -1,63 +1,123 @@
 <style>
   .blocktext {
-      margin-left: auto;
-      margin-right: auto;
-  
     margin: 0;
+    margin-left: auto;
     position: relative;
     left: 50%;
     margin-right: -50%;
   }
 
-  section.wrapper {
-    margin-top: -32px;
+  .nav-backend{
+    margin-left: 37px;
+    margin-bottom: 20px;
+    margin-top: -25px;
   }
 
-  .addBtn{
-    color: white;
-    /* float: right; */
-    margin: ;
-    margin-left: 85%;
+  .row.match-height {
+    margin-top: 12%;
+    width: 90%;
+    margin-left: 8%;
+  }
+
+  
+  h4.card-title.mb-1{
+    margin-left: 40%;
   }
 </style>
-<p id="notice"><%= notice %></p>
 
-<h1>Vehicleenquiries</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Firstname</th>
-      <th>Lastname</th>
-      <th>Email</th>
-      <th>Phonenumber</th>
-      <th>Message</th>
-      <th>Status</th>
-      <th>Enquirer user</th>
-      <th>Vehicle user</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<div class="wrapper">
 
-  <tbody>
-    <% @vehicleenquiries.each do |vehicleenquiry| %>
-      <tr>
-        <td><%= vehicleenquiry.firstname %></td>
-        <td><%= vehicleenquiry.lastname %></td>
-        <td><%= vehicleenquiry.email %></td>
-        <td><%= vehicleenquiry.phonenumber %></td>
-        <td><%= vehicleenquiry.message %></td>
-        <td><%= vehicleenquiry.status %></td>
-        <td><%= vehicleenquiry.enquirer_user_id %></td>
-        <td><%= vehicleenquiry.vehicle_user_id %></td>
-        <td><%= link_to 'Show', vehicleenquiry %></td>
-        <td><%= link_to 'Edit', edit_vehicleenquiry_path(vehicleenquiry) %></td>
-        <td><%= link_to 'Destroy', vehicleenquiry, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
 
-<br>
+  <!-- main menu-->
 
-<%= link_to 'New Vehicleenquiry', new_vehicleenquiry_path %>
+  <div class="main-panel">
+    <!-- BEGIN : Main Content-->
+    <div class="main-content">
+      <div class="content-overlay"></div>
+      <div class="content-wrapper">
+        <div class="row match-height">
+          <div class="col-xl-12 col-lg-12 col-12">
+            <div class="card shopping-cart">
+              <div class="card-header pb-2">
+                <h4 class="card-title mb-1">Vehicle Enquiries</h4>
+              </div>
+              <div class="card-content">
+                <div class="card-body p-0">
+                  <div class="table-responsive">
+                    <table class="table text-center m-0">
+                      <thead>
+                        <tr>
+                          <th>Name of Inquirer</th>
+                          <!--<th>Email</th>
+                          <th>Phonenumber</th>-->
+                          <th>Message</th>
+                          <th colspan="1"></th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <% @vehicleenquiries.each do |vehicleenquiry| %>
+                          <tr>
+                            <td><%= vehicleenquiry.firstname + " " + vehicleenquiry.lastname%> </td>
+                            <!--<td><%#= vehicleenquiry.email %></td>
+                            <td><%#= vehicleenquiry.phonenumber %></td>
+                            <td><%#= vehicleenquiry.message %></td>-->
+                            <td id ="whitespace" ><%= link_to 'View Enquiry', view_enquiry_path(:id => vehicleenquiry.id ), {:remote => true, class:'"btn btn-success btn-sm btn3d"','data-toggle' =>  "modal", 'data-target' => '#enquiryModal'} %></td>
+                            <td><%#= link_to 'Show', vehicleenquiry %></td>
+                          </tr>
+                        <% end %>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll to top button -->
+    <button class="btn btn-primary scroll-top" type="button"><i class="ft-arrow-up"></i></button>
+
+  </div>
+</div>
+
+<!--<div id="myModal4" class="modal fade" role="dialog" >
+  <div class="modal-dialog" >
+    <div class="modal-content" >
+      <div class="modal-header" >
+        <!-- <h4 class="modal-title"> Assign Patient To A Health Personnel</h4> -->
+        <!--<h4 class="modal-title"> Enquiry Details</h4>
+        <button type="button" class="close" data-dismiss="modal">
+          &times;
+        </button>
+      </div>
+      <div class="modal-body"  id ='enquiry'>
+        <%#= render "view_enquiry"   %>
+      </div>
+    </div>
+  </div>
+</div>-->
+
+
+<div class="modal fade" id="enquiryModal" tabindex="-1" role="dialog" aria-labelledby="enquiryModal">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div>
+        <!-- <h4 class="modal-title"> Assign Patient To A Health Personnel</h4> -->
+        <h4 class="modal-title"> Enquiry Details</h4>
+        <button type="button" class="close" data-dismiss="modal">
+          &times;
+        </button>
+      </div>
+      <div class="modal-body" id ="enquiryView">
+          
+        
+      </div>
+    </div>
+  </div>
+</div>
+        
+
+<!-- ////////////////////////////////////////////////////////////////////////////-->

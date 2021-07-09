@@ -11829,27 +11829,40 @@
           margin-top:0;
         }
 
-        .logo-span{
-            margin-left: -10px;
+
+        .logo-span {
+            margin-left: -40px;
         }
 
 
-        .frontierLogo{
+        /* .frontierLogo{
             width: 100%;
-            margin-left: 0;
-            margin-top: 7px;
+            margin-left: 30px;
+            margin-top: 26px;
+            height: auto;
+        } */
+
+
+        .frontierLogo {
+            width: 73%;
+            margin-left: 30px;
+            margin-top: 0;
+            height: auto;
         }
 
 
-        .fronText{
-            margin-top: 2px;
-            margin-left: 0;
-            font-weight: 700;
+        img.frontierLogo {
+            margin-left: 22px;
         }
 
 
-        .frontext-inline {
-            font-size: 22px;
+
+        svg.atds-svg {
+            margin-left: -15px;
+        }
+
+        a.atds-type-mini.atds-header-tools__link {
+            margin-left: 18px;
         }
 
 
@@ -11869,17 +11882,18 @@
 
 
             .frontierLogo{
-                width: 30%;
-                margin-left: -40px;
+                width: 25%;
+                margin-left: -30px;
                 margin-top: 0px;
             }
 
 
             .fronText{
                 margin-top: -26px;
-                margin-left: -10px;
+                margin-left: -35px;
                 font-weight: 700;
             }
+
 
 
             .frontext-inline {
@@ -13191,14 +13205,14 @@
                           <a href="/" class="atds-header__logo">
                                 <span style="display: inline; " class="logo-span">
                                     <img class="frontierLogo"
-                                    src="/assets/frontierlogo.png"
+                                    src="/assets/autofrontier.png"
                                     >
                                 </span>
-                                <p class="fronText">
+                                <!--<p class="fronText">
                                     <span class="frontext-inline">
                                         AutoFrontier 
                                     <span>
-                                </p>
+                                </p>-->
                             </a>
                             <div class="atds-header-tools wide-hide">
                                 <!--<button
@@ -13306,27 +13320,29 @@
                                         aria-current="true"
                                         class="atds-channel-switcher__link atds-channel-switcher__link--selected">Cars</a>
                                 </li>
-                                <li role="none" class="atds-channel-switcher__item"><a href="#"
-                                        role="menuitem" aria-current="false"
-                                        class="atds-channel-switcher__link ">Prestige cars</a></li>
-                                <li role="none" class="atds-channel-switcher__item"><a href="#" role="menuitem"
-                                        aria-current="false" class="atds-channel-switcher__link ">Vans</a></li>
-                                <li role="none" class="atds-channel-switcher__item"><a href="/bikes" role="menuitem"
-                                        aria-current="false" class="atds-channel-switcher__link ">Bikes</a></li>
-                                <li role="none" class="atds-channel-switcher__item"><a href="#"
-                                        role="menuitem" aria-current="false"
-                                        class="atds-channel-switcher__link ">Motorhomes</a></li>
-                                <li role="none" class="atds-channel-switcher__item"><a href="#" role="menuitem"
-                                        aria-current="false" class="atds-channel-switcher__link ">Caravans</a></li>
-                                <li role="none" class="atds-channel-switcher__item"><a href="#" role="menuitem"
-                                        aria-current="false" class="atds-channel-switcher__link ">Trucks</a></li>
-                                <li role="none" class="atds-channel-switcher__item"><a href="#" role="menuitem"
+                                <li role="none" class="atds-channel-switcher__item"><a href="/used_cars"
+                                    role="menuitem" aria-current="false"
+                                    class="atds-channel-switcher__link ">Used cars</a></li>
+                                <li role="none" class="atds-channel-switcher__item"><a href="/new_cars" role="menuitem"
+                                    aria-current="false" class="atds-channel-switcher__link ">New Cars</a></li>
+                                <li role="none" class="atds-channel-switcher__item"><a href="/sell_cars" role="menuitem"
+                                    aria-current="false" class="atds-channel-switcher__link ">Sell your car</a></li>
+                                <li role="none" class="atds-channel-switcher__item"><a href="/value_cars"
+                                    role="menuitem" aria-current="false"
+                                    class="atds-channel-switcher__link ">Value your car</a></li>
+                                <!--<li role="none" class="atds-channel-switcher__item"><a href="#" role="menuitem"
                                         aria-current="false" class="atds-channel-switcher__link ">Farm</a></li>
                                 <li role="none" class="atds-channel-switcher__item"><a href="#" role="menuitem"
-                                        aria-current="false" class="atds-channel-switcher__link ">Plant</a></li>
+                                        aria-current="false" class="atds-channel-switcher__link ">Plant</a></li> -->
                                 <li role="none" class="atds-channel-switcher__item"><a
-                                        href="#" role="menuitem" aria-current="false"
-                                        class="atds-channel-switcher__link  narrow-hide">Security advice</a></li>
+                                    href="#" role="menuitem" aria-current="false"
+                                    class="atds-channel-switcher__link  narrow-hide">Security advice</a></li>
+                                <% if user_signed_in? %>
+                                    <li role="none" class="atds-channel-switcher__item"><a
+                                        href="/dashboard" role="menuitem" aria-current="false"
+                                        class="atds-channel-switcher__link  narrow-hide">My DashBoard</a>
+                                    </li>
+                                <% end %>
                             </ul>
                         </div>
                         <!--<div class="atds-header__drawer">
@@ -13453,7 +13469,7 @@
                                     >Value your car</a
                                     >
                                 </li>
-                                <li class="atds-primary-navigation__item" role="menuitem">
+                                <!--<li class="atds-primary-navigation__item" role="menuitem">
                                     <a href="#" class="atds-primary-navigation__link"
                                     >Car reviews</a
                                     >
@@ -13476,7 +13492,7 @@
                                     <a href="#" class="atds-primary-navigation__link"
                                     >Finance</a
                                     >
-                                </li>
+                                </li>-->
                             </ul>
                         </div>
                     </div>
@@ -13963,16 +13979,20 @@
                             </div>
                         </div>
                     </div>
-                    <footer class="atds-section-footer"><a class="atds-signpost atds-type-fiesta"
-                            href="#"><span class="atds-signpost__text">View all brands</span><svg
-                                xmlns="http://www.w3.org/2000/svg" class="atds-svg atds-icon atds-icon--small">
-                                <title>chevron-right</title>
-                                <path
-                                    d="M15.8047 7.5283L10.9427 2.6673L9.99969 3.6093L13.7237 7.3333H-0.000305176V8.6673H13.7237L9.99969 12.3903L10.9427 13.3333L15.8047 8.4713C16.0657 8.2113 16.0657 7.7893 15.8047 7.5283Z">
-                                </path>
-                            </svg></a></footer>
+                    <footer class="atds-section-footer">
+                        <a class="atds-signpost atds-type-fiesta" href="#">
+                        <span class="atds-signpost__text">View all brands</span>
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg" class="atds-svg atds-icon atds-icon--small">
+                            <title>chevron-right</title>
+                            <path
+                                d="M15.8047 7.5283L10.9427 2.6673L9.99969 3.6093L13.7237 7.3333H-0.000305176V8.6673H13.7237L9.99969 12.3903L10.9427 13.3333L15.8047 8.4713C16.0657 8.2113 16.0657 7.7893 15.8047 7.5283Z">
+                            </path>
+                        </svg>
+                        </a>
+                    </footer>
                 </section>
-                <section class="atds-container atds-container--fixed-wide">
+                <!--<section class="atds-container atds-container--fixed-wide">
                     <div class="promo-section promo-section--part-ex" data-gui="promo-value-my-car">
                         <div class="promo-section__content">
                             <div class="promo-section__action">
@@ -14009,8 +14029,8 @@
                             </div>
                         </div><span class="promo-section__spacer" aria-hidden="true"></span>
                     </div>
-                </section>
-                <section class="atds-container atds-container--fixed-wide">
+                </section>-->
+                <!--<section class="atds-container atds-container--fixed-wide">
                     <div class="promo-section promo-section--reviews promo-section--reversed" data-gui="promo-reviews">
                         <div class="promo-section__content">
                             <div class="promo-section__action">
@@ -14043,8 +14063,8 @@
                             </div>
                         </div><span class="promo-section__spacer" aria-hidden="true"></span>
                     </div>
-                </section>
-                <section class="atds-container atds-container--fixed-wide">
+                </section>-->
+                <!--<section class="atds-container atds-container--fixed-wide">
                     <header class="atds-section-title">
                         <h2 class="atds-type-phantom">Popular models in the UK</h2>
                     </header>
@@ -14110,8 +14130,8 @@
                             </div>
                         </div>
                     </div>
-                </section>
-                <section class="atds-container atds-container--fixed-wide atds-container--scrollable"
+                </section>-->
+                <!--<section class="atds-container atds-container--fixed-wide atds-container--scrollable"
                     data-gui="best-of">
                     <header class="atds-section-title">
                         <h2 class="atds-type-phantom">Top picks from the experts</h2>
@@ -14166,7 +14186,7 @@
                                 budget. </p>
                         </div>
                     </div>
-                </section>
+                </section>-->
                 <section class="atds-container atds-container--fixed-wide atds-container--scrollable" data-gui="guides">
                     <header class="atds-section-title">
                         <h2 class="atds-type-phantom">Guides to buying a used car</h2>
@@ -14246,7 +14266,7 @@
                             waiting</span><a class="sc-eCQjjX cUKTMf atds-button atds-type-fiesta"
                             href="#">Find yours</a></blockquote>
                 </div>
-                <section class="atds-container atds-container--constrained">
+                <!--<section class="atds-container atds-container--constrained">
                     <header class="atds-section-title">
                         <h2 class="atds-type-phantom">Your questions answered</h2>
                     </header>
@@ -14461,7 +14481,7 @@
                             </div>
                         </li>
                     </ul>
-                </section>
+                </section>-->
                 <div class="atds-container atds-container--constrained atds-about-autotrader"><svg
                         xmlns="http://www.w3.org/2000/svg" height="54" width="48" class="atds-svg">
                         <title></title>
@@ -14560,14 +14580,13 @@
                                         class="atds-link tracking-footer-link atds-type-mini"
                                         href="#">
                                         <!-- -->About Auto Trader</a></li>
-                                <li class="sc-kEbeIB fZUkEp footer__nav-listing"><a
-                                        class="atds-link tracking-footer-link atds-type-mini"
-                                        href="#">
-                                        <!-- -->Careers</a></li>
-                                <li class="sc-kEbeIB fZUkEp footer__nav-listing"><a
-                                        class="atds-link tracking-footer-link atds-type-mini"
-                                        href="#">
-                                        <!-- -->Investor information</a></li>
+                                <li class="sc-kEbeIB fZUkEp footer__nav-listing">
+                                    <a class="atds-link tracking-footer-link atds-type-mini" href="#">Careers</a>
+                                </li>
+                                <!--<li class="sc-kEbeIB fZUkEp footer__nav-listing">
+                                    <a class="atds-link tracking-footer-link atds-type-mini" href="#">
+                                    Investor information</a>
+                                </li>-->
                                 <li class="sc-kEbeIB fZUkEp footer__nav-listing"><a
                                         class="atds-link tracking-footer-link atds-type-mini" href="#">
                                         <!-- -->Privacy policies and terms</a></li>
@@ -14579,13 +14598,13 @@
                                         class="atds-link tracking-footer-link atds-type-mini"
                                         href="#">
                                         <!-- -->Display advertising</a></li>
-                                <li class="sc-kEbeIB fZUkEp footer__nav-listing"><a
-                                        class="atds-link tracking-footer-link atds-type-mini"
-                                        href="#">
-                                        <!-- -->Carzone.ie</a></li>
-                                <li class="sc-kEbeIB fZUkEp footer__nav-listing"><button
-                                        class="sc-dILjMz cYLxIE tracking-footer-link atds-type-mini">Manage
-                                        cookies</button></li>
+                                <!--<li class="sc-kEbeIB fZUkEp footer__nav-listing">
+                                    <a class="atds-link tracking-footer-link atds-type-mini" href="#"><!-- ->Carzone.ie
+                                    </a>
+                                </li>-->
+                                <!--<li class="sc-kEbeIB fZUkEp footer__nav-listing">
+                                    <button class="sc-dILjMz cYLxIE tracking-footer-link atds-type-mini">Manage cookies</button>
+                                </li>-->
                             </ul>
                         </section>
                     </nav>
@@ -14617,26 +14636,26 @@
                                         <!-- -->Finance calculator</a></li>
                             </ul>
                         </section>
-                        <section class="sc-crPixz fGaqFm footer__nav-reviews">
+                        <!--<section class="sc-crPixz fGaqFm footer__nav-reviews">
                             <h6 class="sc-qdQaH kqiiLU atds-type-fiesta">Buying advice</h6>
                             <ul class="sc-jrIDfS hapfiC">
                                 <li class="sc-kEbeIB fZUkEp footer__nav-listing"><a
                                         class="atds-link tracking-footer-link atds-type-mini" href="#">
-                                        <!-- -->Owner reviews</a></li>
+                                        <!-- ->Owner reviews</a></li>
                                 <li class="sc-kEbeIB fZUkEp footer__nav-listing"><a
                                         class="atds-link tracking-footer-link atds-type-mini" href="#">
-                                        <!-- -->Buying &amp; selling guides</a></li>
+                                        <!-- ->Buying &amp; selling guides</a></li>
                                 <li class="sc-kEbeIB fZUkEp footer__nav-listing"><a
                                         class="atds-link tracking-footer-link atds-type-mini" href="#">
-                                        <!-- -->Retailer awards</a></li>
+                                        <!-- ->Retailer awards</a></li>
                                 <li class="sc-kEbeIB fZUkEp footer__nav-listing"><a
                                         class="atds-link tracking-footer-link atds-type-mini" href="#">
-                                        <!-- -->New car awards</a></li>
+                                        <!-- ->New car awards</a></li>
                                 <li class="sc-kEbeIB fZUkEp footer__nav-listing"><a
                                         class="atds-link tracking-footer-link atds-type-mini" href="#">
-                                        <!-- -->Why Auto Trader?</a></li>
+                                        <!-- ->Why Auto Trader?</a></li>
                             </ul>
-                        </section>
+                        </section>-->
                     </nav>
                     <nav class="sc-iCEByO cWYuDQ">
                         <section class="sc-crPixz fGaqFm footer__nav-searches">
@@ -14645,43 +14664,46 @@
                                 <li class="sc-kEbeIB fZUkEp footer__nav-listing"><a
                                         class="atds-link tracking-footer-link atds-type-mini" href="#">
                                         <!-- -->All makes and models</a></li>
-                                <li class="sc-kEbeIB fZUkEp footer__nav-listing"><a
+                                <!--<li class="sc-kEbeIB fZUkEp footer__nav-listing">
+                                    <a class="atds-link tracking-footer-link atds-type-mini" href="#">
+                                        <!--All UK locations</a></li>-->
+                                <li class="sc-kEbeIB fZUkEp footer__nav-listing">
+                                    <a class="atds-link tracking-footer-link atds-type-mini" href="#">
+                                        <!-- -->Find a car dealer
+                                    </a>
+                                </li>
+                                <!--<li class="sc-kEbeIB fZUkEp footer__nav-listing"><a
                                         class="atds-link tracking-footer-link atds-type-mini" href="#">
-                                        <!-- -->All UK locations</a></li>
-                                <li class="sc-kEbeIB fZUkEp footer__nav-listing"><a
-                                        class="atds-link tracking-footer-link atds-type-mini" href="#">
-                                        <!-- -->Find a car dealer</a></li>
-                                <li class="sc-kEbeIB fZUkEp footer__nav-listing"><a
-                                        class="atds-link tracking-footer-link atds-type-mini" href="#">
-                                        <!-- -->Electric cars</a></li>
+                                        <!-- Electric cars</a></li>-->
                                 <li class="sc-kEbeIB fZUkEp footer__nav-listing"><a
                                         class="atds-link tracking-footer-link atds-type-mini" href="#">
                                         <!-- -->Car leasing deals</a></li>
                                 <li class="sc-kEbeIB fZUkEp footer__nav-listing"><a
                                         class="atds-link tracking-footer-link atds-type-mini" href="#">
                                         <!-- -->Cheap cars</a></li>
-                                <li class="sc-kEbeIB fZUkEp footer__nav-listing"><a
-                                        class="atds-link tracking-footer-link atds-type-mini" href="#">
-                                        <!-- -->New car deals</a></li>
+                                <!--<li class="sc-kEbeIB fZUkEp footer__nav-listing">
+                                    <a class="atds-link tracking-footer-link atds-type-mini" href="#">
+                                        <!-- New car deals
+                                    </a
+                                ></li>-->
                             </ul>
                         </section>
-                        <section class="sc-crPixz fGaqFm footer__nav-dealers">
+                        <!--<section class="sc-crPixz fGaqFm footer__nav-dealers">
                             <h6 class="sc-qdQaH kqiiLU atds-type-fiesta">Auto Trader for dealers</h6>
                             <ul class="sc-jrIDfS hapfiC">
                                 <li class="sc-kEbeIB fZUkEp footer__nav-listing"><a
                                         class="atds-link tracking-footer-link atds-type-mini"
                                         href="#">
-                                        <!-- -->Dealer portal</a></li>
+                                        <!-- Dealer portal</a></li>
+                                <li class="sc-kEbeIB fZUkEp footer__nav-listing">
+                                    <a class="atds-link tracking-footer-link atds-type-mini" href="#">
+                                        <!-- Advertising packages</a></li>
                                 <li class="sc-kEbeIB fZUkEp footer__nav-listing"><a
                                         class="atds-link tracking-footer-link atds-type-mini"
                                         href="#">
-                                        <!-- -->Advertising packages</a></li>
-                                <li class="sc-kEbeIB fZUkEp footer__nav-listing"><a
-                                        class="atds-link tracking-footer-link atds-type-mini"
-                                        href="#">
-                                        <!-- -->Pay As You Go</a></li>
+                                        <!-- Pay As You Go</a></li>
                             </ul>
-                        </section>
+                        </section>-->
                     </nav>
                     <nav class="sc-iCEByO cWYuDQ">
                         <ul class="sc-krVALI ctgCoH">
@@ -14867,7 +14889,3 @@
 </body>
 
 </html>
-
-
-
-https://www.autotrader.co.uk

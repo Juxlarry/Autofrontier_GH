@@ -13,7 +13,7 @@
   </head>
 
   <body>
-    <% if user_signed_in? && (params[:action] != "welcome") && (params[:action] != "sell_cars")  && (params[:action] != "value_cars") && (params[:action] != "used_cars")  && (params[:action] != "new_cars") && (params[:action] != "show") %>
+    <% if user_signed_in? && (params[:action] != "welcome") && (params[:action] != "car_sell")  && (params[:action] != "car_value") && (params[:action] != "used_cars")  && (params[:action] != "new_cars") && (params[:action] != "show") %>
 
       <%= render 'layouts/sidelayout' %>
       
@@ -28,7 +28,3 @@
     
   </body>
 </html>
-
-<!--, "sell_cars", "value_cars", "used_cars", 
-      "new_cars"
--->

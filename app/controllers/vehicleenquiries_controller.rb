@@ -3,7 +3,63 @@ class VehicleenquiriesController < ApplicationController
 
   # GET /vehicleenquiries or /vehicleenquiries.json
   def index
-    @vehicleenquiries = Vehicleenquiry.all
+    @vehicleenquiries = Vehicleenquiry.all.order('id desc')
+
+    # logger.info "enquiries -- #{@vehicleenquiries.inspect}"
+  end
+
+  def view_enquiry 
+    enquiry_id = params[:id]
+    
+    logger.info "view_enquiry id --- #{enquiry_id}"
+    @view_enquiry_made = Vehicleenquiry.where(:id => enquiry_id)
+
+    logger.info "::::view_enquiry details --- #{@view_enquiry_made[0].inspect}"
+
+    logger.info "This very enquiry --- #{@view_enquiry_made[0].firstname}"
+
+    @enquirer_firstname = @view_enquiry_made[0].firstname
+    @enquirer_email = @view_enquiry_made[0].email
+    @enquirer_message = @view_enquiry_made[0].message
+    @enquirer_phone = @view_enquiry_made[0].phonenumber
+
+    respond_to do |format|
+
+      format.html
+      format.js
+    end
+  end 
+
+
+  def assign_a_patient
+    @assign_patient = AssignPatient.new
+    patient_id=params[:id]
+
+    logger.info "Lets see id para #{patient_id}"
+
+    @patient = Patient.new
+    @records = Patient.find_by(id: patient_id)
+
+    logger.info "Lets see the records"
+    logger.info "record: #{@records.inspect}"
+
+    @patient_id = @records.id
+    patient_id = @patient_id
+    logger.info "patient id: #{@patient_id}"
+
+    @check_insurance = @records.insurance_cash
+    @check_card = @records.card_no
+    logger.info "patient CASH OR INSURANCE: #{@check_insurance}"
+     logger.info "patient card_no: #{@check_card}"
+
+    
+
+    respond_to do |format|
+
+      format.html
+      format.js
+    end
+
   end
 
   # GET /vehicleenquiries/1 or /vehicleenquiries/1.json

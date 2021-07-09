@@ -1,0 +1,36 @@
+
+
+
+
+<div class="table-agile-info">
+
+
+  <% if (defined?(@view_enquiry_made)).nil? %>
+  
+  <% else  %>
+
+    <p> <span> <b>First Name:</b> </span><%= @enquirer_firstname %> </p>
+    <p> <span> <b>Email:</b> </span><%= @enquirer_email %> </p>
+    <p> <span> <b>Phone Number:</b> </span><%= @enquirer_phone %> </p>
+    <div>
+      <span> <b>Message</b> </span>
+      
+      <div>
+        <p> 
+          <%= @enquirer_message %> 
+        </p>
+      </div>
+    </div>
+    
+
+  <% end %>
+
+
+</div>
+
+
+
+
+
+
+

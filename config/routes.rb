@@ -48,5 +48,7 @@ Rails.application.routes.draw do
 
   get  'make_enquiry' => 'cars#make_enquiry'
 
+  get  'view_enquiry' => 'vehicleenquiries#view_enquiry'
+
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
