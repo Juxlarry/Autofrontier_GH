@@ -7,13 +7,13 @@
     <%= csp_meta_tag %>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%#= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
     
   </head>
 
   <body>
-    <% if user_signed_in? && (params[:action] != "welcome") %>
+    <% if user_signed_in? && (params[:action] != "welcome") && (params[:action] != "car_sell")  && (params[:action] != "car_value") && (params[:action] != "used_cars")  && (params[:action] != "new_cars") && (params[:action] != "show") %>
 
       <%= render 'layouts/sidelayout' %>
       
@@ -28,7 +28,3 @@
     
   </body>
 </html>
-
-<!--, "sell_cars", "value_cars", "used_cars", 
-      "new_cars"
--->

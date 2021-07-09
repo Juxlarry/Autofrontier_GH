@@ -8382,7 +8382,7 @@
         /*!sc*/
 
 
-        .logo-span{
+        /* .logo-span{
             margin-left: -10px;
         }
 
@@ -8391,10 +8391,34 @@
             width: 100%;
             margin-left: 0;
             margin-top: 7px;
+        } */
+
+        .logo-span {
+            margin-left: -40px;
         }
 
 
-        .fronText{
+        /* .frontierLogo{
+            width: 100%;
+            margin-left: 30px;
+            margin-top: 26px;
+            height: auto;
+        } */
+
+        .frontierLogo {
+            width: 73%;
+            margin-left: 30px;
+            margin-top: 0;
+            height: auto;
+        }
+
+
+        img.frontierLogo {
+            margin-left: 22px;
+        }
+
+
+        /* .fronText{
             margin-top: 2px;
             margin-left: 0;
             font-weight: 700;
@@ -8403,6 +8427,15 @@
 
         .frontext-inline {
             font-size: 22px;
+        } */
+
+
+        svg.atds-svg {
+            margin-left: -15px;
+        }
+
+        a.atds-type-mini.atds-header-tools__link {
+            margin-left: 18px;
         }
 
 
@@ -9743,14 +9776,14 @@
                             <a href="/" class="atds-header__logo">
                                 <span style="display: inline; " class="logo-span">
                                     <img class="frontierLogo"
-                                    src="/assets/frontierlogo.png"
+                                    src="/assets/autofrontier.png"
                                     >
                                 </span>
-                                <p class="fronText">
+                                <!--<p class="fronText">
                                     <span class="frontext-inline">
                                         AutoFrontier 
                                     <span>
-                                </p>
+                                </p>-->
                             </a>
                             <div class="atds-header-tools wide-hide">
                                 <!--<button
@@ -9859,27 +9892,29 @@
                                         aria-current="true"
                                         class="atds-channel-switcher__link atds-channel-switcher__link--selected">Cars</a>
                                 </li>
-                                <li role="none" class="atds-channel-switcher__item"><a href="#"
-                                        role="menuitem" aria-current="false"
-                                        class="atds-channel-switcher__link ">Prestige cars</a></li>
-                                <li role="none" class="atds-channel-switcher__item"><a href="#" role="menuitem"
-                                        aria-current="false" class="atds-channel-switcher__link ">Vans</a></li>
-                                <li role="none" class="atds-channel-switcher__item"><a href="#" role="menuitem"
-                                        aria-current="false" class="atds-channel-switcher__link ">Bikes</a></li>
-                                <li role="none" class="atds-channel-switcher__item"><a href="#"
-                                        role="menuitem" aria-current="false"
-                                        class="atds-channel-switcher__link ">Motorhomes</a></li>
-                                <li role="none" class="atds-channel-switcher__item"><a href="#" role="menuitem"
-                                        aria-current="false" class="atds-channel-switcher__link ">Caravans</a></li>
-                                <li role="none" class="atds-channel-switcher__item"><a href="#" role="menuitem"
-                                        aria-current="false" class="atds-channel-switcher__link ">Trucks</a></li>
-                                <li role="none" class="atds-channel-switcher__item"><a href="#" role="menuitem"
+                                <li role="none" class="atds-channel-switcher__item"><a href="/used_cars"
+                                    role="menuitem" aria-current="false"
+                                    class="atds-channel-switcher__link ">Used cars</a></li>
+                                <li role="none" class="atds-channel-switcher__item"><a href="/new_cars" role="menuitem"
+                                    aria-current="false" class="atds-channel-switcher__link ">New Cars</a></li>
+                                <li role="none" class="atds-channel-switcher__item"><a href="/sell_cars" role="menuitem"
+                                    aria-current="false" class="atds-channel-switcher__link ">Sell your car</a></li>
+                                <li role="none" class="atds-channel-switcher__item"><a href="/value_cars"
+                                    role="menuitem" aria-current="false"
+                                    class="atds-channel-switcher__link ">Value your car</a></li>
+                                <!--<li role="none" class="atds-channel-switcher__item"><a href="#" role="menuitem"
                                         aria-current="false" class="atds-channel-switcher__link ">Farm</a></li>
                                 <li role="none" class="atds-channel-switcher__item"><a href="#" role="menuitem"
-                                        aria-current="false" class="atds-channel-switcher__link ">Plant</a></li>
+                                        aria-current="false" class="atds-channel-switcher__link ">Plant</a></li> -->
                                 <li role="none" class="atds-channel-switcher__item"><a
-                                        href="#" role="menuitem" aria-current="false"
-                                        class="atds-channel-switcher__link  narrow-hide">Security advice</a></li>
+                                    href="#" role="menuitem" aria-current="false"
+                                    class="atds-channel-switcher__link  narrow-hide">Security advice</a></li>
+                                <% if user_signed_in? %>
+                                    <li role="none" class="atds-channel-switcher__item"><a
+                                        href="/dashboard" role="menuitem" aria-current="false"
+                                        class="atds-channel-switcher__link  narrow-hide">My DashBoard</a>
+                                    </li>
+                                <% end %>
                             </ul>
                         </div>
                         <!--<div class="atds-header__drawer">
@@ -10006,7 +10041,7 @@
                                     >Value your car</a
                                     >
                                 </li>
-                                <li class="atds-primary-navigation__item" role="menuitem">
+                                <!--<li class="atds-primary-navigation__item" role="menuitem">
                                     <a href="#" class="atds-primary-navigation__link"
                                     >Car reviews</a
                                     >
@@ -10029,7 +10064,7 @@
                                     <a href="#" class="atds-primary-navigation__link"
                                     >Finance</a
                                     >
-                                </li>
+                                </li>-->
                             </ul>
                         </div>
                     </div>

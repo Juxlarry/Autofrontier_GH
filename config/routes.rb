@@ -21,7 +21,13 @@ Rails.application.routes.draw do
 
   get 'dashboard' => 'home#index'
 
+  get 'new_user_cars' => 'cars#new_user_cars'
+
+  get 'used_user_cars' => 'cars#used_user_cars'
+
   get 'sell_cars' => 'home#car_sell'
+
+  get 'show_cars' => 'cars#show'
 
   get 'value_cars' => 'home#car_value'
 
@@ -41,6 +47,8 @@ Rails.application.routes.draw do
   post 'create_user' => 'users#create', as: :create_user
 
   get  'make_enquiry' => 'cars#make_enquiry'
+
+  get  'view_enquiry' => 'vehicleenquiries#view_enquiry'
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

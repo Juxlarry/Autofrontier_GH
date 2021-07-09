@@ -8,6 +8,17 @@
     left: 50%;
     margin-right: -50%;
   }
+
+  section.wrapper {
+    margin-top: -32px;
+  }
+
+  .addBtn{
+    color: white;
+    /* float: right; */
+    margin: ;
+    margin-left: 85%;
+  }
 </style>
 <main>
   <section id="main-content">
@@ -20,6 +31,7 @@
       </div>
       <div class="row mb-4">
         <div class="col-12 mb-4">
+          <%= link_to 'Add Colour', new_car_colour_path , class:'btn btn-primary addBtn', style:'color:white;' %>
           <div class="card">
             <div class="card-body">
               <div class="table-responsive bs-example widget-shadow">
@@ -27,8 +39,6 @@
                   <thead>
                     <tr>
                       <th>Name</th>
-                      <th>Comments</th>
-                      <th>Status</th>
                       <th colspan="3"></th>
                     </tr>
                   </thead>
@@ -36,8 +46,6 @@
                     <% @car_colours.each do |car_colour| %>
                       <tr>
                         <td><%= car_colour.name %></td>
-                        <td><%= car_colour.comments %></td>
-                        <td><%= car_colour.status %></td>
                         <td><span id="badgeSpan" class="badge badge-primary"><%= link_to 'Show', car_colour, id: "badgeSpan" %></span></td>
                         <td><span id="badgeSpan" class="badge badge-warning"><%= link_to 'Edit', edit_car_colour_path(car_colour) %></span></td>
                         <td><span id="badgeSpan" class="badge badge-danger"><%= link_to 'Delete', car_colour, method: :delete, data: { confirm: 'Are you sure?' } %></span></td>
@@ -47,10 +55,10 @@
                 </table>
                 <br>
               </div>
+              <div class="pagy-block">
+                <%==  pagy_bootstrap_combo_nav_js(@pagy).html_safe %>
+              </div>
             </div>
-          </div>
-          <div class="blocktext" style="margin-top:5%; color:white">
-            <%= link_to 'Add Colour', new_car_colour_path , class:'btn btn-primary', style:'color:white' %>
           </div>
       </div>
     </section>

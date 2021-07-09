@@ -3,7 +3,7 @@ class CarColoursController < ApplicationController
 
   # GET /car_colours or /car_colours.json
   def index
-    @car_colours = CarColour.all
+    @pagy, @car_colours = pagy(CarColour.all.order('id desc'), items: 5)
   end
 
   # GET /car_colours/1 or /car_colours/1.json

@@ -9,6 +9,26 @@
         .footer_col{
             display: contents;
         }
+
+        /* .logo-span {
+            margin-left: 0;
+            margin-top: -5px;
+        } */
+
+        /* p.fronText {
+            margin-top: -20px;
+        }
+
+        span.frontext-inline {
+            margin-left: 100px;
+        }
+
+        .frontext-inline {
+            font-size: 17px;
+            font-weight: 700;
+        } */
+
+        
     
     </style>
     <% if user_signed_in? %>
@@ -33,18 +53,25 @@
                 <rect x="0.5" y="15.5" width="25" height="1" /></svg></a>
                 <!--<div class="custom-switch custom-switch-primary-inverse custom-switch-small pl-1"
                     data-toggle="tooltip" data-placement="left" title="Dark Mode">
-                    <input class="custom-switch-input"id="switchDark" type="checkbox" checked="checked"> 
-                    <label class="custom-switch-btn" for="switchDark"></label>
-                </div> -->
+                        <input class="custom-switch-input"
+                                id="switchDark" type="checkbox" checked="checked"> 
+                        <label class="custom-switch-btn" for="switchDark"></label>
+                </div>
+          
                 <div>
-
                     <span style="display: inline; " class="logo-span">
                         <img class="frontierLogo" src="/assets/frontierlogo.png">
                     </span>
                     <p class="fronText">
                         <span class="frontext-inline"> AutoFrontier <span>
                     </p>
-                </div>
+                </div> 
+                <div class="logo-span">-->
+                    <img src='/assets/autofrontier.png' class="frontierLogo" >
+                    <!--<p class="fronText">
+                        <span class="frontext-inline"> AutoFrontier <span>
+                    </p>
+                </div>-->
             </div>
             <a class="navbar-logo" href="/"><span class="logo d-none d-xs-block"></span> <span
                 class="logo-mobile d-block d-xs-none"></span>
@@ -58,6 +85,7 @@
                 </div>
                 <% if user_signed_in? %>
                     <div class="user d-inline-block">
+                        <%#= link_to 'Home Page'.html_safe, root_path, :class=>" dropdown-item" %>
                         <button class="btn btn-empty p-0" type="button" data-toggle="dropdown"
                                 aria-haspopup="true" aria-expanded="false"><span class="name">Hi, <%= current_user.username %></span> <span><img
                                 alt="Profile Picture" src="https://res.cloudinary.com/sahanana/image/upload/v1586685522/medapp/images/profile-pic-l_ppksiy.jpg"></span>
@@ -90,7 +118,7 @@
                     <div class="scroll">
                         <ul class="list-unstyled">
                             <li class="active"><a href="/"><i class="iconsminds-dashboard"></i><span>Dashboard</span></a></li>
-                            <li><a href="#vehicles"><i class="iconsminds-digital-drawing"></i> Vehicles</a></li>
+                            <li><a href="#vehicles"><i class="iconsminds-digital-drawing"></i> Cars </a></li>
                             <li><a href="#aesthetics"><i class="iconsminds-credit-card"></i> Aesthetics</a></li>
                             <li><a href="#enquiry"><i class="iconsminds-digital-drawing"></i> Enquiry</a></li>
                             <li><a href="#documentation"><i class="iconsminds-credit-card"></i> Documentation</a></li>
@@ -109,20 +137,14 @@
                                 <div id="collapseAuthorization" class="collapse show">
                                     <ul class="list-unstyled inner-level-menu">
                                         <li>
-                                            <span><%= link_to "Cars",cars_path,:class=>"d-inline-block" %></span>
+                                            <span><%= link_to "All Cars",cars_path,:class=>"d-inline-block" %></span>
                                         </li>
                                         <li>
-                                            <span><%= link_to "Vehicles",vehicle_types_path,:class=>"d-inline-block" %></span>
-                                        </li>
-                                        <!--<li>
-                                            <span><%= link_to "Cars",cars_path,:class=>"d-inline-block" %></span>
+                                            <span><%= link_to "New Cars",new_user_cars_path,:class=>"d-inline-block" %></span>
                                         </li>
                                         <li>
-                                            <span><%= link_to "Cars",cars_path,:class=>"d-inline-block" %></span>
+                                            <span><%= link_to "Used Cars",used_user_cars_path,:class=>"d-inline-block" %></span>
                                         </li>
-                                        <li>
-                                            <span><%= link_to "Cars",cars_path,:class=>"d-inline-block" %></span>
-                                        </li> -->
                                     </ul>
                                 </div>
                             </li>
