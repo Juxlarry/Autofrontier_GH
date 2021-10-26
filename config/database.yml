@@ -14,7 +14,7 @@ default: &default
   encoding: unicode
   pool: 5
   username: hp
-  password: qazxcv&95
+  password: 
   host: localhost
 
 development:
@@ -50,10 +50,9 @@ test:
 #
 
 #setting database url for heroku
-DATABASE_URL: mysql2://b9605492d32781:e170a8d9@us-cdbr-east-03.cleardb.com/heroku_1e35bcd1e4be00d?reconnect=true
 
 production:
   <<: *default
   # database: <%= ENV['DATABASE_URL'] %>
-  database: postgres://htwxndlqtcazzt:4444ebe492bd25d7fec8732ed8376528960999fec5f33dde0815c05555c37c66@ec2-52-4-111-46.compute-1.amazonaws.com:5432/d5fk7003gdv7ia
+  database:
   # password: <%= ENV['AUTOFRONTIER_DATABASE_PASSWORD'] %>
